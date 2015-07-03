@@ -132,7 +132,7 @@ IceBRG::distance_type IceBRG::dfa( const IceBRG::sky_obj *obj1,
 			z_to_use );
 }
 
-double IceBRG::skydist2d( const IceBRG::sky_obj *obj1, const IceBRG::sky_obj *obj2 )
+IceBRG::angle_type IceBRG::skydist2d( const IceBRG::sky_obj *obj1, const IceBRG::sky_obj *obj2 )
 {
 	return skydist2d(obj1->ra(),obj1->dec(),obj2->ra(),obj2->dec());
 }

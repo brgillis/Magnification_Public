@@ -39,6 +39,8 @@
 #include "IceBRG_main/file_access/ascii_table_map.hpp"
 #include "IceBRG_main/file_access/open_file.hpp"
 
+#include "IceBRG_main/join_path.hpp"
+
 #include "IceBRG_main/math/misc_math.hpp"
 #include "IceBRG_main/math/calculus/integrate.hpp"
 #include "IceBRG_main/math/solvers/solvers.hpp"
@@ -55,26 +57,19 @@
 #include "IceBRG_physics/astro.h"
 #include "IceBRG_physics/sky_obj/galaxy.h"
 
-// Magic values
-const std::string data_directory = "/disk2/brg/git/CFHTLenS_cat/Data/";
-const std::string fields_directory = data_directory + "filtered_tables/";
-const std::string lens_weight_file = data_directory + "field_lens_weights.dat";
-const std::string fields_list = data_directory + "fields_list.txt";
-const std::string output_table_root = data_directory + "magnitude_hist_z";
-const std::string g_output_table_root = data_directory + "magnitude_hist_gz";
-const std::string output_table_tail = ".dat";
-const std::string field_size_file_name = "/disk2/brg/git/CFHTLenS_cat/Data/masks/field_sizes.dat";
+#include "get_data_directory.hpp"
+#include "magic_values.hpp"
 
-constexpr double z_buffer = 0.2;
+// Magic values
 
 #undef USE_MOCK_SOURCES
 
 #undef USE_FIELD_WEIGHTING
 
 #ifdef USE_MOCK_SOURCES
-const std::string source_root = "_small_mock_source.dat";
+const std::string source_base = "_small_mock_source.dat";
 #else
-const std::string source_root = "_source.dat";
+const std::string source_base = "_source.dat";
 #endif
 
 #ifdef USE_FIELD_WEIGHTING
@@ -83,26 +78,36 @@ const std::string count_column_to_use = "weighted_count";
 const std::string count_column_to_use = "count";
 #endif
 
-constexpr double sg_mag_window = 0.4;
-constexpr short unsigned sg_window = sg_mag_window/IceBRG::mag_m_step;
-constexpr short unsigned sg_deg = 3;
+using namespace IceBRG;
 
-constexpr short unsigned cache_size = 1000;
-constexpr short unsigned num_mag_bins = 10;
+constexpr double sg_mag_window = 0.4;
+constexpr short unsigned sg_window = sg_mag_window/mag_m_step;
+constexpr short unsigned sg_deg = 3;
 
 int main( const int argc, const char *argv[] )
 {
 
-	// Open and read in the fields list
+	// Get the desired location of the data directory
+
 	std::ifstream fi;
-	IceBRG::open_file_input(fi,fields_list);
+
+	std::string data_directory = get_data_directory(argc,argv,fi);
+
+	// Set up the locations of relevant files and directories
+	const std::string field_directory = join_path(data_directory,field_subdirectory);
+	const std::string lens_weight_file = join_path(data_directory,lens_weight_filename);
+	const std::string mag_hist_table_base = join_path(data_directory,mag_hist_table_name_base);
+	const std::string g_mag_hist_table_base = join_path(data_directory,g_mag_hist_table_name_base);
+	const std::string field_size_file = join_path(data_directory,field_size_filename);
+
+	// Open and read in the fields list
 
 	// Set up the redshift bins
-	IceBRG::limit_vector<double> z_bin_limits(IceBRG::mag_z_min,
-			IceBRG::mag_z_max,IceBRG::round_int((IceBRG::mag_z_max-IceBRG::mag_z_min)/IceBRG::mag_z_step));
+	limit_vector<double> z_bin_limits(mag_z_min,
+			mag_z_max,round_int((mag_z_max-mag_z_min)/mag_z_step));
 
-	IceBRG::limit_vector<double> mag_bin_limits(IceBRG::mag_m_counting_min,
-			IceBRG::mag_m_counting_max,IceBRG::round_int((IceBRG::mag_m_counting_max-IceBRG::mag_m_counting_min)/IceBRG::mag_m_step));
+	limit_vector<double> mag_bin_limits(mag_m_counting_min,
+			mag_m_counting_max,round_int((mag_m_counting_max-mag_m_counting_min)/mag_m_step));
 
 	size_t num_z_bins = z_bin_limits.num_bins();
 	size_t num_mag_bins = mag_bin_limits.num_bins();
@@ -129,7 +134,7 @@ int main( const int argc, const char *argv[] )
 	std::string field_name;
 
 	std::vector<double> field_sizes;
-	const auto field_size_table = IceBRG::load_table_map<double>(field_size_file_name);
+	const auto field_size_table = load_table_map<double>(field_size_file);
 
 	while(fi>>field_name)
 	{
@@ -143,11 +148,11 @@ int main( const int argc, const char *argv[] )
 
 
 	// Load the lens weight table
-	const IceBRG::labeled_array<double> lens_weight_table(lens_weight_file);
-	auto lens_weight_z_limits_builder = IceBRG::coerce<std::vector<double>>(lens_weight_table.at_label("z_bin_min"));
+	const labeled_array<double> lens_weight_table(lens_weight_file);
+	auto lens_weight_z_limits_builder = coerce<std::vector<double>>(lens_weight_table.at_label("z_bin_min"));
 	lens_weight_z_limits_builder.push_back(2*lens_weight_z_limits_builder.back()-
 										   lens_weight_z_limits_builder.at(lens_weight_z_limits_builder.size()-2));
-	const IceBRG::limit_vector<double> lens_weight_z_limits(std::move(lens_weight_z_limits_builder));
+	const limit_vector<double> lens_weight_z_limits(std::move(lens_weight_z_limits_builder));
 
 
 	// Load each field in turn and process it
@@ -158,17 +163,17 @@ int main( const int argc, const char *argv[] )
 	#endif
 	for(size_t field_i=0;field_i<num_fields;++field_i)
 	{
-		std::string field_name_root = field_names[field_i].substr(0,6);
+		std::string field_name_base = field_names[field_i].substr(0,6);
 
 		try
 		{
 			// Get the field size
-			const auto size_measurements = field_size_table.at(field_name_root);
+			const auto size_measurements = field_size_table.at(field_name_base);
 
 			const double field_size = size_measurements[1];
 
 			// Get the weights for each redshift for this field
-			const auto z_weights = lens_weight_table.at_label(field_name_root).raw();
+			const auto z_weights = lens_weight_table.at_label(field_name_base).raw();
 
 			#ifdef _OPENMP
 			#pragma omp critical(append_field_size)
@@ -198,13 +203,13 @@ int main( const int argc, const char *argv[] )
 
 			// Get the source file names
 			std::stringstream ss("");
-			ss << fields_directory << field_name_root << source_root;
+			ss << field_directory << field_name_base << source_base;
 			std::string source_input_name = ss.str();
 
 			// Load in sources
-			//const IceBRG::table_map_t<double> source_map(IceBRG::load_table_map<double>(source_input_name));
-			IceBRG::table_map_t<double> source_map;
-			source_map = (IceBRG::load_table_map<double>(source_input_name));
+			//const table_map_t<double> source_map(load_table_map<double>(source_input_name));
+			table_map_t<double> source_map;
+			source_map = (load_table_map<double>(source_input_name));
 			size_t num_sources = source_map.begin()->second.size();
 
 			for(size_t i=0; i<num_sources; ++i)
@@ -261,7 +266,7 @@ int main( const int argc, const char *argv[] )
 		}
 		catch (const std::runtime_error &e)
 		{
-			std::cerr << "Error processing field " << field_name_root << " (#" <<
+			std::cerr << "Error processing field " << field_name_base << " (#" <<
 					++num_processed << "/" << num_fields << ")!\n"
 					<< e.what();
 			#ifdef _OPENMP
@@ -275,14 +280,14 @@ int main( const int argc, const char *argv[] )
 		#pragma omp critical(report_field_complete)
 		#endif
 		{
-			std::cout << "Field " << field_name_root << " (#" <<
+			std::cout << "Field " << field_name_base << " (#" <<
 				++num_processed << "/" << num_fields << ") complete.\n";
 		}
 
 	}
 
 	// Get the total survey size
-	const double survey_size = IceBRG::sum(field_sizes);
+	const double survey_size = sum(field_sizes);
 
 	// Set up and print histogram tables
 
@@ -295,11 +300,11 @@ int main( const int argc, const char *argv[] )
 	for(auto z_it=z_bin_limits.begin();z_hist_it!=z_bin_hists.end(); ++z_it, ++z_hist_it, ++z_w_hist_it, ++z_count_it, ++z_tot_weight_it)
 	{
 		// Get the name for the table we'll output to
-		std::string z_label = boost::lexical_cast<std::string>(IceBRG::round_int(1000 * *z_it));
-		std::string output_file_name = output_table_root + z_label + output_table_tail;
+		std::string z_label = boost::lexical_cast<std::string>(round_int(1000 * *z_it));
+		std::string mag_hist_file_name = mag_hist_table_base + z_label + mag_hist_table_tail;
 
 		// Set up the data table, and make sure it has the needed columns
-		IceBRG::table_map_t<double> data;
+		table_map_t<double> data;
 		data["mag_bin_lower"];
 		data["count"];
 		data["weighted_count"];
@@ -323,22 +328,22 @@ int main( const int argc, const char *argv[] )
 		auto rep_func = [] (const double & v) {if(v>0) return v; else return 0.1;};
 
 		// Now calculate the smoothed count
-		auto log_count = IceBRG::divide(IceBRG::log(IceBRG::apply(rep_func,data[count_column_to_use])),
+		auto log_count = divide(log(apply(rep_func,data[count_column_to_use])),
 				std::log(10.));
-		auto smoothed_log = IceBRG::sg_smooth(log_count,sg_window,sg_deg);
-		data["smoothed_count"] = IceBRG::pow(10.,smoothed_log);
+		auto smoothed_log = sg_smooth(log_count,sg_window,sg_deg);
+		data["smoothed_count"] = pow(10.,smoothed_log);
 
 		// Check for a systematic over or underestimation from smoothing
-		double smooth_correction_factor = IceBRG::sum(data["count"])/
-				IceBRG::sum(data["smoothed_count"]);
+		double smooth_correction_factor = sum(data["count"])/
+				sum(data["smoothed_count"]);
 
-		data["smoothed_count"] = IceBRG::multiply(data["smoothed_count"],smooth_correction_factor);
+		data["smoothed_count"] = multiply(data["smoothed_count"],smooth_correction_factor);
 
-		data["smoothed_alpha"] = IceBRG::add(IceBRG::multiply(
-				IceBRG::sg_derivative(smoothed_log,sg_window,sg_deg),
+		data["smoothed_alpha"] = add(multiply(
+				sg_derivative(smoothed_log,sg_window,sg_deg),
 				2.5/mag_step),0);
 
-		IceBRG::print_table_map(output_file_name,data);
+		print_table_map(mag_hist_file_name,data);
 
 	}
 
@@ -351,11 +356,11 @@ int main( const int argc, const char *argv[] )
 	for(auto z_it=z_bin_limits.begin();z_hist_it!=gz_bin_hists.end(); ++z_it, ++z_hist_it, ++z_w_hist_it, ++z_count_it, ++z_tot_weight_it)
 	{
 		// Get the name for the table we'll output to
-		std::string z_label = boost::lexical_cast<std::string>(IceBRG::round_int(1000 * *z_it));
-		std::string output_file_name = g_output_table_root + z_label + output_table_tail;
+		std::string z_label = boost::lexical_cast<std::string>(round_int(1000 * *z_it));
+		std::string mag_hist_file_name = g_mag_hist_table_base + z_label + mag_hist_table_tail;
 
 		// Set up the data table, and make sure it has the needed columns
-		IceBRG::table_map_t<double> data;
+		table_map_t<double> data;
 		data["mag_bin_lower"];
 		data["count"];
 		data["weighted_count"];
@@ -379,11 +384,11 @@ int main( const int argc, const char *argv[] )
 		auto rep_func = [] (const double & v) {if(v>0) return v; else return 0.1;};
 
 		// Now calculate the smoothed count
-		auto log_count = IceBRG::divide(IceBRG::log(IceBRG::apply(rep_func,data[count_column_to_use])),
+		auto log_count = divide(log(apply(rep_func,data[count_column_to_use])),
 				std::log(10.));
-		auto smoothed_log = IceBRG::sg_smooth(log_count,sg_window,sg_deg);
+		auto smoothed_log = sg_smooth(log_count,sg_window,sg_deg);
 
-		data["smoothed_count"] = IceBRG::pow(10.,smoothed_log);
+		data["smoothed_count"] = pow(10.,smoothed_log);
 
 		Eigen::Map<Eigen::ArrayXd> smoothed_count(data["smoothed_count"].data(),data["smoothed_count"].size());
 
@@ -392,15 +397,15 @@ int main( const int argc, const char *argv[] )
 		{
 			return mag_bin_limits.interpolate_bins(mag,smoothed_count);
 		};
-		double integrated_count = IceBRG::integrate_Romberg(smooth_count_func,IceBRG::mag_m_counting_min,
-				IceBRG::mag_m_counting_max,0.000001);
-		double smooth_correction_factor = IceBRG::sum(data[count_column_to_use])*IceBRG::mag_m_step/
+		double integrated_count = integrate_Romberg(smooth_count_func,mag_m_counting_min,
+				mag_m_counting_max,0.000001);
+		double smooth_correction_factor = sum(data[count_column_to_use])*mag_m_step/
 				integrated_count;
 
 		smoothed_count *= smooth_correction_factor;
 
-		data["smoothed_alpha"] = IceBRG::add(IceBRG::multiply(
-				IceBRG::sg_derivative(smoothed_log,sg_window,sg_deg),
+		data["smoothed_alpha"] = add(multiply(
+				sg_derivative(smoothed_log,sg_window,sg_deg),
 				2.5/mag_step),0);
 
 //		auto unsmoothed_am1_count_func = [&] (const double & mag = true)
@@ -408,8 +413,8 @@ int main( const int argc, const char *argv[] )
 //			return data["count"][mag_bin_limits.get_bin_index(mag)] *
 //				(mag_bin_limits.interpolate_bins(mag,data["smoothed_alpha"])-1);
 //		};
-//		double summed_am1_count = IceBRG::integrate_Romberg(&unsmoothed_am1_count_func,IceBRG::mag_m_min,
-//				IceBRG::mag_m_max,0.000001);
+//		double summed_am1_count = integrate_Romberg(&unsmoothed_am1_count_func,mag_m_min,
+//				mag_m_max,0.000001);
 //
 //		auto diff_minimizer_func = [&] (const double & mag_shift = true)
 //		{
@@ -417,10 +422,10 @@ int main( const int argc, const char *argv[] )
 //			auto am1s_count_func = [&] (const double & mag = true)
 //			{
 //				return mag_bin_limits.interpolate_bins(mag-mag_shift,data["count"]) *
-//					IceBRG::square(mag_bin_limits.interpolate_bins(mag,data["smoothed_alpha"])-1);
+//					square(mag_bin_limits.interpolate_bins(mag,data["smoothed_alpha"])-1);
 //			};
-//			double integrated_am1s_count = IceBRG::integrate_Romberg(&am1s_count_func,IceBRG::mag_m_min,
-//					IceBRG::mag_m_max,0.000001);
+//			double integrated_am1s_count = integrate_Romberg(&am1s_count_func,mag_m_min,
+//					mag_m_max,0.000001);
 //
 //			auto am1am2_count_func = [&] (const double & mag = true)
 //			{
@@ -428,8 +433,8 @@ int main( const int argc, const char *argv[] )
 //					(mag_bin_limits.interpolate_bins(mag,data["smoothed_alpha"])-1) *
 //					(mag_bin_limits.interpolate_bins(mag,data["smoothed_alpha"])-2);
 //			};
-//			double integrated_am1am2_count = IceBRG::integrate_Romberg(&am1am2_count_func,IceBRG::mag_m_min,
-//					IceBRG::mag_m_max,0.000001);
+//			double integrated_am1am2_count = integrate_Romberg(&am1am2_count_func,mag_m_min,
+//					mag_m_max,0.000001);
 //
 //			double mu_test = (summed_am1_count+integrated_am1am2_count)/integrated_am1s_count;
 //
@@ -437,14 +442,14 @@ int main( const int argc, const char *argv[] )
 //
 //		};
 //
-//		double mag_shift = IceBRG::solve_grid(&diff_minimizer_func,-10*IceBRG::mag_m_step,10*IceBRG::mag_m_step,0.,0.);
+//		double mag_shift = solve_grid(&diff_minimizer_func,-10*mag_m_step,10*mag_m_step,0.,0.);
 //
 //		std::cout << "z = " << *z_it << ".\tTest mu diff: " << diff_minimizer_func(0) << ".\tBest shift: " << mag_shift << ",\twhich gives diff: "
 //			<< diff_minimizer_func(mag_shift) << ".\n";
 //
-//		data["shifted_mag_bin_lower"] = IceBRG::add(data["mag_bin_lower"],mag_shift);
+//		data["shifted_mag_bin_lower"] = add(data["mag_bin_lower"],mag_shift);
 
-		IceBRG::print_table_map(output_file_name,data);
+		print_table_map(mag_hist_file_name,data);
 
 	}
 

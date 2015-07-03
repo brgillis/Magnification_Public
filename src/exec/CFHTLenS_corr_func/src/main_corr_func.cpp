@@ -40,7 +40,14 @@
 #include "IceBRG_main/units/unitconv_map.hpp"
 #include "IceBRG_main/utility.hpp"
 #include "IceBRG_main/vector/limit_vector.hpp"
+
+#include "IceBRG_physics/lensing_correlation_function_estimator.h"
+#include "IceBRG_physics/correlation_function_estimator.h"
+
 #include "IceBRG_lensing/magnification/mag_global_values.h"
+
+#include "get_data_directory.hpp"
+#include "magic_values.hpp"
 
 #include "corr_func_bin.hpp"
 #include "corr_func_config.h"
@@ -51,33 +58,27 @@
 
 #define USE_FIELD_WEIGHTING
 
-#include "IceBRG_physics/lensing_correlation_function_estimator.h"
-#include "IceBRG_physics/correlation_function_estimator.h"
-
 // Magic values
-std::string data_directory = "/disk2/brg/git/CFHTLenS_cat/Data/";
-std::string fields_list = data_directory + "fields_list.txt";
-
-const std::string lens_root = "_lens.dat";
-const std::string source_root = "_source.dat";
 
 constexpr int reserve_factor = 10000;
-
-#ifdef USE_FIELD_WEIGHTING
-const std::string lens_weight_file = data_directory + "field_lens_weights.dat";
-#endif
 
 int main( const int argc, const char *argv[] )
 {
 	using namespace IceBRG;
+
+	// Open the fields list and get the data directory
+	std::ifstream fi;
+	const std::string data_directory = get_data_directory(argc,argv,fi);
+
+	const std::string lens_weight_file = join_path(data_directory,lens_weight_filename);
 
 	// Get the configuration file from the command-line arguments
 	const corr_func_config config(argc,argv);
 
 	const short lensing_style = config.lensing_style;
 
-	flt_type source_z_min = IceBRG::mag_z_min;
-	flt_type source_z_max = IceBRG::mag_z_max;
+	flt_type source_z_min = mag_z_min;
+	flt_type source_z_max = mag_z_max;
 
 	if(!lensing_style)
 	{
@@ -97,8 +98,8 @@ int main( const int argc, const char *argv[] )
 	else
 		const_cast<std::string &>(output_name) = data_directory + "auto_corr_funcs_quick.dat";
 
-	const std::string lens_mock_root = "_small_mock_lens.dat";
-	const std::string source_mock_root = "_small_mock_source.dat";
+	const std::string lens_mock_tail = "_small_mock_lens.dat";
+	const std::string source_mock_tail = "_small_mock_source.dat";
 
 	#else // #ifdef SMALL_MOCKS
 
@@ -109,30 +110,25 @@ int main( const int argc, const char *argv[] )
 	else
 		const_cast<std::string &>(output_name) = data_directory + "auto_corr_funcs.dat";
 
-	const std::string lens_mock_root = "_mock_lens.dat";
-	const std::string source_mock_root = "_mock_source.dat";
+	const std::string lens_mock_tail = "_mock_lens.dat";
+	const std::string source_mock_tail = "_mock_source.dat";
 
 	#endif // #ifdef SMALL_MOCKS // #else
 
 
 	// Set up global data
 
-	auto R_lin_or_log = config.R_log ? IceBRG::limit_vector<distance_type>::type::LOG : IceBRG::limit_vector<distance_type>::type::LINEAR;
-	IceBRG::limit_vector<distance_type> R_limits(R_lin_or_log, config.R_min,config.R_max,config.R_bins);
+	auto R_lin_or_log = config.R_log ? limit_vector<distance_type>::type::LOG : limit_vector<distance_type>::type::LINEAR;
+	limit_vector<distance_type> R_limits(R_lin_or_log, config.R_min,config.R_max,config.R_bins);
 
-	auto z_lin_or_log = config.z_log ? IceBRG::limit_vector<flt_type>::type::LOG : IceBRG::limit_vector<flt_type>::type::LINEAR;
-	IceBRG::limit_vector<flt_type> lens_z_limits(z_lin_or_log, config.z_min,config.z_max,config.z_bins);
+	auto z_lin_or_log = config.z_log ? limit_vector<flt_type>::type::LOG : limit_vector<flt_type>::type::LINEAR;
+	limit_vector<flt_type> lens_z_limits(z_lin_or_log, config.z_min,config.z_max,config.z_bins);
 
-	auto m_lin_or_log = config.m_log ? IceBRG::limit_vector<mass_type>::type::LOG : IceBRG::limit_vector<mass_type>::type::LINEAR;
-	IceBRG::limit_vector<mass_type> lens_m_limits(m_lin_or_log, config.m_min,config.m_max,config.m_bins);
+	auto m_lin_or_log = config.m_log ? limit_vector<mass_type>::type::LOG : limit_vector<mass_type>::type::LINEAR;
+	limit_vector<mass_type> lens_m_limits(m_lin_or_log, config.m_min,config.m_max,config.m_bins);
 
-	auto mag_lin_or_log = config.mag_log ? IceBRG::limit_vector<flt_type>::type::LOG : IceBRG::limit_vector<flt_type>::type::LINEAR;
-	IceBRG::limit_vector<flt_type> lens_mag_limits(mag_lin_or_log, config.mag_min,config.mag_max,config.mag_bins);
-
-
-	// Open and read in the fields list
-	std::ifstream fi;
-	IceBRG::open_file_input(fi,fields_list);
+	auto mag_lin_or_log = config.mag_log ? limit_vector<flt_type>::type::LOG : limit_vector<flt_type>::type::LINEAR;
+	limit_vector<flt_type> lens_mag_limits(mag_lin_or_log, config.mag_min,config.mag_max,config.mag_bins);
 
 	std::vector<std::string> field_names;
 	std::string field_name;
@@ -146,11 +142,11 @@ int main( const int argc, const char *argv[] )
 
 	#ifdef USE_FIELD_WEIGHTING
 	// Load the lens weight table
-	const IceBRG::labeled_array<flt_type> lens_weight_table(lens_weight_file);
-	auto lens_weight_z_limits_builder = IceBRG::coerce<std::vector<flt_type>>(lens_weight_table.at_label("z_bin_min"));
+	const labeled_array<flt_type> lens_weight_table(lens_weight_file);
+	auto lens_weight_z_limits_builder = coerce<std::vector<flt_type>>(lens_weight_table.at_label("z_bin_min"));
 	lens_weight_z_limits_builder.push_back(2*lens_weight_z_limits_builder.back()-
 										   lens_weight_z_limits_builder.at(lens_weight_z_limits_builder.size()-2));
-	const IceBRG::limit_vector<flt_type> lens_weight_z_limits(std::move(lens_weight_z_limits_builder));
+	const limit_vector<flt_type> lens_weight_z_limits(std::move(lens_weight_z_limits_builder));
 	#endif
 
 	typedef std::vector<std::tuple<angle_type,angle_type,flt_type,flt_type>> pos_vec;
@@ -164,7 +160,7 @@ int main( const int argc, const char *argv[] )
 
 	std::vector<std::vector<std::vector<corr_func_bin>>> corr_func_bin_sums;
 
-	IceBRG::make_vector_value(corr_func_bin_sums,
+	make_vector_value(corr_func_bin_sums,
 								template_bin,
 								lens_z_limits.num_bins(),
 								lens_m_limits.num_bins(),
@@ -184,7 +180,7 @@ int main( const int argc, const char *argv[] )
 	{
 		std::vector<std::vector<std::vector<corr_func_bin>>> corr_func_bins;
 
-		IceBRG::make_vector_value(corr_func_bins,
+		make_vector_value(corr_func_bins,
 									template_bin,
 									lens_z_limits.num_bins(),
 									lens_m_limits.num_bins(),
@@ -203,14 +199,14 @@ int main( const int argc, const char *argv[] )
 		for(auto & pos : mock_source_positions)
 			pos.reserve(reserve_factor);
 
-		std::string field_name_root = field_names[field_i].substr(0,6);
+		std::string field_name_tail = field_names[field_i].substr(0,6);
 
 		std::stringstream ss("");
-		ss << data_directory << "filtered_tables/" << field_name_root << lens_root;
+		ss << data_directory << "filtered_tables/" << field_name_tail << lens_tail;
 		std::string lens_input_name = ss.str();
 
 		{
-			const IceBRG::labeled_array<flt_type> gals(lens_input_name);
+			const labeled_array<flt_type> gals(lens_input_name);
 
 			int z_col = gals.get_index_for_label("Z_B");
 			int mag_col = gals.get_index_for_label("MAG_r");
@@ -235,11 +231,11 @@ int main( const int argc, const char *argv[] )
 		}
 
 		ss.str("");
-		ss << data_directory << "filtered_tables/" << field_name_root << source_root;
+		ss << data_directory << "filtered_tables/" << field_name_tail << source_tail;
 		std::string source_input_name = ss.str();
 
 		{
-			const IceBRG::labeled_array<flt_type> gals(source_input_name);
+			const labeled_array<flt_type> gals(source_input_name);
 
 			int z_col = gals.get_index_for_label("Z_B");
 			int mag_col = gals.get_index_for_label("MAG_r");
@@ -251,7 +247,7 @@ int main( const int argc, const char *argv[] )
 				const flt_type & z = gal.at(z_col);
 				if((z<source_z_min)||(z>source_z_max)) continue;
 				const flt_type & mag = gal.at(mag_col);
-				if((mag<IceBRG::mag_m_min)||(mag>IceBRG::mag_m_max)) continue;
+				if((mag<mag_m_min)||(mag>mag_m_max)) continue;
 
 				auto pos = std::make_tuple(gal.at(ra_col)*rad,gal.at(dec_col)*rad,z,mag);
 
@@ -268,11 +264,11 @@ int main( const int argc, const char *argv[] )
 		}
 
 		ss.str("");
-		ss << data_directory << "filtered_tables/" << field_name_root << lens_mock_root;
+		ss << data_directory << "filtered_tables/" << field_name_tail << lens_mock_tail;
 		std::string mock_lens_input_name = ss.str();
 
 		{
-			const IceBRG::labeled_array<flt_type> gals(mock_lens_input_name);
+			const labeled_array<flt_type> gals(mock_lens_input_name);
 
 			int z_col = gals.get_index_for_label("Z_B");
 			int mag_col = gals.get_index_for_label("MAG_r");
@@ -291,11 +287,11 @@ int main( const int argc, const char *argv[] )
 		}
 
 		ss.str("");
-		ss << data_directory << "filtered_tables/" << field_name_root << source_mock_root;
+		ss << data_directory << "filtered_tables/" << field_name_tail << source_mock_tail;
 		std::string mock_source_input_name = ss.str();
 
 		{
-			const IceBRG::labeled_array<flt_type> gals(mock_source_input_name);
+			const labeled_array<flt_type> gals(mock_source_input_name);
 
 			int z_col = gals.get_index_for_label("Z_B");
 			int mag_col = gals.get_index_for_label("MAG_r");
@@ -307,7 +303,7 @@ int main( const int argc, const char *argv[] )
 				const flt_type & z = gal.at(z_col);
 				if((z<source_z_min)||(z>source_z_max)) continue;
 				const flt_type & mag = gal.at(mag_col);
-				if((mag<IceBRG::mag_m_min)||(mag>IceBRG::mag_m_max)) continue;
+				if((mag<mag_m_min)||(mag>mag_m_max)) continue;
 
 				auto pos = std::make_tuple(gal.at(ra_col)*rad,gal.at(dec_col)*rad,z,mag);
 
@@ -328,7 +324,7 @@ int main( const int argc, const char *argv[] )
 		{
 
 			#ifdef USE_FIELD_WEIGHTING
-			const auto & z_weights = lens_weight_table.at_label(field_name_root).raw();
+			const auto & z_weights = lens_weight_table.at_label(field_name_tail).raw();
 			flt_type field_weight = z_weights(lens_weight_z_limits.get_bin_index((lens_z_limits.lower_limit(z_i)+lens_z_limits.upper_limit(z_i))/2));
 			#else
 			constexpr flt_type field_weight = 1.;
@@ -384,12 +380,12 @@ int main( const int argc, const char *argv[] )
 					}
 				}
 
-				std::cout << "Field " << field_name_root << " (#" <<
+				std::cout << "Field " << field_name_tail << " (#" <<
 						++num_processed << "/" << num_fields << ") complete!\n";
 			}
 			catch (const std::exception &e)
 			{
-				std::cerr << "Error combining data from field " << field_name_root << " (#" <<
+				std::cerr << "Error combining data from field " << field_name_tail << " (#" <<
 						++num_processed << "/" << num_fields << ")!\n"
 						<< e.what();
 			}
@@ -399,7 +395,7 @@ int main( const int argc, const char *argv[] )
 
 
 	// Set up the output table
-	IceBRG::labeled_array<flt_type> output_table;
+	labeled_array<flt_type> output_table;
 	#ifdef LIMIT_TO_MONOPOLE
 	std::vector<std::string> labels = {"R_bin_mid_kpc", "z_bin_mid", "m_bin_mid_Msun", "mag_bin_mid", "xi_mp"};
 	#else
@@ -451,10 +447,10 @@ int main( const int argc, const char *argv[] )
 		}
 	}
 
-	IceBRG::unitconv_map u_map;
+	unitconv_map u_map;
 
-	u_map["R_bin_mid_kpc"] = IceBRG::unitconv::kpctom;
-	u_map["m_bin_mid_Msun"] = IceBRG::unitconv::Msuntokg;
+	u_map["R_bin_mid_kpc"] = unitconv::kpctom;
+	u_map["m_bin_mid_Msun"] = unitconv::Msuntokg;
 
 	output_table.apply_unitconvs(u_map);
 

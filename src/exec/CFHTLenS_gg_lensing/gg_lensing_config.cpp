@@ -30,6 +30,7 @@
 #include <string>
 #include <vector>
 
+#include "IceBRG_main/error_handling.h"
 #include "IceBRG_main/file_access/open_file.hpp"
 #include "IceBRG_main/file_access/trim_comments.hpp"
 #include "IceBRG_main/lexical_cast.hpp"
@@ -43,37 +44,39 @@ gg_lensing_config::gg_lensing_config( const int argc, const char *argv[] )
 	using namespace IceBRG;
 	using namespace IceBRG::unitconv;
 
-	if(argc==1)
+	if(argc<3)
 	{
+		handle_notification(
+				std::string("CFHTLenS_gg_lensing normally takes a configuration file as the second\n") +
+				"command-line argument. None was detected, so it will use default values.");
+
 		use_precalculated_data = false;
 		precalculated_data_filename = "";
 
-		R_min = 10*kpctom*m;
+		R_min = 0*kpctom*m;
 		R_max = 2000*kpctom*m;
-		R_bins = 100;
+		R_bins = 20;
 		R_log = true;
 
-		m_min = 1e8*Msuntokg*kg;
-		m_max = 1e11*Msuntokg*kg;
+		m_min = 1e9*Msuntokg*kg;
+		m_max = 1e12*Msuntokg*kg;
 		m_bins = 3;
 		m_log = true;
 
 		z_min = 0.2;
-		z_max = 1.1;
-		z_bins = 1;
+		z_max = 1.3;
+		z_bins = 11;
 		z_log = false;
 
 		mag_min = -std::numeric_limits<double>::infinity();
 		mag_max = 25;
 		mag_bins = 1;
 		mag_log = false;
-
-		z_buffer = 0.1;
 	}
 	else
 	{
 		// Open the config file
-		std::string filename(argv[1]);
+		std::string filename(argv[2]);
 		std::ifstream fi;
 		IceBRG::open_file_input(fi,filename);
 
@@ -130,8 +133,6 @@ gg_lensing_config::gg_lensing_config( const int argc, const char *argv[] )
 		mag_max = IceBRG::max_cast<double>(config_value_strings.at(i++));
 		mag_bins = boost::lexical_cast<size_t>(config_value_strings.at(i++));
 		mag_log = IceBRG::bool_cast(config_value_strings.at(i++));
-
-		z_buffer = boost::lexical_cast<double>(config_value_strings.at(i++));
 
 	}
 }

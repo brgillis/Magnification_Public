@@ -26,6 +26,8 @@
 
 #include "IceBRG_lensing/pair_binner.h"
 
+#include "magic_values.hpp"
+
 #include "gg_lensing_config.h"
 #include "pass_configs_to_binner.h"
 
@@ -54,7 +56,7 @@ IceBRG::pair_binner pass_configs_to_binner(const gg_lensing_config & config)
 		binner.set_log_mag_limits(config.mag_min,config.mag_max,config.mag_bins);
 	}
 
-	binner.set_z_buffer(config.z_buffer);
+	binner.set_z_buffer(z_buffer);
 
 	return binner;
 }

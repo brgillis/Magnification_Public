@@ -31,9 +31,9 @@
 #include "IceBRG_main/math/interpolator/interpolator.h"
 #include "IceBRG_main/file_access/ascii_table_map.hpp"
 
-#include "correct_redshift_bias.h"
+#include "magic_values.hpp"
 
-const std::string z_cal_filename = "/disk2/brg/git/CFHTLenS_cat/Data/redshift_calibration_table.dat";
+#include "correct_redshift_bias.h"
 
 IceBRG::interpolator redshift_calibrator_wrapper::redshift_calibration_interpolator = IceBRG::interpolator();
 

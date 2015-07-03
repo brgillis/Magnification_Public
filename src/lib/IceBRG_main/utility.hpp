@@ -42,15 +42,12 @@
 namespace IceBRG
 {
 
-// Classes, enums, and typedefs
-#if(1)
-
-#endif
-
 // Functions
 #if(1)
 
 // Function to get the size of a container casted to a signed integer
+#if(1)
+
 template<typename T, BRG_F_IS_CONTAINER(T)>
 int_type ssize( const T & container)
 {
@@ -68,6 +65,8 @@ int_type ssize( const T & container)
 {
 	return container.size(); // TODO: Fix so it'll give a result of 1 for those without a size() method
 }
+
+#endif // Function to get the size of a container casted to a signed integer
 
 // Generic functions
 #if (1)
@@ -120,9 +119,9 @@ inline void make_obj( BRG_UNIQUE_PTR<obj_type> & obj_pointer )
 	set_zero(*obj_pointer);
 }
 
-#endif // Functions
+#endif // Generic functions
 
-#endif // Ending functions
+#endif // Functions
 
 
 } // end namespace IceBRG

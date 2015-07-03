@@ -23,7 +23,6 @@
 
 \**********************************************************************/
 
-
 #include <iostream>
 #include <omp.h>
 #include <string>
@@ -35,33 +34,27 @@
 #include "IceBRG_main/file_access/ascii_table_map.hpp"
 #include "IceBRG_main/file_access/binary_archive.hpp"
 #include "IceBRG_main/file_access/open_file.hpp"
+#include "IceBRG_main/join_path.hpp"
 #include "IceBRG_main/math/misc_math.hpp"
 #include "IceBRG_main/units/unit_conversions.hpp"
 #include "IceBRG_main/vector/limit_vector.hpp"
 
+#include "get_data_directory.hpp"
+#include "magic_values.hpp"
 
 #define MAKE_WEIGHT_TABLE
 
-// Magic values
-const std::string data_directory = "/disk2/brg/git/CFHTLenS_cat/Data/";
-const std::string field_directory = data_directory + "filtered_tables/";
-const std::string fields_list = data_directory + "fields_list.txt";
-const std::string lens_suffix = "_lens.dat";
-const std::string source_suffix = "_source.dat";
-const std::string pixel_map_suffix = "_lens_good_pixels.bin";
+using namespace IceBRG;
 
-constexpr double z_bin_min = 0.2;
-constexpr double z_bin_max = 1.3;
+// Magic values
 
 #ifdef MAKE_WEIGHT_TABLE
-const std::string output_filename = data_directory + "field_lens_weights.dat";
+const std::string output_filename = "field_lens_weights.dat";
 constexpr unsigned z_bins = 110;
 #else
-const std::string output_filename = data_directory + "field_stats.dat";
+const std::string output_filename = "field_stats.dat";
 constexpr unsigned z_bins = 11;
 #endif
-
-constexpr double rad_per_px = 0.185965*IceBRG::unitconv::asectorad;
 
 inline size_t num_good_pixels(const std::vector<std::vector<bool>> & input)
 {
@@ -95,14 +88,17 @@ int main( const int argc, const char *argv[] )
 	omp_set_num_threads(5);
 #endif
 
-	IceBRG::limit_vector<double> z_limits(z_bin_min,z_bin_max,z_bins);
+	limit_vector<double> z_limits(z_bin_min,z_bin_max,z_bins);
 
 	// Set up output data table
-	IceBRG::labeled_array<double> output_table;
+	labeled_array<double> output_table;
 
-	// Open and read in the fields list
+	// Open and read in the fields list and get the data directory
 	std::ifstream fi;
-	IceBRG::open_file_input(fi,fields_list);
+	const std::string data_directory = get_data_directory(argc,argv,fi);
+
+	const std::string field_directory = join_path(data_directory,field_subdirectory);
+	const std::string output_file = join_path(data_directory,output_filename);
 
 	std::vector<std::string> field_names;
 	std::vector<std::string> output_header;
@@ -153,24 +149,24 @@ int main( const int argc, const char *argv[] )
 		std::stringstream ss;
 
 		ss.str("");
-		ss << field_directory << field_name_root << pixel_map_suffix;
+		ss << field_directory << field_name_root << pixel_map_tail;
 		const std::string pixel_map_file_name = ss.str();
 
 		// Get the size of this field
 
 		std::vector<std::vector<bool>> good_pixels;
 
-		good_pixels = IceBRG::binary_load<std::vector<std::vector<bool>>>(pixel_map_file_name);
+		good_pixels = binary_load<std::vector<std::vector<bool>>>(pixel_map_file_name);
 		// Get the good size of this field now
 		size_t num_good = num_good_pixels(good_pixels);
-		const double field_size = IceBRG::square(rad_per_px)*num_good;
+		const double field_size = square(rad_per_px)*num_good;
 
 		// Get the lens file name
 		ss.str("");
-		ss << field_directory << field_name_root << lens_suffix;
+		ss << field_directory << field_name_root << lens_tail;
 		const std::string lens_file_name = ss.str();
 
-		IceBRG::labeled_array<double> lens_table;
+		labeled_array<double> lens_table;
 
 		lens_table.load(lens_file_name);
 
@@ -216,9 +212,9 @@ int main( const int argc, const char *argv[] )
 
 	output_table.set_labels(output_header);
 
-	output_table.save(output_filename);
+	output_table.save(output_file);
 
-	std::cout << "Done!\n";
+	std::cout << "Done!\nOutput saved to " << output_file << "." << std::endl;
 
 	return 0;
 }

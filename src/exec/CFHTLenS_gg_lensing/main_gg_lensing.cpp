@@ -50,6 +50,10 @@
 
 #include "IceBRG_physics/astro.h"
 #include "IceBRG_physics/sky_obj/galaxy.h"
+
+#include "get_data_directory.hpp"
+#include "magic_values.hpp"
+
 #include "gg_lensing_config.h"
 #include "pass_configs_to_binner.h"
 
@@ -58,9 +62,9 @@
 #undef USE_MOCK_LENSES
 #undef USE_MOCK_SOURCES
 
+#undef PRINT_CACHES
+
 // Magic values
-const std::string data_directory = "/disk2/brg/git/CFHTLenS_cat/Data/";
-const std::string fields_list = data_directory + "fields_list.txt";
 
 #ifdef USE_CALIBRATION_LENSES
 
@@ -86,9 +90,6 @@ const std::string lens_weight_file = data_directory + "field_lens_weights.dat";
 
 #else // #ifdef USE_MOCK_LENSES
 
-const std::string output_table = data_directory + "gg_lensing_signal.dat";
-const std::string output_data = data_directory + "gg_lensing_data.dat";
-
 const std::string lens_root = "_lens.dat";
 const std::string lens_unmasked_frac_root = "_lens_mask_frac.dat";
 
@@ -102,24 +103,44 @@ const std::string source_root = "_small_mock_source.dat";
 const std::string source_root = "_source.dat";
 #endif
 
-const std::string expected_count_cache_output_file = data_directory + "ex_count_cache.dat";
-const std::string expected_count_derivative_cache_output_file = data_directory + "alpha_cache.dat";
-const std::string mag_signal_integral_cache_output_file = data_directory + "mag_sig_integral_cache.dat";
-const std::string mag_weight_integral_cache_output_file = data_directory + "mag_W_integral_cache.dat";
-const std::string mag_calibration_cache_output_file = data_directory + "mag_calibration_cache.dat";
-
 int main( const int argc, const char *argv[] )
 {
 	using namespace IceBRG;
+
+	std::ifstream fi;
+	const std::string data_directory = get_data_directory(argc,argv,fi);
+
+	const std::string fields_directory = join_path(data_directory,field_subdirectory);
+
+	const std::string output_table = join_path(data_directory,gg_lensing_signal_filename);
+	const std::string output_data = join_path(data_directory,gg_lensing_data_filename);
+
+	const std::string expected_count_cache_output_file = join_path(data_directory,
+			expected_count_cache_output_filename);
+	const std::string expected_count_derivative_cache_output_file = join_path(data_directory,
+			expected_count_derivative_cache_output_filename);
+	const std::string mag_signal_integral_cache_output_file = join_path(data_directory,
+			mag_signal_integral_cache_output_filename);
+	const std::string mag_weight_integral_cache_output_file = join_path(data_directory,
+			mag_weight_integral_cache_output_filename);
+	const std::string mag_calibration_cache_output_file = join_path(data_directory,
+			mag_calibration_cache_output_filename);
 
 	// Get the configuration file from the command-line arguments
 	const gg_lensing_config config(argc,argv);
 
 	// Set up the caches before we get to the parallel section, so they can be calculated in parallel
+	#ifdef PRINT_CACHES
 	IceBRG::expected_count_cache().print(expected_count_cache_output_file);
 	IceBRG::expected_count_derivative_cache().print(expected_count_derivative_cache_output_file);
 	IceBRG::mag_weight_integral_cache().print(mag_weight_integral_cache_output_file);
 	IceBRG::mag_signal_integral_cache().print(mag_signal_integral_cache_output_file);
+	#else
+	IceBRG::expected_count_cache().get(0.,0.);
+	IceBRG::expected_count_derivative_cache().get(0.,0.);
+	IceBRG::mag_weight_integral_cache().get(0.);
+	IceBRG::mag_signal_integral_cache().get(0.);
+	#endif
 
 	#ifdef USE_CALIBRATION_LENSES
 	// Load the lens weight table
@@ -155,9 +176,6 @@ int main( const int argc, const char *argv[] )
 	{
 
 		// Open and read in the fields list
-		std::ifstream fi;
-		IceBRG::open_file_input(fi,fields_list);
-
 		std::vector<std::string> field_names;
 		std::string field_name;
 
@@ -199,15 +217,15 @@ int main( const int argc, const char *argv[] )
 			{
 				// Get the lens and source file names
 				std::stringstream ss("");
-				ss << data_directory << "filtered_tables/" << field_name_root << lens_root;
+				ss << fields_directory << field_name_root << lens_root;
 				std::string lens_input_name = ss.str();
 
 				ss.str("");
-				ss << data_directory << "filtered_tables/" << field_name_root << lens_unmasked_frac_root;
+				ss << fields_directory << field_name_root << lens_unmasked_frac_root;
 				std::string lens_unmasked_name = ss.str();
 
 				ss.str("");
-				ss << data_directory << "filtered_tables/" << field_name_root << source_root;
+				ss << fields_directory << field_name_root << source_root;
 				std::string source_input_name = ss.str();
 
 				// Set up vectors
@@ -234,12 +252,12 @@ int main( const int argc, const char *argv[] )
 
 					#ifdef USE_CALIBRATION_LENSES
 					// Get the weight for this lens
-					double weight = z_weights(lens_weight_z_limits.get_bin_index(z-config.z_buffer));
+					double weight = z_weights(lens_weight_z_limits.get_bin_index(z-z_buffer));
 					lens.set_weight(weight);
 					#else
 					#ifdef USE_MOCK_LENSES
 					// Get the weight for this lens
-					double weight = z_weights(lens_weight_z_limits.get_bin_index(z-config.z_buffer));
+					double weight = z_weights(lens_weight_z_limits.get_bin_index(z-z_buffer));
 					//lens.set_weight(weight);
 					#endif
 					#endif // #ifdef USE_CALIBRATION_LENSES
@@ -308,7 +326,7 @@ int main( const int argc, const char *argv[] )
 					{
 
 						// Check that the lens is sufficiently in front of the source
-						if(lens.z() > source.z() - config.z_buffer + std::numeric_limits<double>::epsilon()) continue;
+						if(lens.z() > source.z() - z_buffer + std::numeric_limits<double>::epsilon()) continue;
 
 //						if(((source.mag()>=IceBRG::mag_m_min) && (source.mag()<IceBRG::mag_m_max) &&
 //						 (source.z()>=1.14) && (source.z()<IceBRG::mag_z_max)) ) ++counter; //!!

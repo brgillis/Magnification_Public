@@ -45,6 +45,7 @@
 #include "IceBRG_main/file_access/ascii_table_map.hpp"
 #include "IceBRG_main/file_access/binary_archive.hpp"
 #include "IceBRG_main/file_access/open_file.hpp"
+#include "IceBRG_main/join_path.hpp"
 #include "IceBRG_main/math/misc_math.hpp"
 #include "IceBRG_main/math/random/random_functions.hpp"
 #include "IceBRG_main/vector/limit_vector.hpp"
@@ -53,20 +54,15 @@
 #include "IceBRG_main/units/units.hpp"
 #include "IceBRG_main/units/unit_conversions.hpp"
 
+#include "get_data_directory.hpp"
+#include "magic_values.hpp"
+
 #include "get_good_positions.hpp"
 #include "load_pixel_table.h"
 
-// Magic values
-const std::string data_directory = "/disk2/brg/git/CFHTLenS_cat/Data/";
-const std::string mask_directory = data_directory + "masks/";
-const std::string field_directory = data_directory + "filtered_tables/";
-const std::string fields_list = data_directory + "fields_list.txt";
-const std::string lens_pixel_map_root = "_lens_good_pixels.bin";
+using namespace IceBRG;
 
-constexpr double lens_z_min = 0.2;
-constexpr double lens_z_max = 1.3;
-constexpr double lens_m_min = 1e9*IceBRG::unitconv::Msuntokg;
-constexpr double lens_m_max = 1e12*IceBRG::unitconv::Msuntokg;
+// Magic values
 
 #undef USE_CALIBRATION
 #undef USE_MOCKS
@@ -113,8 +109,6 @@ constexpr float num_sep_steps = 40;
 
 #endif
 
-constexpr double rad_per_px = 0.185965*IceBRG::unitconv::asectorad;
-
 constexpr unsigned short sampling_factor=4;
 
 static_assert(sampling_factor>0,"Subsample must be positive.");
@@ -140,6 +134,13 @@ inline void _increment_bin(unsigned index, bool good,
 
 int main( const int argc, const char *argv[] )
 {
+	using namespace IceBRG;
+
+	std::ifstream fi; // Will be loaded with fields list first
+	const std::string data_directory = get_data_directory(argc,argv,fi);
+
+	const std::string mask_directory = join_path(data_directory,mask_subdirectory);
+	const std::string field_directory = join_path(data_directory,field_subdirectory);
 
 	// General setup
 #ifdef _OPENMP
@@ -147,13 +148,9 @@ int main( const int argc, const char *argv[] )
 #endif
 
 	// Set up separation limits vector
-	const IceBRG::limit_vector<float> sep_limits(min_kpc_sep,max_kpc_sep,num_sep_steps);
+	const limit_vector<float> sep_limits(min_kpc_sep,max_kpc_sep,num_sep_steps);
 
 	const unsigned num_bins = sep_limits.num_bins();
-
-	// Open and read in the fields list
-	std::ifstream fi;
-	IceBRG::open_file_input(fi,fields_list);
 
 	std::vector<std::string> field_names;
 	std::string temp_field_name;
@@ -164,7 +161,7 @@ int main( const int argc, const char *argv[] )
 	}
 
 	// Set up map for each field's average separation hists
-	IceBRG::table_map_t<double> mean_results;
+	table_map_t<double> mean_results;
 
 	// Add a column to the result table which gives pixel limits
 	std::vector<double> bin_mids(num_bins);
@@ -175,7 +172,7 @@ int main( const int argc, const char *argv[] )
 	mean_results["bin_mid_kpc"] = bin_mids;
 
 	// Set up the field sizes table
-	IceBRG::table_map_t<double> field_sizes;
+	table_map_t<double> field_sizes;
 
 	size_t num_fields = field_names.size();
 
@@ -198,16 +195,16 @@ int main( const int argc, const char *argv[] )
 
 		// Get the lens pixel map file name
 		ss.str("");
-		ss << field_directory << field_name_root << lens_pixel_map_root;
-		const std::string lens_pixel_map_file_name = ss.str();
+		ss << field_directory << field_name_root << pixel_map_tail;
+		const std::string pixel_map_file_name = ss.str();
 
 		std::vector<std::vector<bool>> good_pixels;
 
 		try
 		{
 			#ifdef USE_SAVED_MASK
-			good_pixels = IceBRG::binary_load<std::vector<std::vector<bool>>>(
-					lens_pixel_map_file_name);
+			good_pixels = binary_load<std::vector<std::vector<bool>>>(
+					pixel_map_file_name);
 			#else
 			good_pixels = load_pixel_table(input_file_name);
 			#endif
@@ -256,7 +253,7 @@ int main( const int argc, const char *argv[] )
 		std::string lens_output_file_name = ss.str();
 
 		// Load the lens table
-		const auto lens_table_map = IceBRG::load_table_map<double>(lens_file_name);
+		const auto lens_table_map = load_table_map<double>(lens_file_name);
 
 		// Set up vectors to store result data
 		std::vector<COUNTING_TYPE> good_px_per_bin(num_bins+2,0); // Add 2 to allow potential over/underflow
@@ -267,7 +264,7 @@ int main( const int argc, const char *argv[] )
 		std::vector<COUNTING_TYPE> lens_total_px_per_bin(num_bins+2,0);
 
 		// Set up a map for each lens's info
-		IceBRG::table_map_t<double> field_result;
+		table_map_t<double> field_result;
 
 		// Add column to this table for bin middles
 		field_result["bin_mid_kpc"] = bin_mids;
@@ -292,14 +289,14 @@ int main( const int argc, const char *argv[] )
 			if(lens_m>lens_m_max) continue;
 
 			// Get the lens's position on the image
-			const unsigned lens_xp = IceBRG::round_int(lens_table_map.at("Xpos")[lens_i]);
-			const unsigned lens_yp = IceBRG::round_int(lens_table_map.at("Ypos")[lens_i]);
+			const unsigned lens_xp = round_int(lens_table_map.at("Xpos")[lens_i]);
+			const unsigned lens_yp = round_int(lens_table_map.at("Ypos")[lens_i]);
 
 			// Initialize per-lens vectors
 			for(auto & elem : lens_good_px_per_bin) elem = 0;
 			for(auto & elem : lens_total_px_per_bin) elem = 0;
 
-			const double pxfd_fact = IceBRG::value_of(IceBRG::afd(lens_z))/rad_per_px;
+			const double pxfd_fact = value_of(afd(lens_z))/rad_per_px;
 
 			const int lens_max_px_sep = pxfd_fact*max_kpc_sep+1;
 
@@ -335,7 +332,7 @@ int main( const int argc, const char *argv[] )
 				// Loop over possible source positions
 				for(int j=1; j<i; j+=sampling_factor)
 				{
-					const float d = IceBRG::dist2d<float,float>(i,j);
+					const float d = dist2d<float,float>(i,j);
 					if(d>lens_max_px_sep) continue;
 					unsigned bin_i = sep_limits.get_bin_index(d/pxfd_fact);
 
@@ -352,7 +349,7 @@ int main( const int argc, const char *argv[] )
 				}
 			}
 
-			//IceBRG::print_pixels<decltype(tag_vector),unsigned short>("tagged_pixels.dat",tag_vector);
+			//print_pixels<decltype(tag_vector),unsigned short>("tagged_pixels.dat",tag_vector);
 
 			// Set up result vector for this lens
 			std::vector<double> lens_res(num_bins);
@@ -365,19 +362,19 @@ int main( const int argc, const char *argv[] )
 						static_cast<float>(lens_total_px_per_bin[i]);
 
 //				std::cout << "Annulus unmasked area_type: " << lens_res[i] * pi *
-//					(IceBRG::square(sep_limits.upper_limit(i)*pxfd_fact*rad_per_px)-
-//						IceBRG::square(sep_limits.lower_limit(i))*pxfd_fact*rad_per_px) << std::endl;
+//					(square(sep_limits.upper_limit(i)*pxfd_fact*rad_per_px)-
+//						square(sep_limits.lower_limit(i))*pxfd_fact*rad_per_px) << std::endl;
 			}
 
 /*			// Smooth it
 
 			if(sampling_factor>2)
 			{
-				lens_res = IceBRG::sg_smooth(lens_res,sg_window_large,sg_deg);
+				lens_res = sg_smooth(lens_res,sg_window_large,sg_deg);
 			}
 			else
 			{
-				lens_res = IceBRG::sg_smooth(lens_res,sg_window_small,sg_deg);
+				lens_res = sg_smooth(lens_res,sg_window_small,sg_deg);
 			}*/
 
 			// Add this to the field table map
@@ -398,7 +395,7 @@ int main( const int argc, const char *argv[] )
 
 		// Get the good size of this field now
 		size_t num_good = num_good_pixels(good_pixels);
-		const double good_size_upper = IceBRG::square(rad_per_px)*num_good;
+		const double good_size_upper = square(rad_per_px)*num_good;
 		const double good_size_lower = good_size_upper;
 		std::vector<double> size_measures;
 		size_measures.push_back(good_size_lower);
@@ -413,11 +410,11 @@ int main( const int argc, const char *argv[] )
 			mean_results[field_name_root] = field_res;
 			field_sizes[field_name_root] = size_measures;
 
-			IceBRG::print_table_map(lens_output_file_name,field_result);
+			print_table_map(lens_output_file_name,field_result);
 
 			// Archive the good pixel map if we just calculated it
 			#ifndef USE_SAVED_MASK
-			IceBRG::binary_save(lens_pixel_map_file_name,good_pixels);
+			binary_save(pixel_map_file_name,good_pixels);
 			#endif
 
 			std::cout << "Finished processing field " << field_name_root << " (#" << ++num_finished_fields << "/" <<
@@ -430,13 +427,13 @@ int main( const int argc, const char *argv[] )
 	ss << mask_directory << "position_corr.dat";
 	std::string output_name = ss.str();
 
-	IceBRG::print_table_map(output_name,mean_results);
+	print_table_map(output_name,mean_results);
 
 	ss.str("");
 	ss << mask_directory << "field_sizes.dat";
 	std::string field_sizes_name = ss.str();
 
-	IceBRG::print_table_map(field_sizes_name,field_sizes);
+	print_table_map(field_sizes_name,field_sizes);
 
 	std::cout << "Done!\n";
 
