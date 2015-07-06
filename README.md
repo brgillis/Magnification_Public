@@ -5,7 +5,7 @@ This is a pre-release public posting of the code used for Gillis and Taylor (201
 ### What is this repository for? ###
 
 * Code used for Gillis and Taylor (2015), including a release of my C++ library, "IceBRG"
-* v0.9.0
+* v0.9.1
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
