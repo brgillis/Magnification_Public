@@ -47,7 +47,7 @@ class expected_count_derivative_cache: public brg_cache_2d<expected_count_deriva
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "magexdrv";
 		return name_base;
@@ -56,7 +56,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return v;
 	}
@@ -71,7 +71,7 @@ public:
 	expected_count_derivative_cache()
 	{
 	}
-	virtual ~expected_count_derivative_cache()
+	~expected_count_derivative_cache()
 	{
 	}
 };

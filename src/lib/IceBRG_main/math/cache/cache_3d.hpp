@@ -105,7 +105,7 @@ private:
 
 	// Private methods
 #if (1)
-	void _init() const throw()
+	void _init() const
 	{
 		// We check for initialisation twice due to the critical section here.
 		// It's expensive to enter, and we don't want to do anything inside it more than once,
@@ -237,7 +237,7 @@ private:
 		in_file.clear();
 		SPCP(name)->_loaded_ = true;
 	}
-	void _unload() const throw()
+	void _unload() const
 	{
 		SPCP(name)->_loaded_ = false;
 		SPCP(name)->_results_.clear();
@@ -254,7 +254,7 @@ private:
 		}
 
 		// Print a message that we're generating the cache
-		handle_notification("Generating " + SPCP(name)->_file_name_ + ". This may take some time_type.");
+		handle_notification("Generating " + SPCP(name)->_file_name_ + ". This may take some time.");
 
 		// Set up data
 		SPCP(name)->_resolution_1_ = (size_t) max( ( ( SPCP(name)->_max_1_ - SPCP(name)->_min_1_ ) / safe_d(SPCP(name)->_step_1_)) + 1, 2);
@@ -368,7 +368,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<any_units_type>(v);
 	}
@@ -376,22 +376,15 @@ protected:
 #endif // _BRG_USE_UNITS_
 
 	// Long calculation function, which is used to generate the cache
-	virtual flt_type _calculate(const flt_type & x_1, const flt_type & x_2, const flt_type & x_3) const
-	{
-		return 0;
-	}
+	flt_type _calculate(const flt_type & x_1, const flt_type & x_2, const flt_type & x_3) const;
 
 	// This function should be overloaded to provide a unique name for this cache
-	virtual const std::string _name_base() const throw()
-	{
-		char name_base[BRG_CACHE_ND_NAME_SIZE] = "";
-		return name_base;
-	}
+	const std::string _name_base() const;
 
 	// This function should be overloaded to call each cache of the same dimensionality
 	// this cache depends upon in calculation. This is necessary in order to avoid critical
 	// sections of the same name being called recursively.
-	virtual void _load_cache_dependencies() const
+	void _load_cache_dependencies() const
 	{
 	}
 
@@ -498,7 +491,7 @@ public:
 	}
 
 	template< typename Tx1, typename Tx2, typename Tx3 >
-	const any_units_type get( const Tx1 & init_x_1, const Tx2 & init_x_2,
+	any_units_type get( const Tx1 & init_x_1, const Tx2 & init_x_2,
 			const Tx3 & init_x_3) const
 	{
 
@@ -521,7 +514,7 @@ public:
 		if ( !SPCP(name)->_loaded_ )
 		{
 			// Load any caches we depend upon before the critical section
-			_load_cache_dependencies();
+			SPCP(name)->_load_cache_dependencies();
 
 			// Critical section here, since we can't load multiple times simultaneously
 
@@ -598,7 +591,7 @@ public:
 	}
 
 	// Constructor
-	brg_cache_3d() throw()
+	brg_cache_3d()
 	{
 	}
 

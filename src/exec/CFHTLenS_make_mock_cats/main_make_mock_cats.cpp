@@ -29,10 +29,6 @@
 #include <utility>
 #include <vector>
 
-#ifdef _OPENMP
-#include <omp.h>
-#endif
-
 #include <boost/serialization/vector.hpp>
 
 #include "IceBRG_main/file_access/binary_archive.hpp"
@@ -104,11 +100,7 @@ constexpr int base_seed = 12431;
 
 int main( const int argc, const char *argv[] )
 {
-	// General setup
-	#ifdef _OPENMP
-	omp_set_num_threads(5);
-	#endif
-	
+
 	// Open and read in the fields list
 	std::ifstream fi;
 	IceBRG::open_file_input(fi,fields_list);

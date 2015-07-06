@@ -9,6 +9,7 @@ AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([subdir-objects])
 
 AC_LANG(C++)
+AM_PATH_PYTHON([2.6])
 
 AC_PROG_RANLIB
 
@@ -65,6 +66,7 @@ AC_CHECK_FUNCS([floor modf pow sqrt])
 
 AC_CONFIG_FILES([Makefile
                  src/Makefile
+                 src/exec/CFHTLenS_catalogue_fetching/Makefile
                  src/exec/CFHTLenS_catalogue_filtering/Makefile
                  src/exec/CFHTLenS_corr_func/Makefile
                  src/exec/CFHTLenS_field_stats/Makefile

@@ -49,7 +49,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "lensshft";
 		return name_base;
@@ -58,9 +58,9 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
-		return any_units_cast<surface_density_type>(v);
+		return units_cast<surface_density_type>(v);
 	}
 
 #endif // _BRG_USE_UNITS_
@@ -72,7 +72,7 @@ public:
 	shifting_cache()
 	{
 	}
-	virtual ~shifting_cache()
+	~shifting_cache()
 	{
 	}
 };

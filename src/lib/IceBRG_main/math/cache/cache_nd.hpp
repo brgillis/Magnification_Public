@@ -98,7 +98,7 @@ private:
 
 	// Private methods
 #if (1)
-	void _init() const throw()
+	void _init() const
 	{
 		// We check for initialisation twice due to the critical section here.
 		// It's expensive to enter, and we don't want to do anything inside it more than once,
@@ -226,7 +226,7 @@ private:
 		in_file.clear();
 		SPCP(name)->_loaded_ = true;
 	}
-	void _unload() const throw()
+	void _unload() const
 	{
 		SPCP(name)->_loaded_ = false;
 		SPCP(name)->_results_.clear();
@@ -247,7 +247,7 @@ private:
 		}
 
 		// Print a message that we're generating the cache
-		handle_notification("Generating " + SPCP(name)->_file_name_ + ". This may take some time_type.");
+		handle_notification("Generating " + SPCP(name)->_file_name_ + ". This may take some time.");
 
 		// Set up data
 		SPCP(name)->_resolutions_.resize(SPCP(name)->_num_dim_);
@@ -342,7 +342,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<any_units_type>(v);
 	}
@@ -350,17 +350,10 @@ protected:
 #endif // _BRG_USE_UNITS_
 
 	// Long calculation function, which is used to generate the cache
-	flt_type _calculate(const IceBRG::multi_vector<flt_type> & x) const
-	{
-		return 0;
-	}
+	flt_type _calculate(const IceBRG::multi_vector<flt_type> & x) const;
 
 	// This function should be overloaded to provide a unique name for this cache
-	const std::string _name_base() const throw()
-	{
-		char name_base[BRG_CACHE_ND_NAME_SIZE] = "";
-		return name_base;
-	}
+	std::string _name_base() const;
 
 	// This function should be overloaded to call each cache of the same dimensionality
 	// this cache depends upon in calculation. This is necessary in order to avoid critical
@@ -433,7 +426,7 @@ public:
 		if ( !SPCP(name)->_loaded_ )
 		{
 			// Load any caches we depend upon before the critical section
-			_load_cache_dependencies();
+			SPCP(name)->_load_cache_dependencies();
 
 			// Critical section here, since we can't load multiple times simultaneously
 			#pragma omp critical(load_brg_cache_nd)
@@ -512,7 +505,7 @@ public:
 	}
 
 	// Constructor
-	brg_cache_nd() throw()
+	brg_cache_nd()
 	{
 		if(!SPCP(name)->_initialised_) SPP(name)->_init();
 	}

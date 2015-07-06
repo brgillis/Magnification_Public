@@ -48,7 +48,7 @@ class mag_calibration_cache: public brg_cache<mag_calibration_cache> {
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		return "mag_calibration";
 	}
@@ -56,7 +56,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have. Only the units matter in the return, not the value
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<dimensionless_type>(v);
 	}
@@ -70,7 +70,7 @@ public:
 	mag_calibration_cache()
 	{
 	}
-	virtual ~mag_calibration_cache()
+	~mag_calibration_cache()
 	{
 	}
 };

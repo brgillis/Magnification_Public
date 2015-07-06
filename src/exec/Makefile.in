@@ -219,6 +219,11 @@ PACKAGE_TARNAME = @PACKAGE_TARNAME@
 PACKAGE_URL = @PACKAGE_URL@
 PACKAGE_VERSION = @PACKAGE_VERSION@
 PATH_SEPARATOR = @PATH_SEPARATOR@
+PYTHON = @PYTHON@
+PYTHON_EXEC_PREFIX = @PYTHON_EXEC_PREFIX@
+PYTHON_PLATFORM = @PYTHON_PLATFORM@
+PYTHON_PREFIX = @PYTHON_PREFIX@
+PYTHON_VERSION = @PYTHON_VERSION@
 RANLIB = @RANLIB@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
@@ -257,9 +262,13 @@ mkdir_p = @mkdir_p@
 mypj_compile_get_unmasked_fractions = @mypj_compile_get_unmasked_fractions@
 oldincludedir = @oldincludedir@
 pdfdir = @pdfdir@
+pkgpyexecdir = @pkgpyexecdir@
+pkgpythondir = @pkgpythondir@
 prefix = @prefix@
 program_transform_name = @program_transform_name@
 psdir = @psdir@
+pyexecdir = @pyexecdir@
+pythondir = @pythondir@
 sbindir = @sbindir@
 sharedstatedir = @sharedstatedir@
 sky2xy_found = @sky2xy_found@
@@ -270,7 +279,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
-SUBDIRS = CFHTLenS_catalogue_filtering CFHTLenS_corr_func CFHTLenS_field_stats CFHTLenS_fit_lensing_models @mypj_compile_get_unmasked_fractions@ CFHTLenS_gg_lensing CFHTLenS_make_mock_cats CFHTLenS_source_count_fitting CFHTLenS_source_counting 
+SUBDIRS = CFHTLenS_catalogue_fetching CFHTLenS_catalogue_filtering CFHTLenS_corr_func CFHTLenS_field_stats CFHTLenS_fit_lensing_models @mypj_compile_get_unmasked_fractions@ CFHTLenS_gg_lensing CFHTLenS_make_mock_cats CFHTLenS_source_count_fitting CFHTLenS_source_counting 
 all: all-recursive
 
 .SUFFIXES:

@@ -91,7 +91,7 @@ private:
 
 	// Private methods
 #if (1)
-	void _init() const throw()
+	void _init() const
 	{
 		// We check for initialisation twice due to the critical section here.
 		// It's expensive to enter, and we don't want to do anything inside it more than once,
@@ -238,7 +238,7 @@ private:
 		in_file.clear();
 		SPCP(name)->_loaded_ = true;
 	}
-	void _unload() const throw()
+	void _unload() const
 	{
 		SPCP(name)->_loaded_ = false;
 		SPCP(name)->_results_.clear();
@@ -251,6 +251,9 @@ private:
 		{
 			throw std::runtime_error("ERROR: Bad range passed to brg_cache::_calc() for " + SPCP(name)->_name_base() + "\n");
 		}
+
+		// Print a message that we're generating the cache
+		handle_notification("Generating " + SPCP(name)->_file_name_ + ". This may take some time.");
 
 		// Set up data
 		SPCP(name)->_resolution_1_ = (size_t) max( ( ( SPCP(name)->_max_1_ - SPCP(name)->_min_1_ ) / safe_d(SPCP(name)->_step_1_)) + 1, 2);
@@ -280,6 +283,9 @@ private:
 
 		if(bad_result) throw std::runtime_error("One or more calculations failed in generating cache " + SPCP(name)->_name_base());
 		SPCP(name)->_loaded_ = true;
+
+		// Print a message that we've finished generating the cache
+		handle_notification("Finished generating " + SPCP(name)->_file_name_ + "!");
 	}
 	void _output() const
 	{
@@ -320,25 +326,24 @@ protected:
 	// These are made protected instead of private so base classes can overload them
 #if (1)
 
+	std::string _name_base() const;
+
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
-		return any_units_cast<any_units_type>(v);
+		return v;
 	}
-	const any_units_type _inverse_units(const flt_type & v) const
+	any_units_type _inverse_units(const flt_type & v) const
 	{
-		return any_units_cast<any_units_type>(v);
+		return v;
 	}
 
 #endif // _BRG_USE_UNITS_
 
 	// Long calculation function, which is used to generate the cache
-	flt_type _calculate(const flt_type & x) const
-	{
-		return 0;
-	}
+	flt_type _calculate(const flt_type & x) const;
 
 	// This function should be overloaded to call each cache of the same dimensionality as
 	// this cache depends upon in calculation. This is necessary in order to avoid critical
@@ -574,7 +579,7 @@ public:
 	}
 
 	// Deconstructor
-	~brg_cache()
+	virtual ~brg_cache()
 	{
 	}
 

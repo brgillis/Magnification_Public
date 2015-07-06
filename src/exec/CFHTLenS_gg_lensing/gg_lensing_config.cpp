@@ -48,7 +48,7 @@ gg_lensing_config::gg_lensing_config( const int argc, const char *argv[] )
 	{
 		handle_notification(
 				std::string("CFHTLenS_gg_lensing normally takes a configuration file as the second\n") +
-				"command-line argument. None was detected, so it will use default values.");
+				"command-line argument. None was detected, so it will use default values.\n");
 
 		use_precalculated_data = false;
 		precalculated_data_filename = "";
@@ -56,7 +56,7 @@ gg_lensing_config::gg_lensing_config( const int argc, const char *argv[] )
 		R_min = 0*kpctom*m;
 		R_max = 2000*kpctom*m;
 		R_bins = 20;
-		R_log = true;
+		R_log = false;
 
 		m_min = 1e9*Msuntokg*kg;
 		m_max = 1e12*Msuntokg*kg;

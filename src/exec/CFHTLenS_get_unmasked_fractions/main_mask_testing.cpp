@@ -32,10 +32,6 @@
 #include <string>
 #include <unordered_map>
 
-#ifdef _OPENMP
-#include <omp.h>
-#endif
-
 #include <boost/lexical_cast.hpp>
 #include <boost/serialization/vector.hpp>
 
@@ -141,11 +137,6 @@ int main( const int argc, const char *argv[] )
 
 	const std::string mask_directory = join_path(data_directory,mask_subdirectory);
 	const std::string field_directory = join_path(data_directory,field_subdirectory);
-
-	// General setup
-#ifdef _OPENMP
-	omp_set_num_threads(5);
-#endif
 
 	// Set up separation limits vector
 	const limit_vector<float> sep_limits(min_kpc_sep,max_kpc_sep,num_sep_steps);
@@ -284,7 +275,7 @@ int main( const int argc, const char *argv[] )
 			const float lens_z = lens_table_map.at("Z_B")[lens_i];
 			if(lens_z>lens_z_max) continue;
 			if(lens_z<lens_z_min) continue;
-			const double lens_m = lens_table_map.at("Mstel_kg")[lens_i];
+			const mass_type lens_m = units_cast<mass_type>(lens_table_map.at("Mstel_kg")[lens_i]);
 			if(lens_m<lens_m_min) continue;
 			if(lens_m>lens_m_max) continue;
 

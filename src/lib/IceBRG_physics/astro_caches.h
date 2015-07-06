@@ -46,7 +46,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		return "dfa";
 	}
@@ -57,12 +57,14 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const;
-	const any_units_type _inverse_units(const flt_type & v) const;
+	any_units_type _units( const flt_type & v ) const;
+	any_units_type _inverse_units(const flt_type & v) const;
 
 #endif
 
 public:
+
+	~dfa_cache() {}
 
 };
 // class dfa_cache
@@ -78,7 +80,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "ang_di_d";
 		return name_base;
@@ -90,12 +92,13 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const;
-	const any_units_type _inverse_units(const flt_type & v) const;
+	any_units_type _units( const flt_type & v ) const;
 
 #endif
 
 public:
+
+	~add_cache() {}
 
 };
 // class add_cache
@@ -111,7 +114,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		return "tfa";
 	}
@@ -122,12 +125,14 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Gets the result in the proper units
-	const any_units_type _units( const flt_type & v ) const;
-	const any_units_type _inverse_units(const flt_type & v) const;
+	any_units_type _units( const flt_type & v ) const;
+	any_units_type _inverse_units(const flt_type & v) const;
 
 #endif
 
 public:
+
+	~tfa_cache() {}
 
 };
 // class tfa_cache

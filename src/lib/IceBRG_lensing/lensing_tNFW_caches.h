@@ -46,7 +46,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tNFW_sig";
 		return name_base;
@@ -55,7 +55,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -67,6 +67,8 @@ protected:
 			const flt_type & in_param_3 ) const;
 
 public:
+
+	~tNFW_sig_cache() {}
 
 }; // class tNFW_sig_cache
 
@@ -82,7 +84,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tN_o_sig";
 		return name_base;
@@ -91,7 +93,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -103,6 +105,8 @@ protected:
 			const flt_type & in_param_3, const flt_type & in_param_4 ) const;
 
 public:
+
+	~tNFW_offset_sig_cache() {}
 
 }; // class tNFW_offset_sig_cache
 
@@ -118,7 +122,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tN_g_sig";
 		return name_base;
@@ -133,7 +137,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -145,6 +149,8 @@ protected:
 			const flt_type & in_param_3, const flt_type & in_param_4 ) const;
 
 public:
+
+	~tNFW_group_sig_cache() {}
 
 }; // class tNFW_group_sig_cache
 
@@ -160,7 +166,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tN_s_sig";
 		return name_base;
@@ -175,7 +181,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -187,6 +193,8 @@ protected:
 			const flt_type & in_param_3 ) const;
 
 public:
+
+	~tNFW_shifted_sig_cache() {}
 
 }; // class tNFW_shifted_sig_cache
 
@@ -201,7 +209,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tNFWSigm";
 		return name_base;
@@ -210,7 +218,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -222,6 +230,8 @@ protected:
 			const flt_type & in_param_3 ) const;
 
 public:
+
+	~tNFW_Sigma_cache() {}
 
 }; // class tNFW_Sigma_cache
 
@@ -237,7 +247,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tNoSigma";
 		return name_base;
@@ -246,7 +256,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -258,6 +268,8 @@ protected:
 			const flt_type & in_param_3, const flt_type & in_param_4 ) const;
 
 public:
+
+	~tNFW_offset_Sigma_cache() {}
 
 }; // class tNFW_offset_Sigma_cache
 
@@ -273,7 +285,7 @@ private:
 
 protected:
 
-	const std::string _name_base() const throw()
+	const std::string _name_base() const
 	{
 		char name_base[BRG_CACHE_ND_NAME_SIZE] = "tNgSigma";
 		return name_base;
@@ -288,7 +300,7 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
 		return any_units_cast<surface_density_type>(v);
 	}
@@ -300,6 +312,8 @@ protected:
 			const flt_type & in_param_3, const flt_type & in_param_4 ) const;
 
 public:
+
+	~tNFW_group_Sigma_cache() {}
 
 }; // class tNFW_group_Sigma_cache
 

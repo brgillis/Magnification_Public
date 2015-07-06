@@ -24,7 +24,6 @@
 \**********************************************************************/
 
 #include <iostream>
-#include <omp.h>
 #include <string>
 #include <vector>
 
@@ -83,10 +82,6 @@ inline size_t num_good_pixels(const std::vector<std::vector<bool>> & input)
  */
 int main( const int argc, const char *argv[] )
 {
-
-#ifdef _OPENMP
-	omp_set_num_threads(5);
-#endif
 
 	limit_vector<double> z_limits(z_bin_min,z_bin_max,z_bins);
 

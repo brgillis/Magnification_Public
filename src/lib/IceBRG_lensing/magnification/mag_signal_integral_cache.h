@@ -47,7 +47,7 @@ class mag_signal_integral_cache: public brg_cache<mag_signal_integral_cache> {
 
 protected:
 
-	const std::string _name_base() const throw()
+	std::string _name_base() const
 	{
 		return "mag_signal_integral";
 	}
@@ -55,9 +55,9 @@ protected:
 #ifdef _BRG_USE_UNITS_
 
 	// Tells what units the result should have. Only the units matter in the return, not the value
-	const any_units_type _units( const flt_type & v ) const
+	any_units_type _units( const flt_type & v ) const
 	{
-		return any_units_cast<custom_unit_type<0,0,0,-2,0>>(v);
+		return units_cast<custom_unit_type<0,0,0,-2,0>>(v);
 	}
 
 #endif // _BRG_USE_UNITS_
@@ -70,7 +70,7 @@ public:
 	mag_signal_integral_cache()
 	{
 	}
-	virtual ~mag_signal_integral_cache()
+	~mag_signal_integral_cache()
 	{
 	}
 };

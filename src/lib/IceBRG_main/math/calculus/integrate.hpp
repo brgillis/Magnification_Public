@@ -415,7 +415,7 @@ inline auto integrate_mc( const f * func,
 //                   will dramatically increase speed of the function, but decrease accuracy (whether the trade-off is worth it should be investigated)
 // num_passed_in_param & passed_in_param: Ignore these unless you know what you're doing.
 
-// Scalar-in, scalar-out version. !!! Still needs cleanup after testing
+// Scalar-in, scalar-out version.
 template< typename f, typename Tin >
 inline auto integrate_Romberg( const f & func,
 		const Tin & min_in_param, const Tin & max_in_param, flt_type precision = 0.00001,
