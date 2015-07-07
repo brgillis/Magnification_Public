@@ -5102,7 +5102,7 @@ done
 test -n "$doxygen_found" || doxygen_found=""yes""
 
 
- if test -n "x$doxygen_found" == "xyes"; then
+ if test "x$doxygen_found" == "xyes"; then
   HAVE_DOXYGEN_TRUE=
   HAVE_DOXYGEN_FALSE='#'
 else

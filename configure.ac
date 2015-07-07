@@ -42,7 +42,7 @@ AC_CHECK_PROG(sky2xy_found,sky2xy,"yes","no")
 AC_CHECK_PROG(xy2sky_found,xy2sky,"yes","no")
 AC_CHECK_PROGS(doxygen_found,doxygen,"yes","no")
 
-AM_CONDITIONAL([HAVE_DOXYGEN], [test -n "x$doxygen_found" == "xyes"])
+AM_CONDITIONAL([HAVE_DOXYGEN], [test "x$doxygen_found" == "xyes"])
 AM_COND_IF([HAVE_DOXYGEN], [AC_CONFIG_FILES([docs/Doxyfile])])
 
 # Checks for libraries.
@@ -103,7 +103,7 @@ AS_IF([test "x$sky2xy_found" == "xyes" -a "x$xy2sky_found" == "xyes"], [],
 		which call these programs will fail until these are installed. They can be installed as part of the wcstools package.])])
 
 AS_IF([test "x$doxygen_found" == "xyes"], [],
-	[AC_MSG_WARN([Unable to find Doxygen. This program can compile, documentation will not be generated.])])
+	[AC_MSG_WARN([Unable to find Doxygen. This program can compile, but documentation will not be generated.])])
 
 AS_IF([test "x$mypj_found_std_headers" != "xyes"],
 	[AC_MSG_WARN([Unable to find the standard definitions headers.])])
