@@ -1,0 +1,106 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_source_counting/main_source_counting.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_source_counting/main_source_counting.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include <Eigen/Core>\fP
+.br
+\fC#include 'IceBRG_main/container/labeled_array\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/table_typedefs\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/external/sgsmooth\&.h'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/join_path\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/calculus/integrate\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/solvers/solvers\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/elementwise_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/limit_vector\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/manipulations\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_global_values\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/pair_binner\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/pair_bins_summary\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/source_galaxy\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/astro\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/sky_obj/galaxy\&.h'\fP
+.br
+\fC#include 'get_data_directory\&.hpp'\fP
+.br
+\fC#include 'magic_values\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (const int argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBsource_base\fP = '_source\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBcount_column_to_use\fP = 'count'"
+.br
+.ti -1c
+.RI "constexpr double \fBsg_mag_window\fP = 0\&.4"
+.br
+.ti -1c
+.RI "constexpr short unsigned \fBsg_window\fP = \fBsg_mag_window\fP/mag_m_step"
+.br
+.ti -1c
+.RI "constexpr short unsigned \fBsg_deg\fP = 3"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (const intargc, const char *argv[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string count_column_to_use = 'count'"
+
+.SS "constexpr short unsigned sg_deg = 3"
+
+.SS "constexpr double sg_mag_window = 0\&.4"
+
+.SS "constexpr short unsigned sg_window = \fBsg_mag_window\fP/mag_m_step"
+
+.SS "const std::string source_base = '_source\&.dat'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

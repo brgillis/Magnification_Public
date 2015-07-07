@@ -1,0 +1,77 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/utility.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/utility.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cassert>\fP
+.br
+\fC#include <complex>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <limits>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/tuple/tuple\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/container/is_container\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > \fBint_type\fP \fBIceBRG::ssize\fP (const T &container)"
+.br
+.ti -1c
+.RI "void \fBIceBRG::set_zero\fP (\fBint_type\fP &obj)"
+.br
+.ti -1c
+.RI "void \fBIceBRG::set_zero\fP (\fBshort_int_type\fP &obj)"
+.br
+.ti -1c
+.RI "void \fBIceBRG::set_zero\fP (\fBlong_int_type\fP &obj)"
+.br
+.ti -1c
+.RI "void \fBIceBRG::set_zero\fP (\fBflt_type\fP &obj)"
+.br
+.ti -1c
+.RI "void \fBIceBRG::set_zero\fP (\fBlong_flt_type\fP &obj)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBIceBRG::set_zero\fP (std::vector< T > &vec)"
+.br
+.ti -1c
+.RI "template<typename T > void \fBIceBRG::set_zero\fP (T *&obj)"
+.br
+.ti -1c
+.RI "template<typename obj_type > void \fBIceBRG::set_zero\fP (obj_type &obj)"
+.br
+.ti -1c
+.RI "template<typename obj_type > void \fBIceBRG::make_obj\fP (\fBBRG_UNIQUE_PTR\fP< obj_type > &obj_pointer)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

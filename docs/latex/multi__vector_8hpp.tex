@@ -1,0 +1,169 @@
+\hypertarget{multi__vector_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/multi\-\_\-vector.hpp File Reference}
+\label{multi__vector_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/multi\-\_\-vector.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/multi\-\_\-vector.\-hpp}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/utility.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/elementwise\-\_\-functions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/summary\-\_\-functions.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector$<$ T, A $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\void \hyperlink{namespaceIceBRG_a7493a46bbc68c3aa67603f1e453cb266}{Ice\-B\-R\-G\-::swap} (multi\-\_\-vector$<$ T, A $>$ \&v1, multi\-\_\-vector$<$ T, A $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a5b38eff204dde0267a08172da735dc2c}{Ice\-B\-R\-G\-::operator+} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_aef9c10918e088bb2fc977df06ce504fc}{Ice\-B\-R\-G\-::operator+} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const std\-::vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a620df17dfe0302262ba3d345ea47fc35}{Ice\-B\-R\-G\-::operator+} (const std\-::vector$<$ T1, A1 $>$ \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a51bf8f08ec7aacd6315b72d860fc29f4}{Ice\-B\-R\-G\-::operator+} (multi\-\_\-vector$<$ T1, A1 $>$ v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_ac814fa6496297941b5cd2a3eee09942f}{Ice\-B\-R\-G\-::operator+} (T1 v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a1efdf0e26382c2842a20882b4d6ea88b}{Ice\-B\-R\-G\-::operator-\/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_ad19694786b76b7fa8b31f7ecca068067}{Ice\-B\-R\-G\-::operator-\/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const std\-::vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a0702c555cb23a263c1ff00cdaea34f6c}{Ice\-B\-R\-G\-::operator-\/} (const std\-::vector$<$ T1, A1 $>$ \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_ad9f2edab0f323edcf75b29603b5953f6}{Ice\-B\-R\-G\-::operator-\/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_ab6f562c73028eb890e26e18c80a131ca}{Ice\-B\-R\-G\-::operator-\/} (T1 v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a46636b1c68a548740eb744c5e14a5af8}{Ice\-B\-R\-G\-::operator$\ast$} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a8970349c8399f859b43145564b36fd51}{Ice\-B\-R\-G\-::operator$\ast$} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const std\-::vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a53dbde352dc28555860e0e453beb61bb}{Ice\-B\-R\-G\-::operator$\ast$} (const std\-::vector$<$ T1, A1 $>$ \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a52ad9ecdfacfd81a0b3071f17322bbe4}{Ice\-B\-R\-G\-::operator$\ast$} (multi\-\_\-vector$<$ T1, A1 $>$ v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_a2bed0c80e72d70765507f839f5d7024d}{Ice\-B\-R\-G\-::operator$\ast$} (T1 v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a74e3345007374a26851ec9409f9a1b49}{Ice\-B\-R\-G\-::operator/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a9efa03563d9a194728d53b924956194c}{Ice\-B\-R\-G\-::operator/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const std\-::vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a08b92990f0e893494599c7450a206690}{Ice\-B\-R\-G\-::operator/} (const std\-::vector$<$ T1, A1 $>$ \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_af4f974023316002e353c6218f893f2e9}{Ice\-B\-R\-G\-::operator/} (multi\-\_\-vector$<$ T1, A1 $>$ v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_ae69a8c98c2896391015340a87c07ae16}{Ice\-B\-R\-G\-::operator/} (T1 v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_ad06312f2e05a9d4994ddaec243242500}{Ice\-B\-R\-G\-::operator==} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a331262aa3c5a33293c68f35aee0350bd}{Ice\-B\-R\-G\-::operator==} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_aa6fa4a8424f5051ddbe4b39c77b698f5}{Ice\-B\-R\-G\-::operator==} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a654d1bb4d81bda12ddfd3f1877e716b9}{Ice\-B\-R\-G\-::operator!=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_acf8f5e81f304de50c114edfb923a980e}{Ice\-B\-R\-G\-::operator!=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a34f4a8f890be55fae2a455f900738a28}{Ice\-B\-R\-G\-::operator!=} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a97d457a38fd83f749dc536408f9dcce7}{Ice\-B\-R\-G\-::operator$<$} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_ad027dea3a036f6b7fe3e9569264b0ef4}{Ice\-B\-R\-G\-::operator$<$} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_aebc2ba24a7364380cba288a9dc0e11bb}{Ice\-B\-R\-G\-::operator$<$} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_af66da99a25ff1a0c0a0648d6f4cacafd}{Ice\-B\-R\-G\-::operator$>$} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a23c02407348b8ccead4ef56ace20dbea}{Ice\-B\-R\-G\-::operator$>$} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_afdb9ff9e0936048867925814e5b812c5}{Ice\-B\-R\-G\-::operator$>$} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a6202208614894a948e4e2a42c21a7e02}{Ice\-B\-R\-G\-::operator$<$=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a2840f4f6c157ae44809aa2147cb5634b}{Ice\-B\-R\-G\-::operator$<$=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_aa5d89b08e3fb79a1e60fb1b0bec45c87}{Ice\-B\-R\-G\-::operator$<$=} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a96bb204a67d7c22b5b0478290744c36c}{Ice\-B\-R\-G\-::operator$>$=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_a593cbe10c8b991eed3439719f440bbb1}{Ice\-B\-R\-G\-::operator$>$=} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const std\-::vector$<$ bool $>$ \& \hyperlink{namespaceIceBRG_ac43383dc65efeb8b2c80995ef751aad8}{Ice\-B\-R\-G\-::operator$>$=} (const T1 v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_ab587eb53926cf8e4dbee0fd61d4e7c3a}{Ice\-B\-R\-G\-::min} (multi\-\_\-vector$<$ T, A $>$ v1, const multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_ac7d617bf12fb3e93fed83f86a8857e82}{Ice\-B\-R\-G\-::min} (multi\-\_\-vector$<$ T, A $>$ v1, const std\-::vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_af5f5bb2549b40fc144eaa8ff79955dbc}{Ice\-B\-R\-G\-::min} (const std\-::vector$<$ T, A $>$ \&v1, const multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \hyperlink{namespaceIceBRG_a41dfd1c517715eecd797955d5bbcfd3b}{Ice\-B\-R\-G\-::min} (T v1, multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a58195c6e7b76bbc581b38ccf2a393262}{Ice\-B\-R\-G\-::min} (multi\-\_\-vector$<$ T, A $>$ v1, const T\-\_\-o v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_af201b849bae0a34deca8224b6ec33e31}{Ice\-B\-R\-G\-::max} (multi\-\_\-vector$<$ T, A $>$ v1, const multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_aa9d3aa0facb2e56fbf35dc931bb377c3}{Ice\-B\-R\-G\-::max} (multi\-\_\-vector$<$ T, A $>$ v1, const std\-::vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a4dfe17c79cc4b37a1e1e9de7abc72e8b}{Ice\-B\-R\-G\-::max} (const std\-::vector$<$ T, A $>$ \&v1, const multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T , typename T\-\_\-o , typename A\-\_\-o $>$ }\\multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ \hyperlink{namespaceIceBRG_aaaa561d241312f48ff79afd0c8023361}{Ice\-B\-R\-G\-::max} (const T v1, multi\-\_\-vector$<$ T\-\_\-o, A\-\_\-o $>$ v2)
+\item 
+{\footnotesize template$<$typename T , typename A , typename T\-\_\-o $>$ }\\multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a223be429a666e2ef2ca22c26ea8e5f19}{Ice\-B\-R\-G\-::max} (multi\-\_\-vector$<$ T, A $>$ v1, const T\-\_\-o v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a2be9de849c61ce02aba5477f4792391c}{Ice\-B\-R\-G\-::pow} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_aa4e163dd2a9d355e27dbd2450eece323}{Ice\-B\-R\-G\-::pow} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_aa64d6be7b7c668b8ec3afe185a9bbe45}{Ice\-B\-R\-G\-::pow} (const T1 \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_a9c3ecdd0b11c370f8d575bd9368687af}{Ice\-B\-R\-G\-::safe\-\_\-pow} (multi\-\_\-vector$<$ T1, A1 $>$ v1, const multi\-\_\-vector$<$ T2, A2 $>$ \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename A1 , typename T2 $>$ }\\const multi\-\_\-vector$<$ T1, A1 $>$ \hyperlink{namespaceIceBRG_adf05dc7cf51f011bea3a3c29d54d44e0}{Ice\-B\-R\-G\-::safe\-\_\-pow} (const multi\-\_\-vector$<$ T1, A1 $>$ \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename A2 $>$ }\\const multi\-\_\-vector$<$ T2, A2 $>$ \hyperlink{namespaceIceBRG_a6cf85db10c2fba10bd89f305ee5ac52f}{Ice\-B\-R\-G\-::safe\-\_\-pow} (const T1 \&v1, multi\-\_\-vector$<$ T2, A2 $>$ v2)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_af5a45a1ae5b6ab5ebae83d9f649318a5}{Ice\-B\-R\-G\-::operator-\/} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_ad6f65f5bba2c8b96b6b33f93cfa3cd7f}{Ice\-B\-R\-G\-::abs} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_ad78a65d06e8bdc03534b89fd3ec01789}{Ice\-B\-R\-G\-::sqrt} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a4d1466ea7750a9f6de43a79e4c8d23d1}{Ice\-B\-R\-G\-::safe\-\_\-sqrt} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_ac32d08c445a60fcadf434ace48406d94}{Ice\-B\-R\-G\-::exp} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a12901d9ef42c183e7268f4334a95628b}{Ice\-B\-R\-G\-::square} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a44985542dda9e074751a55cc354bfc38}{Ice\-B\-R\-G\-::cube} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_af10adb416b6990751b8a95a59ee16f12}{Ice\-B\-R\-G\-::quart} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a530690fc21a37b60c129ced409bceaa5}{Ice\-B\-R\-G\-::inverse} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a0c6241d2692d5628797728af2efd0c0f}{Ice\-B\-R\-G\-::inv\-\_\-square} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a327fa8b9cb72205f2d07d21cad508feb}{Ice\-B\-R\-G\-::inv\-\_\-cube} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a66e21644cb97134df27c37f6b17ff847}{Ice\-B\-R\-G\-::inv\-\_\-quart} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const multi\-\_\-vector$<$ T, A $>$ \hyperlink{namespaceIceBRG_a6a42ffe9a64197dfc458f9e5ff648ce2}{Ice\-B\-R\-G\-::safe\-\_\-d} (multi\-\_\-vector$<$ T, A $>$ v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const T \hyperlink{namespaceIceBRG_a506ce09b9b1cefbe1bd3b8e062a8938b}{Ice\-B\-R\-G\-::sum} (const \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector}$<$ T, A $>$ \&v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const T \hyperlink{namespaceIceBRG_a631ab58f518c17b99a3e2d1c2d022830}{Ice\-B\-R\-G\-::product} (const \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector}$<$ T, A $>$ \&v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const T \hyperlink{namespaceIceBRG_a31912d66a78938bcc3e0fdbc917c5eec}{Ice\-B\-R\-G\-::mean} (const \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector}$<$ T, A $>$ \&v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const T \hyperlink{namespaceIceBRG_a97e1636544e3bdcfc71f53292e1c3df3}{Ice\-B\-R\-G\-::std} (const \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector}$<$ T, A $>$ \&v)
+\item 
+{\footnotesize template$<$typename T , typename A $>$ }\\const T \hyperlink{namespaceIceBRG_a9db49a32658ae04d4e5780e90c58ae15}{Ice\-B\-R\-G\-::stddev} (const \hyperlink{classIceBRG_1_1multi__vector}{Ice\-B\-R\-G\-::multi\-\_\-vector}$<$ T, A $>$ \&v)
+\end{DoxyCompactItemize}

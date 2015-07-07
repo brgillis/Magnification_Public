@@ -1,0 +1,365 @@
+.TH "IceBRG::pair_bins_summary" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IceBRG::pair_bins_summary \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <pair_bins_summary\&.h>\fP
+.PP
+Inherited by \fBIceBRG::pair_binner\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBpair_bins_summary\fP ()"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP > R_bin_limits, \fBIceBRG::limit_vector\fP< \fBmass_type\fP > m_bin_limits=std::vector< \fBflt_type\fP >(), \fBIceBRG::limit_vector\fP< \fBflt_type\fP > z_bin_limits=std::vector< \fBflt_type\fP >(), \fBIceBRG::limit_vector\fP< \fBflt_type\fP > mag_bin_limits=std::vector< \fBflt_type\fP >())"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_bins=1, const \fBmass_type\fP &m_min=-std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBmass_type\fP &m_max=std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBssize_t\fP &m_bins=1, const \fBflt_type\fP &z_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &z_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &\fBz_bins\fP=1, const \fBflt_type\fP &mag_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &mag_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &mag_bins=1)"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP (std::istream &in)"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP (const std::string &filename)"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP (const \fBpair_binner\fP &bins)"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP & \fBoperator=\fP (const \fBpair_binner\fP &bins)"
+.br
+.ti -1c
+.RI "virtual \fB~pair_bins_summary\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_R_limits\fP (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP > R_bin_limits)"
+.br
+.ti -1c
+.RI "void \fBset_m_limits\fP (\fBIceBRG::limit_vector\fP< \fBmass_type\fP > m_bin_limits)"
+.br
+.ti -1c
+.RI "void \fBset_z_limits\fP (\fBIceBRG::limit_vector\fP< \fBflt_type\fP > z_bin_limits)"
+.br
+.ti -1c
+.RI "void \fBset_mag_limits\fP (\fBIceBRG::limit_vector\fP< \fBflt_type\fP > mag_bin_limits)"
+.br
+.ti -1c
+.RI "void \fBset_linear_R_limits\fP (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_bins)"
+.br
+.ti -1c
+.RI "void \fBset_linear_m_limits\fP (const \fBmass_type\fP &m_min, const \fBmass_type\fP &m_max, const \fBssize_t\fP &m_bins)"
+.br
+.ti -1c
+.RI "void \fBset_linear_z_limits\fP (const \fBflt_type\fP &z_min, const \fBflt_type\fP &z_max, const \fBssize_t\fP &\fBz_bins\fP)"
+.br
+.ti -1c
+.RI "void \fBset_linear_mag_limits\fP (const \fBflt_type\fP &mag_min, const \fBflt_type\fP &mag_max, const \fBssize_t\fP &mag_bins)"
+.br
+.ti -1c
+.RI "void \fBset_log_R_limits\fP (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBset_log_m_limits\fP (const \fBmass_type\fP &m_min, const \fBmass_type\fP &m_max, const \fBssize_t\fP &m_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBset_log_z_limits\fP (const \fBflt_type\fP &z_min, const \fBflt_type\fP &z_max, const \fBssize_t\fP &z_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBset_log_mag_limits\fP (const \fBflt_type\fP &mag_min, const \fBflt_type\fP &mag_max, const \fBssize_t\fP &mag_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBclear_R_limits\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear_m_limits\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear_z_limits\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear_mag_limits\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_limits\fP (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP > R_bin_limits, \fBIceBRG::limit_vector\fP< \fBmass_type\fP > m_bin_limits=std::vector< \fBflt_type\fP >(), \fBIceBRG::limit_vector\fP< \fBflt_type\fP > z_bin_limits=std::vector< \fBflt_type\fP >(), \fBIceBRG::limit_vector\fP< \fBflt_type\fP > mag_bin_limits=std::vector< \fBflt_type\fP >())"
+.br
+.ti -1c
+.RI "void \fBset_linear_limits\fP (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins=1, const \fBmass_type\fP &m_min=-std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBmass_type\fP &m_max=std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBssize_t\fP &m_num_bins=1, const \fBflt_type\fP &z_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &z_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &z_num_bins=1, const \fBflt_type\fP &mag_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &mag_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &mag_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBset_log_limits\fP (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins=1, const \fBmass_type\fP &m_min=-std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBmass_type\fP &m_max=std::numeric_limits< \fBflt_type\fP >::infinity()*\fBkg\fP, const \fBssize_t\fP &m_num_bins=1, const \fBflt_type\fP &z_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &z_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &z_num_bins=1, const \fBflt_type\fP &mag_min=-std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBflt_type\fP &mag_max=std::numeric_limits< \fBflt_type\fP >::infinity(), const \fBssize_t\fP &mag_num_bins=1)"
+.br
+.ti -1c
+.RI "void \fBfixbad\fP ()"
+.br
+.ti -1c
+.RI "const \fBIceBRG::limit_vector\fP
+.br
+< \fBdistance_type\fP > & \fBR_limits\fP () const "
+.br
+.ti -1c
+.RI "const \fBIceBRG::limit_vector\fP
+.br
+< \fBmass_type\fP > & \fBm_limits\fP () const "
+.br
+.ti -1c
+.RI "const \fBIceBRG::limit_vector\fP
+.br
+< \fBflt_type\fP > & \fBz_limits\fP () const "
+.br
+.ti -1c
+.RI "const \fBIceBRG::limit_vector\fP
+.br
+< \fBflt_type\fP > & \fBmag_limits\fP () const "
+.br
+.ti -1c
+.RI "bool \fBvalid_limits\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBsort\fP () const "
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "const std::vector< std::vector
+.br
+< std::vector< std::vector
+.br
+< \fBpair_bin_summary\fP > > > > & \fBpair_bin_summaries\fP () const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_mean_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_mean_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_std_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_std_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_stderr_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_stderr_for_bin\fP (\fBssize_t\fP R_i, \fBssize_t\fP m_i, \fBssize_t\fP z_i, \fBssize_t\fP mag_i) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_mean_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_mean_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_std_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_std_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_t_stderr_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "virtual \fBsurface_density_type\fP \fBdelta_Sigma_x_stderr_for_bin\fP (const \fBdistance_type\fP &R, const \fBmass_type\fP &\fBm\fP, \fBflt_type\fP z, \fBflt_type\fP mag) const "
+.br
+.ti -1c
+.RI "void \fBprint_bin_data\fP (std::ostream &out, const \fBunitconv_map\fP &u_map=\fBunitconv_map\fP())"
+.br
+.ti -1c
+.RI "void \fBprint_bin_data\fP (const std::string &file_name, const \fBunitconv_map\fP &u_map=\fBunitconv_map\fP())"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP & \fBoperator+=\fP (const \fBpair_bins_summary\fP &other)"
+.br
+.ti -1c
+.RI "\fBpair_bins_summary\fP \fBoperator+\fP (\fBpair_bins_summary\fP other) const "
+.br
+.ti -1c
+.RI "void \fBsave\fP (std::ostream &) const "
+.br
+.ti -1c
+.RI "void \fBsave\fP (const std::string &) const "
+.br
+.ti -1c
+.RI "void \fBsave\fP (std::ostream &)"
+.br
+.ti -1c
+.RI "void \fBsave\fP (const std::string &)"
+.br
+.ti -1c
+.RI "void \fBload\fP (std::istream &)"
+.br
+.ti -1c
+.RI "void \fBload\fP (const std::string &)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fB_construct\fP () const "
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::vector
+.br
+< std::vector< std::vector
+.br
+< \fBpair_bin_summary\fP > > > > \fB_pair_bin_summaries_\fP"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBboost::serialization::access\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "IceBRG::pair_bins_summary::pair_bins_summary ()\fC [inline]\fP"
+
+.SS "IceBRG::pair_bins_summary::pair_bins_summary (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP >R_bin_limits, \fBIceBRG::limit_vector\fP< \fBmass_type\fP >m_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP, \fBIceBRG::limit_vector\fP< \fBflt_type\fP >z_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP, \fBIceBRG::limit_vector\fP< \fBflt_type\fP >mag_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP)"
+
+.SS "IceBRG::pair_bins_summary::pair_bins_summary (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_bins = \fC1\fP, const \fBmass_type\fP &m_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBmass_type\fP &m_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBssize_t\fP &m_bins = \fC1\fP, const \fBflt_type\fP &z_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &z_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &z_bins = \fC1\fP, const \fBflt_type\fP &mag_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &mag_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &mag_bins = \fC1\fP)"
+
+.SS "IceBRG::pair_bins_summary::pair_bins_summary (std::istream &in)"
+
+.SS "IceBRG::pair_bins_summary::pair_bins_summary (const std::string &filename)"
+
+.SS "IceBRG::pair_bins_summary::pair_bins_summary (const \fBpair_binner\fP &bins)"
+
+.SS "virtual IceBRG::pair_bins_summary::~pair_bins_summary ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void IceBRG::pair_bins_summary::_construct () const\fC [inline]\fP, \fC [protected]\fP"
+
+.SS "void IceBRG::pair_bins_summary::clear ()\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBIceBRG::pair_binner\fP\&.
+.SS "void IceBRG::pair_bins_summary::clear_m_limits ()"
+
+.SS "void IceBRG::pair_bins_summary::clear_mag_limits ()"
+
+.SS "void IceBRG::pair_bins_summary::clear_R_limits ()"
+
+.SS "void IceBRG::pair_bins_summary::clear_z_limits ()"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_mean_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_mean_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_std_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_std_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_stderr_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_t_stderr_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_mean_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_mean_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_std_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_std_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_stderr_for_bin (\fBssize_t\fPR_i, \fBssize_t\fPm_i, \fBssize_t\fPz_i, \fBssize_t\fPmag_i) const\fC [virtual]\fP"
+
+.SS "\fBsurface_density_type\fP IceBRG::pair_bins_summary::delta_Sigma_x_stderr_for_bin (const \fBdistance_type\fP &R, const \fBmass_type\fP &m, \fBflt_type\fPz, \fBflt_type\fPmag) const\fC [virtual]\fP"
+
+.SS "void IceBRG::pair_bins_summary::fixbad ()"
+
+.SS "void IceBRG::pair_bins_summary::load (std::istream &in)"
+
+.SS "void IceBRG::pair_bins_summary::load (const std::string &filename)"
+
+.SS "const \fBIceBRG::limit_vector\fP< \fBmass_type\fP >& IceBRG::pair_bins_summary::m_limits () const\fC [inline]\fP"
+
+.SS "const \fBIceBRG::limit_vector\fP< \fBflt_type\fP >& IceBRG::pair_bins_summary::mag_limits () const\fC [inline]\fP"
+
+.SS "\fBpair_bins_summary\fP IceBRG::pair_bins_summary::operator+ (\fBpair_bins_summary\fPother) const\fC [inline]\fP"
+
+.SS "\fBpair_bins_summary\fP & IceBRG::pair_bins_summary::operator+= (const \fBpair_bins_summary\fP &other)"
+
+.SS "\fBpair_bins_summary\fP& IceBRG::pair_bins_summary::operator= (const \fBpair_binner\fP &bins)\fC [inline]\fP"
+
+.SS "const std::vector< std::vector< std::vector< std::vector<\fBpair_bin_summary\fP> > > >& IceBRG::pair_bins_summary::pair_bin_summaries () const\fC [inline]\fP"
+
+.SS "void IceBRG::pair_bins_summary::print_bin_data (std::ostream &out, const \fBunitconv_map\fP &u_map = \fC\fBunitconv_map\fP()\fP)"
+
+.SS "void IceBRG::pair_bins_summary::print_bin_data (const std::string &file_name, const \fBunitconv_map\fP &u_map = \fC\fBunitconv_map\fP()\fP)"
+
+.SS "const \fBIceBRG::limit_vector\fP< \fBdistance_type\fP >& IceBRG::pair_bins_summary::R_limits () const\fC [inline]\fP"
+
+.SS "void IceBRG::pair_bins_summary::save (std::ostream &out) const"
+
+.SS "void IceBRG::pair_bins_summary::save (const std::string &filename) const"
+
+.SS "void IceBRG::pair_bins_summary::save (std::ostream &out)"
+
+.SS "void IceBRG::pair_bins_summary::save (const std::string &filename)"
+
+.SS "void IceBRG::pair_bins_summary::set_limits (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP >R_bin_limits, \fBIceBRG::limit_vector\fP< \fBmass_type\fP >m_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP, \fBIceBRG::limit_vector\fP< \fBflt_type\fP >z_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP, \fBIceBRG::limit_vector\fP< \fBflt_type\fP >mag_bin_limits = \fCstd::vector<\fBflt_type\fP>()\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_linear_limits (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins = \fC1\fP, const \fBmass_type\fP &m_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBmass_type\fP &m_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBssize_t\fP &m_num_bins = \fC1\fP, const \fBflt_type\fP &z_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &z_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &z_num_bins = \fC1\fP, const \fBflt_type\fP &mag_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &mag_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &mag_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_linear_m_limits (const \fBmass_type\fP &m_min, const \fBmass_type\fP &m_max, const \fBssize_t\fP &m_bins)"
+
+.SS "void IceBRG::pair_bins_summary::set_linear_mag_limits (const \fBflt_type\fP &mag_min, const \fBflt_type\fP &mag_max, const \fBssize_t\fP &mag_bins)"
+
+.SS "void IceBRG::pair_bins_summary::set_linear_R_limits (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_bins)"
+
+.SS "void IceBRG::pair_bins_summary::set_linear_z_limits (const \fBflt_type\fP &z_min, const \fBflt_type\fP &z_max, const \fBssize_t\fP &z_bins)"
+
+.SS "void IceBRG::pair_bins_summary::set_log_limits (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins = \fC1\fP, const \fBmass_type\fP &m_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBmass_type\fP &m_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()*\fBkg\fP\fP, const \fBssize_t\fP &m_num_bins = \fC1\fP, const \fBflt_type\fP &z_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &z_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &z_num_bins = \fC1\fP, const \fBflt_type\fP &mag_min = \fC-std::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBflt_type\fP &mag_max = \fCstd::numeric_limits<\fBflt_type\fP>::infinity()\fP, const \fBssize_t\fP &mag_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_log_m_limits (const \fBmass_type\fP &m_min, const \fBmass_type\fP &m_max, const \fBssize_t\fP &m_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_log_mag_limits (const \fBflt_type\fP &mag_min, const \fBflt_type\fP &mag_max, const \fBssize_t\fP &mag_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_log_R_limits (const \fBdistance_type\fP &R_min, const \fBdistance_type\fP &R_max, const \fBssize_t\fP &R_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_log_z_limits (const \fBflt_type\fP &z_min, const \fBflt_type\fP &z_max, const \fBssize_t\fP &z_num_bins = \fC1\fP)"
+
+.SS "void IceBRG::pair_bins_summary::set_m_limits (\fBIceBRG::limit_vector\fP< \fBmass_type\fP >m_bin_limits)"
+
+.SS "void IceBRG::pair_bins_summary::set_mag_limits (\fBIceBRG::limit_vector\fP< \fBflt_type\fP >mag_bin_limits)"
+
+.SS "void IceBRG::pair_bins_summary::set_R_limits (\fBIceBRG::limit_vector\fP< \fBdistance_type\fP >R_bin_limits)"
+
+.SS "void IceBRG::pair_bins_summary::set_z_limits (\fBIceBRG::limit_vector\fP< \fBflt_type\fP >z_bin_limits)"
+
+.SS "virtual void IceBRG::pair_bins_summary::sort () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBIceBRG::pair_binner\fP\&.
+.SS "bool IceBRG::pair_bins_summary::valid_limits () const\fC [inline]\fP"
+
+.SS "const \fBIceBRG::limit_vector\fP< \fBflt_type\fP >& IceBRG::pair_bins_summary::z_limits () const\fC [inline]\fP"
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class boost::serialization::access\fC [friend]\fP"
+
+.SH "Field Documentation"
+.PP 
+.SS "std::vector< std::vector< std::vector< std::vector<\fBpair_bin_summary\fP> > > > IceBRG::pair_bins_summary::_pair_bin_summaries_\fC [mutable]\fP, \fC [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

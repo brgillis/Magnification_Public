@@ -1,0 +1,185 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/CFHTLenS_include/magic_values.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/CFHTLenS_include/magic_values.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unit_conversions\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "const IceBRG::square_angle_type \fBfield_size\fP (130\&.98 *\fBIceBRG::square\fP((M_PI/180 *\fBIceBRG::radian\fP)))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBunfiltered_field_subdirectory\fP = 'full_tables/'"
+.br
+.ti -1c
+.RI "const std::string \fBfield_subdirectory\fP = 'filtered_tables/'"
+.br
+.ti -1c
+.RI "const std::string \fBmask_subdirectory\fP = 'masks/'"
+.br
+.ti -1c
+.RI "const std::string \fBcount_fitting_results_filename\fP = 'count_fitting_results\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBlens_weight_filename\fP = 'field_lens_weights\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBfield_size_filename\fP = 'masks/field_sizes\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBz_cal_filename\fP = '/disk2/brg/git/CFHTLenS_cat/Data/redshift_calibration_table\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBgg_lensing_signal_filename\fP = 'gg_lensing_signal\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBgg_lensing_data_filename\fP = 'gg_lensing_serialization\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBexpected_count_cache_output_filename\fP = 'ex_count_cache\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBexpected_count_derivative_cache_output_filename\fP = 'alpha_cache\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBmag_signal_integral_cache_output_filename\fP = 'mag_sig_integral_cache\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBmag_weight_integral_cache_output_filename\fP = 'mag_W_integral_cache\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBmag_calibration_cache_output_filename\fP = 'mag_calibration_cache\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBmag_hist_table_name_base\fP = 'magnitude_hist_z'"
+.br
+.ti -1c
+.RI "const std::string \fBg_mag_hist_table_name_base\fP = 'magnitude_hist_gz'"
+.br
+.ti -1c
+.RI "const std::string \fBdata_file_tail\fP = '\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBlens_tail\fP = '_lens' + data_file_tail"
+.br
+.ti -1c
+.RI "const std::string \fBsource_tail\fP = '_source' + data_file_tail"
+.br
+.ti -1c
+.RI "const std::string \fBpixel_map_tail\fP = '_lens_good_pixels\&.bin'"
+.br
+.ti -1c
+.RI "const std::string \fBcount_table_tail\fP = \fBdata_file_tail\fP"
+.br
+.ti -1c
+.RI "const std::string \fBmag_hist_table_tail\fP = \fBdata_file_tail\fP"
+.br
+.ti -1c
+.RI "constexpr double \fBlens_z_min\fP = 0\&.2"
+.br
+.ti -1c
+.RI "constexpr double \fBlens_z_max\fP = 1\&.3"
+.br
+.ti -1c
+.RI "constexpr double \fBz_bin_min\fP = \fBlens_z_min\fP"
+.br
+.ti -1c
+.RI "constexpr double \fBz_bin_max\fP = \fBlens_z_max\fP"
+.br
+.ti -1c
+.RI "constexpr double \fBz_buffer\fP = 0\&.2"
+.br
+.ti -1c
+.RI "const \fBIceBRG::mass_type\fP \fBlens_m_min\fP = 1e9*IceBRG::unitconv::Msuntokg*IceBRG::kg"
+.br
+.ti -1c
+.RI "const \fBIceBRG::mass_type\fP \fBlens_m_max\fP = 1e12*IceBRG::unitconv::Msuntokg*IceBRG::kg"
+.br
+.ti -1c
+.RI "constexpr double \fBrad_per_px\fP = 0\&.185965*\fBIceBRG::unitconv::asectorad\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "const IceBRG::square_angle_type field_size (130\&.98 *IceBRG::square(M_PI/180 *IceBRG::radian))"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string count_fitting_results_filename = 'count_fitting_results\&.dat'"
+
+.SS "const std::string count_table_tail = \fBdata_file_tail\fP"
+
+.SS "const std::string data_file_tail = '\&.dat'"
+
+.SS "const std::string expected_count_cache_output_filename = 'ex_count_cache\&.dat'"
+
+.SS "const std::string expected_count_derivative_cache_output_filename = 'alpha_cache\&.dat'"
+
+.SS "const std::string field_size_filename = 'masks/field_sizes\&.dat'"
+
+.SS "const std::string field_subdirectory = 'filtered_tables/'"
+
+.SS "const std::string g_mag_hist_table_name_base = 'magnitude_hist_gz'"
+
+.SS "const std::string gg_lensing_data_filename = 'gg_lensing_serialization\&.dat'"
+
+.SS "const std::string gg_lensing_signal_filename = 'gg_lensing_signal\&.dat'"
+
+.SS "const \fBIceBRG::mass_type\fP lens_m_max = 1e12*IceBRG::unitconv::Msuntokg*IceBRG::kg"
+
+.SS "const \fBIceBRG::mass_type\fP lens_m_min = 1e9*IceBRG::unitconv::Msuntokg*IceBRG::kg"
+
+.SS "const std::string lens_tail = '_lens' + data_file_tail"
+
+.SS "const std::string lens_weight_filename = 'field_lens_weights\&.dat'"
+
+.SS "constexpr double lens_z_max = 1\&.3"
+
+.SS "constexpr double lens_z_min = 0\&.2"
+
+.SS "const std::string mag_calibration_cache_output_filename = 'mag_calibration_cache\&.dat'"
+
+.SS "const std::string mag_hist_table_name_base = 'magnitude_hist_z'"
+
+.SS "const std::string mag_hist_table_tail = \fBdata_file_tail\fP"
+
+.SS "const std::string mag_signal_integral_cache_output_filename = 'mag_sig_integral_cache\&.dat'"
+
+.SS "const std::string mag_weight_integral_cache_output_filename = 'mag_W_integral_cache\&.dat'"
+
+.SS "const std::string mask_subdirectory = 'masks/'"
+
+.SS "const std::string pixel_map_tail = '_lens_good_pixels\&.bin'"
+
+.SS "constexpr double rad_per_px = 0\&.185965*\fBIceBRG::unitconv::asectorad\fP"
+
+.SS "const std::string source_tail = '_source' + data_file_tail"
+
+.SS "const std::string unfiltered_field_subdirectory = 'full_tables/'"
+
+.SS "constexpr double z_bin_max = \fBlens_z_max\fP"
+
+.SS "constexpr double z_bin_min = \fBlens_z_min\fP"
+
+.SS "constexpr double z_buffer = 0\&.2"
+
+.SS "const std::string z_cal_filename = '/disk2/brg/git/CFHTLenS_cat/Data/redshift_calibration_table\&.dat'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

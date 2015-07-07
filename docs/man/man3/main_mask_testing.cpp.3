@@ -1,0 +1,152 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_get_unmasked_fractions/main_mask_testing.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_get_unmasked_fractions/main_mask_testing.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <functional>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <unordered_map>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include <boost/serialization/vector\&.hpp>\fP
+.br
+\fC#include <CCfits/CCfits>\fP
+.br
+\fC#include 'IceBRG_main/external/sgsmooth\&.h'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/binary_archive\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/join_path\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/random/random_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/limit_vector\&.hpp'\fP
+.br
+\fC#include 'IceBRG_physics/astro\&.h'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unit_conversions\&.hpp'\fP
+.br
+\fC#include 'get_data_directory\&.hpp'\fP
+.br
+\fC#include 'magic_values\&.hpp'\fP
+.br
+\fC#include 'get_good_positions\&.hpp'\fP
+.br
+\fC#include 'load_pixel_table\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSE_SAVED_MASK\fP"
+.br
+.ti -1c
+.RI "#define \fBCOUNTING_TYPE\fP   unsigned"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBstatic_assert\fP (\fBsampling_factor\fP >0,'Subsample must be positive\&.')"
+.br
+.ti -1c
+.RI "void \fB_increment_bin\fP (unsigned index, bool good, std::vector< \fBCOUNTING_TYPE\fP > &total_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &lens_total_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &good_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &lens_good_px_per_bin)"
+.br
+.ti -1c
+.RI "int \fBmain\fP (const int argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBlens_root\fP = '_lens\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBlens_output_root\fP = '_lens_mask_frac\&.dat'"
+.br
+.ti -1c
+.RI "constexpr float \fBmin_kpc_sep\fP = 0"
+.br
+.ti -1c
+.RI "constexpr float \fBmax_kpc_sep\fP = 2000"
+.br
+.ti -1c
+.RI "constexpr float \fBnum_sep_steps\fP = 40"
+.br
+.ti -1c
+.RI "constexpr unsigned short \fBsampling_factor\fP = 4"
+.br
+.ti -1c
+.RI "constexpr short unsigned \fBsg_window_small\fP = 2"
+.br
+.ti -1c
+.RI "constexpr short unsigned \fBsg_window_large\fP = 5"
+.br
+.ti -1c
+.RI "constexpr short unsigned \fBsg_deg\fP = 3"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define COUNTING_TYPE   unsigned"
+
+.SS "#define USE_SAVED_MASK"
+
+.SH "Function Documentation"
+.PP 
+.SS "void _increment_bin (unsignedindex, boolgood, std::vector< \fBCOUNTING_TYPE\fP > &total_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &lens_total_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &good_px_per_bin, std::vector< \fBCOUNTING_TYPE\fP > &lens_good_px_per_bin)\fC [inline]\fP"
+
+.SS "int main (const intargc, const char *argv[])"
+
+.SS "static_assert (\fBsampling_factor\fP, 0, 'Subsample must be positive\&.')"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string lens_output_root = '_lens_mask_frac\&.dat'"
+
+.SS "const std::string lens_root = '_lens\&.dat'"
+
+.SS "constexpr float max_kpc_sep = 2000"
+
+.SS "constexpr float min_kpc_sep = 0"
+
+.SS "constexpr float num_sep_steps = 40"
+
+.SS "constexpr unsigned short sampling_factor = 4"
+
+.SS "constexpr short unsigned sg_deg = 3"
+
+.SS "constexpr short unsigned sg_window_large = 5"
+
+.SS "constexpr short unsigned sg_window_small = 2"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

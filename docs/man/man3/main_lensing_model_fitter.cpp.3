@@ -1,0 +1,154 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_fit_lensing_models/main_lensing_model_fitter.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_fit_lensing_models/main_lensing_model_fitter.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <boost/bimap\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/container/labeled_array\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/solvers/solver_classes\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unit_conversions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unitconv_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/lensing_tNFW_profile\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/lensing_tNFW_caches\&.h'\fP
+.br
+\fC#include 'common\&.h'\fP
+.br
+\fC#include 'get_errors_on_fit\&.hpp'\fP
+.br
+\fC#include 'lensing_fitting_bin\&.hpp'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSKIP_CACHE_OUTPUT\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef Eigen::Array< \fBflt_type\fP, 
+.br
+\fBnum_params\fP, 1 > \fBarray_type\fP"
+.br
+.ti -1c
+.RI "typedef \fBMCMC_solver\fP< \fBflt_type\fP, 
+.br
+\fBnum_params\fP > \fBsolver_type\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBint_type\fP \fBmain\fP (const \fBint_type\fP argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBinit_frac_in_groups\fP = 0\&.1"
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBmin_frac_in_groups\fP = 0\&."
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBmax_frac_in_groups\fP = 1\&."
+.br
+.ti -1c
+.RI "const \fBmass_type\fP \fBmax_group_mass\fP = 1e16*unitconv::Msuntokg*kg"
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBmax_Sigma_offset\fP = 50 * unitconv::Msuntokg/(unitconv::pctom*unitconv::pctom)"
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBmin_Sigma_offset\fP = -\fBmax_Sigma_offset\fP"
+.br
+.ti -1c
+.RI "constexpr \fBint_type\fP \fBMCMC_max_steps\fP = 10000"
+.br
+.ti -1c
+.RI "constexpr \fBint_type\fP \fBMCMC_annealing_period\fP = \fBMCMC_max_steps\fP/10"
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBMCMC_annealing_factor\fP = 4"
+.br
+.ti -1c
+.RI "constexpr \fBint_type\fP \fBMCMC_skip_factor\fP = 10"
+.br
+.ti -1c
+.RI "constexpr \fBint_type\fP \fBnum_params\fP = 4"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define SKIP_CACHE_OUTPUT"
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef Eigen::Array<\fBflt_type\fP,\fBnum_params\fP,1> \fBarray_type\fP"
+
+.SS "typedef \fBMCMC_solver\fP<\fBflt_type\fP,\fBnum_params\fP> \fBsolver_type\fP"
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBint_type\fP main (const \fBint_type\fPargc, const char *argv[])"
+TODO (description)
+.PP
+\fBParameters:\fP
+.RS 4
+\fITODO\fP (params to be passed at command-line) 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr \fBflt_type\fP init_frac_in_groups = 0\&.1"
+
+.SS "constexpr \fBflt_type\fP max_frac_in_groups = 1\&."
+
+.SS "const \fBmass_type\fP max_group_mass = 1e16*unitconv::Msuntokg*kg"
+
+.SS "constexpr \fBflt_type\fP max_Sigma_offset = 50 * unitconv::Msuntokg/(unitconv::pctom*unitconv::pctom)"
+
+.SS "constexpr \fBflt_type\fP MCMC_annealing_factor = 4"
+
+.SS "constexpr \fBint_type\fP MCMC_annealing_period = \fBMCMC_max_steps\fP/10"
+
+.SS "constexpr \fBint_type\fP MCMC_max_steps = 10000"
+
+.SS "constexpr \fBint_type\fP MCMC_skip_factor = 10"
+
+.SS "constexpr \fBflt_type\fP min_frac_in_groups = 0\&."
+
+.SS "constexpr \fBflt_type\fP min_Sigma_offset = -\fBmax_Sigma_offset\fP"
+
+.SS "constexpr \fBint_type\fP num_params = 4"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

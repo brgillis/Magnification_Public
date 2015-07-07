@@ -1,0 +1,62 @@
+.TH "IceBRG::shifted_Delta_Sigma_circ_functor< name >" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IceBRG::shifted_Delta_Sigma_circ_functor< name > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <lensing_profile_extension_functors\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBset_host_ptr\fP (const name *new_host_ptr)"
+.br
+.ti -1c
+.RI "const name * \fBhost_ptr\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_R_shift\fP (const \fBdistance_type\fP &new_R_shift)"
+.br
+.ti -1c
+.RI "const \fBdistance_type\fP & \fBR_shift\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_R\fP (const \fBdistance_type\fP &new_R)"
+.br
+.ti -1c
+.RI "const \fBdistance_type\fP & \fBR\fP ()"
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBoperator()\fP (const \fBangle_type\fP &in_param) const "
+.br
+.ti -1c
+.RI "\fBshifted_Delta_Sigma_circ_functor\fP (const name *new_host=\fBNULL\fP, const \fBdistance_type\fP &new_R_shift=0, const \fBdistance_type\fP &new_R=0)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename name> \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::\fBshifted_Delta_Sigma_circ_functor\fP (const name *new_host = \fC\fBNULL\fP\fP, const \fBdistance_type\fP &new_R_shift = \fC0\fP, const \fBdistance_type\fP &new_R = \fC0\fP)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename name> const name* \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::host_ptr ()\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::operator() (const \fBangle_type\fP &in_param) const\fC [inline]\fP"
+
+.SS "template<typename name> const \fBdistance_type\fP& \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::R ()\fC [inline]\fP"
+
+.SS "template<typename name> const \fBdistance_type\fP& \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::R_shift ()\fC [inline]\fP"
+
+.SS "template<typename name> void \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::set_host_ptr (const name *new_host_ptr)\fC [inline]\fP"
+
+.SS "template<typename name> void \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::set_R (const \fBdistance_type\fP &new_R)\fC [inline]\fP"
+
+.SS "template<typename name> void \fBIceBRG::shifted_Delta_Sigma_circ_functor\fP< name >::set_R_shift (const \fBdistance_type\fP &new_R_shift)\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

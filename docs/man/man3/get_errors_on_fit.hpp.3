@@ -1,0 +1,47 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_fit_lensing_models/get_errors_on_fit.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_fit_lensing_models/get_errors_on_fit.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <stdexcept>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include 'common\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T_func , typename T_in_params , typename T_chi_squared > std::vector< \fBflt_type\fP > \fBget_errors_on_in_params\fP (const T_func &func, T_in_params &best_in_params, T_chi_squared &best_chi_squared)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr \fBint_type\fP \fBcounter_max\fP = 10000000"
+.br
+.ti -1c
+.RI "constexpr \fBflt_type\fP \fBerror_step_factor\fP = 0\&.01"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "template<typename T_func , typename T_in_params , typename T_chi_squared > std::vector<\fBflt_type\fP> get_errors_on_in_params (const T_func &func, T_in_params &best_in_params, T_chi_squared &best_chi_squared)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr \fBint_type\fP counter_max = 10000000"
+
+.SS "constexpr \fBflt_type\fP error_step_factor = 0\&.01"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

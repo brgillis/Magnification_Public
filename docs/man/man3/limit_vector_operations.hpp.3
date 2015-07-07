@@ -1,0 +1,124 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/vector/limit_vector_operations.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/vector/limit_vector_operations.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cassert>\fP
+.br
+\fC#include <stdexcept>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/limit_vector\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/summary_functions\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::above_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::above_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_above_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_above_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::under_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::under_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_under_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_under_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::outside_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::outside_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_outside_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_outside_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::inside_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::inside_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_inside_limits\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> bool \fBIceBRG::checked_inside_limits\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::checked_get_bin_index\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::checked_get_bin_index\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::get_bin_index\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::get_bin_index\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::get_bin_index_no_overflow\fP (const T &val, const std::vector< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T , typename A  = std::allocator<T>> \fBssize_t\fP \fBIceBRG::get_bin_index_no_overflow\fP (const T &val, const \fBIceBRG::limit_vector\fP< T, A > &vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>, typename T2  = T1, typename A2  = std::allocator<T2>> T2 \fBIceBRG::interpolate_bins\fP (const T2 &val, const std::vector< T1, A1 > &lim_vec, const std::vector< T2, A2 > &val_vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>, typename T2  = T1, typename A2  = std::allocator<T2>> T2 \fBIceBRG::interpolate_bins\fP (const T2 &val, const \fBIceBRG::limit_vector\fP< T1, A1 > &lim_vec, const std::vector< T2, A2 > &val_vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>> std::vector< T1, A1 > \fBIceBRG::get_bin_mids_from_limits\fP (std::vector< T1, A1 > vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>> std::vector< T1, A1 > \fBIceBRG::get_bin_mids_from_limits\fP (const \fBIceBRG::limit_vector\fP< T1, A1 > &vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>> std::vector< T1, A1 > \fBIceBRG::get_bin_limits_from_mids\fP (std::vector< T1, A1 > vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>> \fBIceBRG::limit_vector\fP< T1, A1 > \fBIceBRG::make_limit_vector_from_mids\fP (std::vector< T1, A1 > vec)"
+.br
+.ti -1c
+.RI "template<typename T1 , typename A1  = std::allocator<T1>> \fBIceBRG::limit_vector\fP< T1, A1 > \fBIceBRG::make_limit_vector_from_mids\fP (std::vector< T1, A1 > &&vec)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

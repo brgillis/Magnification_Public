@@ -1,0 +1,75 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_lensing/lensing_tNFW_caches.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_lensing/lensing_tNFW_caches.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/math/cache/cache_4d\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/lensing_tNFW_profile\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/astro\&.h'\fP
+.br
+\fC#include 'lensing_tNFW_caches\&.h'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_3D_STATIC_VARS\fP (tNFW_sig_cache, std::log(1e7 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e7))/300, 0\&.1, 1\&.5, 0\&.1, std::log(0\&.1 *unitconv::kpctom), std::log(2000 *unitconv::kpctom),(std::log(2000)-std::log(0\&.1))/300)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_4D_STATIC_VARS\fP (tNFW_offset_sig_cache, std::log(1e13 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log(0\&.1 *unitconv::kpctom), std::log(4000 *unitconv::kpctom),(std::log(4000)-std::log(0\&.1))/1000, std::log(0\&.01 *unitconv::kpctom), std::log(2000 *unitconv::kpctom),(std::log(2000)-std::log(0\&.01))/100)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_4D_STATIC_VARS\fP (tNFW_group_sig_cache, std::log(1e13 *unitconv::Msuntokg), std::log(1e15 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log(0\&.1 *unitconv::kpctom), std::log(2000 *unitconv::kpctom),(std::log(2000)-std::log(0\&.1))/100, 2\&.5, 10\&., 2\&.5)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_3D_STATIC_VARS\fP (tNFW_shifted_sig_cache, std::log(1e7 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e7))/100, 0\&.1, 1\&.5, 0\&.4, std::log(0\&.1 *unitconv::kpctom), std::log(2000 *unitconv::kpctom),(std::log(2000)-std::log(0\&.1))/100)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_3D_STATIC_VARS\fP (tNFW_Sigma_cache, std::log(1e7 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e7))/300, 0\&.1, 1\&.5, 0\&.1, std::log(0\&.1 *unitconv::kpctom), std::log(2000 *unitconv::kpctom),(std::log(2000)-std::log(0\&.1))/300)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_4D_STATIC_VARS\fP (tNFW_offset_Sigma_cache, std::log(1e13 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log(0\&.1 *unitconv::kpctom), std::log(4000 *unitconv::kpctom),(std::log(4000)-std::log(0\&.1))/1000, std::log(0\&.1 *unitconv::kpctom), std::log(4000 *unitconv::kpctom),(std::log(4000)-std::log(0\&.01))/100)"
+.br
+.ti -1c
+.RI "\fBDEFINE_BRG_CACHE_4D_STATIC_VARS\fP (tNFW_group_Sigma_cache, std::log(1e13 *unitconv::Msuntokg), std::log(1e16 *unitconv::Msuntokg),(std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log(0\&.1 *unitconv::kpctom), std::log(4000 *unitconv::kpctom),(std::log(4000)-std::log(0\&.1))/200, 2\&.5, 5\&.0, 2\&.5)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "DEFINE_BRG_CACHE_3D_STATIC_VARS (tNFW_sig_cache, std::log1e7 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e7))/300, 0\&.1, 1\&.5, 0\&.1, std::log0\&.1 *unitconv::kpctom, std::log2000 *unitconv::kpctom, (std::log(2000)-std::log(0\&.1))/300)"
+
+.SS "DEFINE_BRG_CACHE_3D_STATIC_VARS (tNFW_shifted_sig_cache, std::log1e7 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e7))/100, 0\&.1, 1\&.5, 0\&.4, std::log0\&.1 *unitconv::kpctom, std::log2000 *unitconv::kpctom, (std::log(2000)-std::log(0\&.1))/100)"
+
+.SS "DEFINE_BRG_CACHE_3D_STATIC_VARS (tNFW_Sigma_cache, std::log1e7 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e7))/300, 0\&.1, 1\&.5, 0\&.1, std::log0\&.1 *unitconv::kpctom, std::log2000 *unitconv::kpctom, (std::log(2000)-std::log(0\&.1))/300)"
+
+.SS "DEFINE_BRG_CACHE_4D_STATIC_VARS (tNFW_offset_sig_cache, std::log1e13 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log0\&.1 *unitconv::kpctom, std::log4000 *unitconv::kpctom, (std::log(4000)-std::log(0\&.1))/1000, std::log0\&.01 *unitconv::kpctom, std::log2000 *unitconv::kpctom, (std::log(2000)-std::log(0\&.01))/100)"
+
+.SS "DEFINE_BRG_CACHE_4D_STATIC_VARS (tNFW_group_sig_cache, std::log1e13 *unitconv::Msuntokg, std::log1e15 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log0\&.1 *unitconv::kpctom, std::log2000 *unitconv::kpctom, (std::log(2000)-std::log(0\&.1))/100, 2\&.5, 10\&., 2\&.5)"
+
+.SS "DEFINE_BRG_CACHE_4D_STATIC_VARS (tNFW_offset_Sigma_cache, std::log1e13 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log0\&.1 *unitconv::kpctom, std::log4000 *unitconv::kpctom, (std::log(4000)-std::log(0\&.1))/1000, std::log0\&.1 *unitconv::kpctom, std::log4000 *unitconv::kpctom, (std::log(4000)-std::log(0\&.01))/100)"
+
+.SS "DEFINE_BRG_CACHE_4D_STATIC_VARS (tNFW_group_Sigma_cache, std::log1e13 *unitconv::Msuntokg, std::log1e16 *unitconv::Msuntokg, (std::log(1e16)-std::log(1e13))/30, 0\&.1, 1\&.5, 0\&.4, std::log0\&.1 *unitconv::kpctom, std::log4000 *unitconv::kpctom, (std::log(4000)-std::log(0\&.1))/200, 2\&.5, 5\&.0, 2\&.5)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

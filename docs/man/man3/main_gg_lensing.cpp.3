@@ -1,0 +1,98 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_gg_lensing/main_gg_lensing.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_gg_lensing/main_gg_lensing.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/container/labeled_array\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unitconv_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/elementwise_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/limit_vector\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/expected_count_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/expected_count_derivative_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_calibration_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_signal_integral_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_weight_integral_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_global_values\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/pair_binner\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/pair_bins_summary\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/source_galaxy\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/astro\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/astro_caches\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/sky_obj/galaxy\&.h'\fP
+.br
+\fC#include 'get_data_directory\&.hpp'\fP
+.br
+\fC#include 'magic_values\&.hpp'\fP
+.br
+\fC#include 'gg_lensing_config\&.h'\fP
+.br
+\fC#include 'pass_configs_to_binner\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (const int argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBlens_root\fP = '_lens\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBlens_unmasked_frac_root\fP = '_lens_mask_frac\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBsource_root\fP = '_source\&.dat'"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (const intargc, const char *argv[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string lens_root = '_lens\&.dat'"
+
+.SS "const std::string lens_unmasked_frac_root = '_lens_mask_frac\&.dat'"
+
+.SS "const std::string source_root = '_source\&.dat'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

@@ -1,0 +1,56 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/file_access/table_utility.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/file_access/table_utility.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/container/table_typedefs\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/make_vector\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T > table_map_t< T > \fBIceBRG::make_table_map\fP (const table_t< T > &data, const header_t &header)"
+.br
+.ti -1c
+.RI "std::vector< std::string > \fBIceBRG::split_on_whitespace\fP (const std::string &sentence)"
+.br
+.ti -1c
+.RI "header_t \fBIceBRG::convert_to_header\fP (const std::string &line)"
+.br
+.ti -1c
+.RI "template<typename T_out , typename T_in , typename std::enable_if< std::is_same< T_out, std::string >::value, char >::type  = 0> T_in & \fBIceBRG::pop_from_istream\fP (T_in &in, T_out &out)"
+.br
+.ti -1c
+.RI "template<typename T_out , typename T_in > std::vector< T_out > \fBIceBRG::split_line\fP (T_in &&line_data, const T_out &default_value=T_out(), const size_t &min_length=0)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

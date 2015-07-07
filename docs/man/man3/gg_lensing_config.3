@@ -1,0 +1,135 @@
+.TH "gg_lensing_config" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+gg_lensing_config \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <gg_lensing_config\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBgg_lensing_config\fP (const int argc=0, const char *argv[]=nullptr)"
+.br
+.ti -1c
+.RI "virtual \fB~gg_lensing_config\fP ()"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "bool \fBuse_precalculated_data\fP"
+.br
+.ti -1c
+.RI "std::string \fBprecalculated_data_filename\fP"
+.br
+.ti -1c
+.RI "\fBIceBRG::distance_type\fP \fBR_min\fP"
+.br
+.ti -1c
+.RI "\fBIceBRG::distance_type\fP \fBR_max\fP"
+.br
+.ti -1c
+.RI "\fBIceBRG::mass_type\fP \fBm_min\fP"
+.br
+.ti -1c
+.RI "\fBIceBRG::mass_type\fP \fBm_max\fP"
+.br
+.ti -1c
+.RI "double \fBz_min\fP"
+.br
+.ti -1c
+.RI "double \fBz_max\fP"
+.br
+.ti -1c
+.RI "double \fBmag_min\fP"
+.br
+.ti -1c
+.RI "double \fBmag_max\fP"
+.br
+.ti -1c
+.RI "size_t \fBR_bins\fP"
+.br
+.ti -1c
+.RI "size_t \fBm_bins\fP"
+.br
+.ti -1c
+.RI "size_t \fBz_bins\fP"
+.br
+.ti -1c
+.RI "size_t \fBmag_bins\fP"
+.br
+.ti -1c
+.RI "bool \fBR_log\fP"
+.br
+.ti -1c
+.RI "bool \fBm_log\fP"
+.br
+.ti -1c
+.RI "bool \fBz_log\fP"
+.br
+.ti -1c
+.RI "bool \fBmag_log\fP"
+.br
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "static constexpr size_t \fBnum_config_params\fP = 18"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "gg_lensing_config::gg_lensing_config (const intargc = \fC0\fP, const char *argv[] = \fCnullptr\fP)"
+
+.SS "virtual gg_lensing_config::~gg_lensing_config ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Field Documentation"
+.PP 
+.SS "size_t gg_lensing_config::m_bins"
+
+.SS "bool gg_lensing_config::m_log"
+
+.SS "\fBIceBRG::mass_type\fP gg_lensing_config::m_max"
+
+.SS "\fBIceBRG::mass_type\fP gg_lensing_config::m_min"
+
+.SS "size_t gg_lensing_config::mag_bins"
+
+.SS "bool gg_lensing_config::mag_log"
+
+.SS "double gg_lensing_config::mag_max"
+
+.SS "double gg_lensing_config::mag_min"
+
+.SS "constexpr size_t gg_lensing_config::num_config_params = 18\fC [static]\fP"
+
+.SS "std::string gg_lensing_config::precalculated_data_filename"
+
+.SS "size_t gg_lensing_config::R_bins"
+
+.SS "bool gg_lensing_config::R_log"
+
+.SS "\fBIceBRG::distance_type\fP gg_lensing_config::R_max"
+
+.SS "\fBIceBRG::distance_type\fP gg_lensing_config::R_min"
+
+.SS "bool gg_lensing_config::use_precalculated_data"
+
+.SS "size_t gg_lensing_config::z_bins"
+
+.SS "bool gg_lensing_config::z_log"
+
+.SS "double gg_lensing_config::z_max"
+
+.SS "double gg_lensing_config::z_min"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

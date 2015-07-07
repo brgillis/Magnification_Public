@@ -1,0 +1,40 @@
+.TH "IceBRG::source_galaxy" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IceBRG::source_galaxy \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <source_galaxy\&.h>\fP
+.PP
+Inherits \fBIceBRG::source_obj\fP, and \fBIceBRG::galaxy\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBsource_galaxy\fP (const \fBangle_type\fP &init_ra=0, const \fBangle_type\fP &init_dec=0, const \fBflt_type\fP &init_z=0, const \fBflt_type\fP &init_gamma_1=0, const \fBflt_type\fP &init_gamma_2=0, const \fBflt_type\fP &init_kappa=0, const \fBmass_type\fP &init_mstar=0, const \fBflt_type\fP &init_mag=0, const \fBflt_type\fP &init_weight=1)"
+.br
+.ti -1c
+.RI "virtual \fB~source_galaxy\fP ()"
+.br
+.ti -1c
+.RI "\fBmass_type\fP \fBm\fP () const "
+.br
+.ti -1c
+.RI "\fBflt_type\fP \fBmag\fP () const "
+.br
+.ti -1c
+.RI "\fBredshift_obj\fP * \fBredshift_obj_clone\fP () const "
+.br
+.ti -1c
+.RI "\fBsky_obj\fP * \fBsky_obj_clone\fP () const "
+.br
+.ti -1c
+.RI "\fBgalaxy\fP * \fBgalaxy_clone\fP () const "
+.br
+.ti -1c
+.RI "\fBsource_obj\fP * \fBsource_obj_clone\fP () const "
+.br
+.in -1c

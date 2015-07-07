@@ -1,0 +1,75 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/solvers/solvers.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/solvers/solvers.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include <cstdlib>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include <type_traits>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include 'IceBRG_main/container/is_container\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/generic_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/tuple\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/random/random_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/elementwise_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/summary_functions\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename f , typename T , BRG_F_NOT_CONTAINER(T) > const T \fBIceBRG::solve_iterate\fP (const f &func, const T &init_param=0, const \fBint_type\fP slowdown=1, const \fBflt_type\fP &precision=0\&.0001, const \fBint_type\fP max_counter=10000)"
+.br
+.ti -1c
+.RI "template<typename f , typename T , BRG_F_NOT_CONTAINER(T) > T \fBIceBRG::solve_sd\fP (const f &func, const T &init_in_params, const \fBflt_type\fP &precision=0\&.00001, const \fBflt_type\fP &lambda=0\&.1, const \fBflt_type\fP &cusp_override_power=0, const \fBint_type\fP max_steps=10000)"
+.br
+.ti -1c
+.RI "template<typename f , typename T , BRG_F_NOT_CONTAINER(T) > std::vector< T > \fBIceBRG::solve_sd\fP (const f &func, const std::vector< T > &init_in_params, const \fBflt_type\fP &precision=0\&.00001, const \fBflt_type\fP &lambda=0\&.1, const \fBflt_type\fP &cusp_override_power=0, const \fBint_type\fP max_steps=10000)"
+.br
+.ti -1c
+.RI "template<typename f , typename Tin , typename Tout , BRG_F_NOT_CONTAINER(Tin) , BRG_F_NOT_CONTAINER(Tout) > Tin \fBIceBRG::solve_grid\fP (const f &func, const Tin &init_min_in_param, const Tin &init_max_in_param, const Tin &init_init_in_params_step, const Tout &target_out_param, const \fBflt_type\fP &init_init_precision=0\&.00001, const \fBflt_type\fP &search_precision=0\&.1)"
+.br
+.ti -1c
+.RI "template<typename f , typename Tin , BRG_F_NOT_CONTAINER(Tin) > std::vector< Tin > \fBIceBRG::solve_grid\fP (const f &func, const std::vector< Tin > &init_min_in_params, const std::vector< Tin > &init_max_in_params, const std::vector< Tin > &init_init_in_params_step, const decltype(f()(std::vector< Tin >()))&target_out_params=decltype(f()(std::vector< Tin >()))(), const \fBflt_type\fP &init_init_precision=0\&.00001, const \fBflt_type\fP &search_precision=0\&.1, const std::vector< \fBflt_type\fP > &init_out_params_weight=std::vector< \fBflt_type\fP >(0))"
+.br
+.ti -1c
+.RI "template<typename f , typename Tin , typename Tout , BRG_F_NOT_CONTAINER(Tin) , BRG_F_NOT_CONTAINER(Tout) > Tin \fBIceBRG::solve_grid\fP (const f &func, const Tin &init_min_in_params, const Tin &init_max_in_params, const \fBint_type\fP &num_search_steps, const Tout &target_out_params, const \fBflt_type\fP &init_init_precision=0\&.00001, const \fBflt_type\fP &search_precision=0\&.1)"
+.br
+.ti -1c
+.RI "template<typename f , typename Tin , typename Tout , BRG_F_NOT_CONTAINER(Tin) , BRG_F_NOT_CONTAINER(Tout) > std::vector< Tin > \fBIceBRG::solve_grid\fP (const f &func, const std::vector< Tin > &init_min_in_params, const std::vector< Tin > &init_max_in_params, const \fBint_type\fP &num_search_steps, const std::vector< Tout > &target_out_params, const \fBflt_type\fP &init_init_precision=0\&.00001, const \fBflt_type\fP &search_precision=0\&.1, const std::vector< \fBflt_type\fP > &out_params_weight=std::vector< \fBflt_type\fP >(0))"
+.br
+.ti -1c
+.RI "template<typename f , typename T , BRG_F_NOT_CONTAINER(T) > T \fBIceBRG::solve_MCMC\fP (const f &func, const T &init_in_param, const T &init_min_in_param, const T &init_max_in_param, const T &init_in_param_step_sigma, const \fBint_type\fP &max_steps=1000000, const \fBint_type\fP &annealing_period=100000, const \fBflt_type\fP &annealing_factor=4)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

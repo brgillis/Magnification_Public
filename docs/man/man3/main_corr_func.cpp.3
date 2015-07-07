@@ -1,0 +1,92 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_corr_func/src/main_corr_func.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_corr_func/src/main_corr_func.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <tuple>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include <Eigen/Core>\fP
+.br
+\fC#include 'IceBRG_main/container/coerce\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/labeled_array\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unit_conversions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unitconv_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/vector/limit_vector\&.hpp'\fP
+.br
+\fC#include 'IceBRG_physics/lensing_correlation_function_estimator\&.h'\fP
+.br
+\fC#include 'IceBRG_physics/correlation_function_estimator\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_global_values\&.h'\fP
+.br
+\fC#include 'get_data_directory\&.hpp'\fP
+.br
+\fC#include 'magic_values\&.hpp'\fP
+.br
+\fC#include 'corr_func_bin\&.hpp'\fP
+.br
+\fC#include 'corr_func_config\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLIMIT_TO_MONOPOLE\fP"
+.br
+.ti -1c
+.RI "#define \fBUSE_FIELD_WEIGHTING\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (const int argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr int \fBreserve_factor\fP = 10000"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LIMIT_TO_MONOPOLE"
+
+.SS "#define USE_FIELD_WEIGHTING"
+
+.SH "Function Documentation"
+.PP 
+.SS "int main (const intargc, const char *argv[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr int reserve_factor = 10000"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

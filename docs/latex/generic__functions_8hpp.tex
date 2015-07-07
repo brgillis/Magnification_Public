@@ -1,0 +1,53 @@
+\hypertarget{generic__functions_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/container/generic\-\_\-functions.hpp File Reference}
+\label{generic__functions_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/container/generic\-\_\-functions.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/container/generic\-\_\-functions.\-hpp}}
+}
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/container/is\-\_\-container.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/units.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/utility.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{namespaceIceBRG_structIceBRG_1_1all__flt__type}{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, Enable $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1all__flt__type_3_01T_00_01BRG__S__IS__STL_07T_08_4}{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, B\-R\-G\-\_\-\-S\-\_\-\-I\-S\-\_\-\-S\-T\-L(\-T)$>$}
+\item 
+struct \hyperlink{structIceBRG_1_1all__flt__type_3_01T_00_01BRG__S__IS__EIGEN_07T_08_4}{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, B\-R\-G\-\_\-\-S\-\_\-\-I\-S\-\_\-\-E\-I\-G\-E\-N(\-T)$>$}
+\item 
+struct \hyperlink{structIceBRG_1_1all__flt__type_3_01T_00_01BRG__S__IS__NULL_07T_08_4}{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, B\-R\-G\-\_\-\-S\-\_\-\-I\-S\-\_\-\-N\-U\-L\-L(\-T)$>$}
+\item 
+struct \hyperlink{structIceBRG_1_1all__flt__type_3_01T_00_01BRG__S__IS__TUPLE_07T_08_4}{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, B\-R\-G\-\_\-\-S\-\_\-\-I\-S\-\_\-\-T\-U\-P\-L\-E(\-T)$>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-C\-O\-N\-T\-A\-I\-N\-E\-R(\-T) $>$ }\\auto \hyperlink{namespaceIceBRG_a8dab53a7f9a46c62f6760c21ccfe1f66}{Ice\-B\-R\-G\-::get} (T \&v, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&i)-\/$>$ decltype(v\mbox{[}i\mbox{]})
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-C\-O\-N\-T\-A\-I\-N\-E\-R(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_a6a80d91835add9f6719b9233a19cdea5}{Ice\-B\-R\-G\-::fix\-\_\-min\-\_\-and\-\_\-max} (T \&v1, T \&v2)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-N\-U\-L\-L(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_a084bf1186811c3fd362d52cf79e3948c}{Ice\-B\-R\-G\-::fix\-\_\-min\-\_\-and\-\_\-max} (const T \&v1, const T \&v2)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-C\-O\-N\-T\-A\-I\-N\-E\-R(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_ab5f6386b56383dcac68a24808b83fb6c}{Ice\-B\-R\-G\-::fix\-\_\-step\-\_\-sigmas} (T \&v\-\_\-sigmas, const T \&v\-\_\-min, const T \&v\-\_\-max)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-N\-U\-L\-L(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_aebcfb0c04e9854acc78a326c43785560}{Ice\-B\-R\-G\-::fix\-\_\-step\-\_\-sigmas} (const T \&v\-\_\-sigmas, const T \&v\-\_\-min, const T \&v\-\_\-max)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-C\-O\-N\-T\-A\-I\-N\-E\-R(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_a8e7080546dfa40b9457149562d7c81ed}{Ice\-B\-R\-G\-::fix\-\_\-step\-\_\-sigmas} (const T \&v\-\_\-sigmas)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-T\-U\-P\-L\-E(\-T) $>$ }\\void \hyperlink{namespaceIceBRG_a0269eb85770d5903ad410f3732145184}{Ice\-B\-R\-G\-::fix\-\_\-step\-\_\-sigmas} (T \&v\-\_\-sigmas)
+\item 
+{\footnotesize template$<$typename T , B\-R\-G\-\_\-\-F\-\_\-\-I\-S\-\_\-\-C\-O\-N\-T\-A\-I\-N\-E\-R(\-T) $>$ }\\auto \hyperlink{namespaceIceBRG_a7e4ad51abcee05e3f624b6c72ee38693}{Ice\-B\-R\-G\-::attempt\-\_\-get} (T \&v, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&i)-\/$>$ decltype(v\mbox{[}i\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Data Structure Documentation}
+\index{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type@{Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type}}\label{structIceBRG_1_1all__flt__type}
+\hypertarget{namespaceIceBRG_structIceBRG_1_1all__flt__type}{}
+\subsubsection{struct Ice\-B\-R\-G\-:\-:all\-\_\-flt\-\_\-type}
+\subsubsection*{template$<$typename T, typename Enable = void$>$struct Ice\-B\-R\-G\-::all\-\_\-flt\-\_\-type$<$ T, Enable $>$}
+

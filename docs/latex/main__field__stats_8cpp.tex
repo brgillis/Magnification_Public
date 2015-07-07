@@ -1,0 +1,79 @@
+\hypertarget{main__field__stats_8cpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-field\-\_\-stats/main\-\_\-field\-\_\-stats.cpp File Reference}
+\label{main__field__stats_8cpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-field\-\_\-stats/main\-\_\-field\-\_\-stats.\-cpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-field\-\_\-stats/main\-\_\-field\-\_\-stats.\-cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$Eigen/\-Core$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/container/labeled\-\_\-array.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/ascii\-\_\-table\-\_\-map.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/binary\-\_\-archive.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/open\-\_\-file.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/join\-\_\-path.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/misc\-\_\-math.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/unit\-\_\-conversions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/limit\-\_\-vector.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-data\-\_\-directory.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magic\-\_\-values.\-hpp\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main__field__stats_8cpp_ae586289c7dcfec8adb6006665b8c24ff}{M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\-\_\-t \hyperlink{main__field__stats_8cpp_a622bee76d6c64489639fa2ae549a8403}{num\-\_\-good\-\_\-pixels} (const std\-::vector$<$ std\-::vector$<$ bool $>$$>$ \&input)
+\item 
+int \hyperlink{main__field__stats_8cpp_ad53223b8779f25caeddb70a3b9172967}{main} (const int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{main__field__stats_8cpp_a88d48aa9101c673522dda66c9e311e64}{output\-\_\-filename} = \char`\"{}field\-\_\-lens\-\_\-weights.\-dat\char`\"{}
+\item 
+constexpr unsigned \hyperlink{main__field__stats_8cpp_a6d4d8cfc3c2eccfe9ed5091d304e8dcd}{z\-\_\-bins} = 110
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main__field__stats_8cpp_ae586289c7dcfec8adb6006665b8c24ff}{\index{main\-\_\-field\-\_\-stats.\-cpp@{main\-\_\-field\-\_\-stats.\-cpp}!M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E@{M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E}}
+\index{M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E@{M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E}!main_field_stats.cpp@{main\-\_\-field\-\_\-stats.\-cpp}}
+\subsubsection[{M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\-A\-K\-E\-\_\-\-W\-E\-I\-G\-H\-T\-\_\-\-T\-A\-B\-L\-E}}\label{main__field__stats_8cpp_ae586289c7dcfec8adb6006665b8c24ff}
+
+
+\subsection{Function Documentation}
+\hypertarget{main__field__stats_8cpp_ad53223b8779f25caeddb70a3b9172967}{\index{main\-\_\-field\-\_\-stats.\-cpp@{main\-\_\-field\-\_\-stats.\-cpp}!main@{main}}
+\index{main@{main}!main_field_stats.cpp@{main\-\_\-field\-\_\-stats.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{const int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main__field__stats_8cpp_ad53223b8779f25caeddb70a3b9172967}
+T\-O\-D\-O (description)
+
+
+\begin{DoxyParams}{Parameters}
+{\em T\-O\-D\-O} & (params to be passed at command-\/line) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{main__field__stats_8cpp_a622bee76d6c64489639fa2ae549a8403}{\index{main\-\_\-field\-\_\-stats.\-cpp@{main\-\_\-field\-\_\-stats.\-cpp}!num\-\_\-good\-\_\-pixels@{num\-\_\-good\-\_\-pixels}}
+\index{num\-\_\-good\-\_\-pixels@{num\-\_\-good\-\_\-pixels}!main_field_stats.cpp@{main\-\_\-field\-\_\-stats.\-cpp}}
+\subsubsection[{num\-\_\-good\-\_\-pixels}]{\setlength{\rightskip}{0pt plus 5cm}size\-\_\-t num\-\_\-good\-\_\-pixels (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ std\-::vector$<$ bool $>$$>$ \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{main__field__stats_8cpp_a622bee76d6c64489639fa2ae549a8403}
+
+
+\subsection{Variable Documentation}
+\hypertarget{main__field__stats_8cpp_a88d48aa9101c673522dda66c9e311e64}{\index{main\-\_\-field\-\_\-stats.\-cpp@{main\-\_\-field\-\_\-stats.\-cpp}!output\-\_\-filename@{output\-\_\-filename}}
+\index{output\-\_\-filename@{output\-\_\-filename}!main_field_stats.cpp@{main\-\_\-field\-\_\-stats.\-cpp}}
+\subsubsection[{output\-\_\-filename}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string output\-\_\-filename = \char`\"{}field\-\_\-lens\-\_\-weights.\-dat\char`\"{}}}\label{main__field__stats_8cpp_a88d48aa9101c673522dda66c9e311e64}
+\hypertarget{main__field__stats_8cpp_a6d4d8cfc3c2eccfe9ed5091d304e8dcd}{\index{main\-\_\-field\-\_\-stats.\-cpp@{main\-\_\-field\-\_\-stats.\-cpp}!z\-\_\-bins@{z\-\_\-bins}}
+\index{z\-\_\-bins@{z\-\_\-bins}!main_field_stats.cpp@{main\-\_\-field\-\_\-stats.\-cpp}}
+\subsubsection[{z\-\_\-bins}]{\setlength{\rightskip}{0pt plus 5cm}constexpr unsigned z\-\_\-bins = 110}}\label{main__field__stats_8cpp_a6d4d8cfc3c2eccfe9ed5091d304e8dcd}

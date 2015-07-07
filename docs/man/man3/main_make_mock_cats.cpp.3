@@ -1,0 +1,174 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_make_mock_cats/main_make_mock_cats.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_make_mock_cats/main_make_mock_cats.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cassert>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/serialization/vector\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/file_access/binary_archive\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/random/random_functions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/unit_conversions\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_global_values\&.h'\fP
+.br
+\fC#include 'get_ra_dec\&.h'\fP
+.br
+\fC#include 'num_good_pixels\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (const int argc, const char *argv[])"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBdata_directory\fP = '/disk2/brg/git/CFHTLenS_cat/Data/'"
+.br
+.ti -1c
+.RI "const std::string \fBmask_directory\fP = 'masks/'"
+.br
+.ti -1c
+.RI "const std::string \fBfield_directory\fP = 'filtered_tables/'"
+.br
+.ti -1c
+.RI "const std::string \fBfields_list\fP = 'fields_list\&.txt'"
+.br
+.ti -1c
+.RI "const std::string \fBpixel_map_root\fP = '_lens_good_pixels\&.bin'"
+.br
+.ti -1c
+.RI "const std::string \fBlens_output_root\fP = '_mock_lens\&.dat'"
+.br
+.ti -1c
+.RI "const std::string \fBsource_output_root\fP = '_mock_source\&.dat'"
+.br
+.ti -1c
+.RI "constexpr unsigned \fBnum_lenses_to_generate\fP = 400000"
+.br
+.ti -1c
+.RI "constexpr unsigned \fBnum_sources_to_generate\fP = 600000"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_lens_z\fP = 0\&.2"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_lens_z\fP = 1\&.6"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_source_z\fP = 0\&.2"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_source_z\fP = 4\&.0"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_lens_mag\fP = 15"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_lens_mag\fP = 23"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_source_mag\fP = 19"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_source_mag\fP = 25"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_lens_lmsun\fP = 9"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_lens_lmsun\fP = 12"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_T\fP = 1\&.0"
+.br
+.ti -1c
+.RI "constexpr double \fBmax_T\fP = 6\&.0"
+.br
+.ti -1c
+.RI "constexpr double \fBmin_good_frac\fP = 0\&.01"
+.br
+.ti -1c
+.RI "constexpr int \fBbase_seed\fP = 12431"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (const intargc, const char *argv[])"
+
+.SH "Variable Documentation"
+.PP 
+.SS "constexpr int base_seed = 12431"
+
+.SS "const std::string data_directory = '/disk2/brg/git/CFHTLenS_cat/Data/'"
+
+.SS "const std::string field_directory = 'filtered_tables/'"
+
+.SS "const std::string fields_list = 'fields_list\&.txt'"
+
+.SS "const std::string lens_output_root = '_mock_lens\&.dat'"
+
+.SS "const std::string mask_directory = 'masks/'"
+
+.SS "constexpr double max_lens_lmsun = 12"
+
+.SS "constexpr double max_lens_mag = 23"
+
+.SS "constexpr double max_lens_z = 1\&.6"
+
+.SS "constexpr double max_source_mag = 25"
+
+.SS "constexpr double max_source_z = 4\&.0"
+
+.SS "constexpr double max_T = 6\&.0"
+
+.SS "constexpr double min_good_frac = 0\&.01"
+
+.SS "constexpr double min_lens_lmsun = 9"
+
+.SS "constexpr double min_lens_mag = 15"
+
+.SS "constexpr double min_lens_z = 0\&.2"
+
+.SS "constexpr double min_source_mag = 19"
+
+.SS "constexpr double min_source_z = 0\&.2"
+
+.SS "constexpr double min_T = 1\&.0"
+
+.SS "constexpr unsigned num_lenses_to_generate = 400000"
+
+.SS "constexpr unsigned num_sources_to_generate = 600000"
+
+.SS "const std::string pixel_map_root = '_lens_good_pixels\&.bin'"
+
+.SS "const std::string source_output_root = '_mock_source\&.dat'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

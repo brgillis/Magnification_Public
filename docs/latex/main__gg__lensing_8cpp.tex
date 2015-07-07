@@ -1,0 +1,67 @@
+\hypertarget{main__gg__lensing_8cpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-gg\-\_\-lensing/main\-\_\-gg\-\_\-lensing.cpp File Reference}
+\label{main__gg__lensing_8cpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-gg\-\_\-lensing/main\-\_\-gg\-\_\-lensing.\-cpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-gg\-\_\-lensing/main\-\_\-gg\-\_\-lensing.\-cpp}}
+}
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/lexical\-\_\-cast.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/container/labeled\-\_\-array.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/ascii\-\_\-table\-\_\-map.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/open\-\_\-file.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/unitconv\-\_\-map.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/units.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/elementwise\-\_\-functions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/limit\-\_\-vector.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/expected\-\_\-count\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/expected\-\_\-count\-\_\-derivative\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/mag\-\_\-calibration\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/mag\-\_\-signal\-\_\-integral\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/mag\-\_\-weight\-\_\-integral\-\_\-cache.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/magnification/mag\-\_\-global\-\_\-values.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/pair\-\_\-binner.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/pair\-\_\-bins\-\_\-summary.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-lensing/source\-\_\-galaxy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-physics/astro.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-physics/astro\-\_\-caches.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-physics/sky\-\_\-obj/galaxy.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-data\-\_\-directory.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magic\-\_\-values.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gg\-\_\-lensing\-\_\-config.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}pass\-\_\-configs\-\_\-to\-\_\-binner.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main__gg__lensing_8cpp_ad53223b8779f25caeddb70a3b9172967}{main} (const int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{main__gg__lensing_8cpp_a68b396b065fb3961863b6b7fdae996ae}{lens\-\_\-root} = \char`\"{}\-\_\-lens.\-dat\char`\"{}
+\item 
+const std\-::string \hyperlink{main__gg__lensing_8cpp_a8add411587f85631bb08f3dccdafc390}{lens\-\_\-unmasked\-\_\-frac\-\_\-root} = \char`\"{}\-\_\-lens\-\_\-mask\-\_\-frac.\-dat\char`\"{}
+\item 
+const std\-::string \hyperlink{main__gg__lensing_8cpp_ae4fdee3e0a9fb9065528aa407b7f1ee2}{source\-\_\-root} = \char`\"{}\-\_\-source.\-dat\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main__gg__lensing_8cpp_ad53223b8779f25caeddb70a3b9172967}{\index{main\-\_\-gg\-\_\-lensing.\-cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}!main@{main}}
+\index{main@{main}!main_gg_lensing.cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{const int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main__gg__lensing_8cpp_ad53223b8779f25caeddb70a3b9172967}
+
+
+\subsection{Variable Documentation}
+\hypertarget{main__gg__lensing_8cpp_a68b396b065fb3961863b6b7fdae996ae}{\index{main\-\_\-gg\-\_\-lensing.\-cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}!lens\-\_\-root@{lens\-\_\-root}}
+\index{lens\-\_\-root@{lens\-\_\-root}!main_gg_lensing.cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}}
+\subsubsection[{lens\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string lens\-\_\-root = \char`\"{}\-\_\-lens.\-dat\char`\"{}}}\label{main__gg__lensing_8cpp_a68b396b065fb3961863b6b7fdae996ae}
+\hypertarget{main__gg__lensing_8cpp_a8add411587f85631bb08f3dccdafc390}{\index{main\-\_\-gg\-\_\-lensing.\-cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}!lens\-\_\-unmasked\-\_\-frac\-\_\-root@{lens\-\_\-unmasked\-\_\-frac\-\_\-root}}
+\index{lens\-\_\-unmasked\-\_\-frac\-\_\-root@{lens\-\_\-unmasked\-\_\-frac\-\_\-root}!main_gg_lensing.cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}}
+\subsubsection[{lens\-\_\-unmasked\-\_\-frac\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string lens\-\_\-unmasked\-\_\-frac\-\_\-root = \char`\"{}\-\_\-lens\-\_\-mask\-\_\-frac.\-dat\char`\"{}}}\label{main__gg__lensing_8cpp_a8add411587f85631bb08f3dccdafc390}
+\hypertarget{main__gg__lensing_8cpp_ae4fdee3e0a9fb9065528aa407b7f1ee2}{\index{main\-\_\-gg\-\_\-lensing.\-cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}!source\-\_\-root@{source\-\_\-root}}
+\index{source\-\_\-root@{source\-\_\-root}!main_gg_lensing.cpp@{main\-\_\-gg\-\_\-lensing.\-cpp}}
+\subsubsection[{source\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string source\-\_\-root = \char`\"{}\-\_\-source.\-dat\char`\"{}}}\label{main__gg__lensing_8cpp_ae4fdee3e0a9fb9065528aa407b7f1ee2}

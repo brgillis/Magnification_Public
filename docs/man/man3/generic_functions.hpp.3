@@ -1,0 +1,83 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/container/generic_functions.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/container/generic_functions.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cassert>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include 'IceBRG_main/container/is_container\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBIceBRG::all_flt_type< T, Enable >\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::all_flt_type< T, BRG_S_IS_STL(T)>\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::all_flt_type< T, BRG_S_IS_EIGEN(T)>\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::all_flt_type< T, BRG_S_IS_NULL(T)>\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::all_flt_type< T, BRG_S_IS_TUPLE(T)>\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > auto \fBIceBRG::get\fP (T &v, const \fBint_type\fP &i)-> decltype(v[i])"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > void \fBIceBRG::fix_min_and_max\fP (T &v1, T &v2)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_NULL(T) > void \fBIceBRG::fix_min_and_max\fP (const T &v1, const T &v2)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > void \fBIceBRG::fix_step_sigmas\fP (T &v_sigmas, const T &v_min, const T &v_max)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_NULL(T) > void \fBIceBRG::fix_step_sigmas\fP (const T &v_sigmas, const T &v_min, const T &v_max)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > void \fBIceBRG::fix_step_sigmas\fP (const T &v_sigmas)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_TUPLE(T) > void \fBIceBRG::fix_step_sigmas\fP (T &v_sigmas)"
+.br
+.ti -1c
+.RI "template<typename T , BRG_F_IS_CONTAINER(T) > auto \fBIceBRG::attempt_get\fP (T &v, const \fBint_type\fP &i)-> decltype(v[i])"
+.br
+.in -1c
+.SH "Data Structure Documentation"
+.PP 
+.SH "struct IceBRG::all_flt_type"
+.PP 
+
+.SS "template<typename T, typename Enable = void>struct IceBRG::all_flt_type< T, Enable >"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

@@ -1,0 +1,84 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/Fourier/management.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/Fourier/management.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <memory>\fP
+.br
+\fC#include <stdexcept>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <fftw3\&.h>\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBIceBRG::Fourier::managed_fftw_plan\fP"
+.br
+.ti -1c
+.RI "class \fBIceBRG::Fourier::fftw_wisdom_accumulator\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::Fourier::fftw_array_deleter< T >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.ti -1c
+.RI "namespace \fBIceBRG::Fourier\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef Eigen::Map
+.br
+< flt_array_type > \fBIceBRG::Fourier::flt_array_map_type\fP"
+.br
+.ti -1c
+.RI "typedef Eigen::Map
+.br
+< complex_array_type > \fBIceBRG::Fourier::complex_array_map_type\fP"
+.br
+.ti -1c
+.RI "typedef std::unique_ptr
+.br
+< \fBflt_type\fP, fftw_array_deleter
+.br
+< \fBflt_type\fP > > \fBIceBRG::Fourier::fftw_flt_ptr\fP"
+.br
+.ti -1c
+.RI "typedef std::unique_ptr
+.br
+< fftw_complex, 
+.br
+fftw_array_deleter
+.br
+< fftw_complex > > \fBIceBRG::Fourier::fftw_complex_ptr\fP"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr const char * \fBIceBRG::Fourier::default_fftw_wisdom_filename\fP = '\&.fftw_wisdom'"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

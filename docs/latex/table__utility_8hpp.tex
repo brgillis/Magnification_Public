@@ -1,0 +1,30 @@
+\hypertarget{table__utility_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/file\-\_\-access/table\-\_\-utility.hpp File Reference}
+\label{table__utility_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/file\-\_\-access/table\-\_\-utility.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/file\-\_\-access/table\-\_\-utility.\-hpp}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$type\-\_\-traits$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/container/table\-\_\-typedefs.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/utility.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/make\-\_\-vector.\-hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\table\-\_\-map\-\_\-t$<$ T $>$ \hyperlink{namespaceIceBRG_a8b16d77487fb029cea7629dc52bd7dc7}{Ice\-B\-R\-G\-::make\-\_\-table\-\_\-map} (const table\-\_\-t$<$ T $>$ \&data, const header\-\_\-t \&header)
+\item 
+std\-::vector$<$ std\-::string $>$ \hyperlink{namespaceIceBRG_aad40379211c58b53606d4bdb8bf7e4aa}{Ice\-B\-R\-G\-::split\-\_\-on\-\_\-whitespace} (const std\-::string \&sentence)
+\item 
+header\-\_\-t \hyperlink{namespaceIceBRG_a9f5dc0a1a78255329f619200e7dca2ac}{Ice\-B\-R\-G\-::convert\-\_\-to\-\_\-header} (const std\-::string \&line)
+\item 
+{\footnotesize template$<$typename T\-\_\-out , typename T\-\_\-in , typename std\-::enable\-\_\-if$<$ std\-::is\-\_\-same$<$ T\-\_\-out, std\-::string $>$\-::value, char $>$\-::type  = 0$>$ }\\T\-\_\-in \& \hyperlink{namespaceIceBRG_a1ff20754fdcf67b62d9d29e53769f22f}{Ice\-B\-R\-G\-::pop\-\_\-from\-\_\-istream} (T\-\_\-in \&in, T\-\_\-out \&out)
+\item 
+{\footnotesize template$<$typename T\-\_\-out , typename T\-\_\-in $>$ }\\std\-::vector$<$ T\-\_\-out $>$ \hyperlink{namespaceIceBRG_a7468ea3f83d5b2502eb12fd7894e4b59}{Ice\-B\-R\-G\-::split\-\_\-line} (T\-\_\-in \&\&line\-\_\-data, const T\-\_\-out \&default\-\_\-value=T\-\_\-out(), const size\-\_\-t \&min\-\_\-length=0)
+\end{DoxyCompactItemize}

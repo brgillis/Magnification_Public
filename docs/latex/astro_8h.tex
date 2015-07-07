@@ -1,0 +1,140 @@
+\hypertarget{astro_8h}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-physics/astro.h File Reference}
+\label{astro_8h}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-physics/astro.\-h@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-physics/astro.\-h}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/unit\-\_\-conversions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/units.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/misc\-\_\-math.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1redshift__obj}{Ice\-B\-R\-G\-::redshift\-\_\-obj}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{astro_8h_ad945cd646a47f9625c4a79b7744d3860}{\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}
+\item 
+\#define \hyperlink{astro_8h_a063dcb8f85e5d1cae17ad35ada1baf07}{\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}
+\item 
+\#define \hyperlink{astro_8h_ae7aacc643482cd4e8c9e1462a6a7c148}{\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}
+\item 
+\#define \hyperlink{astro_8h_a8912dc3f47b3da6d5b3e937c2487ee98}{\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const velocity\-\_\-type \hyperlink{namespaceIceBRG_a064ef8d17408ee9f2c81f8aa1f87155e}{Ice\-B\-R\-G\-::c} (\hyperlink{namespaceIceBRG_1_1unitconv_a4452bf41e30df2caf01bd4494fb7da32}{Ice\-B\-R\-G\-::unitconv\-::ctomps} $\ast$mps)
+\item 
+const inverse\-\_\-time\-\_\-type \hyperlink{namespaceIceBRG_a5d7bd223bbc2553d0dfa6d12ee830d2b}{Ice\-B\-R\-G\-::\-H\-\_\-0} (70 $\ast$unitconv\-::kmtom/unitconv\-::stos/unitconv\-::\-Mpctom/\hyperlink{namespaceIceBRG_a542d4177a57d87415daf841cf88e6b15}{Ice\-B\-R\-G\-::second})
+\item 
+inverse\-\_\-time\-\_\-type \hyperlink{namespaceIceBRG_addecf77361206a35290044de4c398220}{Ice\-B\-R\-G\-::\-H} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+custom\-\_\-unit\-\_\-type$<$ 1, 0, 0,-\/1, 0 $>$ \hyperlink{namespaceIceBRG_aa3f4f062a080eb902eb579c6b85318c7}{Ice\-B\-R\-G\-::dfa} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a35339f67e46b35ffdd2166ccc82c9a32}{Ice\-B\-R\-G\-::dfa} (const angle\-\_\-type \&da, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_aadcee0c5b6b0258dfef54e576a9f48d6}{Ice\-B\-R\-G\-::dfa} (const angle\-\_\-type \&a1, const angle\-\_\-type \&a2, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a25e66a91dfb063dd1c370d210d4664f2}{Ice\-B\-R\-G\-::dfa} (const angle\-\_\-type \&a1x, const angle\-\_\-type \&a1y, const angle\-\_\-type \&a2x, const angle\-\_\-type \&a2y, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+custom\-\_\-unit\-\_\-type$<$-\/1, 0, 0, 1, 0 $>$ \hyperlink{namespaceIceBRG_a37a7c079075ab49d54d820dff1a08689}{Ice\-B\-R\-G\-::afd} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+angle\-\_\-type \hyperlink{namespaceIceBRG_a2d43e09e2a9f096392dc89e0e0dcb580}{Ice\-B\-R\-G\-::afd} (const distance\-\_\-type \&dd, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+angle\-\_\-type \hyperlink{namespaceIceBRG_ae0c64eb958d8720654841e8123e0612b}{Ice\-B\-R\-G\-::afd} (const distance\-\_\-type \&d1, const distance\-\_\-type \&d2, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+angle\-\_\-type \hyperlink{namespaceIceBRG_a75ab9ba6f091a98c22692ebe8511faad}{Ice\-B\-R\-G\-::afd} (const distance\-\_\-type \&d1x, const distance\-\_\-type \&d1y, const distance\-\_\-type \&d2x, const distance\-\_\-type \&d2y, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_ab201f049a3140d4267a402bdd87fc4b7}{Ice\-B\-R\-G\-::zfa} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&a)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_ae1f945396c7f24f274ee9e9e054445a4}{Ice\-B\-R\-G\-::afz} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+time\-\_\-type \hyperlink{namespaceIceBRG_a286b57454b570266d1494163bb9ab956}{Ice\-B\-R\-G\-::tfz} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+time\-\_\-type \hyperlink{namespaceIceBRG_ad4d2ec9c3d2729517ed0e12138e431f7}{Ice\-B\-R\-G\-::tfa} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a5e8ffffddca0034ee8cbf7d0c4388035}{Ice\-B\-R\-G\-::zft} (const time\-\_\-type \&t)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a5b8d858b4409256b4b3c37000fcd9878}{Ice\-B\-R\-G\-::aft} (const time\-\_\-type \&t)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a3dae2765a994021cfd7984e01d049c1c}{Ice\-B\-R\-G\-::integrate\-\_\-add} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z1, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z2)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a8a0120e45c0042742873813af7209b99}{Ice\-B\-R\-G\-::integrate\-\_\-cmd} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z1, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z2)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a05ee282684a7b00dfe06c5e56162444b}{Ice\-B\-R\-G\-::integrate\-\_\-\-Ld} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z1, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z2)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_ad26acf5308cef1b32f3d1bbe50da3899}{Ice\-B\-R\-G\-::integrate\-\_\-ltd} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z1, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z2)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a36a9d9b01c4b3decad051fd96a65f255}{Ice\-B\-R\-G\-::integrate\-\_\-add} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_ad2ce8086bbc4c5965a1aa76bd84562b8}{Ice\-B\-R\-G\-::integrate\-\_\-cmd} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a210041d97246c7869226f8568231abab}{Ice\-B\-R\-G\-::integrate\-\_\-\-Ld} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a20a04918dd827e062b09cb52a37c5f38}{Ice\-B\-R\-G\-::integrate\-\_\-ltd} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a9a93961201a81685266c5a6ba22a9a4f}{Ice\-B\-R\-G\-::integrate\-\_\-distance} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z1, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z2, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&mode, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&resolution=10000)
+\item 
+distance\-\_\-type \hyperlink{namespaceIceBRG_a6f2a47905657fc5eb2fabd9ff1cf2cb6}{Ice\-B\-R\-G\-::ad\-\_\-distance} (\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} z1, \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} z2=0)
+\item 
+surface\-\_\-density\-\_\-type \hyperlink{namespaceIceBRG_a06ceb81b816047973b849f9d0ed7ab33}{Ice\-B\-R\-G\-::sigma\-\_\-crit} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z\-\_\-lens, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \&z\-\_\-source)
+\item 
+{\footnotesize template$<$typename Tr1 , typename Td1 , typename Tr2 , typename Td2 $>$ }\\const Tr1 \hyperlink{namespaceIceBRG_ad7a84367f7e6f0d26e5c47b9b6acdc88}{Ice\-B\-R\-G\-::skydist2d} (const Tr1 \&ra1, const Td1 \&dec1, const Tr2 \&ra2, const Td2 \&dec2)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \& \hyperlink{astro_8h_ab93673585019b7cd625ac62489070410}{pi} = M\-\_\-\-P\-I
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_ae34ca33d4c7073fde8efcc53cf6fd5f4}{Ice\-B\-R\-G\-::\-Gc} = 6.\-67384e-\/11
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_acddabe6e9443c1f8cb4b3c1093342aa3}{Ice\-B\-R\-G\-::\-Omega\-\_\-m} = 0.\-288
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a8861a491b3586ab09c51c1bfc9020698}{Ice\-B\-R\-G\-::\-Omega\-\_\-r} = 0.\-000086
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_afb35c6ac056f6db5d60d8cb03a7b997a}{Ice\-B\-R\-G\-::\-Omega\-\_\-k} = 0
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_adb990b0d239fa166345fc328d173dfec}{Ice\-B\-R\-G\-::\-Omega\-\_\-l} = 1 -\/ Omega\-\_\-k -\/ Omega\-\_\-m -\/ Omega\-\_\-r
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a109232f7a7118dd2b89b92a18df26a79}{Ice\-B\-R\-G\-::\-Omega\-\_\-b} = 0.\-0472
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a110c5768e115f02bf29631b9f0bde3cc}{Ice\-B\-R\-G\-::sigma\-\_\-8} = 0.\-830
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a08eb14835ddd7739204fc116ccfff92d}{Ice\-B\-R\-G\-::n\-\_\-s} = 0.\-971
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_abcd07f4d78fce67e4c2d0a7929722725}{Ice\-B\-R\-G\-::default\-\_\-c} = 6.
+\item 
+constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\-\_\-type} \hyperlink{namespaceIceBRG_a0676bacdb07e422cde03208f56210270}{Ice\-B\-R\-G\-::default\-\_\-tau\-\_\-factor} = 2.
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{astro_8h_a8912dc3f47b3da6d5b3e937c2487ee98}{\index{astro.\-h@{astro.\-h}!\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}
+\index{\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}!astro.h@{astro.\-h}}
+\subsubsection[{\-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-B\-R\-G\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-A\-S\-T\-R\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}\label{astro_8h_a8912dc3f47b3da6d5b3e937c2487ee98}
+\hypertarget{astro_8h_ad945cd646a47f9625c4a79b7744d3860}{\index{astro.\-h@{astro.\-h}!\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}
+\index{\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}!astro.h@{astro.\-h}}
+\subsubsection[{\-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-B\-R\-G\-\_\-\-P\-I\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}\label{astro_8h_ad945cd646a47f9625c4a79b7744d3860}
+Constant Definitions \hypertarget{astro_8h_ae7aacc643482cd4e8c9e1462a6a7c148}{\index{astro.\-h@{astro.\-h}!\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}
+\index{\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}!astro.h@{astro.\-h}}
+\subsubsection[{\-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-C\-O\-S\-M\-O\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}\label{astro_8h_ae7aacc643482cd4e8c9e1462a6a7c148}
+\hypertarget{astro_8h_a063dcb8f85e5d1cae17ad35ada1baf07}{\index{astro.\-h@{astro.\-h}!\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}
+\index{\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-@{\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}!astro.h@{astro.\-h}}
+\subsubsection[{\-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define \-\_\-\-P\-H\-Y\-S\-\_\-\-V\-A\-R\-S\-\_\-\-D\-E\-F\-I\-N\-E\-D\-\_\-}}\label{astro_8h_a063dcb8f85e5d1cae17ad35ada1baf07}
+
+
+\subsection{Variable Documentation}
+\hypertarget{astro_8h_ab93673585019b7cd625ac62489070410}{\index{astro.\-h@{astro.\-h}!pi@{pi}}
+\index{pi@{pi}!astro.h@{astro.\-h}}
+\subsubsection[{pi}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf flt\-\_\-type}\& pi = M\-\_\-\-P\-I}}\label{astro_8h_ab93673585019b7cd625ac62489070410}

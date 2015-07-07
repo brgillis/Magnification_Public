@@ -1,0 +1,30 @@
+\hypertarget{resampling_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/statistics/resampling.hpp File Reference}
+\label{resampling_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/statistics/resampling.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/statistics/resampling.\-hpp}}
+}
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$random$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$boost/optional.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/\-Eigen.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/random/random\-\_\-functions.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1bootstrap}{Ice\-B\-R\-G\-::bootstrap$<$ T\-\_\-vec, T\-\_\-func, T\-\_\-gen $>$}
+\item 
+class \hyperlink{classIceBRG_1_1jackknife}{Ice\-B\-R\-G\-::jackknife$<$ T\-\_\-vec, T\-\_\-func $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\-\_\-vec , typename T\-\_\-gen  = decltype(rng)$>$ }\\T\-\_\-vec \hyperlink{namespaceIceBRG_ae922ec487b3be5021f32c3df392cc8da}{Ice\-B\-R\-G\-::get\-\_\-case\-\_\-resampled} (const T\-\_\-vec \&vec, T\-\_\-gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T\-\_\-vec , std\-::enable\-\_\-if$<$ Ice\-B\-R\-G\-::is\-\_\-eigen\-\_\-container$<$ T\-\_\-vec $>$\-::value, char $>$  = 0$>$ }\\T\-\_\-vec \hyperlink{namespaceIceBRG_afc154bf91798fed11ad39165acd952bb}{Ice\-B\-R\-G\-::get\-\_\-jackknife\-\_\-resampled} (const T\-\_\-vec \&vec, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&sample\-\_\-num=0, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\-\_\-type} \&num\-\_\-samples=2)
+\end{DoxyCompactItemize}

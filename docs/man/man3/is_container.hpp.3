@@ -1,0 +1,291 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/container/is_container.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/container/is_container.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <type_traits>\fP
+.br
+\fC#include 'IceBRG_main/container/is_boost_tuple\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/is_eigen_container\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/is_stl_container\&.hpp'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "struct \fBIceBRG::is_container< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::is_container_or_boost_tuple< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::is_scalar< T >\fP"
+.br
+.ti -1c
+.RI "struct \fBIceBRG::is_scalar_or_eigen< T >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBRG_S_BOTH_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_FIRST_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_SECOND_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_NEITHER_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_EIGEN\fP(T1)   typename std::enable_if<\fBIceBRG::is_eigen_container\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_EIGEN_OR_SCALAR\fP(T1)   typename std::enable_if<\fBIceBRG::is_scalar_or_eigen\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_STL_OR_EIGEN\fP(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_STL\fP(T1)   typename std::enable_if<\fBIceBRG::is_stl_container\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_BOTH_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_FIRST_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_SECOND_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_NEITHER_STL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_EIGEN\fP(T1)   typename std::enable_if<\fBIceBRG::is_eigen_container\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_EIGEN_OR_SCALAR\fP(T1)   typename std::enable_if<\fBIceBRG::is_scalar_or_eigen\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_STL_OR_EIGEN\fP(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_STL\fP(T1)   typename std::enable_if<\fBIceBRG::is_stl_container\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_TUPLE\fP(T1)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_NOT_TUPLE\fP(T1)   typename std::enable_if<!\fBIceBRG::is_boost_tuple\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_NULL\fP(T1)   typename std::enable_if<\fBIceBRG::is_null_type\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_EITHER_IS_NULL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_TUPLE\fP(T1)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_NOT_TUPLE\fP(T1)   typename std::enable_if<!\fBIceBRG::is_boost_tuple\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_NULL\fP(T1)   typename std::enable_if<\fBIceBRG::is_null_type\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_EITHER_IS_NULL\fP(T1, T2)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_CONTAINER\fP(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_IS_CONTAINER_OR_TUPLE\fP(T1)"
+.br
+.ti -1c
+.RI "#define \fBBRG_S_NOT_CONTAINER\fP(T1)   typename std::enable_if<\fBIceBRG::is_scalar\fP<T1>::value>::type"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_CONTAINER\fP(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value,char>::type = 0"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_IS_CONTAINER_OR_TUPLE\fP(T1)"
+.br
+.ti -1c
+.RI "#define \fBBRG_F_NOT_CONTAINER\fP(T1)   typename std::enable_if<\fBIceBRG::is_scalar\fP<T1>::value,char>::type = 0"
+.br
+.in -1c
+.SH "Data Structure Documentation"
+.PP 
+.SH "struct IceBRG::is_container"
+.PP 
+
+.SS "template<typename T>struct IceBRG::is_container< T >"
+
+.SH "struct IceBRG::is_container_or_boost_tuple"
+.PP 
+
+.SS "template<typename T>struct IceBRG::is_container_or_boost_tuple< T >"
+
+.SH "struct IceBRG::is_scalar"
+.PP 
+
+.SS "template<typename T>struct IceBRG::is_scalar< T >"
+
+.SH "struct IceBRG::is_scalar_or_eigen"
+.PP 
+
+.SS "template<typename T>struct IceBRG::is_scalar_or_eigen< T >"
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BRG_F_BOTH_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T1>::value && \\
+	IceBRG::is_stl_container<T2>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_EITHER_IS_NULL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_null_type<T1>::value || \\
+	IceBRG::is_null_type<T2>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_FIRST_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T1>::value && \\
+	IceBRG::is_scalar_or_eigen<T2>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_IS_CONTAINER(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_CONTAINER_OR_TUPLE(T1)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if< \\
+	IceBRG::is_container_or_boost_tuple<T1>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_IS_EIGEN(T1)   typename std::enable_if<\fBIceBRG::is_eigen_container\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_EIGEN_OR_SCALAR(T1)   typename std::enable_if<\fBIceBRG::is_scalar_or_eigen\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_NULL(T1)   typename std::enable_if<\fBIceBRG::is_null_type\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_STL(T1)   typename std::enable_if<\fBIceBRG::is_stl_container\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_STL_OR_EIGEN(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_IS_TUPLE(T1)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_boost_tuple<T1>::value && \
+    !IceBRG::is_null_type<T1>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_NEITHER_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_scalar_or_eigen<T1>::value && \\
+	IceBRG::is_scalar_or_eigen<T2>::value,char>::type = 0
+.fi
+.SS "#define BRG_F_NOT_CONTAINER(T1)   typename std::enable_if<\fBIceBRG::is_scalar\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_NOT_TUPLE(T1)   typename std::enable_if<!\fBIceBRG::is_boost_tuple\fP<T1>::value,char>::type = 0"
+
+.SS "#define BRG_F_SECOND_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T2>::value && \\
+	IceBRG::is_scalar_or_eigen<T1>::value,char>::type = 0
+.fi
+.SS "#define BRG_S_BOTH_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T1>::value && \\
+	IceBRG::is_stl_container<T2>::value>::type
+.fi
+.SS "#define BRG_S_EITHER_IS_NULL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_null_type<T1>::value || \\
+	IceBRG::is_null_type<T2>::value>::type
+.fi
+.SS "#define BRG_S_FIRST_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T1>::value && \\
+	IceBRG::is_scalar_or_eigen<T2>::value>::type
+.fi
+.SS "#define BRG_S_IS_CONTAINER(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_CONTAINER_OR_TUPLE(T1)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if< \\
+	IceBRG::is_container_or_boost_tuple<T1>::value>::type
+.fi
+.SS "#define BRG_S_IS_EIGEN(T1)   typename std::enable_if<\fBIceBRG::is_eigen_container\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_EIGEN_OR_SCALAR(T1)   typename std::enable_if<\fBIceBRG::is_scalar_or_eigen\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_NULL(T1)   typename std::enable_if<\fBIceBRG::is_null_type\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_STL(T1)   typename std::enable_if<\fBIceBRG::is_stl_container\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_STL_OR_EIGEN(T1)   typename std::enable_if<\fBIceBRG::is_container\fP<T1>::value>::type"
+
+.SS "#define BRG_S_IS_TUPLE(T1)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_boost_tuple<T1>::value && \
+    !IceBRG::is_null_type<T1>::value>::type
+.fi
+.SS "#define BRG_S_NEITHER_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_scalar_or_eigen<T1>::value && \\
+	IceBRG::is_scalar_or_eigen<T2>::value>::type
+.fi
+.SS "#define BRG_S_NOT_CONTAINER(T1)   typename std::enable_if<\fBIceBRG::is_scalar\fP<T1>::value>::type"
+
+.SS "#define BRG_S_NOT_TUPLE(T1)   typename std::enable_if<!\fBIceBRG::is_boost_tuple\fP<T1>::value>::type"
+
+.SS "#define BRG_S_SECOND_STL(T1, T2)"
+\fBValue:\fP
+.PP
+.nf
+typename std::enable_if<IceBRG::is_stl_container<T2>::value && \\
+	IceBRG::is_scalar_or_eigen<T1>::value>::type
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

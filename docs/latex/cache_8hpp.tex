@@ -1,0 +1,104 @@
+\hypertarget{cache_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/cache/cache.hpp File Reference}
+\label{cache_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/cache/cache.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/math/cache/cache.\-hpp}}
+}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/error\-\_\-handling.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/ascii\-\_\-table.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/open\-\_\-file.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/trim\-\_\-comments.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/misc\-\_\-math.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/safe\-\_\-math.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/units.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1brg__cache}{Ice\-B\-R\-G\-::brg\-\_\-cache$<$ name $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{cache_8hpp_a83708651aeadbeb7d3851329e9b67c04}{S\-P\-C\-P}(name)~static\-\_\-cast$<$const name$\ast$$>$(this)
+\item 
+\#define \hyperlink{cache_8hpp_aafe8a78cf7b43e2fbcfecf80a4703e34}{S\-P\-P}(name)~static\-\_\-cast$<$name$\ast$$>$(this)
+\item 
+\#define \hyperlink{cache_8hpp_a2f2fc4f49b24b8377431ece6779f71e7}{D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}()
+\item 
+\#define \hyperlink{cache_8hpp_a9028eb38452bd279519554ecc13ab71f}{D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}(class\-\_\-name, init\-\_\-min, init\-\_\-max, init\-\_\-step)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{cache_8hpp_a2f2fc4f49b24b8377431ece6779f71e7}{\index{cache.\-hpp@{cache.\-hpp}!D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S@{D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}}
+\index{D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S@{D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}!cache.hpp@{cache.\-hpp}}
+\subsubsection[{D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-C\-L\-A\-R\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{cache_8hpp_a2f2fc4f49b24b8377431ece6779f71e7}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{static} \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\_type} \_min\_1\_, \_max\_1\_, \_step\_1\_; \(\backslash\)
+    static \textcolor{keywordtype}{size\_t} \_resolution\_1\_;           \(\backslash\)
+    static std::vector< flt\_type > \_results\_; \(\backslash\)
+                                            \(\backslash\)
+    static std::string \_file\_name\_;         \(\backslash\)
+    static std::string \_header\_string\_;     \(\backslash\)
+                                            \(\backslash\)
+    static \textcolor{keywordtype}{bool} \_loaded\_, \_initialised\_;    \(\backslash\)
+    static \hyperlink{lib_2IceBRG__main_2common_8h_a9a4c2c3afa89b73437fa1d63d607c7c1}{short\_int\_type} \_is\_monotonic\_;     \(\backslash\)
+                                            \(\backslash\)
+    static \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\_type} \_sig\_digits\_;
+\end{DoxyCode}
+\hypertarget{cache_8hpp_a9028eb38452bd279519554ecc13ab71f}{\index{cache.\-hpp@{cache.\-hpp}!D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S@{D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}}
+\index{D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S@{D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}!cache.hpp@{cache.\-hpp}}
+\subsubsection[{D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\-E\-F\-I\-N\-E\-\_\-\-B\-R\-G\-\_\-\-C\-A\-C\-H\-E\-\_\-\-S\-T\-A\-T\-I\-C\-\_\-\-V\-A\-R\-S(
+\begin{DoxyParamCaption}
+\item[{}]{class\-\_\-name, }
+\item[{}]{init\-\_\-min, }
+\item[{}]{init\-\_\-max, }
+\item[{}]{init\-\_\-step}
+\end{DoxyParamCaption}
+)}}\label{cache_8hpp_a9028eb38452bd279519554ecc13ab71f}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\_type} IceBRG::class\_name::\_min\_1\_ = init\_min;                        
+      \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{\(\backslash\)}
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{    flt\_type} IceBRG::class\_name::\_max\_1\_ = init\_max;                       
+      \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{\(\backslash\)}
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{    flt\_type} IceBRG::class\_name::\_step\_1\_ = init\_step;                         
+      \(\backslash\)
+    bool IceBRG::class\_name::\_loaded\_ = \textcolor{keyword}{false};                          \(\backslash\)
+    bool IceBRG::class\_name::\_initialised\_ = \textcolor{keyword}{false};                     \hyperlink{lib_2IceBRG__main_2common_8h_a9a4c2c3afa89b73437fa1d63d607c7c1}{\(\backslash\)}
+\hyperlink{lib_2IceBRG__main_2common_8h_a9a4c2c3afa89b73437fa1d63d607c7c1}{    short\_int\_type} IceBRG::class\_name::\_is\_monotonic\_ = 0;                       
+      \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{\(\backslash\)}
+\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{    int\_type} IceBRG::class\_name::\_sig\_digits\_ = 8;                 \(\backslash\)
+    size\_t IceBRG::class\_name::\_resolution\_1\_ = 0;                      \(\backslash\)
+    std::string IceBRG::class\_name::\_file\_name\_ = \textcolor{stringliteral}{""};                       \(\backslash\)
+    std::string IceBRG::class\_name::\_header\_string\_ = \textcolor{stringliteral}{""};                   \(\backslash\)
+    std::vector<flt\_type> IceBRG::class\_name::\_results\_;
+\end{DoxyCode}
+\hypertarget{cache_8hpp_a83708651aeadbeb7d3851329e9b67c04}{\index{cache.\-hpp@{cache.\-hpp}!S\-P\-C\-P@{S\-P\-C\-P}}
+\index{S\-P\-C\-P@{S\-P\-C\-P}!cache.hpp@{cache.\-hpp}}
+\subsubsection[{S\-P\-C\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-C\-P(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~static\-\_\-cast$<$const name$\ast$$>$(this)}}\label{cache_8hpp_a83708651aeadbeb7d3851329e9b67c04}
+\hypertarget{cache_8hpp_aafe8a78cf7b43e2fbcfecf80a4703e34}{\index{cache.\-hpp@{cache.\-hpp}!S\-P\-P@{S\-P\-P}}
+\index{S\-P\-P@{S\-P\-P}!cache.hpp@{cache.\-hpp}}
+\subsubsection[{S\-P\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-P\-P(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~static\-\_\-cast$<$name$\ast$$>$(this)}}\label{cache_8hpp_aafe8a78cf7b43e2fbcfecf80a4703e34}

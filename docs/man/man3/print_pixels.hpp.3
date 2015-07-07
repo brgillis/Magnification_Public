@@ -1,0 +1,51 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/file_access/print_pixels.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/file_access/print_pixels.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <type_traits>\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table_map\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include '\&.\&./container/is_stl_container\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (std::ostream &out_stream, const T &data)"
+.br
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (const std::string &file_name, const T &data)"
+.br
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type::value_type >::value, typename T::value_type::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (std::ostream &out_stream, const T &data)"
+.br
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type::value_type >::value, typename T::value_type::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (const std::string &file_name, const T &data)"
+.br
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type::value_type::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type::value_type >::value, typename T::value_type::value_type >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type::value_type::value_type >::value, typename T::value_type::value_type::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (std::ostream &out_stream, const T &data)"
+.br
+.ti -1c
+.RI "template<typename T , typename T_data  = typename T::value_type::value_type::value_type, typename std::enable_if< IceBRG::is_stl_container< T >::value, T >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type >::value, typename T::value_type >::type *  = nullptr, typename std::enable_if< IceBRG::is_stl_container< typename T::value_type::value_type >::value, typename T::value_type::value_type >::type *  = nullptr, typename std::enable_if<!IceBRG::is_stl_container< typename T::value_type::value_type::value_type >::value, typename T::value_type::value_type::value_type >::type *  = nullptr> void \fBIceBRG::print_pixels\fP (const std::string &file_name, const T &data)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

@@ -1,0 +1,107 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/calculus/integrate.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/calculus/integrate.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/math/functor/functor_product\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/safe_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBROMBERG_N_MAX\fP   20"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename f , typename T > auto \fBIceBRG::integrate_trapezoid\fP (const f *func, const T &min_in_param, const T &max_in_param, const T &in_param_step)-> decltype(func(min_in_param)*min_in_param)"
+.br
+.ti -1c
+.RI "template<typename f , typename T > auto \fBIceBRG::integrate_trapezoid\fP (const f *func, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const std::vector< T > &in_param_step, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(multiply(func(min_in_param)"
+.br
+.ti -1c
+.RI "T auto \fBIceBRG::integrate_trapezoid\fP (const f *func, const T &min_in_param, const T &max_in_param, const \fBint_type\fP num_samples)-> decltype(func(min_in_param)*min_in_param)"
+.br
+.ti -1c
+.RI "template<typename f , typename T > auto \fBIceBRG::integrate_trapezoid\fP (const f *func, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBint_type\fP num_samples, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f1 , typename f2 , typename T > auto \fBIceBRG::integrate_weighted_trapezoid\fP (const f1 *func, const f2 *func_weight, const T &min_in_param, const T &max_in_param, const T &in_param_step)-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f1 , typename f2 , typename T > auto \fBIceBRG::integrate_weighted_trapezoid\fP (const f1 *func, const f2 *func_weight, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const std::vector< T > &in_param_step, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f1 , typename f2 , typename T > auto \fBIceBRG::integrate_weighted_trapezoid\fP (const f1 *func, const f2 *func_weight, const T &min_in_param, const T &max_in_param, const \fBint_type\fP num_samples)-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f1 , typename f2 , typename T > auto \fBIceBRG::integrate_weighted_trapezoid\fP (const f1 *func, const f2 *func_weight, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBint_type\fP num_samples, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f , typename T > auto \fBIceBRG::integrate_mc\fP (const f *func, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBint_type\fP num_samples)-> decltype(multiply(func(min_in_param)"
+.br
+.ti -1c
+.RI "Tin auto \fBIceBRG::integrate_Romberg\fP (const f &func, const Tin &min_in_param, const Tin &max_in_param, \fBflt_type\fP precision=0\&.00001, bool tighten_precision=false)-> decltype(func(min_in_param)*min_in_param)"
+.br
+.ti -1c
+.RI "template<typename f , typename T > auto \fBIceBRG::integrate_Romberg\fP (const f &func, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBflt_type\fP &precision=0\&.00001, const bool tighten_precision=false, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(multiply(func(min_in_param)"
+.br
+.ti -1c
+.RI "T auto \fBIceBRG::integrate_product_Romberg\fP (const f_in_1 &func1, const f_in_2 &func2, const T &min_in_param, const T &max_in_param, const \fBflt_type\fP &precision=0\&.00001, const bool tighten_precision=false)-> decltype(func1(min_in_param)*func2(min_in_param)*min_in_param)"
+.br
+.ti -1c
+.RI "template<typename f_in_1 , typename f_in_2 , typename T > auto \fBIceBRG::integrate_product_Romberg\fP (const f_in_1 &func1, const f_in_2 &func2, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBflt_type\fP &precision=0\&.00001, const bool tighten_precision=false, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(multiply(multiply(func1(min_in_param)"
+.br
+.ti -1c
+.RI "auto \fBIceBRG::func2\fP (min_in_param))"
+.br
+.ti -1c
+.RI "T auto \fBIceBRG::integrate_weighted_Romberg\fP (const f_in_1 &func, const f_in_2 &func_weight, const T &min_in_param, const T &max_in_param, const \fBflt_type\fP &precision=0\&.00001, const bool tighten_precision=false)-> decltype(func(min_in_param))"
+.br
+.ti -1c
+.RI "template<typename f_in_1 , typename f_in_2 , typename T > auto \fBIceBRG::integrate_weighted_Romberg\fP (const f_in_1 &func, const f_in_2 &func_weight, const std::vector< T > &min_in_param, const std::vector< T > &max_in_param, const \fBflt_type\fP &precision=0\&.00001, const bool tighten_precision=false, const std::vector< T > &passed_in_param=std::vector< T >(0))-> decltype(func(min_in_param))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBIceBRG::f_in_2\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define ROMBERG_N_MAX   20"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

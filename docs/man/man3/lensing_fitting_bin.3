@@ -1,0 +1,102 @@
+.TH "lensing_fitting_bin" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+lensing_fitting_bin \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <lensing_fitting_bin\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlensing_fitting_bin\fP ()"
+.br
+.ti -1c
+.RI "\fBlensing_fitting_bin\fP (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)"
+.br
+.ti -1c
+.RI "virtual \fB~lensing_fitting_bin\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_bounds\fP (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)"
+.br
+.ti -1c
+.RI "template<typename Tz1 , typename Tz2 , typename Tm1 , typename Tm2 > void \fBset_bounds\fP (Tz1 &&new_z_min, Tz2 &&new_z_max, Tm1 &&new_m_min, Tm2 &&new_m_max)"
+.br
+.ti -1c
+.RI "void \fBinsert\fP (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)"
+.br
+.ti -1c
+.RI "const \fBflt_type\fP & \fBz_min\fP () const "
+.br
+.ti -1c
+.RI "const \fBflt_type\fP & \fBz_max\fP () const "
+.br
+.ti -1c
+.RI "const \fBflt_type\fP & \fBm_min\fP () const "
+.br
+.ti -1c
+.RI "const \fBflt_type\fP & \fBm_max\fP () const "
+.br
+.ti -1c
+.RI "const \fBflt_type\fP & \fBSigma_crit\fP () const "
+.br
+.ti -1c
+.RI "\fBflt_type\fP \fBz_mid\fP () const "
+.br
+.ti -1c
+.RI "\fBflt_type\fP \fBm_mid\fP () const "
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "template<typename func > \fBflt_type\fP \fBget_shear_chi_squared\fP (const func &f) const "
+.br
+.ti -1c
+.RI "template<typename func > \fBflt_type\fP \fBget_magf_chi_squared\fP (const func &f) const "
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "lensing_fitting_bin::lensing_fitting_bin ()\fC [inline]\fP"
+
+.SS "lensing_fitting_bin::lensing_fitting_bin (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)\fC [inline]\fP"
+
+.SS "virtual lensing_fitting_bin::~lensing_fitting_bin ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void lensing_fitting_bin::clear ()\fC [inline]\fP"
+
+.SS "template<typename func > \fBflt_type\fP lensing_fitting_bin::get_magf_chi_squared (const func &f) const\fC [inline]\fP"
+
+.SS "template<typename func > \fBflt_type\fP lensing_fitting_bin::get_shear_chi_squared (const func &f) const\fC [inline]\fP"
+
+.SS "void lensing_fitting_bin::insert (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)\fC [inline]\fP"
+
+.SS "const \fBflt_type\fP& lensing_fitting_bin::m_max () const\fC [inline]\fP"
+
+.SS "\fBflt_type\fP lensing_fitting_bin::m_mid () const\fC [inline]\fP"
+
+.SS "const \fBflt_type\fP& lensing_fitting_bin::m_min () const\fC [inline]\fP"
+
+.SS "void lensing_fitting_bin::set_bounds (const \fBIceBRG::labeled_array\fP< \fBflt_type\fP >::row_reference &row)\fC [inline]\fP"
+
+.SS "template<typename Tz1 , typename Tz2 , typename Tm1 , typename Tm2 > void lensing_fitting_bin::set_bounds (Tz1 &&new_z_min, Tz2 &&new_z_max, Tm1 &&new_m_min, Tm2 &&new_m_max)\fC [inline]\fP"
+
+.SS "const \fBflt_type\fP& lensing_fitting_bin::Sigma_crit () const\fC [inline]\fP"
+
+.SS "const \fBflt_type\fP& lensing_fitting_bin::z_max () const\fC [inline]\fP"
+
+.SS "\fBflt_type\fP lensing_fitting_bin::z_mid () const\fC [inline]\fP"
+
+.SS "const \fBflt_type\fP& lensing_fitting_bin::z_min () const\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

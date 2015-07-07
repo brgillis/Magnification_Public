@@ -1,0 +1,66 @@
+\hypertarget{main__source__count__fitting_8cpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-source\-\_\-count\-\_\-fitting/main\-\_\-source\-\_\-count\-\_\-fitting.cpp File Reference}
+\label{main__source__count__fitting_8cpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-source\-\_\-count\-\_\-fitting/main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-source\-\_\-count\-\_\-fitting/main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+}
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/lexical\-\_\-cast.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/ascii\-\_\-table\-\_\-map.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/join\-\_\-path.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/misc\-\_\-math.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/math/solvers/solvers.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/units/units.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/vector/elementwise\-\_\-functions.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-data\-\_\-directory.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}magic\-\_\-values.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}count\-\_\-fitting\-\_\-functor.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Schechter\-\_\-like\-\_\-functor.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main__source__count__fitting_8cpp_ad53223b8779f25caeddb70a3b9172967}{main} (const int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{main__source__count__fitting_8cpp_a88d48aa9101c673522dda66c9e311e64}{output\-\_\-filename} = \char`\"{}count\-\_\-fitting\-\_\-results.\-dat\char`\"{}
+\item 
+const unsigned int \hyperlink{main__source__count__fitting_8cpp_a25be5586bab94174d13c817527c045cb}{zlo} = 200
+\item 
+const unsigned int \hyperlink{main__source__count__fitting_8cpp_a06437a833e0b24e2b2b41408a9bf0b76}{zstep} = 40
+\item 
+const unsigned int \hyperlink{main__source__count__fitting_8cpp_abc48e5f2f39f3edd4803ac17c2cbc821}{zhi} = 1960
+\item 
+const double \hyperlink{main__source__count__fitting_8cpp_af9751da693bc02eb274ff43ee1a07d3f}{z\-\_\-bin\-\_\-size} = \hyperlink{main__source__count__fitting_8cpp_a06437a833e0b24e2b2b41408a9bf0b76}{zstep}$\ast$0.\-01
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main__source__count__fitting_8cpp_ad53223b8779f25caeddb70a3b9172967}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!main@{main}}
+\index{main@{main}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{const int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{main__source__count__fitting_8cpp_ad53223b8779f25caeddb70a3b9172967}
+
+
+\subsection{Variable Documentation}
+\hypertarget{main__source__count__fitting_8cpp_a88d48aa9101c673522dda66c9e311e64}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!output\-\_\-filename@{output\-\_\-filename}}
+\index{output\-\_\-filename@{output\-\_\-filename}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{output\-\_\-filename}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string output\-\_\-filename = \char`\"{}count\-\_\-fitting\-\_\-results.\-dat\char`\"{}}}\label{main__source__count__fitting_8cpp_a88d48aa9101c673522dda66c9e311e64}
+\hypertarget{main__source__count__fitting_8cpp_af9751da693bc02eb274ff43ee1a07d3f}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!z\-\_\-bin\-\_\-size@{z\-\_\-bin\-\_\-size}}
+\index{z\-\_\-bin\-\_\-size@{z\-\_\-bin\-\_\-size}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{z\-\_\-bin\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}const double z\-\_\-bin\-\_\-size = {\bf zstep}$\ast$0.\-01}}\label{main__source__count__fitting_8cpp_af9751da693bc02eb274ff43ee1a07d3f}
+\hypertarget{main__source__count__fitting_8cpp_abc48e5f2f39f3edd4803ac17c2cbc821}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!zhi@{zhi}}
+\index{zhi@{zhi}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{zhi}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int zhi = 1960}}\label{main__source__count__fitting_8cpp_abc48e5f2f39f3edd4803ac17c2cbc821}
+\hypertarget{main__source__count__fitting_8cpp_a25be5586bab94174d13c817527c045cb}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!zlo@{zlo}}
+\index{zlo@{zlo}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{zlo}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int zlo = 200}}\label{main__source__count__fitting_8cpp_a25be5586bab94174d13c817527c045cb}
+\hypertarget{main__source__count__fitting_8cpp_a06437a833e0b24e2b2b41408a9bf0b76}{\index{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}!zstep@{zstep}}
+\index{zstep@{zstep}!main_source_count_fitting.cpp@{main\-\_\-source\-\_\-count\-\_\-fitting.\-cpp}}
+\subsubsection[{zstep}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned int zstep = 40}}\label{main__source__count__fitting_8cpp_a06437a833e0b24e2b2b41408a9bf0b76}

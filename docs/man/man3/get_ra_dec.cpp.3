@@ -1,0 +1,84 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_make_mock_cats/get_ra_dec.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_make_mock_cats/get_ra_dec.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/call_program\&.hpp'\fP
+.br
+\fC#include 'get_ra_dec\&.h'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table\&.hpp'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "std::vector< std::pair
+.br
+< std::pair< double, double >
+.br
+, std::pair< double, double > > > \fBget_ra_dec\fP (const std::string &field_name, const std::vector< std::pair< double, double >> &xp_yp)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::string \fBdata_directory\fP = '/disk2/brg/git/CFHTLenS_cat/Data/'"
+.br
+.ti -1c
+.RI "const std::string \fBmask_directory\fP = 'masks/'"
+.br
+.ti -1c
+.RI "const std::string \fBmask_file_root\fP = '\&.fits\&.fz'"
+.br
+.ti -1c
+.RI "const std::string \fBlist_file_root\fP = '_poslist\&.tmp'"
+.br
+.ti -1c
+.RI "const std::string \fBtemp_file_root\fP = '\&.tmp'"
+.br
+.ti -1c
+.RI "const std::string \fBget_ra_dec_command\fP = '/disk2/brg/bin/xy2sky'"
+.br
+.ti -1c
+.RI "const std::string \fBget_ra_dec_args\fP = '-d -n 10 '"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "std::vector<std::pair<std::pair<double,double>,std::pair<double,double> > > get_ra_dec (const std::string &field_name, const std::vector< std::pair< double, double >> &xp_yp)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "const std::string data_directory = '/disk2/brg/git/CFHTLenS_cat/Data/'"
+
+.SS "const std::string get_ra_dec_args = '-d -n 10 '"
+
+.SS "const std::string get_ra_dec_command = '/disk2/brg/bin/xy2sky'"
+
+.SS "const std::string list_file_root = '_poslist\&.tmp'"
+
+.SS "const std::string mask_directory = 'masks/'"
+
+.SS "const std::string mask_file_root = '\&.fits\&.fz'"
+
+.SS "const std::string temp_file_root = '\&.tmp'"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

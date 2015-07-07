@@ -1,0 +1,64 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/random/random_functions.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/random/random_functions.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cmath>\fP
+.br
+\fC#include <random>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename T  = int_type, typename T_in  = int_type, typename T_gen  = decltype(rng)> T \fBIceBRG::irand\fP (T_in &&min, T_in &&max, T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::drand\fP (T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_in  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::drand\fP (T_in &&min, T_in &&max, T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Gaus_rand\fP (T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_in  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Gaus_rand\fP (T_in &&mean, T_in &&stddev=1\&.0, T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::log10Gaus_rand\fP (T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_in  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::log10Gaus_rand\fP (T_in &&mean, T_in &&stddev=1\&., T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Rayleigh_rand\fP (T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = flt_type, typename T_in  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Rayleigh_rand\fP (T_in &&sigma, T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = int_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Pois_rand\fP (T_gen &gen=rng)"
+.br
+.ti -1c
+.RI "template<typename T  = int_type, typename T_in  = flt_type, typename T_gen  = decltype(rng)> T \fBIceBRG::Pois_rand\fP (T_in &&lambda=1\&., T_gen &gen=rng)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

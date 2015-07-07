@@ -1,0 +1,73 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/Fourier/transform.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/Fourier/transform.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <type_traits>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <boost/optional\&.hpp>\fP
+.br
+\fC#include <fftw3\&.h>\fP
+.br
+\fC#include 'IceBRG_main/Eigen\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/coerce\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/container/is_eigen_container\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'management\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.ti -1c
+.RI "namespace \fBIceBRG::Fourier\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> complex_array_type \fBIceBRG::Fourier::Fourier_transform\fP (const \fBarray_type\fP &vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::inverse_Fourier_transform\fP (const \fBarray_type\fP &vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::Fourier_sin_transform\fP (const \fBarray_type\fP &vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::inverse_Fourier_sin_transform\fP (const \fBarray_type\fP &vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::spherical_Fourier_transform\fP (\fBarray_type\fP vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename array_type , typename std::enable_if< IceBRG::is_container< array_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::inverse_spherical_Fourier_transform\fP (\fBarray_type\fP vals, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename func_type , typename std::enable_if<!IceBRG::is_container< func_type >::value, char >::type  = 0> complex_array_type \fBIceBRG::Fourier::Fourier_transform\fP (const func_type &func, const \fBflt_type\fP &min=0\&., const \fBflt_type\fP &max=1\&., const \fBint_type\fP &samples=1024, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename func_type , typename std::enable_if<!IceBRG::is_container< func_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::Fourier_sin_transform\fP (const func_type &func, const \fBflt_type\fP &max=1\&., const \fBint_type\fP &samples=1024, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.ti -1c
+.RI "template<typename func_type , typename std::enable_if<!IceBRG::is_container< func_type >::value, char >::type  = 0> flt_array_type \fBIceBRG::Fourier::spherical_Fourier_transform\fP (const func_type &func, const \fBflt_type\fP &max=1\&., const \fBint_type\fP &samples=1024, const boost::optional< fftw_wisdom_accumulator & > &wisdom=boost::none)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

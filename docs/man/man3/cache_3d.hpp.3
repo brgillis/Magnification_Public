@@ -1,0 +1,120 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/cache/cache_3d.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/cache/cache_3d.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdlib>\fP
+.br
+\fC#include <exception>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <sstream>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/error_handling\&.h'\fP
+.br
+\fC#include 'IceBRG_main/file_access/ascii_table\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/file_access/open_file\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/safe_math\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+
+.SS "Data Structures"
+
+.in +1c
+.ti -1c
+.RI "class \fBIceBRG::brg_cache_3d< name >\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBBRG_CACHE_ND_NAME_SIZE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSPCP\fP(name)   static_cast<const name*>(this)"
+.br
+.ti -1c
+.RI "#define \fBSPP\fP(name)   static_cast<name*>(this)"
+.br
+.ti -1c
+.RI "#define \fBDECLARE_BRG_CACHE_3D_STATIC_VARS\fP()"
+.br
+.ti -1c
+.RI "#define \fBDEFINE_BRG_CACHE_3D_STATIC_VARS\fP(class_name, init_min_1, init_max_1, init_step_1, init_min_2, init_max_2, init_step_2, init_min_3, init_max_3, init_step_3)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define BRG_CACHE_ND_NAME_SIZE   9"
+
+.SS "#define DECLARE_BRG_CACHE_3D_STATIC_VARS()"
+\fBValue:\fP
+.PP
+.nf
+static flt_type _min_1_, _max_1_, _step_1_;                  \
+    static size_t _resolution_1_;                        \
+    static flt_type _min_2_, _max_2_, _step_2_;                  \
+    static size_t _resolution_2_;                        \
+    static flt_type _min_3_, _max_3_, _step_3_;                  \
+    static size_t _resolution_3_;                        \
+    static std::vector< std::vector< std::vector< flt_type > > > _results_;     \
+                                                               \
+    static std::string _file_name_;                            \
+    static int_type _version_number_;                      \
+                                                               \
+    static bool _loaded_, _initialised_;
+.fi
+.SS "#define DEFINE_BRG_CACHE_3D_STATIC_VARS(class_name, init_min_1, init_max_1, init_step_1, init_min_2, init_max_2, init_step_2, init_min_3, init_max_3, init_step_3)"
+\fBValue:\fP
+.PP
+.nf
+flt_type IceBRG::class_name::_min_1_ = init_min_1;                        \\
+	flt_type IceBRG::class_name::_max_1_ = init_max_1;                         \\
+	flt_type IceBRG::class_name::_step_1_ = init_step_1;                   \
+    size_t IceBRG::class_name::_resolution_1_ = 0;                  \\
+	flt_type IceBRG::class_name::_min_2_ = init_min_2;                     \\
+	flt_type IceBRG::class_name::_max_2_ = init_max_2;                         \\
+	flt_type IceBRG::class_name::_step_2_ = init_step_2;                   \
+    size_t IceBRG::class_name::_resolution_2_ = 0;                  \\
+	flt_type IceBRG::class_name::_min_3_ = init_min_3;                     \\
+	flt_type IceBRG::class_name::_max_3_ = init_max_3;                         \\
+	flt_type IceBRG::class_name::_step_3_ = init_step_3;                   \
+    size_t IceBRG::class_name::_resolution_3_ = 0;                  \
+    bool IceBRG::class_name::_loaded_ = false;                          \
+    bool IceBRG::class_name::_initialised_ = false;                     \
+    std::string IceBRG::class_name::_file_name_ = '';                       \\
+	int_type IceBRG::class_name::_version_number_ = 2;             \
+    std::vector< std::vector< std::vector< flt_type > > > IceBRG::class_name::_results_;
+.fi
+.SS "#define SPCP(name)   static_cast<const name*>(this)"
+
+.SS "#define SPP(name)   static_cast<name*>(this)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

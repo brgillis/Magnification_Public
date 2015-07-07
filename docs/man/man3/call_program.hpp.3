@@ -1,0 +1,47 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/call_program.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/call_program.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdexcept>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <wait\&.h>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> \fBint_type\fP \fBIceBRG::call_program_noexcept\fP (const char *program_name, \fBint_type\fP num_retries, Args\&.\&.\&.args)"
+.br
+.ti -1c
+.RI "\fBint_type\fP \fBIceBRG::call_program_noexcept\fP (const char *program_name)"
+.br
+.ti -1c
+.RI "template<typename\&.\&.\&. Args> void \fBIceBRG::call_program\fP (const char *program_name, \fBint_type\fP num_retries, Args\&.\&.\&.args)"
+.br
+.ti -1c
+.RI "std::string \fBIceBRG::exec\fP (const char *cmd)"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

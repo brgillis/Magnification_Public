@@ -1,0 +1,70 @@
+\hypertarget{make__vector_8hpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/make\-\_\-vector.hpp File Reference}
+\label{make__vector_8hpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/make\-\_\-vector.\-hpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/lib/\-Ice\-B\-R\-G\-\_\-main/vector/make\-\_\-vector.\-hpp}}
+}
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$type\-\_\-traits$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/common.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/container/coerce.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/utility.\-hpp\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__defaulter}{Ice\-B\-R\-G\-::vector\-\_\-defaulter$<$ d, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__defaulter_3_011_00_01container_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-defaulter$<$ 1, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__defaulter_3_010_00_01container_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-defaulter$<$ 0, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__zeroer}{Ice\-B\-R\-G\-::vector\-\_\-zeroer$<$ d, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__zeroer_3_011_00_01container_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-zeroer$<$ 1, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__zeroer_3_010_00_01container_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-zeroer$<$ 0, container, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__valuer}{Ice\-B\-R\-G\-::vector\-\_\-valuer$<$ d, container, value\-\_\-type, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__valuer_3_011_00_01container_00_01value__type_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-valuer$<$ 1, container, value\-\_\-type, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__valuer_3_010_00_01container_00_01value__type_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-valuer$<$ 0, container, value\-\_\-type, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__functioner}{Ice\-B\-R\-G\-::vector\-\_\-functioner$<$ d, container, func\-\_\-type, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__functioner_3_011_00_01container_00_01func__type_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-functioner$<$ 1, container, func\-\_\-type, other\-\_\-container $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1vector__functioner_3_010_00_01container_00_01func__type_00_01other__container_01_4}{Ice\-B\-R\-G\-::vector\-\_\-functioner$<$ 0, container, func\-\_\-type, other\-\_\-container $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespaceIceBRG}{Ice\-B\-R\-G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename container $>$ }\\void \hyperlink{namespaceIceBRG_adae9c4fcd34840e25150cbc7dede3acd}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-default} (container \&vec, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1)
+\item 
+{\footnotesize template$<$typename container , typename... Args$>$ }\\void \hyperlink{namespaceIceBRG_afbf18251ba74da55c00f8f3215c221c2}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-default} (container \&vec, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d2, Args...\-remaining\-\_\-dims)
+\item 
+{\footnotesize template$<$int\-\_\-type d, typename container , typename value\-\_\-type , typename other\-\_\-container $>$ }\\void \hyperlink{namespaceIceBRG_a71eeb68549f8242b92eef96cfc87a06b}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-default} (container \&vec, const value\-\_\-type \&val, const other\-\_\-container \&other\-\_\-vec)
+\item 
+{\footnotesize template$<$typename container $>$ }\\void \hyperlink{namespaceIceBRG_a47bca7bc99b76f1c99a35a84fee5694e}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-zeroes} (container \&vec, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1)
+\item 
+{\footnotesize template$<$typename container , typename... Args$>$ }\\void \hyperlink{namespaceIceBRG_a3639599d532b4861b6f0bb6295854d52}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-zeroes} (container \&vec, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d2, Args...\-remaining\-\_\-dims)
+\item 
+{\footnotesize template$<$int\-\_\-type d, typename container , typename value\-\_\-type , typename other\-\_\-container $>$ }\\void \hyperlink{namespaceIceBRG_a5791a10e6c507524702dee353e33086c}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-zeroes} (container \&vec, const value\-\_\-type \&val, const other\-\_\-container \&other\-\_\-vec)
+\item 
+{\footnotesize template$<$typename container , typename val\-\_\-type $>$ }\\void \hyperlink{namespaceIceBRG_a9176023dbe7fc7e68f8e0811a0de0c81}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-value} (container \&vec, const val\-\_\-type \&val, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1)
+\item 
+{\footnotesize template$<$typename container , typename val\-\_\-type , typename... Args$>$ }\\void \hyperlink{namespaceIceBRG_a9e09c8639427a3259d4947879a3597fb}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-value} (container \&vec, const val\-\_\-type \&val, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d2, Args...\-remaining\-\_\-dims)
+\item 
+{\footnotesize template$<$int\-\_\-type d, typename container , typename value\-\_\-type , typename other\-\_\-container $>$ }\\void \hyperlink{namespaceIceBRG_aea1d0e75aa6b086d67d0dbd5625b53d6}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-value} (container \&vec, const value\-\_\-type \&val, const other\-\_\-container \&other\-\_\-vec)
+\item 
+{\footnotesize template$<$typename container , typename func\-\_\-type $>$ }\\void \hyperlink{namespaceIceBRG_a305cbfd9d239119500de04cffef48e2e}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-function} (container \&vec, const func\-\_\-type \&func, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1)
+\item 
+{\footnotesize template$<$typename container , typename func\-\_\-type , typename... Args$>$ }\\void \hyperlink{namespaceIceBRG_a7da023ce0735e27d4d6482c833d0dec9}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-function} (container \&vec, const func\-\_\-type \&func, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d1, const typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{container\-::size\-\_\-type} \&d2, Args...\-remaining\-\_\-dims)
+\item 
+{\footnotesize template$<$int\-\_\-type d, typename container , typename func\-\_\-type , typename other\-\_\-container $>$ }\\void \hyperlink{namespaceIceBRG_af2c3d875d64225a57d4590e0f4356774}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-function} (container \&vec, const func\-\_\-type \&func, const other\-\_\-container \&other\-\_\-vec)
+\item 
+{\footnotesize template$<$int\-\_\-type d, typename container , typename other\-\_\-container $>$ }\\void \hyperlink{namespaceIceBRG_aa5b2a2789b13159ed029d2fe742f0b0b}{Ice\-B\-R\-G\-::make\-\_\-vector\-\_\-coerce} (container \&vec, const other\-\_\-container \&other\-\_\-vec)
+\end{DoxyCompactItemize}

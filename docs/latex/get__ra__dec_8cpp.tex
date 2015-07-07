@@ -1,0 +1,70 @@
+\hypertarget{get__ra__dec_8cpp}{\section{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-make\-\_\-mock\-\_\-cats/get\-\_\-ra\-\_\-dec.cpp File Reference}
+\label{get__ra__dec_8cpp}\index{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-make\-\_\-mock\-\_\-cats/get\-\_\-ra\-\_\-dec.\-cpp@{/disk2/brg/git/\-Magnification\-\_\-\-Public/src/exec/\-C\-F\-H\-T\-Len\-S\-\_\-make\-\_\-mock\-\_\-cats/get\-\_\-ra\-\_\-dec.\-cpp}}
+}
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/lexical\-\_\-cast.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/call\-\_\-program.\-hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}get\-\_\-ra\-\_\-dec.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\-B\-R\-G\-\_\-main/file\-\_\-access/ascii\-\_\-table.\-hpp\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ std\-::pair\\*
+$<$ std\-::pair$<$ double, double $>$\\*
+, std\-::pair$<$ double, double $>$ $>$ $>$ \hyperlink{get__ra__dec_8cpp_a49ef6897e606f2e8401f4f91b97f97b0}{get\-\_\-ra\-\_\-dec} (const std\-::string \&field\-\_\-name, const std\-::vector$<$ std\-::pair$<$ double, double $>$$>$ \&xp\-\_\-yp)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a785fc64a1818af5fa19cf474852df851}{data\-\_\-directory} = \char`\"{}/disk2/brg/git/C\-F\-H\-T\-Len\-S\-\_\-cat/Data/\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a13ca7a49acc4f96ca81fae3b851f818c}{mask\-\_\-directory} = \char`\"{}masks/\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_ac72b6d3d4b57486838589bbad4d7fc29}{mask\-\_\-file\-\_\-root} = \char`\"{}.fits.\-fz\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a017e312e6861dab7e83742cfeda6cd62}{list\-\_\-file\-\_\-root} = \char`\"{}\-\_\-poslist.\-tmp\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a9121d9c100d3e5e19de8535e2d0b8b53}{temp\-\_\-file\-\_\-root} = \char`\"{}.tmp\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a840bb17b05b65909b836fe25b37184dc}{get\-\_\-ra\-\_\-dec\-\_\-command} = \char`\"{}/disk2/brg/bin/xy2sky\char`\"{}
+\item 
+const std\-::string \hyperlink{get__ra__dec_8cpp_a2c2badabc2b39cf9563fa69ad391837e}{get\-\_\-ra\-\_\-dec\-\_\-args} = \char`\"{}-\/d -\/n 10 \char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{get__ra__dec_8cpp_a49ef6897e606f2e8401f4f91b97f97b0}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!get\-\_\-ra\-\_\-dec@{get\-\_\-ra\-\_\-dec}}
+\index{get\-\_\-ra\-\_\-dec@{get\-\_\-ra\-\_\-dec}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{get\-\_\-ra\-\_\-dec}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<$std\-::pair$<$std\-::pair$<$double,double$>$,std\-::pair$<$double,double$>$ $>$ $>$ get\-\_\-ra\-\_\-dec (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{field\-\_\-name, }
+\item[{const std\-::vector$<$ std\-::pair$<$ double, double $>$$>$ \&}]{xp\-\_\-yp}
+\end{DoxyParamCaption}
+)}}\label{get__ra__dec_8cpp_a49ef6897e606f2e8401f4f91b97f97b0}
+
+
+\subsection{Variable Documentation}
+\hypertarget{get__ra__dec_8cpp_a785fc64a1818af5fa19cf474852df851}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!data\-\_\-directory@{data\-\_\-directory}}
+\index{data\-\_\-directory@{data\-\_\-directory}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{data\-\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string data\-\_\-directory = \char`\"{}/disk2/brg/git/C\-F\-H\-T\-Len\-S\-\_\-cat/Data/\char`\"{}}}\label{get__ra__dec_8cpp_a785fc64a1818af5fa19cf474852df851}
+\hypertarget{get__ra__dec_8cpp_a2c2badabc2b39cf9563fa69ad391837e}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!get\-\_\-ra\-\_\-dec\-\_\-args@{get\-\_\-ra\-\_\-dec\-\_\-args}}
+\index{get\-\_\-ra\-\_\-dec\-\_\-args@{get\-\_\-ra\-\_\-dec\-\_\-args}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{get\-\_\-ra\-\_\-dec\-\_\-args}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string get\-\_\-ra\-\_\-dec\-\_\-args = \char`\"{}-\/d -\/n 10 \char`\"{}}}\label{get__ra__dec_8cpp_a2c2badabc2b39cf9563fa69ad391837e}
+\hypertarget{get__ra__dec_8cpp_a840bb17b05b65909b836fe25b37184dc}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!get\-\_\-ra\-\_\-dec\-\_\-command@{get\-\_\-ra\-\_\-dec\-\_\-command}}
+\index{get\-\_\-ra\-\_\-dec\-\_\-command@{get\-\_\-ra\-\_\-dec\-\_\-command}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{get\-\_\-ra\-\_\-dec\-\_\-command}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string get\-\_\-ra\-\_\-dec\-\_\-command = \char`\"{}/disk2/brg/bin/xy2sky\char`\"{}}}\label{get__ra__dec_8cpp_a840bb17b05b65909b836fe25b37184dc}
+\hypertarget{get__ra__dec_8cpp_a017e312e6861dab7e83742cfeda6cd62}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!list\-\_\-file\-\_\-root@{list\-\_\-file\-\_\-root}}
+\index{list\-\_\-file\-\_\-root@{list\-\_\-file\-\_\-root}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{list\-\_\-file\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string list\-\_\-file\-\_\-root = \char`\"{}\-\_\-poslist.\-tmp\char`\"{}}}\label{get__ra__dec_8cpp_a017e312e6861dab7e83742cfeda6cd62}
+\hypertarget{get__ra__dec_8cpp_a13ca7a49acc4f96ca81fae3b851f818c}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!mask\-\_\-directory@{mask\-\_\-directory}}
+\index{mask\-\_\-directory@{mask\-\_\-directory}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{mask\-\_\-directory}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string mask\-\_\-directory = \char`\"{}masks/\char`\"{}}}\label{get__ra__dec_8cpp_a13ca7a49acc4f96ca81fae3b851f818c}
+\hypertarget{get__ra__dec_8cpp_ac72b6d3d4b57486838589bbad4d7fc29}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!mask\-\_\-file\-\_\-root@{mask\-\_\-file\-\_\-root}}
+\index{mask\-\_\-file\-\_\-root@{mask\-\_\-file\-\_\-root}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{mask\-\_\-file\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string mask\-\_\-file\-\_\-root = \char`\"{}.fits.\-fz\char`\"{}}}\label{get__ra__dec_8cpp_ac72b6d3d4b57486838589bbad4d7fc29}
+\hypertarget{get__ra__dec_8cpp_a9121d9c100d3e5e19de8535e2d0b8b53}{\index{get\-\_\-ra\-\_\-dec.\-cpp@{get\-\_\-ra\-\_\-dec.\-cpp}!temp\-\_\-file\-\_\-root@{temp\-\_\-file\-\_\-root}}
+\index{temp\-\_\-file\-\_\-root@{temp\-\_\-file\-\_\-root}!get_ra_dec.cpp@{get\-\_\-ra\-\_\-dec.\-cpp}}
+\subsubsection[{temp\-\_\-file\-\_\-root}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::string temp\-\_\-file\-\_\-root = \char`\"{}.tmp\char`\"{}}}\label{get__ra__dec_8cpp_a9121d9c100d3e5e19de8535e2d0b8b53}

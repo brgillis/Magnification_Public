@@ -1,0 +1,137 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/statistics/statistic_extractors.hpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_main/math/statistics/statistic_extractors.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <utility>\fP
+.br
+\fC#include <boost/accumulators/statistics/mean\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/error_of_mean\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/moment\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/variance\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/weighted_mean\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/weighted_moment\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/weighted_variance\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/effective_count\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/error_of_weighted_mean\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/mean_weight\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/sum_of_square_weights\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_count\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_count\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_effective_count\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_effective_count\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_sum_of_weights\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_sum_of_weights\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_mean_weight\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_mean_weight\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_sum_of_square_weights\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_sum_of_square_weights\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_sum\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_sum\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_weighted_sum\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_weighted_sum\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_weighted_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_weighted_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_error_of_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_error_of_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_error_of_weighted_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_error_of_weighted_mean\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_variance\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_variance\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::extract_weighted_variance\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<typename Ti > auto \fBIceBRG::safe_extract_weighted_variance\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<int_type n, typename Ti > auto \fBIceBRG::extract_moment\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<int_type n, typename Ti > auto \fBIceBRG::safe_extract_moment\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<int_type n, typename Ti > auto \fBIceBRG::extract_weighted_moment\fP (Ti &&acc)-> decltype(boost"
+.br
+.ti -1c
+.RI "template<int_type n, typename Ti > auto \fBIceBRG::safe_extract_weighted_moment\fP (Ti &&acc)-> decltype(boost"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

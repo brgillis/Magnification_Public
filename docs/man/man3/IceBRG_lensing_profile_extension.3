@@ -1,0 +1,162 @@
+.TH "IceBRG::lensing_profile_extension< name >" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IceBRG::lensing_profile_extension< name > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <lensing_profile_extension\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBlensing_profile_extension\fP ()"
+.br
+.ti -1c
+.RI "\fB~lensing_profile_extension\fP ()"
+.br
+.ti -1c
+.RI "name * \fBlensing_profile_extension_clone\fP () const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBproj_dens\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBflt_type\fP \fBproj_enc_mass\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBproj_enc_dens\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBDelta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBoffset_Delta_Sigma\fP (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_offset_Delta_Sigma\fP (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBgroup_Delta_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBsemiquick_group_Delta_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_group_Delta_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBtwo_halo_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_two_halo_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBflt_type\fP \fBshift_factor\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBshifted_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBsemiquick_shifted_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_shifted_Delta_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBSigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBoffset_Sigma\fP (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_offset_Sigma\fP (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBgroup_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBsemiquick_group_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_group_Sigma\fP (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c=2\&.5) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBtwo_halo_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.ti -1c
+.RI "\fBsurface_density_type\fP \fBquick_two_halo_Sigma\fP (const \fBdistance_type\fP &R) const "
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename name> \fBIceBRG::lensing_profile_extension\fP< name >::\fBlensing_profile_extension\fP ()\fC [inline]\fP"
+
+.SS "template<typename name> \fBIceBRG::lensing_profile_extension\fP< name >::~\fBlensing_profile_extension\fP ()\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::group_Delta_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::group_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> name* \fBIceBRG::lensing_profile_extension\fP< name >::lensing_profile_extension_clone () const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::offset_Delta_Sigma (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::offset_Sigma (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::proj_dens (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::proj_enc_dens (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBflt_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::proj_enc_mass (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_group_Delta_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_group_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_offset_Delta_Sigma (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_offset_Sigma (const \fBdistance_type\fP &R, const \fBdistance_type\fP &offset_R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_shifted_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_two_halo_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::quick_two_halo_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::semiquick_group_Delta_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::semiquick_group_Sigma (const \fBdistance_type\fP &R, const \fBflt_type\fP &group_c = \fC2\&.5\fP) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::semiquick_shifted_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBflt_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::shift_factor (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::shifted_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::two_halo_Delta_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+.SS "template<typename name> \fBsurface_density_type\fP \fBIceBRG::lensing_profile_extension\fP< name >::two_halo_Sigma (const \fBdistance_type\fP &R) const\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

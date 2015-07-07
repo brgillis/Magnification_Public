@@ -1,0 +1,81 @@
+This is a pre-\/release public posting of the code used for Gillis and Taylor (2015). There's still a lot of documentation to do, though.
+
+\subsection*{What is this repository for?}
+
+
+\begin{DoxyItemize}
+\item Code used for Gillis and Taylor (2015), including a release of my C++ library, \char`\"{}\-Ice\-B\-R\-G\char`\"{}
+\item v0.\-9.\-1
+\item \href{https://bitbucket.org/tutorials/markdowndemo}{\tt Learn Markdown}
+\end{DoxyItemize}
+
+\subsection*{How do I get set up?}
+
+
+\begin{DoxyItemize}
+\item Summary of set up
+\end{DoxyItemize}
+
+This project is set up with autotools, so it can be built from source on a Linux-\/like system with the standard\-:
+
+``` \#!bash
+
+./configure $<$options$>$ make $<$options$>$ make install ```
+
+My quick recommendation for options is\-:
+
+``` \#!bash
+
+./configure --enable-\/full-\/optimization (add --prefix=\$\-H\-O\-M\-E for a user-\/space install) make -\/j8 make install ```
+
+If the configuration step fails, see below for relevant options that may help point to dependencies.
+
+You can uninstall through\-:
+
+``` \#!bash
+
+make uninstall ```
+
+and clean up the installation directory through\-:
+
+``` \#!bash
+
+make clean ```
+
+
+\begin{DoxyItemize}
+\item Configuration
+\end{DoxyItemize}
+
+Relevant configure options\-:
+
+--help (view help and configure options) --prefix=??? (install in a particular directory. --prefix=\$\-H\-O\-M\-E will do install in userspace) --disable-\/parallelization (unless this flag is used, the executables will be installed using parallelization. With this, only one thread will be run at a time.) --enable-\/full-\/optimization (overrides default C++ compilation flags (-\/g -\/\-O2) and uses a recommended set for better optimization. I recommend using this unless you want to tweak the flags yourself.) --with-\/boost=??? (point to a specific location to find boost headers) --with-\/boost-\/libdir=??? (point to a specific location to find boost libraries) --with-\/ccfits=??? (point to a specific location to find C\-Cfits headers) --with-\/ccfits-\/libdir=??? (point to a specific location to find the C\-Cfits library) C\-P\-P\-F\-L\-A\-G\-S=??? (set specific preprocessor flags. For instance, C\-P\-P\-F\-L\-A\-G\-S='-\/\-I/path/to/\-Eigen/' to help find the Eigen headers.
+
+
+\begin{DoxyItemize}
+\item Dependencies
+\end{DoxyItemize}
+
+C++11-\/compliant C++ compiler Python 2.\-6 or greater Boost headers and Boost Serialization library Eigen headers C\-Cfits headers and library wcstools (needed at runtime for certain executables, but not needed at installation)
+
+
+\begin{DoxyItemize}
+\item How to run tests
+\end{DoxyItemize}
+
+Once it's installed, you can run a test analysis through going to a directory where you want to store data, then running the series of commands\-:
+
+``` \#!bash
+
+C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-get\-\_\-fields.\-py C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-filter\-\_\-catalogues C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-get\-\_\-unmasked\-\_\-fractions C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-count\-\_\-sources C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-measure\-\_\-weak\-\_\-lensing C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-fit\-\_\-lensing\-\_\-model
+
+```
+
+This will run all necessary steps on the process up through fitting a lensing model to the data. By default, this only downloads one pointing from the C\-F\-H\-T\-Len\-S server (to lighten the load on it and speed things up for those only performing quick tests). A configure file (not distributed at the moment) may be used with the C\-F\-H\-T\-Len\-S\-\_\-\-Mag\-\_\-measure\-\_\-weak\-\_\-lensing step to modify the lens bins for which the lensing signal is measured.
+
+\subsection*{Who do I talk to?}
+
+
+\begin{DoxyItemize}
+\item Bryan Gillis -\/ repo owner 
+\end{DoxyItemize}

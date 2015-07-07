@@ -1,0 +1,93 @@
+.TH "IceBRG::count_fitting_functor< Tf >" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IceBRG::count_fitting_functor< Tf > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <count_fitting_functor\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef Tf \fBfunctor_type\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBcount_fitting_functor\fP ()"
+.br
+.ti -1c
+.RI "\fBcount_fitting_functor\fP (\fBfunctor_type\fP *init_f=nullptr, std::string init_filename='', square_angle_type init_field_size=1 *\fBradian\fP *\fBradian\fP, double init_z_bin_size=1)"
+.br
+.ti -1c
+.RI "virtual \fB~count_fitting_functor\fP ()"
+.br
+.ti -1c
+.RI "void \fBset_function\fP (\fBfunctor_type\fP *new_f)"
+.br
+.ti -1c
+.RI "void \fBset_filename\fP (std::string new_filename)"
+.br
+.ti -1c
+.RI "void \fBset_field_size\fP (const square_angle_type &new_field_size)"
+.br
+.ti -1c
+.RI "void \fBset_z_bin_size_size\fP (double new_z_bin_size)"
+.br
+.ti -1c
+.RI "const \fBfunctor_type\fP * \fBfunction\fP ()"
+.br
+.ti -1c
+.RI "const std::string & \fBfilename\fP ()"
+.br
+.ti -1c
+.RI "const square_angle_type & \fBfield_size\fP () const "
+.br
+.ti -1c
+.RI "double \fBz_bin_size\fP () const "
+.br
+.ti -1c
+.RI "double \fBoperator()\fP (const typename functor_type::params_type &in_params) const "
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "template<typename Tf > typedef Tf \fBIceBRG::count_fitting_functor\fP< Tf >::\fBfunctor_type\fP"
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename Tf > \fBIceBRG::count_fitting_functor\fP< Tf >::\fBcount_fitting_functor\fP ()\fC [inline]\fP"
+
+.SS "template<typename Tf > \fBIceBRG::count_fitting_functor\fP< Tf >::\fBcount_fitting_functor\fP (\fBfunctor_type\fP *init_f = \fCnullptr\fP, std::stringinit_filename = \fC''\fP, square_angle_typeinit_field_size = \fC1*\fBradian\fP*\fBradian\fP\fP, doubleinit_z_bin_size = \fC1\fP)\fC [inline]\fP"
+
+.SS "template<typename Tf > virtual \fBIceBRG::count_fitting_functor\fP< Tf >::~\fBcount_fitting_functor\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename Tf > const square_angle_type& \fBIceBRG::count_fitting_functor\fP< Tf >::field_size () const\fC [inline]\fP"
+
+.SS "template<typename Tf > const std::string& \fBIceBRG::count_fitting_functor\fP< Tf >::filename ()\fC [inline]\fP"
+
+.SS "template<typename Tf > const \fBfunctor_type\fP* \fBIceBRG::count_fitting_functor\fP< Tf >::function ()\fC [inline]\fP"
+
+.SS "template<typename Tf > double \fBIceBRG::count_fitting_functor\fP< Tf >::operator() (const typename functor_type::params_type &in_params) const\fC [inline]\fP"
+
+.SS "template<typename Tf > void \fBIceBRG::count_fitting_functor\fP< Tf >::set_field_size (const square_angle_type &new_field_size)\fC [inline]\fP"
+
+.SS "template<typename Tf > void \fBIceBRG::count_fitting_functor\fP< Tf >::set_filename (std::stringnew_filename)\fC [inline]\fP"
+
+.SS "template<typename Tf > void \fBIceBRG::count_fitting_functor\fP< Tf >::set_function (\fBfunctor_type\fP *new_f)\fC [inline]\fP"
+
+.SS "template<typename Tf > void \fBIceBRG::count_fitting_functor\fP< Tf >::set_z_bin_size_size (doublenew_z_bin_size)\fC [inline]\fP"
+
+.SS "template<typename Tf > double \fBIceBRG::count_fitting_functor\fP< Tf >::z_bin_size () const\fC [inline]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

@@ -1,0 +1,250 @@
+.TH "corr_func_bin" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+corr_func_bin \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <corr_func_bin\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector
+.br
+< std::tuple
+.br
+< \fBIceBRG::angle_type\fP, 
+.br
+\fBIceBRG::angle_type\fP, \fBflt_type\fP, 
+.br
+\fBflt_type\fP > > \fBpos_vec\fP"
+.br
+.ti -1c
+.RI "typedef Eigen::ArrayXd \fBarray\fP"
+.br
+.ti -1c
+.RI "typedef std::vector
+.br
+< std::tuple
+.br
+< \fBIceBRG::angle_type\fP, 
+.br
+\fBIceBRG::angle_type\fP, \fBflt_type\fP, 
+.br
+\fBflt_type\fP > > \fBpos_vec\fP"
+.br
+.ti -1c
+.RI "typedef Eigen::ArrayXd \fBarray\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBinitialize\fP (const size_t &size)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &R_limits)"
+.br
+.ti -1c
+.RI "void \fBadd_monopole\fP (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &phys_R_limits, const double &mean_z, const double &weight=1\&.)"
+.br
+.ti -1c
+.RI "void \fBadd_all\fP (\fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > phys_R_limits, const double &mean_z, const double &weight=1\&.)"
+.br
+.ti -1c
+.RI "void \fBnormalize\fP ()"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps=0)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps, \fBpos_vec\fP &&new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style=true, const double &new_z_buffer=0)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps, const \fBpos_vec\fP &new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style=true, const double &new_z_buffer=0)"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP ()"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP & \fBoperator+=\fP (const \fBcorr_func_bin\fP &other)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP \fBoperator+\fP (\fBcorr_func_bin\fP other)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (const size_t &size)"
+.br
+.ti -1c
+.RI "void \fBinitialize\fP (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &R_limits)"
+.br
+.ti -1c
+.RI "void \fBadd_monopole\fP (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &phys_R_limits, const double &mean_z, const double &weight=1\&.)"
+.br
+.ti -1c
+.RI "void \fBadd_all\fP (\fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > phys_R_limits, const double &mean_z, const double &weight=1\&.)"
+.br
+.ti -1c
+.RI "void \fBnormalize\fP ()"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps=0)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps, \fBpos_vec\fP &&new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style=true, const double &new_z_buffer=0)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP (const int &R_steps, const \fBpos_vec\fP &new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style=true, const double &new_z_buffer=0)"
+.br
+.ti -1c
+.RI "\fBoperator bool\fP ()"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP & \fBoperator+=\fP (const \fBcorr_func_bin\fP &other)"
+.br
+.ti -1c
+.RI "\fBcorr_func_bin\fP \fBoperator+\fP (\fBcorr_func_bin\fP other)"
+.br
+.in -1c
+.SS "Data Fields"
+
+.in +1c
+.ti -1c
+.RI "boost::optional< \fBpos_vec\fP > \fBlens_positions\fP"
+.br
+.ti -1c
+.RI "const \fBpos_vec\fP * \fBsource_positions\fP"
+.br
+.ti -1c
+.RI "const \fBpos_vec\fP * \fBmock_lens_positions\fP"
+.br
+.ti -1c
+.RI "const \fBpos_vec\fP * \fBmock_source_positions\fP"
+.br
+.ti -1c
+.RI "short \fBlensing_style\fP"
+.br
+.ti -1c
+.RI "double \fBz_buffer\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBmonopole_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBcorr_func_weight_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBdipole_1_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBdipole_2_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBquadrupole_1_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBquadrupole_2_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBoctopole_1_corr_func_sum\fP"
+.br
+.ti -1c
+.RI "\fBarray\fP \fBoctopole_2_corr_func_sum\fP"
+.br
+.in -1c
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef Eigen::ArrayXd \fBcorr_func_bin::array\fP"
+
+.SS "typedef Eigen::ArrayXd \fBcorr_func_bin::array\fP"
+
+.SS "typedef std::vector<std::tuple<\fBIceBRG::angle_type\fP,\fBIceBRG::angle_type\fP,\fBflt_type\fP,\fBflt_type\fP> > \fBcorr_func_bin::pos_vec\fP"
+
+.SS "typedef std::vector<std::tuple<\fBIceBRG::angle_type\fP,\fBIceBRG::angle_type\fP,\fBflt_type\fP,\fBflt_type\fP> > \fBcorr_func_bin::pos_vec\fP"
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "corr_func_bin::corr_func_bin (const int &R_steps = \fC0\fP)\fC [inline]\fP"
+
+.SS "corr_func_bin::corr_func_bin (const int &R_steps, \fBpos_vec\fP &&new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style = \fCtrue\fP, const double &new_z_buffer = \fC0\fP)\fC [inline]\fP"
+
+.SS "corr_func_bin::corr_func_bin (const int &R_steps, const \fBpos_vec\fP &new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style = \fCtrue\fP, const double &new_z_buffer = \fC0\fP)\fC [inline]\fP"
+
+.SS "corr_func_bin::corr_func_bin (const int &R_steps = \fC0\fP)\fC [inline]\fP"
+
+.SS "corr_func_bin::corr_func_bin (const int &R_steps, \fBpos_vec\fP &&new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style = \fCtrue\fP, const double &new_z_buffer = \fC0\fP)\fC [inline]\fP"
+
+.SS "corr_func_bin::corr_func_bin (const int &R_steps, const \fBpos_vec\fP &new_lens_positions, const \fBpos_vec\fP &new_source_positions, const \fBpos_vec\fP &new_mock_lens_positions, const \fBpos_vec\fP &new_mock_source_positions, const bool &new_lensing_style = \fCtrue\fP, const double &new_z_buffer = \fC0\fP)\fC [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void corr_func_bin::add_all (\fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP >phys_R_limits, const double &mean_z, const double &weight = \fC1\&.\fP)\fC [inline]\fP"
+
+.SS "void corr_func_bin::add_all (\fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP >phys_R_limits, const double &mean_z, const double &weight = \fC1\&.\fP)\fC [inline]\fP"
+
+.SS "void corr_func_bin::add_monopole (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &phys_R_limits, const double &mean_z, const double &weight = \fC1\&.\fP)\fC [inline]\fP"
+
+.SS "void corr_func_bin::add_monopole (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &phys_R_limits, const double &mean_z, const double &weight = \fC1\&.\fP)\fC [inline]\fP"
+
+.SS "void corr_func_bin::initialize (const size_t &size)\fC [inline]\fP"
+
+.SS "void corr_func_bin::initialize (const size_t &size)\fC [inline]\fP"
+
+.SS "void corr_func_bin::initialize (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &R_limits)\fC [inline]\fP"
+
+.SS "void corr_func_bin::initialize (const \fBIceBRG::limit_vector\fP< \fBIceBRG::distance_type\fP > &R_limits)\fC [inline]\fP"
+
+.SS "void corr_func_bin::normalize ()\fC [inline]\fP"
+
+.SS "void corr_func_bin::normalize ()\fC [inline]\fP"
+
+.SS "corr_func_bin::operator bool ()\fC [inline]\fP"
+
+.SS "corr_func_bin::operator bool ()\fC [inline]\fP"
+
+.SS "\fBcorr_func_bin\fP corr_func_bin::operator+ (\fBcorr_func_bin\fPother)\fC [inline]\fP"
+
+.SS "\fBcorr_func_bin\fP corr_func_bin::operator+ (\fBcorr_func_bin\fPother)\fC [inline]\fP"
+
+.SS "\fBcorr_func_bin\fP& corr_func_bin::operator+= (const \fBcorr_func_bin\fP &other)\fC [inline]\fP"
+
+.SS "\fBcorr_func_bin\fP& corr_func_bin::operator+= (const \fBcorr_func_bin\fP &other)\fC [inline]\fP"
+
+.SH "Field Documentation"
+.PP 
+.SS "\fBarray\fP corr_func_bin::corr_func_weight_sum"
+
+.SS "\fBarray\fP corr_func_bin::dipole_1_corr_func_sum"
+
+.SS "\fBarray\fP corr_func_bin::dipole_2_corr_func_sum"
+
+.SS "boost::optional< \fBpos_vec\fP > corr_func_bin::lens_positions"
+
+.SS "short corr_func_bin::lensing_style"
+
+.SS "const \fBpos_vec\fP * corr_func_bin::mock_lens_positions"
+
+.SS "const \fBpos_vec\fP * corr_func_bin::mock_source_positions"
+
+.SS "\fBarray\fP corr_func_bin::monopole_corr_func_sum"
+
+.SS "\fBarray\fP corr_func_bin::octopole_1_corr_func_sum"
+
+.SS "\fBarray\fP corr_func_bin::octopole_2_corr_func_sum"
+
+.SS "\fBarray\fP corr_func_bin::quadrupole_1_corr_func_sum"
+
+.SS "\fBarray\fP corr_func_bin::quadrupole_2_corr_func_sum"
+
+.SS "const \fBpos_vec\fP * corr_func_bin::source_positions"
+
+.SS "double corr_func_bin::z_buffer"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

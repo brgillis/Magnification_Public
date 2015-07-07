@@ -1,0 +1,66 @@
+.TH "/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_catalogue_filtering/src/get_filtered_indices.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/exec/CFHTLenS_catalogue_filtering/src/get_filtered_indices.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <limits>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <utility>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <boost/lexical_cast\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/container/table_typedefs\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/misc_math\&.hpp'\fP
+.br
+\fC#include 'is_good_position\&.hpp'\fP
+.br
+\fC#include 'get_filtered_indices\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBmove_y_column_to_i\fP (\fBIceBRG::labeled_array\fP< double > &map)"
+.br
+.ti -1c
+.RI "std::vector< size_t > \fBget_good_lenses\fP (const \fBIceBRG::labeled_array\fP< double > &map, const std::vector< std::vector< bool >> good_pixels)"
+.br
+.ti -1c
+.RI "std::vector< size_t > \fBget_good_sources\fP (const \fBIceBRG::labeled_array\fP< double > &map, const std::vector< std::vector< bool >> good_pixels)"
+.br
+.ti -1c
+.RI "bool \fBgalaxy_passes_lens_filter\fP (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+.br
+.ti -1c
+.RI "bool \fBgalaxy_passes_source_filter\fP (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+.br
+.ti -1c
+.RI "bool \fBgalaxy_passes_global_filter\fP (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "bool galaxy_passes_global_filter (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+
+.SS "bool galaxy_passes_lens_filter (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+
+.SS "bool galaxy_passes_source_filter (const \fBIceBRG::labeled_array\fP< double >::const_row_reference &galaxy)"
+
+.SS "std::vector<size_t> get_good_lenses (const \fBIceBRG::labeled_array\fP< double > &map, const std::vector< std::vector< bool >>good_pixels)"
+
+.SS "std::vector<size_t> get_good_sources (const \fBIceBRG::labeled_array\fP< double > &map, const std::vector< std::vector< bool >>good_pixels)"
+
+.SS "void move_y_column_to_i (\fBIceBRG::labeled_array\fP< double > &map)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.

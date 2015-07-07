@@ -1,0 +1,65 @@
+.TH "/disk2/brg/git/Magnification_Public/src/lib/IceBRG_lensing/pair_bin.cpp" 3 "Tue Jul 7 2015" "Version 0.9.0" "CFHTLenS_Magnification" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/disk2/brg/git/Magnification_Public/src/lib/IceBRG_lensing/pair_bin.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <limits>\fP
+.br
+\fC#include <boost/accumulators/accumulators\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/count\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/mean\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/moment\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/variance\&.hpp>\fP
+.br
+\fC#include <boost/accumulators/statistics/stats\&.hpp>\fP
+.br
+\fC#include 'IceBRG_main/common\&.h'\fP
+.br
+\fC#include 'IceBRG_main/math/calculus/integrate\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/statistic_extractors\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/utility\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/effective_count\&.hpp'\fP
+.br
+\fC#include 'IceBRG_main/math/statistics/error_of_weighted_mean\&.hpp'\fP
+.br
+\fC#include 'IceBRG_lensing/lens_source_pair\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/pair_bin_summary\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_global_values\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/magnification_alpha\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/magnification_functors\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_calibration_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_signal_integral_cache\&.h'\fP
+.br
+\fC#include 'IceBRG_lensing/magnification/mag_weight_integral_cache\&.h'\fP
+.br
+\fC#include 'pair_bin\&.h'\fP
+.br
+\fC#include 'IceBRG_main/units/units\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBIceBRG\fP"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for CFHTLenS_Magnification from the source code\&.
