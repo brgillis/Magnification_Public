@@ -244,6 +244,7 @@ builddir = @builddir@
 datadir = @datadir@
 datarootdir = @datarootdir@
 docdir = @docdir@
+doxygen_found = @doxygen_found@
 dvidir = @dvidir@
 exec_prefix = @exec_prefix@
 host_alias = @host_alias@

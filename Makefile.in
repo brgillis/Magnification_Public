@@ -79,8 +79,8 @@ subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in COPYING compile depcomp install-sh \
-	missing py-compile
+	$(srcdir)/config.h.in $(top_srcdir)/docs/Doxyfile.in COPYING \
+	compile depcomp install-sh missing py-compile
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -89,7 +89,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES =
+CONFIG_CLEAN_FILES = docs/Doxyfile
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -270,6 +270,7 @@ builddir = @builddir@
 datadir = @datadir@
 datarootdir = @datarootdir@
 docdir = @docdir@
+doxygen_found = @doxygen_found@
 dvidir = @dvidir@
 exec_prefix = @exec_prefix@
 host_alias = @host_alias@
@@ -357,6 +358,8 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
+@HAVE_DOXYGEN_TRUE@docs/Doxyfile: $(top_builddir)/config.status $(top_srcdir)/docs/Doxyfile.in
+@HAVE_DOXYGEN_TRUE@	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
@@ -773,6 +776,22 @@ uninstall-am:
 	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
 	uninstall-am
 
+
+@HAVE_DOXYGEN_TRUE@	directory = $(top_srcdir)/docs/man/man3/
+
+@HAVE_DOXYGEN_TRUE@	dist_man_MANS = $(directory)/man_page_1.3 $(directory)/man_page_2.3
+@HAVE_DOXYGEN_TRUE@	$(directory)/man_page_1.3: doxyfile.stamp
+@HAVE_DOXYGEN_TRUE@	$(directory)/man_page_2.3: doxyfile.stamp
+
+@HAVE_DOXYGEN_TRUE@	doxyfile.stamp:
+@HAVE_DOXYGEN_TRUE@	   $(DOXYGEN) Doxyfile
+@HAVE_DOXYGEN_TRUE@	   echo Timestamp > doxyfile.stamp
+
+@HAVE_DOXYGEN_TRUE@	CLEANFILES = doxyfile.stamp
+
+@HAVE_DOXYGEN_TRUE@	all-local: doxyfile.stamp
+@HAVE_DOXYGEN_TRUE@	clean-local:
+@HAVE_DOXYGEN_TRUE@	   rm -rf $(top_srcdir)/docs/man
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

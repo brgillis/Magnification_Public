@@ -638,6 +638,9 @@ CCFITS_LIB
 BOOST_SERIALIZATION_LIB
 BOOST_LDFLAGS
 BOOST_CPPFLAGS
+HAVE_DOXYGEN_FALSE
+HAVE_DOXYGEN_TRUE
+doxygen_found
 xy2sky_found
 sky2xy_found
 CPP
@@ -5055,6 +5058,62 @@ $as_echo "no" >&6; }
 fi
 
 
+for ac_prog in doxygen
+do
+  # Extract the first word of "$ac_prog", so it can be a program name with args.
+set dummy $ac_prog; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_prog_doxygen_found+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  if test -n "$doxygen_found"; then
+  ac_cv_prog_doxygen_found="$doxygen_found" # Let the user override the test.
+else
+as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in "no"
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_prog_doxygen_found="$ac_prog"
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+fi
+fi
+doxygen_found=$ac_cv_prog_doxygen_found
+if test -n "$doxygen_found"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $doxygen_found" >&5
+$as_echo "$doxygen_found" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+  test -n "$doxygen_found" && break
+done
+test -n "$doxygen_found" || doxygen_found=""yes""
+
+
+ if test -n "x$doxygen_found" == "xyes"; then
+  HAVE_DOXYGEN_TRUE=
+  HAVE_DOXYGEN_FALSE='#'
+else
+  HAVE_DOXYGEN_TRUE='#'
+  HAVE_DOXYGEN_FALSE=
+fi
+
+if test -z "$HAVE_DOXYGEN_TRUE"; then :
+  ac_config_files="$ac_config_files docs/Doxyfile"
+
+fi
 
 # Checks for libraries.
 
@@ -6658,8 +6717,17 @@ MY_LDFLAGS="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib
 if test "x$sky2xy_found" == "xyes" -a "x$xy2sky_found" == "xyes"; then :
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
-$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables
+		which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
+$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables
+		which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
+fi
+
+if test "x$doxygen_found" == "xyes"; then :
+
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find Doxygen. This program can compile, documentation will not be generated." >&5
+$as_echo "$as_me: WARNING: Unable to find Doxygen. This program can compile, documentation will not be generated." >&2;}
 fi
 
 if test "x$mypj_found_std_headers" != "xyes"; then :
@@ -6668,11 +6736,16 @@ $as_echo "$as_me: WARNING: Unable to find the standard definitions headers." >&2
 fi
 
 if test "x$mypj_found_eigen_headers" != "xyes"; then :
-  as_fn_error $? "Unable to find Eigen headers. If you know Eigen is installed, make sure its headers are in the proper include path." "$LINENO" 5
+  as_fn_error $? "Unable to find Eigen headers. If you know Eigen is installed, make sure its headers
+		are in the proper include path." "$LINENO" 5
 fi
 if test "x$mypj_found_ccfits_headers" != "xyes"; then :
-  	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its headers are in the proper include path. Compilation for all executables except get_unmasked_fractions can still proceed." >&5
-$as_echo "$as_me: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its headers are in the proper include path. Compilation for all executables except get_unmasked_fractions can still proceed." >&2;}
+  	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its
+		headers are in the proper include path. Compilation for all executables except
+		get_unmasked_fractions can still proceed." >&5
+$as_echo "$as_me: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its
+		headers are in the proper include path. Compilation for all executables except
+		get_unmasked_fractions can still proceed." >&2;}
 		mypj_compile_get_unmasked_fractions=""
 else
   mypj_compile_get_unmasked_fractions="CFHTLenS_get_unmasked_fractions"
@@ -6818,6 +6891,10 @@ Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 if test -z "${am__fastdepCC_TRUE}" && test -z "${am__fastdepCC_FALSE}"; then
   as_fn_error $? "conditional \"am__fastdepCC\" was never defined.
+Usually this means the macro was only invoked conditionally." "$LINENO" 5
+fi
+if test -z "${HAVE_DOXYGEN_TRUE}" && test -z "${HAVE_DOXYGEN_FALSE}"; then
+  as_fn_error $? "conditional \"HAVE_DOXYGEN\" was never defined.
 Usually this means the macro was only invoked conditionally." "$LINENO" 5
 fi
 
@@ -7414,6 +7491,7 @@ do
   case $ac_config_target in
     "config.h") CONFIG_HEADERS="$CONFIG_HEADERS config.h" ;;
     "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+    "docs/Doxyfile") CONFIG_FILES="$CONFIG_FILES docs/Doxyfile" ;;
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "src/Makefile") CONFIG_FILES="$CONFIG_FILES src/Makefile" ;;
     "src/exec/CFHTLenS_catalogue_fetching/Makefile") CONFIG_FILES="$CONFIG_FILES src/exec/CFHTLenS_catalogue_fetching/Makefile" ;;
