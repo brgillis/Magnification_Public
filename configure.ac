@@ -84,7 +84,8 @@ AC_CONFIG_FILES([Makefile
                  src/lib/IceBRG_lensing/Makefile
                  src/lib/IceBRG_main/Makefile
                  src/lib/IceBRG_physics/Makefile
-                 src/lib/Makefile])
+                 src/lib/Makefile
+                 docs/Makefile])
 
 
 

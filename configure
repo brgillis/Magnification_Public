@@ -6694,7 +6694,7 @@ fi
 done
 
 
-ac_config_files="$ac_config_files Makefile src/Makefile src/exec/CFHTLenS_catalogue_fetching/Makefile src/exec/CFHTLenS_catalogue_filtering/Makefile src/exec/CFHTLenS_corr_func/Makefile src/exec/CFHTLenS_field_stats/Makefile src/exec/CFHTLenS_fit_lensing_models/Makefile src/exec/CFHTLenS_get_unmasked_fractions/Makefile src/exec/CFHTLenS_gg_lensing/Makefile src/exec/CFHTLenS_make_mock_cats/Makefile src/exec/CFHTLenS_source_count_fitting/Makefile src/exec/CFHTLenS_source_counting/Makefile src/exec/Makefile src/lib/IceBRG_lensing/Makefile src/lib/IceBRG_main/Makefile src/lib/IceBRG_physics/Makefile src/lib/Makefile"
+ac_config_files="$ac_config_files Makefile src/Makefile src/exec/CFHTLenS_catalogue_fetching/Makefile src/exec/CFHTLenS_catalogue_filtering/Makefile src/exec/CFHTLenS_corr_func/Makefile src/exec/CFHTLenS_field_stats/Makefile src/exec/CFHTLenS_fit_lensing_models/Makefile src/exec/CFHTLenS_get_unmasked_fractions/Makefile src/exec/CFHTLenS_gg_lensing/Makefile src/exec/CFHTLenS_make_mock_cats/Makefile src/exec/CFHTLenS_source_count_fitting/Makefile src/exec/CFHTLenS_source_counting/Makefile src/exec/Makefile src/lib/IceBRG_lensing/Makefile src/lib/IceBRG_main/Makefile src/lib/IceBRG_physics/Makefile src/lib/Makefile docs/Makefile"
 
 
 
@@ -7498,6 +7498,7 @@ do
     "src/lib/IceBRG_main/Makefile") CONFIG_FILES="$CONFIG_FILES src/lib/IceBRG_main/Makefile" ;;
     "src/lib/IceBRG_physics/Makefile") CONFIG_FILES="$CONFIG_FILES src/lib/IceBRG_physics/Makefile" ;;
     "src/lib/Makefile") CONFIG_FILES="$CONFIG_FILES src/lib/Makefile" ;;
+    "docs/Makefile") CONFIG_FILES="$CONFIG_FILES docs/Makefile" ;;
 
   *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
   esac

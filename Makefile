@@ -79,8 +79,8 @@ subdir = .
 DIST_COMMON = INSTALL NEWS README AUTHORS ChangeLog \
 	$(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
-	$(srcdir)/config.h.in $(top_srcdir)/docs/Doxyfile.in COPYING \
-	compile depcomp install-sh missing py-compile
+	$(srcdir)/config.h.in COPYING compile depcomp install-sh \
+	missing py-compile
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -89,7 +89,7 @@ am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
  configure.lineno config.status.lineno
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = config.h
-CONFIG_CLEAN_FILES = docs/Doxyfile
+CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
@@ -190,12 +190,12 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /disk2/brg/git/Magnification_Public/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/brg/git/Magnification_Public/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /disk2/brg/git/Magnification_Public/missing autoconf
-AUTOHEADER = ${SHELL} /disk2/brg/git/Magnification_Public/missing autoheader
-AUTOMAKE = ${SHELL} /disk2/brg/git/Magnification_Public/missing automake-1.14
+AUTOCONF = ${SHELL} /home/brg/git/Magnification_Public/missing autoconf
+AUTOHEADER = ${SHELL} /home/brg/git/Magnification_Public/missing autoheader
+AUTOMAKE = ${SHELL} /home/brg/git/Magnification_Public/missing automake-1.14
 AWK = gawk
 BOOST_CPPFLAGS = 
 BOOST_LDFLAGS = -L/home/brg/lib
@@ -230,7 +230,7 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /disk2/brg/git/Magnification_Public/missing makeinfo
+MAKEINFO = ${SHELL} /home/brg/git/Magnification_Public/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 MY_CPPFLAGS = -std=c++0x -fopenmp -DEIGEN_DONT_PARALLELIZE -DNDEBUG -I$(top_srcdir)/src/lib -I$(top_srcdir)/src/lib/CFHTLenS_include  
 MY_LDFLAGS = -L$(top_builddir)/src/lib/IceBRG_lensing -L$(top_builddir)/src/lib/IceBRG_physics -L$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits -fopenmp -DEIGEN_DONT_PARALLELIZE -L/home/brg/lib -L/home/brg/lib
@@ -253,10 +253,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 0.9.0
-abs_builddir = /disk2/brg/git/Magnification_Public
-abs_srcdir = /disk2/brg/git/Magnification_Public
-abs_top_builddir = /disk2/brg/git/Magnification_Public
-abs_top_srcdir = /disk2/brg/git/Magnification_Public
+abs_builddir = /home/brg/git/Magnification_Public
+abs_srcdir = /home/brg/git/Magnification_Public
+abs_top_builddir = /home/brg/git/Magnification_Public
+abs_top_srcdir = /home/brg/git/Magnification_Public
 ac_ct_CC = gcc
 ac_ct_CXX = g++
 am__include = include
@@ -277,7 +277,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /disk2/brg/git/Magnification_Public/install-sh
+install_sh = ${SHELL} /home/brg/git/Magnification_Public/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -358,8 +358,6 @@ $(srcdir)/config.h.in:  $(am__configure_deps)
 
 distclean-hdr:
 	-rm -f config.h stamp-h1
-docs/Doxyfile: $(top_builddir)/config.status $(top_srcdir)/docs/Doxyfile.in
-	cd $(top_builddir) && $(SHELL) ./config.status $@
 
 # This directory's subdirectories are mostly independent; you can cd
 # into them and run 'make' without going through this Makefile.
