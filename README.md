@@ -5,7 +5,7 @@ This is a pre-release public posting of the code used for Gillis and Taylor (201
 ### What is this repository for? ###
 
 * Code used for Gillis and Taylor (2015), including a release of my C++ library, "IceBRG"
-* v0.9.1
+* v0.9.2 (I'll be updating the documentation over the coming days to bring it up to v1.0.0)
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
@@ -50,6 +50,7 @@ and clean up the installation directory through:
 make clean
 ```
 
+The executables will be installed in $PREFIX/bin, the needed python package will be installed in $PYTHONPREFIX/site-packages, and unless --disable-install-IceBRG is set, the libraries will be installed in $PREFIX/lib, and their headers in $PREFIX/include/cfhtlens_magnification.
 
 * Configuration
 
