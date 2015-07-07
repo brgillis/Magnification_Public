@@ -20,8 +20,8 @@ AC_ARG_ENABLE([parallelization],
 AS_IF([test "x$enable_parallelization" != "xno"], [parallelization_flags="-fopenmp -DEIGEN_DONT_PARALLELIZE"],[parallelization_flags=""])
 
 # Ask the user if they want to install the IceBRG libraries
-AC_ARG_ENABLE([install_IceBRG],
-    AS_HELP_STRING([--disable-install_IceBRG], [Don't install the IceBRG static libraries. They will be only used for compilation of the executables here.]))
+AC_ARG_ENABLE([install-IceBRG],
+    AS_HELP_STRING([--disable-install-IceBRG], [Don't install the IceBRG static libraries. They will be only used for compilation of the executables here.]))
 
 AS_IF([test "x$enable_install_IceBRG" != "xno"], [install_icebrg="true"],[install_icebrg="false"])
 AM_CONDITIONAL([mypj_install_icebrg], [test x$install_icebrg = xtrue])
