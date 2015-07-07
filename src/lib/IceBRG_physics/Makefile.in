@@ -14,6 +14,7 @@
 
 @SET_MAKE@
 
+
 VPATH = @srcdir@
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -78,7 +79,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 subdir = src/lib/IceBRG_physics
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(top_srcdir)/depcomp
+	$(top_srcdir)/depcomp $(am__nobase_myinclude_HEADERS_DIST) \
+	$(am__noinst_HEADERS_DIST)
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -114,7 +116,7 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(libdir)"
+am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"
 LIBRARIES = $(lib_LIBRARIES) $(noinst_LIBRARIES)
 AR = ar
 ARFLAGS = cru
@@ -166,18 +168,6 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-AM_V_CC = $(am__v_CC_@AM_V@)
-am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
-am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
-CCLD = $(CC)
-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-AM_V_CCLD = $(am__v_CCLD_@AM_V@)
-am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
-am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
 SOURCES = $(libIceBRG_physics_a_SOURCES)
 DIST_SOURCES = $(libIceBRG_physics_a_SOURCES)
 am__can_run_installinfo = \
@@ -185,6 +175,29 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+am__nobase_myinclude_HEADERS_DIST = astro_caches.h \
+	correlation_function_estimator.h phase.hpp astro.h \
+	lensing_correlation_function_estimator.h \
+	density_profile/density_profile_functors.h \
+	density_profile/density_profile.h \
+	density_profile/point_mass_profile.h \
+	density_profile/tNFW_profile_functors.hpp \
+	density_profile/tNFW_profile.h sky_obj/galaxy_group.h \
+	sky_obj/galaxy.h sky_obj/position_grid_cache.h \
+	sky_obj/position_grid_extension.hpp sky_obj/sky_obj.h \
+	sky_obj_with_density_profile/tNFW_galaxy.h
+am__noinst_HEADERS_DIST = astro_caches.h \
+	correlation_function_estimator.h phase.hpp astro.h \
+	lensing_correlation_function_estimator.h \
+	density_profile/density_profile_functors.h \
+	density_profile/density_profile.h \
+	density_profile/point_mass_profile.h \
+	density_profile/tNFW_profile_functors.hpp \
+	density_profile/tNFW_profile.h sky_obj/galaxy_group.h \
+	sky_obj/galaxy.h sky_obj/position_grid_cache.h \
+	sky_obj/position_grid_extension.hpp sky_obj/sky_obj.h \
+	sky_obj_with_density_profile/tNFW_galaxy.h
+HEADERS = $(nobase_myinclude_HEADERS) $(noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
@@ -321,8 +334,11 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 @mypj_install_icebrg_TRUE@lib_LIBRARIES = libIceBRG_physics.a
+@mypj_install_icebrg_TRUE@myincludedir = $(pkgincludedir)/IceBRG_physics
+@mypj_install_icebrg_TRUE@nobase_myinclude_HEADERS = astro_caches.h correlation_function_estimator.h phase.hpp astro.h lensing_correlation_function_estimator.h density_profile/density_profile_functors.h density_profile/density_profile.h density_profile/point_mass_profile.h density_profile/tNFW_profile_functors.hpp density_profile/tNFW_profile.h sky_obj/galaxy_group.h sky_obj/galaxy.h sky_obj/position_grid_cache.h sky_obj/position_grid_extension.hpp sky_obj/sky_obj.h sky_obj_with_density_profile/tNFW_galaxy.h
 @mypj_install_icebrg_FALSE@noinst_LIBRARIES = libIceBRG_physics.a
-libIceBRG_physics_a_SOURCES = astro_caches.cpp                    correlation_function_estimator.h astro_caches.h                      lensing_correlation_function_estimator.cpp astro.cpp                           lensing_correlation_function_estimator.h astro.h                             phase.hpp correlation_function_estimator.cpp density_profile/density_profile.cpp density_profile/density_profile_functors.cpp density_profile/density_profile_functors.h density_profile/density_profile.h density_profile/point_mass_profile.cpp density_profile/point_mass_profile.h density_profile/tNFW_profile.cpp density_profile/tNFW_profile_functors.hpp density_profile/tNFW_profile.h sky_obj/galaxy.cpp sky_obj/galaxy_group.cpp sky_obj/galaxy_group.h sky_obj/galaxy.h sky_obj/position_grid_cache.cpp sky_obj/position_grid_cache.h sky_obj/position_grid_extension.hpp sky_obj/sky_obj.cpp sky_obj/sky_obj.h sky_obj_with_density_profile/tNFW_galaxy.cpp sky_obj_with_density_profile/tNFW_galaxy.h 
+@mypj_install_icebrg_FALSE@noinst_HEADERS = astro_caches.h correlation_function_estimator.h phase.hpp astro.h lensing_correlation_function_estimator.h density_profile/density_profile_functors.h density_profile/density_profile.h density_profile/point_mass_profile.h density_profile/tNFW_profile_functors.hpp density_profile/tNFW_profile.h sky_obj/galaxy_group.h sky_obj/galaxy.h sky_obj/position_grid_cache.h sky_obj/position_grid_extension.hpp sky_obj/sky_obj.h sky_obj_with_density_profile/tNFW_galaxy.h
+libIceBRG_physics_a_SOURCES = astro_caches.cpp lensing_correlation_function_estimator.cpp astro.cpp correlation_function_estimator.cpp density_profile/density_profile.cpp density_profile/density_profile_functors.cpp density_profile/point_mass_profile.cpp density_profile/tNFW_profile.cpp sky_obj/galaxy.cpp sky_obj/galaxy_group.cpp sky_obj/position_grid_cache.cpp sky_obj/sky_obj.cpp sky_obj_with_density_profile/tNFW_galaxy.cpp
 all: all-am
 
 .SUFFIXES:
@@ -476,6 +492,30 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+install-nobase_myincludeHEADERS: $(nobase_myinclude_HEADERS)
+	@$(NORMAL_INSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(myincludedir)" || exit 1; \
+	fi; \
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for file in $$files; do \
+	    if test -f "$$file"; then xfiles="$$xfiles $$file"; \
+	    else xfiles="$$xfiles $(srcdir)/$$file"; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(myincludedir)/$$dir"; }; \
+	    echo " $(INSTALL_HEADER) $$xfiles '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	    $(INSTALL_HEADER) $$xfiles "$(DESTDIR)$(myincludedir)/$$dir" || exit $$?; }; \
+	done
+
+uninstall-nobase_myincludeHEADERS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	$(am__nobase_strip_setup); files=`$(am__nobase_strip)`; \
+	dir='$(DESTDIR)$(myincludedir)'; $(am__uninstall_files_from_dir)
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -561,9 +601,9 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(LIBRARIES)
+all-am: Makefile $(LIBRARIES) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(libdir)"; do \
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -625,7 +665,7 @@ info: info-am
 
 info-am:
 
-install-data-am:
+install-data-am: install-nobase_myincludeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -670,7 +710,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-libLIBRARIES
+uninstall-am: uninstall-libLIBRARIES uninstall-nobase_myincludeHEADERS
 
 .MAKE: install-am install-strip
 
@@ -681,12 +721,14 @@ uninstall-am: uninstall-libLIBRARIES
 	install install-am install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-html \
 	install-html-am install-info install-info-am \
-	install-libLIBRARIES install-man install-pdf install-pdf-am \
+	install-libLIBRARIES install-man \
+	install-nobase_myincludeHEADERS install-pdf install-pdf-am \
 	install-ps install-ps-am install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-libLIBRARIES
+	uninstall-am uninstall-libLIBRARIES \
+	uninstall-nobase_myincludeHEADERS
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.

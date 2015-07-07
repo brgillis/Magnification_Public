@@ -14,6 +14,7 @@
 
 @SET_MAKE@
 
+
 VPATH = @srcdir@
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -78,7 +79,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 subdir = src/lib/IceBRG_main
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(top_srcdir)/depcomp
+	$(top_srcdir)/depcomp $(am__nobase_myinclude_HEADERS_DIST) \
+	$(am__noinst_HEADERS_DIST)
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -114,7 +116,7 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(libdir)"
+am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"
 LIBRARIES = $(lib_LIBRARIES) $(noinst_LIBRARIES)
 AR = ar
 ARFLAGS = cru
@@ -179,6 +181,98 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+am__nobase_myinclude_HEADERS_DIST = call_program.hpp common.h \
+	error_handling.h lexical_cast.hpp command_line.hpp Eigen.hpp \
+	join_path.hpp utility.hpp container/coerce.hpp \
+	file_access/print_pixels.hpp container/comparison_type.hpp \
+	file_access/table_utility.hpp container/element_accessor.hpp \
+	file_access/trim_comments.hpp container/generic_functions.hpp \
+	math/ipow.hpp container/insertion_ordered_map.hpp \
+	math/misc_math.hpp container/is_boost_tuple.hpp \
+	math/safe_math.hpp container/is_container.hpp \
+	units/apply_unitconvs.hpp container/is_eigen_container.hpp \
+	units/unit_conversions.hpp container/is_stl_container.hpp \
+	units/unitconv_map.hpp container/labeled_array.hpp \
+	units/units.hpp container/table_typedefs.hpp \
+	vector/elementwise_functions.hpp container/tuple.hpp \
+	vector/limit_vector.hpp external/sgsmooth.h \
+	vector/limit_vector_operations.hpp external/tk_spline.h \
+	vector/make_limit_vector_base.hpp file_access/ascii_table.hpp \
+	vector/make_vector.hpp file_access/ascii_table_map.hpp \
+	vector/manipulations.hpp file_access/binary_archive.hpp \
+	vector/multi_vector.hpp file_access/open_file.hpp \
+	vector/summary_functions.hpp \
+	container/labeled_array/labeled_array_col_iterator.hpp \
+	container/labeled_array/labeled_array_col_reference.hpp \
+	container/labeled_array/labeled_array_element_iterator.hpp \
+	container/labeled_array/labeled_array_iterator_chooser.hpp \
+	container/labeled_array/labeled_array_raw_col_iterator.hpp \
+	container/labeled_array/labeled_array_raw_row_iterator.hpp \
+	container/labeled_array/labeled_array_row_iterator.hpp \
+	container/labeled_array/labeled_array_row_reference.hpp \
+	container/labeled_array/labeled_array_vecs.hpp \
+	math/cache/cache_2d.hpp math/cache/cache_3d.hpp \
+	math/cache/cache_4d.hpp math/cache/cache.hpp \
+	math/cache/cache_nd.hpp math/calculus/DE.hpp \
+	math/calculus/differentiate.hpp math/calculus/integrate.hpp \
+	math/Fourier/management.hpp math/Fourier/radial_vector.hpp \
+	math/Fourier/transform.hpp math/functor/functor.hpp \
+	math/functor/functor_product.hpp \
+	math/interpolator/interpolator_derivative.h \
+	math/interpolator/interpolator.h math/random/distributions.hpp \
+	math/random/random_functions.hpp \
+	math/solvers/solver_classes.hpp math/solvers/solvers.hpp \
+	math/statistics/effective_count.hpp \
+	math/statistics/error_of_weighted_mean.hpp \
+	math/statistics/mean_weight.hpp math/statistics/resampling.hpp \
+	math/statistics/statistic_extractors.hpp \
+	math/statistics/sum_of_square_weights.hpp
+am__noinst_HEADERS_DIST = call_program.hpp common.h error_handling.h \
+	lexical_cast.hpp command_line.hpp Eigen.hpp join_path.hpp \
+	utility.hpp container/coerce.hpp file_access/print_pixels.hpp \
+	container/comparison_type.hpp file_access/table_utility.hpp \
+	container/element_accessor.hpp file_access/trim_comments.hpp \
+	container/generic_functions.hpp math/ipow.hpp \
+	container/insertion_ordered_map.hpp math/misc_math.hpp \
+	container/is_boost_tuple.hpp math/safe_math.hpp \
+	container/is_container.hpp units/apply_unitconvs.hpp \
+	container/is_eigen_container.hpp units/unit_conversions.hpp \
+	container/is_stl_container.hpp units/unitconv_map.hpp \
+	container/labeled_array.hpp units/units.hpp \
+	container/table_typedefs.hpp vector/elementwise_functions.hpp \
+	container/tuple.hpp vector/limit_vector.hpp \
+	external/sgsmooth.h vector/limit_vector_operations.hpp \
+	external/tk_spline.h vector/make_limit_vector_base.hpp \
+	file_access/ascii_table.hpp vector/make_vector.hpp \
+	file_access/ascii_table_map.hpp vector/manipulations.hpp \
+	file_access/binary_archive.hpp vector/multi_vector.hpp \
+	file_access/open_file.hpp vector/summary_functions.hpp \
+	container/labeled_array/labeled_array_col_iterator.hpp \
+	container/labeled_array/labeled_array_col_reference.hpp \
+	container/labeled_array/labeled_array_element_iterator.hpp \
+	container/labeled_array/labeled_array_iterator_chooser.hpp \
+	container/labeled_array/labeled_array_raw_col_iterator.hpp \
+	container/labeled_array/labeled_array_raw_row_iterator.hpp \
+	container/labeled_array/labeled_array_row_iterator.hpp \
+	container/labeled_array/labeled_array_row_reference.hpp \
+	container/labeled_array/labeled_array_vecs.hpp \
+	math/cache/cache_2d.hpp math/cache/cache_3d.hpp \
+	math/cache/cache_4d.hpp math/cache/cache.hpp \
+	math/cache/cache_nd.hpp math/calculus/DE.hpp \
+	math/calculus/differentiate.hpp math/calculus/integrate.hpp \
+	math/Fourier/management.hpp math/Fourier/radial_vector.hpp \
+	math/Fourier/transform.hpp math/functor/functor.hpp \
+	math/functor/functor_product.hpp \
+	math/interpolator/interpolator_derivative.h \
+	math/interpolator/interpolator.h math/random/distributions.hpp \
+	math/random/random_functions.hpp \
+	math/solvers/solver_classes.hpp math/solvers/solvers.hpp \
+	math/statistics/effective_count.hpp \
+	math/statistics/error_of_weighted_mean.hpp \
+	math/statistics/mean_weight.hpp math/statistics/resampling.hpp \
+	math/statistics/statistic_extractors.hpp \
+	math/statistics/sum_of_square_weights.hpp
+HEADERS = $(nobase_myinclude_HEADERS) $(noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
@@ -315,57 +409,157 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 @mypj_install_icebrg_TRUE@lib_LIBRARIES = libIceBRG_main.a
+@mypj_install_icebrg_TRUE@myincludedir = $(pkgincludedir)/IceBRG_main
+@mypj_install_icebrg_TRUE@nobase_myinclude_HEADERS = call_program.hpp \
+@mypj_install_icebrg_TRUE@	common.h error_handling.h \
+@mypj_install_icebrg_TRUE@	lexical_cast.hpp command_line.hpp \
+@mypj_install_icebrg_TRUE@	Eigen.hpp join_path.hpp utility.hpp \
+@mypj_install_icebrg_TRUE@	container/coerce.hpp \
+@mypj_install_icebrg_TRUE@	file_access/print_pixels.hpp \
+@mypj_install_icebrg_TRUE@	container/comparison_type.hpp \
+@mypj_install_icebrg_TRUE@	file_access/table_utility.hpp \
+@mypj_install_icebrg_TRUE@	container/element_accessor.hpp \
+@mypj_install_icebrg_TRUE@	file_access/trim_comments.hpp \
+@mypj_install_icebrg_TRUE@	container/generic_functions.hpp \
+@mypj_install_icebrg_TRUE@	math/ipow.hpp \
+@mypj_install_icebrg_TRUE@	container/insertion_ordered_map.hpp \
+@mypj_install_icebrg_TRUE@	math/misc_math.hpp \
+@mypj_install_icebrg_TRUE@	container/is_boost_tuple.hpp \
+@mypj_install_icebrg_TRUE@	math/safe_math.hpp \
+@mypj_install_icebrg_TRUE@	container/is_container.hpp \
+@mypj_install_icebrg_TRUE@	units/apply_unitconvs.hpp \
+@mypj_install_icebrg_TRUE@	container/is_eigen_container.hpp \
+@mypj_install_icebrg_TRUE@	units/unit_conversions.hpp \
+@mypj_install_icebrg_TRUE@	container/is_stl_container.hpp \
+@mypj_install_icebrg_TRUE@	units/unitconv_map.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array.hpp \
+@mypj_install_icebrg_TRUE@	units/units.hpp \
+@mypj_install_icebrg_TRUE@	container/table_typedefs.hpp \
+@mypj_install_icebrg_TRUE@	vector/elementwise_functions.hpp \
+@mypj_install_icebrg_TRUE@	container/tuple.hpp \
+@mypj_install_icebrg_TRUE@	vector/limit_vector.hpp \
+@mypj_install_icebrg_TRUE@	external/sgsmooth.h \
+@mypj_install_icebrg_TRUE@	vector/limit_vector_operations.hpp \
+@mypj_install_icebrg_TRUE@	external/tk_spline.h \
+@mypj_install_icebrg_TRUE@	vector/make_limit_vector_base.hpp \
+@mypj_install_icebrg_TRUE@	file_access/ascii_table.hpp \
+@mypj_install_icebrg_TRUE@	vector/make_vector.hpp \
+@mypj_install_icebrg_TRUE@	file_access/ascii_table_map.hpp \
+@mypj_install_icebrg_TRUE@	vector/manipulations.hpp \
+@mypj_install_icebrg_TRUE@	file_access/binary_archive.hpp \
+@mypj_install_icebrg_TRUE@	vector/multi_vector.hpp \
+@mypj_install_icebrg_TRUE@	file_access/open_file.hpp \
+@mypj_install_icebrg_TRUE@	vector/summary_functions.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_col_iterator.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_col_reference.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_element_iterator.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_iterator_chooser.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_raw_col_iterator.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_raw_row_iterator.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_row_iterator.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_row_reference.hpp \
+@mypj_install_icebrg_TRUE@	container/labeled_array/labeled_array_vecs.hpp \
+@mypj_install_icebrg_TRUE@	math/cache/cache_2d.hpp \
+@mypj_install_icebrg_TRUE@	math/cache/cache_3d.hpp \
+@mypj_install_icebrg_TRUE@	math/cache/cache_4d.hpp \
+@mypj_install_icebrg_TRUE@	math/cache/cache.hpp \
+@mypj_install_icebrg_TRUE@	math/cache/cache_nd.hpp \
+@mypj_install_icebrg_TRUE@	math/calculus/DE.hpp \
+@mypj_install_icebrg_TRUE@	math/calculus/differentiate.hpp \
+@mypj_install_icebrg_TRUE@	math/calculus/integrate.hpp \
+@mypj_install_icebrg_TRUE@	math/Fourier/management.hpp \
+@mypj_install_icebrg_TRUE@	math/Fourier/radial_vector.hpp \
+@mypj_install_icebrg_TRUE@	math/Fourier/transform.hpp \
+@mypj_install_icebrg_TRUE@	math/functor/functor.hpp \
+@mypj_install_icebrg_TRUE@	math/functor/functor_product.hpp \
+@mypj_install_icebrg_TRUE@	math/interpolator/interpolator_derivative.h \
+@mypj_install_icebrg_TRUE@	math/interpolator/interpolator.h \
+@mypj_install_icebrg_TRUE@	math/random/distributions.hpp \
+@mypj_install_icebrg_TRUE@	math/random/random_functions.hpp \
+@mypj_install_icebrg_TRUE@	math/solvers/solver_classes.hpp \
+@mypj_install_icebrg_TRUE@	math/solvers/solvers.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/effective_count.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/error_of_weighted_mean.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/mean_weight.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/resampling.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/statistic_extractors.hpp \
+@mypj_install_icebrg_TRUE@	math/statistics/sum_of_square_weights.hpp
 @mypj_install_icebrg_FALSE@noinst_LIBRARIES = libIceBRG_main.a
-libIceBRG_main_a_SOURCES = call_program.hpp Eigen.hpp error_handling.h \
-	utility.hpp common.h error_handling.cpp lexical_cast.hpp \
-	container/coerce.hpp file_access/open_file.hpp \
-	container/comparison_type.hpp file_access/print_pixels.hpp \
-	container/element_accessor.hpp file_access/table_utility.hpp \
-	container/generic_functions.hpp file_access/trim_comments.hpp \
-	container/insertion_ordered_map.hpp math/ipow.hpp \
-	container/is_boost_tuple.hpp math/misc_math.hpp \
-	container/is_container.hpp math/safe_math.hpp \
-	container/is_eigen_container.hpp units/apply_unitconvs.hpp \
-	container/is_stl_container.hpp units/unit_conversions.hpp \
-	container/labeled_array.hpp units/unitconv_map.hpp \
-	container/table_typedefs.hpp units/units.hpp \
-	container/tuple.hpp vector/elementwise_functions.hpp \
-	external/sgsmooth.cpp vector/limit_vector.hpp \
-	external/sgsmooth.h vector/limit_vector_operations.hpp \
-	external/tk_spline.cpp vector/make_limit_vector_base.hpp \
-	external/tk_spline.h vector/make_vector.hpp \
-	file_access/ascii_table.hpp vector/manipulations.hpp \
-	file_access/ascii_table_map.hpp vector/multi_vector.hpp \
-	file_access/binary_archive.hpp vector/summary_functions.hpp \
-	container/labeled_array/labeled_array_col_iterator.hpp \
-	container/labeled_array/labeled_array_col_reference.hpp \
-	container/labeled_array/labeled_array_element_iterator.hpp \
-	container/labeled_array/labeled_array_iterator_chooser.hpp \
-	container/labeled_array/labeled_array_raw_col_iterator.hpp \
-	container/labeled_array/labeled_array_raw_row_iterator.hpp \
-	container/labeled_array/labeled_array_row_iterator.hpp \
-	container/labeled_array/labeled_array_row_reference.hpp \
-	container/labeled_array/labeled_array_vecs.hpp \
-	math/cache/cache_2d.hpp math/cache/cache_3d.hpp \
-	math/cache/cache_4d.hpp math/cache/cache.hpp \
-	math/cache/cache_nd.hpp math/calculus/DE.hpp \
-	math/calculus/differentiate.hpp math/calculus/integrate.hpp \
-	math/Fourier/management.hpp math/Fourier/radial_vector.hpp \
-	math/Fourier/transform.hpp math/functor/functor.hpp \
-	math/functor/functor_product.hpp \
-	math/interpolator/interpolator.cpp \
-	math/interpolator/interpolator_derivative.cpp \
-	math/interpolator/interpolator_derivative.h \
-	math/interpolator/interpolator.h math/random/distributions.hpp \
-	math/random/random_functions.cpp \
-	math/random/random_functions.hpp \
-	math/solvers/solver_classes.hpp math/solvers/solvers.hpp \
-	math/statistics/effective_count.hpp \
-	math/statistics/error_of_weighted_mean.hpp \
-	math/statistics/mean_weight.hpp math/statistics/resampling.hpp \
-	math/statistics/statistic_extractors.hpp \
-	math/statistics/sum_of_square_weights.hpp join_path.hpp \
-	command_line.hpp
+@mypj_install_icebrg_FALSE@noinst_HEADERS = call_program.hpp common.h \
+@mypj_install_icebrg_FALSE@	error_handling.h lexical_cast.hpp \
+@mypj_install_icebrg_FALSE@	command_line.hpp Eigen.hpp \
+@mypj_install_icebrg_FALSE@	join_path.hpp utility.hpp \
+@mypj_install_icebrg_FALSE@	container/coerce.hpp \
+@mypj_install_icebrg_FALSE@	file_access/print_pixels.hpp \
+@mypj_install_icebrg_FALSE@	container/comparison_type.hpp \
+@mypj_install_icebrg_FALSE@	file_access/table_utility.hpp \
+@mypj_install_icebrg_FALSE@	container/element_accessor.hpp \
+@mypj_install_icebrg_FALSE@	file_access/trim_comments.hpp \
+@mypj_install_icebrg_FALSE@	container/generic_functions.hpp \
+@mypj_install_icebrg_FALSE@	math/ipow.hpp \
+@mypj_install_icebrg_FALSE@	container/insertion_ordered_map.hpp \
+@mypj_install_icebrg_FALSE@	math/misc_math.hpp \
+@mypj_install_icebrg_FALSE@	container/is_boost_tuple.hpp \
+@mypj_install_icebrg_FALSE@	math/safe_math.hpp \
+@mypj_install_icebrg_FALSE@	container/is_container.hpp \
+@mypj_install_icebrg_FALSE@	units/apply_unitconvs.hpp \
+@mypj_install_icebrg_FALSE@	container/is_eigen_container.hpp \
+@mypj_install_icebrg_FALSE@	units/unit_conversions.hpp \
+@mypj_install_icebrg_FALSE@	container/is_stl_container.hpp \
+@mypj_install_icebrg_FALSE@	units/unitconv_map.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array.hpp \
+@mypj_install_icebrg_FALSE@	units/units.hpp \
+@mypj_install_icebrg_FALSE@	container/table_typedefs.hpp \
+@mypj_install_icebrg_FALSE@	vector/elementwise_functions.hpp \
+@mypj_install_icebrg_FALSE@	container/tuple.hpp \
+@mypj_install_icebrg_FALSE@	vector/limit_vector.hpp \
+@mypj_install_icebrg_FALSE@	external/sgsmooth.h \
+@mypj_install_icebrg_FALSE@	vector/limit_vector_operations.hpp \
+@mypj_install_icebrg_FALSE@	external/tk_spline.h \
+@mypj_install_icebrg_FALSE@	vector/make_limit_vector_base.hpp \
+@mypj_install_icebrg_FALSE@	file_access/ascii_table.hpp \
+@mypj_install_icebrg_FALSE@	vector/make_vector.hpp \
+@mypj_install_icebrg_FALSE@	file_access/ascii_table_map.hpp \
+@mypj_install_icebrg_FALSE@	vector/manipulations.hpp \
+@mypj_install_icebrg_FALSE@	file_access/binary_archive.hpp \
+@mypj_install_icebrg_FALSE@	vector/multi_vector.hpp \
+@mypj_install_icebrg_FALSE@	file_access/open_file.hpp \
+@mypj_install_icebrg_FALSE@	vector/summary_functions.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_col_iterator.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_col_reference.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_element_iterator.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_iterator_chooser.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_raw_col_iterator.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_raw_row_iterator.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_row_iterator.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_row_reference.hpp \
+@mypj_install_icebrg_FALSE@	container/labeled_array/labeled_array_vecs.hpp \
+@mypj_install_icebrg_FALSE@	math/cache/cache_2d.hpp \
+@mypj_install_icebrg_FALSE@	math/cache/cache_3d.hpp \
+@mypj_install_icebrg_FALSE@	math/cache/cache_4d.hpp \
+@mypj_install_icebrg_FALSE@	math/cache/cache.hpp \
+@mypj_install_icebrg_FALSE@	math/cache/cache_nd.hpp \
+@mypj_install_icebrg_FALSE@	math/calculus/DE.hpp \
+@mypj_install_icebrg_FALSE@	math/calculus/differentiate.hpp \
+@mypj_install_icebrg_FALSE@	math/calculus/integrate.hpp \
+@mypj_install_icebrg_FALSE@	math/Fourier/management.hpp \
+@mypj_install_icebrg_FALSE@	math/Fourier/radial_vector.hpp \
+@mypj_install_icebrg_FALSE@	math/Fourier/transform.hpp \
+@mypj_install_icebrg_FALSE@	math/functor/functor.hpp \
+@mypj_install_icebrg_FALSE@	math/functor/functor_product.hpp \
+@mypj_install_icebrg_FALSE@	math/interpolator/interpolator_derivative.h \
+@mypj_install_icebrg_FALSE@	math/interpolator/interpolator.h \
+@mypj_install_icebrg_FALSE@	math/random/distributions.hpp \
+@mypj_install_icebrg_FALSE@	math/random/random_functions.hpp \
+@mypj_install_icebrg_FALSE@	math/solvers/solver_classes.hpp \
+@mypj_install_icebrg_FALSE@	math/solvers/solvers.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/effective_count.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/error_of_weighted_mean.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/mean_weight.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/resampling.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/statistic_extractors.hpp \
+@mypj_install_icebrg_FALSE@	math/statistics/sum_of_square_weights.hpp
+libIceBRG_main_a_SOURCES = error_handling.cpp external/sgsmooth.cpp vector/limit_vector_operations.hpp external/tk_spline.cpp math/interpolator/interpolator.cpp math/interpolator/interpolator_derivative.cpp math/random/random_functions.cpp
 all: all-am
 
 .SUFFIXES:
@@ -501,6 +695,30 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+install-nobase_myincludeHEADERS: $(nobase_myinclude_HEADERS)
+	@$(NORMAL_INSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(myincludedir)" || exit 1; \
+	fi; \
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for file in $$files; do \
+	    if test -f "$$file"; then xfiles="$$xfiles $$file"; \
+	    else xfiles="$$xfiles $(srcdir)/$$file"; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(myincludedir)/$$dir"; }; \
+	    echo " $(INSTALL_HEADER) $$xfiles '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	    $(INSTALL_HEADER) $$xfiles "$(DESTDIR)$(myincludedir)/$$dir" || exit $$?; }; \
+	done
+
+uninstall-nobase_myincludeHEADERS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	$(am__nobase_strip_setup); files=`$(am__nobase_strip)`; \
+	dir='$(DESTDIR)$(myincludedir)'; $(am__uninstall_files_from_dir)
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -586,9 +804,9 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(LIBRARIES)
+all-am: Makefile $(LIBRARIES) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(libdir)"; do \
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -650,7 +868,7 @@ info: info-am
 
 info-am:
 
-install-data-am:
+install-data-am: install-nobase_myincludeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -695,7 +913,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-libLIBRARIES
+uninstall-am: uninstall-libLIBRARIES uninstall-nobase_myincludeHEADERS
 
 .MAKE: install-am install-strip
 
@@ -706,12 +924,14 @@ uninstall-am: uninstall-libLIBRARIES
 	install install-am install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-html \
 	install-html-am install-info install-info-am \
-	install-libLIBRARIES install-man install-pdf install-pdf-am \
+	install-libLIBRARIES install-man \
+	install-nobase_myincludeHEADERS install-pdf install-pdf-am \
 	install-ps install-ps-am install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-libLIBRARIES
+	uninstall-am uninstall-libLIBRARIES \
+	uninstall-nobase_myincludeHEADERS
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.

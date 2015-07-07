@@ -1,9 +1,8 @@
 if HAVE_DOXYGEN
-directory = $(top_srcdir)/docs/man/man3/
+directory = $(top_srcdir)/docs/man/man3
 
-dist_man_MANS = $(directory)/man_page_1.3 $(directory)/man_page_2.3
-$(directory)/man_page_1.3: doxyfile.stamp
-$(directory)/man_page_2.3: doxyfile.stamp
+noinst_MANS = $(directory)/config.h.3
+$(directory)/config.h.3: doxyfile.stamp
 
 doxyfile.stamp:
 	doxygen Doxyfile

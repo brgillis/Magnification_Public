@@ -14,6 +14,7 @@
 
 @SET_MAKE@
 
+
 VPATH = @srcdir@
 am__is_gnu_make = test -n '$(MAKEFILE_LIST)' && test -n '$(MAKELEVEL)'
 am__make_running_with_option = \
@@ -78,7 +79,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 subdir = src/lib/IceBRG_lensing
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(top_srcdir)/depcomp
+	$(top_srcdir)/depcomp $(am__nobase_myinclude_HEADERS_DIST) \
+	$(am__noinst_HEADERS_DIST)
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
@@ -114,7 +116,7 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(libdir)"
+am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"
 LIBRARIES = $(lib_LIBRARIES) $(noinst_LIBRARIES)
 AR = ar
 ARFLAGS = cru
@@ -174,18 +176,6 @@ AM_V_CXXLD = $(am__v_CXXLD_@AM_V@)
 am__v_CXXLD_ = $(am__v_CXXLD_@AM_DEFAULT_V@)
 am__v_CXXLD_0 = @echo "  CXXLD   " $@;
 am__v_CXXLD_1 = 
-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
-	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
-AM_V_CC = $(am__v_CC_@AM_V@)
-am__v_CC_ = $(am__v_CC_@AM_DEFAULT_V@)
-am__v_CC_0 = @echo "  CC      " $@;
-am__v_CC_1 = 
-CCLD = $(CC)
-LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-AM_V_CCLD = $(am__v_CCLD_@AM_V@)
-am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
-am__v_CCLD_0 = @echo "  CCLD    " $@;
-am__v_CCLD_1 = 
 SOURCES = $(libIceBRG_lensing_a_SOURCES)
 DIST_SOURCES = $(libIceBRG_lensing_a_SOURCES)
 am__can_run_installinfo = \
@@ -193,6 +183,49 @@ am__can_run_installinfo = \
     n|no|NO) false;; \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
+am__nobase_myinclude_HEADERS_DIST =  \
+	lensing_profile_extension_functors.hpp pair_bins_summary.h \
+	lensing_profile_extension.hpp pair_bin_summary.h \
+	lensing_tNFW_caches.h source_galaxy.h lensing_tNFW_profile.h \
+	source_obj.hpp lens_source_pair.h two_halo_term_functions.hpp \
+	pair_bin.h two_halo_term_methods.hpp pair_binner.h \
+	magnification/count_fitting_results.hpp \
+	magnification/expected_count_cache.h \
+	magnification/expected_count_derivative_cache.h \
+	magnification/expected_count_fit_loader.h \
+	magnification/expected_count_loader.h \
+	magnification/mag_calibration_cache.h \
+	magnification/mag_calibration_loader.h \
+	magnification/mag_correlation_function_estimator.h \
+	magnification/mag_global_values.h \
+	magnification/magnification_alpha.h \
+	magnification/magnification_functors.h \
+	magnification/mag_signal_integral_cache.h \
+	magnification/mag_weight_integral_cache.h \
+	magnification/Schechter_like_functor.h shifting/corr_alpha.hpp \
+	shifting/shifting_cache.h shifting/shifting_loader.h
+am__noinst_HEADERS_DIST = lensing_profile_extension_functors.hpp \
+	pair_bins_summary.h lensing_profile_extension.hpp \
+	pair_bin_summary.h lensing_tNFW_caches.h source_galaxy.h \
+	lensing_tNFW_profile.h source_obj.hpp lens_source_pair.h \
+	two_halo_term_functions.hpp pair_bin.h \
+	two_halo_term_methods.hpp pair_binner.h \
+	magnification/count_fitting_results.hpp \
+	magnification/expected_count_cache.h \
+	magnification/expected_count_derivative_cache.h \
+	magnification/expected_count_fit_loader.h \
+	magnification/expected_count_loader.h \
+	magnification/mag_calibration_cache.h \
+	magnification/mag_calibration_loader.h \
+	magnification/mag_correlation_function_estimator.h \
+	magnification/mag_global_values.h \
+	magnification/magnification_alpha.h \
+	magnification/magnification_functors.h \
+	magnification/mag_signal_integral_cache.h \
+	magnification/mag_weight_integral_cache.h \
+	magnification/Schechter_like_functor.h shifting/corr_alpha.hpp \
+	shifting/shifting_cache.h shifting/shifting_loader.h
+HEADERS = $(nobase_myinclude_HEADERS) $(noinst_HEADERS)
 am__tagged_files = $(HEADERS) $(SOURCES) $(TAGS_FILES) $(LISP)
 # Read a list of newline-separated strings from the standard input,
 # and print each of them once, without duplicates.  Input order is
@@ -329,44 +362,11 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 @mypj_install_icebrg_TRUE@lib_LIBRARIES = libIceBRG_lensing.a
+@mypj_install_icebrg_TRUE@myincludedir = $(pkgincludedir)/IceBRG_lensing
+@mypj_install_icebrg_TRUE@nobase_myinclude_HEADERS = lensing_profile_extension_functors.hpp pair_bins_summary.h lensing_profile_extension.hpp pair_bin_summary.h lensing_tNFW_caches.h source_galaxy.h lensing_tNFW_profile.h source_obj.hpp lens_source_pair.h two_halo_term_functions.hpp pair_bin.h two_halo_term_methods.hpp pair_binner.h magnification/count_fitting_results.hpp magnification/expected_count_cache.h magnification/expected_count_derivative_cache.h magnification/expected_count_fit_loader.h magnification/expected_count_loader.h magnification/mag_calibration_cache.h magnification/mag_calibration_loader.h magnification/mag_correlation_function_estimator.h magnification/mag_global_values.h magnification/magnification_alpha.h magnification/magnification_functors.h magnification/mag_signal_integral_cache.h magnification/mag_weight_integral_cache.h magnification/Schechter_like_functor.h shifting/corr_alpha.hpp shifting/shifting_cache.h shifting/shifting_loader.h
 @mypj_install_icebrg_FALSE@noinst_LIBRARIES = libIceBRG_lensing.a
-libIceBRG_lensing_a_SOURCES = lensing_profile_extension_functors.hpp \
-	pair_binner.h lensing_profile_extension.hpp \
-	pair_bins_summary.cpp lensing_tNFW_caches.cpp \
-	pair_bins_summary.h lensing_tNFW_caches.h pair_bin_summary.cpp \
-	lensing_tNFW_profile.cpp pair_bin_summary.h \
-	lensing_tNFW_profile.h source_galaxy.cpp lens_source_pair.cpp \
-	source_galaxy.h lens_source_pair.h source_obj.hpp pair_bin.cpp \
-	two_halo_term_functions.hpp pair_bin.h \
-	two_halo_term_methods.hpp pair_binner.cpp magnification \
-	count_fitting_results.hpp \
-	magnification/expected_count_cache.cpp \
-	magnification/expected_count_cache.h \
-	magnification/expected_count_derivative_cache.cpp \
-	magnification/expected_count_derivative_cache.h \
-	magnification/expected_count_fit_loader.cpp \
-	magnification/expected_count_fit_loader.h \
-	magnification/expected_count_loader.cpp \
-	magnification/expected_count_loader.h \
-	magnification/mag_calibration_cache.cpp \
-	magnification/mag_calibration_cache.h \
-	magnification/mag_calibration_loader.cpp \
-	magnification/mag_calibration_loader.h \
-	magnification/mag_correlation_function_estimator.cpp \
-	magnification/mag_correlation_function_estimator.h \
-	magnification/mag_global_values.h \
-	magnification/magnification_alpha.cpp \
-	magnification/magnification_alpha.h \
-	magnification/magnification_functors.cpp \
-	magnification/magnification_functors.h \
-	magnification/mag_signal_integral_cache.cpp \
-	magnification/mag_signal_integral_cache.h \
-	magnification/mag_weight_integral_cache.cpp \
-	magnification/mag_weight_integral_cache.h \
-	magnification/Schechter_like_functor.cpp \
-	magnification/Schechter_like_functor.h shifting/corr_alpha.hpp \
-	shifting/shifting_cache.cpp shifting/shifting_cache.h \
-	shifting/shifting_loader.cpp shifting/shifting_loader.h
+@mypj_install_icebrg_FALSE@noinst_HEADERS = lensing_profile_extension_functors.hpp pair_bins_summary.h lensing_profile_extension.hpp pair_bin_summary.h lensing_tNFW_caches.h source_galaxy.h lensing_tNFW_profile.h source_obj.hpp lens_source_pair.h two_halo_term_functions.hpp pair_bin.h two_halo_term_methods.hpp pair_binner.h magnification/count_fitting_results.hpp magnification/expected_count_cache.h magnification/expected_count_derivative_cache.h magnification/expected_count_fit_loader.h magnification/expected_count_loader.h magnification/mag_calibration_cache.h magnification/mag_calibration_loader.h magnification/mag_correlation_function_estimator.h magnification/mag_global_values.h magnification/magnification_alpha.h magnification/magnification_functors.h magnification/mag_signal_integral_cache.h magnification/mag_weight_integral_cache.h magnification/Schechter_like_functor.h shifting/corr_alpha.hpp shifting/shifting_cache.h shifting/shifting_loader.h
+libIceBRG_lensing_a_SOURCES = pair_bins_summary.cpp lensing_tNFW_caches.cpp pair_bin_summary.cpp lensing_tNFW_profile.cpp source_galaxy.cpp lens_source_pair.cpp pair_bin.cpp pair_binner.cpp magnification/expected_count_cache.cpp magnification/expected_count_derivative_cache.cpp magnification/expected_count_fit_loader.cpp magnification/expected_count_loader.cpp magnification/mag_calibration_cache.cpp magnification/mag_calibration_loader.cpp magnification/mag_correlation_function_estimator.cpp magnification/magnification_alpha.cpp magnification/magnification_functors.cpp magnification/mag_signal_integral_cache.cpp magnification/mag_weight_integral_cache.cpp magnification/Schechter_like_functor.cpp shifting/shifting_cache.cpp shifting/shifting_loader.cpp 
 all: all-am
 
 .SUFFIXES:
@@ -539,6 +539,30 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='$<' object='$@' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXXCOMPILE) -c -o $@ `$(CYGPATH_W) '$<'`
+install-nobase_myincludeHEADERS: $(nobase_myinclude_HEADERS)
+	@$(NORMAL_INSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	if test -n "$$list"; then \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(myincludedir)" || exit 1; \
+	fi; \
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for file in $$files; do \
+	    if test -f "$$file"; then xfiles="$$xfiles $$file"; \
+	    else xfiles="$$xfiles $(srcdir)/$$file"; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo " $(MKDIR_P) '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(myincludedir)/$$dir"; }; \
+	    echo " $(INSTALL_HEADER) $$xfiles '$(DESTDIR)$(myincludedir)/$$dir'"; \
+	    $(INSTALL_HEADER) $$xfiles "$(DESTDIR)$(myincludedir)/$$dir" || exit $$?; }; \
+	done
+
+uninstall-nobase_myincludeHEADERS:
+	@$(NORMAL_UNINSTALL)
+	@list='$(nobase_myinclude_HEADERS)'; test -n "$(myincludedir)" || list=; \
+	$(am__nobase_strip_setup); files=`$(am__nobase_strip)`; \
+	dir='$(DESTDIR)$(myincludedir)'; $(am__uninstall_files_from_dir)
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -624,9 +648,9 @@ distdir: $(DISTFILES)
 	done
 check-am: all-am
 check: check-am
-all-am: Makefile $(LIBRARIES)
+all-am: Makefile $(LIBRARIES) $(HEADERS)
 installdirs:
-	for dir in "$(DESTDIR)$(libdir)"; do \
+	for dir in "$(DESTDIR)$(libdir)" "$(DESTDIR)$(myincludedir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -686,7 +710,7 @@ info: info-am
 
 info-am:
 
-install-data-am:
+install-data-am: install-nobase_myincludeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -731,7 +755,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-libLIBRARIES
+uninstall-am: uninstall-libLIBRARIES uninstall-nobase_myincludeHEADERS
 
 .MAKE: install-am install-strip
 
@@ -742,12 +766,14 @@ uninstall-am: uninstall-libLIBRARIES
 	install install-am install-data install-data-am install-dvi \
 	install-dvi-am install-exec install-exec-am install-html \
 	install-html-am install-info install-info-am \
-	install-libLIBRARIES install-man install-pdf install-pdf-am \
+	install-libLIBRARIES install-man \
+	install-nobase_myincludeHEADERS install-pdf install-pdf-am \
 	install-ps install-ps-am install-strip installcheck \
 	installcheck-am installdirs maintainer-clean \
 	maintainer-clean-generic mostlyclean mostlyclean-compile \
 	mostlyclean-generic pdf pdf-am ps ps-am tags tags-am uninstall \
-	uninstall-am uninstall-libLIBRARIES
+	uninstall-am uninstall-libLIBRARIES \
+	uninstall-nobase_myincludeHEADERS
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
