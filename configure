@@ -5058,10 +5058,8 @@ $as_echo "no" >&6; }
 fi
 
 
-for ac_prog in doxygen
-do
-  # Extract the first word of "$ac_prog", so it can be a program name with args.
-set dummy $ac_prog; ac_word=$2
+# Extract the first word of "doxygen", so it can be a program name with args.
+set dummy doxygen; ac_word=$2
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
 $as_echo_n "checking for $ac_word... " >&6; }
 if ${ac_cv_prog_doxygen_found+:} false; then :
@@ -5071,13 +5069,13 @@ else
   ac_cv_prog_doxygen_found="$doxygen_found" # Let the user override the test.
 else
 as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-for as_dir in "no"
+for as_dir in $PATH
 do
   IFS=$as_save_IFS
   test -z "$as_dir" && as_dir=.
     for ac_exec_ext in '' $ac_executable_extensions; do
   if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
-    ac_cv_prog_doxygen_found="$ac_prog"
+    ac_cv_prog_doxygen_found=""yes""
     $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
     break 2
   fi
@@ -5085,6 +5083,7 @@ done
   done
 IFS=$as_save_IFS
 
+  test -z "$ac_cv_prog_doxygen_found" && ac_cv_prog_doxygen_found=""no""
 fi
 fi
 doxygen_found=$ac_cv_prog_doxygen_found
@@ -5096,10 +5095,6 @@ else
 $as_echo "no" >&6; }
 fi
 
-
-  test -n "$doxygen_found" && break
-done
-test -n "$doxygen_found" || doxygen_found=""yes""
 
 
  if test "x$doxygen_found" == "xyes"; then
@@ -6717,17 +6712,15 @@ MY_LDFLAGS="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib
 if test "x$sky2xy_found" == "xyes" -a "x$xy2sky_found" == "xyes"; then :
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables
-		which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
-$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables
-		which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
+$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
 fi
 
 if test "x$doxygen_found" == "xyes"; then :
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find Doxygen. This program can compile, documentation will not be generated." >&5
-$as_echo "$as_me: WARNING: Unable to find Doxygen. This program can compile, documentation will not be generated." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find Doxygen. This program can compile, but documentation will not be generated." >&5
+$as_echo "$as_me: WARNING: Unable to find Doxygen. This program can compile, but documentation will not be generated." >&2;}
 fi
 
 if test "x$mypj_found_std_headers" != "xyes"; then :
@@ -6740,12 +6733,8 @@ if test "x$mypj_found_eigen_headers" != "xyes"; then :
 		are in the proper include path." "$LINENO" 5
 fi
 if test "x$mypj_found_ccfits_headers" != "xyes"; then :
-  	{ $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its
-		headers are in the proper include path. Compilation for all executables except
-		get_unmasked_fractions can still proceed." >&5
-$as_echo "$as_me: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its
-		headers are in the proper include path. Compilation for all executables except
-		get_unmasked_fractions can still proceed." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its headers are in the proper include path. Compilation for all executables except get_unmasked_fractions can still proceed." >&5
+$as_echo "$as_me: WARNING: Unable to find CCfits headers. If you know CCfits is installed, make sure its headers are in the proper include path. Compilation for all executables except get_unmasked_fractions can still proceed." >&2;}
 		mypj_compile_get_unmasked_fractions=""
 else
   mypj_compile_get_unmasked_fractions="CFHTLenS_get_unmasked_fractions"
