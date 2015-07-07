@@ -72,12 +72,12 @@ inline std::string get_data_directory(const int & argc, const char *argv[],
 	}
 	catch(const std::runtime_error &)
 	{
-		std::cerr << "Error: Data directory not passed at command line (as first argument),\n"
-				<< "and it cannot be deduced." << std::endl;
+		handle_error(std::string("Error: Data directory not passed at command line (as first argument),")
+				+ "and it cannot be deduced.");
 		throw;
 	}
 
-	handle_notification("Using " + data_directory + " as Data directory.");
+	handle_notification("Using " + data_directory + " as Data directory.\n");
 
 	return data_directory;
 

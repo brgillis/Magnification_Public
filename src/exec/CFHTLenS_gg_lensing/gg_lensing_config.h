@@ -42,7 +42,7 @@
  */
 struct gg_lensing_config {
 
-	static constexpr size_t num_config_params = 19;
+	static constexpr size_t num_config_params = 18;
 
 	bool use_precalculated_data;
 	std::string precalculated_data_filename;
