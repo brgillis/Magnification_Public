@@ -56,6 +56,10 @@ The executables will be installed in $PREFIX/bin, the needed python package will
 
 Relevant configure options:
 
+
+```
+#!bash
+
 --help (view help and configure options)
 --prefix=??? (install in a particular directory. --prefix=$HOME will do install in userspace)
 --disable-parallelization (unless this flag is used, the executables will be installed using parallelization. With this, only one thread will be run at a time.)
@@ -65,6 +69,8 @@ Relevant configure options:
 --with-ccfits=??? (point to a specific location to find CCfits headers)
 --with-ccfits-libdir=??? (point to a specific location to find the CCfits library)
 CPPFLAGS=??? (set specific preprocessor flags. For instance, CPPFLAGS='-I/path/to/Eigen/' to help find the Eigen headers.
+```
+
 
 * Dependencies
 
