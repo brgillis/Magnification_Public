@@ -1,4 +1,6 @@
 AM_CPPFLAGS = @MY_CPPFLAGS@
+AM_CXXFLAGS = @MY_CXXFLAGS@
+
 if mypj_install_icebrg
 lib_LIBRARIES = libIceBRG_lensing.a
 myincludedir = $(pkgincludedir)/IceBRG_lensing
