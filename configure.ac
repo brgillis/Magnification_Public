@@ -28,9 +28,10 @@ AM_CONDITIONAL([mypj_install_icebrg], [test x$install_icebrg = xtrue])
 
 # Ask the user if they want to fully optimize the install
 AC_ARG_ENABLE([full-optimization],
-    AS_HELP_STRING([--enable-full-optimization], [Uses a recommended set of optimization flags for compiling the programs and libraries.]))
+    AS_HELP_STRING([--enable-full-optimization], [Increase the optimization level and remove debugging flags by changing default CXXFLAGS to '-O3'. Any user-defined CXXFLAGS will override this.]))
 
-AS_IF([test "x$enable_full_optimization" != "xyes"], [optimization_flags=""],[optimization_flags="-g0 -O3 -funroll-loops -march=native -mfpmath=sse"])])
+AS_IF([test "x$enable_full_optimization" != "xyes"],
+	[], [: ${CXXFLAGS="-O3"}])
 
 # Checks for programs.
 AC_PROG_CXX
@@ -94,10 +95,13 @@ AC_CONFIG_FILES([Makefile
 MY_CPPFLAGS="-DNDEBUG -I\$(top_srcdir)/src/lib -I\$(top_srcdir)/src/lib/CFHTLenS_include $BOOST_CPPFLAGS $CCFITS_CPPFLAGS"
 AC_SUBST(MY_CPPFLAGS)
 
-MY_CXXFLAGS="-std=c++11 $parallelization_flags $optimization_flags $BOOST_CXXFLAGS $CCFITS_CXXFLAGS"
+MY_CXXFLAGS="-std=c++11 $parallelization_flags -funroll-loops -march=native -mfpmath=sse $BOOST_CXXFLAGS $CCFITS_CXXFLAGS"
 AC_SUBST(MY_CXXFLAGS)
 
-MY_LDFLAGS="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
+MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
+AC_SUBST(MY_LDADD)
+
+MY_LDFLAGS="$parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
 AC_SUBST(MY_LDFLAGS)
 
 # Print all warnings and errors at the end

@@ -628,6 +628,8 @@ LTLIBOBJS
 LIBOBJS
 mypj_compile_get_unmasked_fractions
 MY_LDFLAGS
+MY_LDADD
+MY_CXXFLAGS
 MY_CPPFLAGS
 EGREP
 GREP
@@ -665,8 +667,8 @@ EXEEXT
 ac_ct_CXX
 CPPFLAGS
 LDFLAGS
-CXX
 CXXFLAGS
+CXX
 mypj_install_icebrg_FALSE
 mypj_install_icebrg_TRUE
 RANLIB
@@ -1396,9 +1398,9 @@ Optional Features:
                           be only used for compilation of the executables
                           here.
   --enable-full-optimization
-                          Uses a recommended set of optimization flags for
-                          compiling the programs and libraries. This overrides
-                          any CXXFLAGS option passed by the user.
+                          Increase the optimization level and remove debugging
+                          flags by changing default CXXFLAGS to '-O3'. Any
+                          user-defined CXXFLAGS will override this.
   --enable-dependency-tracking
                           do not reject slow dependency extractors
   --disable-dependency-tracking
@@ -3373,8 +3375,7 @@ fi
 if test "x$enable_full_optimization" != "xyes"; then :
 
 else
-  CXXFLAGS="-O3 -funroll-loops -march=native -mfpmath=sse"
-
+  : ${CXXFLAGS="-O3"}
 fi
 
 # Checks for programs.
@@ -6701,10 +6702,16 @@ ac_config_files="$ac_config_files Makefile src/Makefile src/exec/CFHTLenS_catalo
 
 # Setup flags
 
-MY_CPPFLAGS="-std=c++0x $parallelization_flags -DNDEBUG -I\$(top_srcdir)/src/lib -I\$(top_srcdir)/src/lib/CFHTLenS_include $BOOST_CPPFLAGS $CCFITS_CPPFLAGS"
+MY_CPPFLAGS="-DNDEBUG -I\$(top_srcdir)/src/lib -I\$(top_srcdir)/src/lib/CFHTLenS_include $BOOST_CPPFLAGS $CCFITS_CPPFLAGS"
 
 
-MY_LDFLAGS="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
+MY_CXXFLAGS="-std=c++11 $parallelization_flags -funroll-loops -march=native -mfpmath=sse $BOOST_CXXFLAGS $CCFITS_CXXFLAGS"
+
+
+MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
+
+
+MY_LDFLAGS="$parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
 
 
 # Print all warnings and errors at the end

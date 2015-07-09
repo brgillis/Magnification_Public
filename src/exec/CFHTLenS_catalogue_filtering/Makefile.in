@@ -209,6 +209,8 @@ LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
+MY_CXXFLAGS = @MY_CXXFLAGS@
+MY_LDADD = @MY_LDADD@
 MY_LDFLAGS = @MY_LDFLAGS@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
@@ -280,9 +282,11 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
-AM_CXXFLAGS = @MY_CPPFLAGS@
+AM_CPPFLAGS = @MY_CPPFLAGS@
+AM_CXXFLAGS = @MY_CXXFLAGS@
+LDADD = @MY_LDADD@
+AM_LDFLAGS = @MY_LDFLAGS@
 CFHTLenS_Mag_filter_catalogues_SOURCES = correct_redshift_bias.cpp  get_filtered_indices.h  make_output_map.cpp correct_redshift_bias.h    is_good_position.hpp    make_output_map.h get_filtered_indices.cpp   main_catalogue_filtering.cpp
-LDADD = @MY_LDFLAGS@
 all: all-am
 
 .SUFFIXES:

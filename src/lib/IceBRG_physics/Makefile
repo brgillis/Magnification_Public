@@ -226,12 +226,12 @@ AUTOHEADER = ${SHELL} /home/brg/git/Magnification_Public/missing autoheader
 AUTOMAKE = ${SHELL} /home/brg/git/Magnification_Public/missing automake-1.14
 AWK = gawk
 BOOST_CPPFLAGS = 
-BOOST_LDFLAGS = -L/home/brg/lib
+BOOST_LDFLAGS = -L/disk2/brg/lib
 BOOST_SERIALIZATION_LIB = -lboost_serialization
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CCFITS_CPPFLAGS = 
-CCFITS_LDFLAGS = -L/home/brg/lib
+CCFITS_LDFLAGS = -L/disk2/brg/lib
 CCFITS_LIB = -lCCfits
 CFLAGS = -g -O2
 CPP = gcc -E
@@ -239,7 +239,7 @@ CPPFLAGS =
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=gcc3
-CXXFLAGS = -O3 -funroll-loops -march=native -mfpmath=sse
+CXXFLAGS = -O3
 CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
@@ -260,8 +260,10 @@ LIBS =
 LTLIBOBJS = 
 MAKEINFO = ${SHELL} /home/brg/git/Magnification_Public/missing makeinfo
 MKDIR_P = /bin/mkdir -p
-MY_CPPFLAGS = -std=c++0x -fopenmp -DEIGEN_DONT_PARALLELIZE -DNDEBUG -I$(top_srcdir)/src/lib -I$(top_srcdir)/src/lib/CFHTLenS_include  
-MY_LDFLAGS = -L$(top_builddir)/src/lib/IceBRG_lensing -L$(top_builddir)/src/lib/IceBRG_physics -L$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits -fopenmp -DEIGEN_DONT_PARALLELIZE -L/home/brg/lib -L/home/brg/lib
+MY_CPPFLAGS = -DNDEBUG -I$(top_srcdir)/src/lib -I$(top_srcdir)/src/lib/CFHTLenS_include  
+MY_CXXFLAGS = -std=c++11 -fopenmp -DEIGEN_DONT_PARALLELIZE -funroll-loops -march=native -mfpmath=sse  
+MY_LDADD = -L$(top_builddir)/src/lib/IceBRG_lensing -L$(top_builddir)/src/lib/IceBRG_physics -L$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits -fopenmp -DEIGEN_DONT_PARALLELIZE  
+MY_LDFLAGS = -fopenmp -DEIGEN_DONT_PARALLELIZE -L/disk2/brg/lib -L/disk2/brg/lib
 OBJEXT = o
 PACKAGE = cfhtlens_magnification
 PACKAGE_BUGREPORT = brg@roe.ac.uk
@@ -332,7 +334,8 @@ top_build_prefix = ../../../
 top_builddir = ../../..
 top_srcdir = ../../..
 xy2sky_found = yes
-AM_CPPFLAGS = -std=c++0x -fopenmp -DEIGEN_DONT_PARALLELIZE -DNDEBUG -I$(top_srcdir)/src/lib -I$(top_srcdir)/src/lib/CFHTLenS_include  
+AM_CPPFLAGS = -DNDEBUG -I$(top_srcdir)/src/lib -I$(top_srcdir)/src/lib/CFHTLenS_include  
+AM_CXXFLAGS = -std=c++11 -fopenmp -DEIGEN_DONT_PARALLELIZE -funroll-loops -march=native -mfpmath=sse  
 lib_LIBRARIES = libIceBRG_physics.a
 myincludedir = $(pkgincludedir)/IceBRG_physics
 nobase_myinclude_HEADERS = astro_caches.h correlation_function_estimator.h phase.hpp astro.h lensing_correlation_function_estimator.h density_profile/density_profile_functors.h density_profile/density_profile.h density_profile/point_mass_profile.h density_profile/tNFW_profile_functors.hpp density_profile/tNFW_profile.h sky_obj/galaxy_group.h sky_obj/galaxy.h sky_obj/position_grid_cache.h sky_obj/position_grid_extension.hpp sky_obj/sky_obj.h sky_obj_with_density_profile/tNFW_galaxy.h

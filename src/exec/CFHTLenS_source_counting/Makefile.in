@@ -195,6 +195,8 @@ LTLIBOBJS = @LTLIBOBJS@
 MAKEINFO = @MAKEINFO@
 MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
+MY_CXXFLAGS = @MY_CXXFLAGS@
+MY_LDADD = @MY_LDADD@
 MY_LDFLAGS = @MY_LDFLAGS@
 OBJEXT = @OBJEXT@
 PACKAGE = @PACKAGE@
@@ -266,9 +268,11 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
-AM_CXXFLAGS = @MY_CPPFLAGS@
+AM_CPPFLAGS = @MY_CPPFLAGS@
+AM_CXXFLAGS = @MY_CXXFLAGS@
+LDADD = @MY_LDADD@
+AM_LDFLAGS = @MY_LDFLAGS@
 CFHTLenS_Mag_count_sources_SOURCES = main_source_counting.cpp
-LDADD = @MY_LDFLAGS@
 all: all-am
 
 .SUFFIXES:
