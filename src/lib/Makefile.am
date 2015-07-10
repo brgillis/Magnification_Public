@@ -1,2 +1,2 @@
-SUBDIRS = IceBRG_lensing IceBRG_main IceBRG_physics
+SUBDIRS = IceBRG_main IceBRG_physics IceBRG_lensing
 

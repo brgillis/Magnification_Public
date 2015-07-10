@@ -4,6 +4,7 @@ var searchData=
   ['have_5fboost_5fserialization',['HAVE_BOOST_SERIALIZATION',['../config_8h.html#a53cad89b0ddc7d1ea71bf50479eb4e92',1,'config.h']]],
   ['have_5fccfits',['HAVE_CCFITS',['../config_8h.html#acde409c35936016aa307006a513a1f4b',1,'config.h']]],
   ['have_5fccfits_5fccfits_5fh',['HAVE_CCFITS_CCFITS_H',['../config_8h.html#adfdd3cc653b381129603f7b5f87b75a3',1,'config.h']]],
+  ['have_5fdlfcn_5fh',['HAVE_DLFCN_H',['../config_8h.html#a0ee1617ff2f6885ef384a3dd46f9b9d7',1,'config.h']]],
   ['have_5feigen_5fcore',['HAVE_EIGEN_CORE',['../config_8h.html#a4bfd4fe5f8a5171e6ee1acb4c55765fe',1,'config.h']]],
   ['have_5ffloor',['HAVE_FLOOR',['../config_8h.html#ab452be2c7cc8652644e7782380300b8b',1,'config.h']]],
   ['have_5ffork',['HAVE_FORK',['../config_8h.html#af5eda00981183c9820f5930f0933c293',1,'config.h']]],

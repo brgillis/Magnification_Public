@@ -5,13 +5,14 @@ AC_PREREQ([2.69])
 AC_INIT([CFHTLenS_Magnification], [0.9.2], [brg@roe.ac.uk])
 AC_CONFIG_SRCDIR([src/exec/CFHTLenS_catalogue_filtering/correct_redshift_bias.h])
 AC_CONFIG_HEADERS([config.h])
+AC_CONFIG_MACRO_DIRS([m4])
+
+LT_INIT
 
 AM_INIT_AUTOMAKE([subdir-objects])
 
 AC_LANG(C++)
 AM_PATH_PYTHON([2.6])
-
-AC_PROG_RANLIB
 
 # Ask the user if they want to disable parallelization
 AC_ARG_ENABLE([parallelization],
@@ -97,6 +98,8 @@ AC_SUBST(MY_CPPFLAGS)
 
 MY_CXXFLAGS="-std=c++11 $parallelization_flags -funroll-loops -march=native -mfpmath=sse $BOOST_CXXFLAGS $CCFITS_CXXFLAGS"
 AC_SUBST(MY_CXXFLAGS)
+MY_LIBCXXFLAGS="-fPIC $MY_CXXFLAGS"
+AC_SUBST(MY_LIBCXXFLAGS)
 
 MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
 AC_SUBST(MY_LDADD)
@@ -116,10 +119,9 @@ AS_IF([test "x$mypj_found_std_headers" != "xyes"],
 	[AC_MSG_WARN([Unable to find the standard definitions headers.])])
 
 AS_IF([test "x$mypj_found_eigen_headers" != "xyes"],
-	[AC_MSG_ERROR([Unable to find Eigen headers. If you know Eigen is installed, make sure its headers
-		are in the proper include path.])])
+	[AC_MSG_ERROR([Unable to find Eigen headers. If you know Eigen is installed, set the include path to include their location.])])
 AS_IF([test "x$mypj_found_ccfits_headers" != "xyes"],
-	[AC_MSG_WARN([Unable to find CCfits headers. If you know CCfits is installed, make sure its headers are in the proper include path. Compilation for all executables except get_unmasked_fractions can still proceed.])
+	[AC_MSG_WARN([Unable to find CCfits headers. If you know CCfits is installed, set the include path to include their location. Compilation for all executables except get_unmasked_fractions can still proceed.])
 		mypj_compile_get_unmasked_fractions=""],
 	[mypj_compile_get_unmasked_fractions="CFHTLenS_get_unmasked_fractions"])
 AC_SUBST(mypj_compile_get_unmasked_fractions)
