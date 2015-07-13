@@ -1,0 +1,71 @@
+/*! \mainpage Index
+ *
+ *
+ * \section intro_sec Introduction
+ *
+ * This package contains the code used for Gillis and Taylor (2015, "GT15"), available at
+ * http://arxiv.org/abs/1507.01858. In broad terms, the code in this package can
+ * be considered in two parts:
+ *
+ * 1. The IceBRG libraries - C++ libraries I've developed through the course of my work,
+ * which I'm distributing in full (even though some parts aren't used here, and some
+ * aren't complete).
+ *
+ * 2. Executables and scripts which recreate most of the analysis performed in GT15, all
+ * prepended with "CFHTLenS_Mag_".
+ * 
+ *
+ * \section install_sec Installation
+ *
+ * If you're reading this, chances are you've already built the package. If not, see
+ * the directions in README in the root directory.
+ *
+ * 
+ * \section conventions_sec General Code Explanations
+ *
+ * Here are some of the naming conventions I use:
+ *
+ * -C++ source files are all *.cpp. Headers are either *.h or *.hpp. *.hpp headers are those
+ * which are self-contained - they include inlined definitions of all functions and methods
+ * defined within.
+ *
+ * -Private member variables are surrounded by underscores ("_x_"), and private methods are
+ * prepended with an underscore ("_f()").
+ *
+ * -Getter methods are in most cases simply the name of the variable. For instance, 
+ * galaxy.z() would return the redshift of the galaxy.
+ *
+ * Variable typedefs are defined in "IceBRG_main/common.h" and "IceBRG_main/units/units.hpp".
+ * I use Boost's units library for dimensional analysis in programming, using typedefs to save
+ * space in giving the types of units. This is mostly checked at compile-time, but it can't be
+ * entirely optimized out in my code, so I use a preprocessor macro to disable dimensional
+ * analysis in the release version of the code. This means that in the release version, any value
+ * like "distance_type" is actually just a double.
+ *
+ * Since's Boost's "quantities" (values with units) aren't directly comparable to unitless values
+ * (even zero), you'll see functions like "value_of(...)" in various places. This is defined
+ * differently depending on whether dimensional analysis is used or not, but in either case it has
+ * the result of returning the unitless value of a variable. The reverse operation, turning a
+ * unitless value into a quantity, is performed with the method "units_cast<T>()".
+ *
+ * To simplify units, I use all values in SI kms units throughout my code, except at input and
+ * output. This way I don't have to worry in the translation from debug code (with dimensional
+ * analysis enabled) to release code (with it disabled) that the units might differ. This is done
+ * through the use of conversions to and from this base in the header
+ * "IceBRG_main/units/unit_conversions.hpp", which are defined in the namespace "IceBRG::unitconv".
+ *  
+ * 
+ * \section icebrg_sec IceBRG Libraries
+ *
+ * In this section, I'll give an overview of the IceBRG libraries, explain the purpose of
+ * each, and point to some functions and classes which others may find interesting. All
+ * functions, classes, and typedefs in these libraries are declared in the namespace
+ * "IceBRG", except for certain overloads of std:: functions.
+ *
+ *
+ * \subsection icebrg_main_sec IceBRG_main Library
+ *
+ * IceBRG_main contains all useful functions and classes I've written which don't have
+ * anything specifically to do with my astrophysics work. That is, anything that might be
+ * useful to someone completely outside of astrophysics would go in this library.
+ */
