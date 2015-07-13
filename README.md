@@ -91,6 +91,7 @@ Once it's installed, you can run a test analysis through going to a directory wh
 #!bash
 
 CFHTLenS_Mag_get_fields.py
+CFHTLenS_Mag_get_masks.py
 CFHTLenS_Mag_filter_catalogues
 CFHTLenS_Mag_get_unmasked_fractions
 CFHTLenS_Mag_count_sources

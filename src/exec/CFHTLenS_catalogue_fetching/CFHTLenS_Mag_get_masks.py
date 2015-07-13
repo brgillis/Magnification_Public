@@ -49,20 +49,6 @@ def main(argv):
         
     print("Using " + data_dir + " as data directory. This can be changed by passing")
     print("the desired directory as the first command-line argument.\n")
-    
-    # Check if we've passed another argument, which will enable using all fields
-    use_all_fields = False
-    if(len(argv)>=3):
-        if((argv[2]=="True") or (argv[2]=="true") or (argv[2]=="1")):
-            use_all_fields = True
-            
-    if(use_all_fields):
-        print("Fetching all masks. To disable this and only get the mask for one field,")
-        print("instead pass False (or nothing) as the second command-line argument.\n")
-    else:
-        print("Fetching just the mask for one field. This is done to lighten the")
-        print("load on the CFHTLenS servers for people only testing this code. To")
-        print("get all masks, pass True as the second command-line argument.\n")
         
     # Get the full filenames for everything we'll need
     good_fields_filename = join(data_dir,mv.base_good_fields_filename)

@@ -82,13 +82,40 @@
  * way or another.
  *
  *
- * \section CFHTLenS_Mag executables
+ * \section execs_sec CFHTLenS_Mag executables
  *
  * The various programs here generate executables for performing most of the necessary steps for
  * a gravitational lensing analysis as done in GT15. Much of the heavy lifting for these
  * executables is performed by functions and classes within the IceBRG libraries. The code in
  * these executables is typically designed to work specifically with the CFHTLenS catalogues and
  * isn't as portable as the code in the libraries.
+ *
+ * When run without command-line arguments, the downloaded and generated data will be stored in a
+ * Data/ subdirectory of the directory from which the executables are run. The first command-line
+ * argument to all executables can be used to specify an alternate directory for data.
+ *
+ * The code here will be listed by folder, in the order in which the generated executables should
+ * generally be run in a first pass.
+ *
+ *
+ * \subsection fetching_sec CFHTLenS_catalogue_fetching
+ *
+ * This folder contains Python scripts to generate a list of the fields we want to process,
+ * download them from the CFHTLenS web server, and download and compress the corresponding
+ * mask files. Two executable python scripts will be installed:
+ *
+ * -CFHTLenS_Mag_get_fields.py - This generates the list of fields and downloads them. By default,
+ * this creates a list of only a single field and downloads just that. This is done to lower
+ * the burden on the CFHTLenS server for people who only want to test the code. The second
+ * command-line argument can be set to "True" to instead generate a list of all fields and
+ * download them all.
+ *
+ * -CFHTLenS_Mag_get_masks.py - This downloads the mask file for each field in the generated fields
+ * list, then compresses it with fpack (the files are quite large, but smoothly varying, so they
+ * have a very good compression ratio).
+ *
+ *
+ * \
  *
  *
  * \subsection
