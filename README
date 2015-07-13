@@ -75,9 +75,9 @@ CPPFLAGS=??? (set specific preprocessor flags. For instance, CPPFLAGS='-I/path/t
 * Dependencies
 
 C++11-compliant C++ compiler
-Python 2.6 or greater
-Boost headers and Boost Serialization library
-Eigen headers
+Python interpreter (tested on Python 2.7)
+Boost headers and Boost Serialization library (tested on v1.56)
+Eigen 3 headers
 CCfits headers and library
 wcstools (needed at runtime for certain executables, but not needed at installation)
 
