@@ -80,7 +80,7 @@ build_triplet = @build@
 host_triplet = @host@
 subdir = src/exec/CFHTLenS_catalogue_fetching
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(fetching_PYTHON) $(top_srcdir)/py-compile
+	$(nobase_python_PYTHON) $(top_srcdir)/py-compile
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/libtool.m4 \
 	$(top_srcdir)/m4/ltoptions.m4 $(top_srcdir)/m4/ltsugar.m4 \
@@ -119,7 +119,7 @@ am__uninstall_files_from_dir = { \
     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
          $(am__cd) "$$dir" && rm -f $$files; }; \
   }
-am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(fetchingdir)"
+am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pythondir)"
 SCRIPTS = $(bin_SCRIPTS)
 AM_V_P = $(am__v_P_@AM_V@)
 am__v_P_ = $(am__v_P_@AM_DEFAULT_V@)
@@ -290,8 +290,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 bin_SCRIPTS = CFHTLenS_Mag_get_fields.py
-fetchingdir = $(pythondir)/CFHTLenS_Mag_fetching_data
-fetching_PYTHON = CFHTLenS_Mag_fetching_data/fields_lists.py  CFHTLenS_Mag_fetching_data/match_command.py CFHTLenS_Mag_fetching_data/__init__.py      CFHTLenS_Mag_fetching_data/query.py CFHTLenS_Mag_fetching_data/magic_values.py
+nobase_python_PYTHON = CFHTLenS_Mag_fetching_data/fields_lists.py  CFHTLenS_Mag_fetching_data/match_command.py CFHTLenS_Mag_fetching_data/__init__.py      CFHTLenS_Mag_fetching_data/query.py CFHTLenS_Mag_fetching_data/magic_values.py
 all: all-am
 
 .SUFFIXES:
@@ -366,37 +365,36 @@ mostlyclean-libtool:
 
 clean-libtool:
 	-rm -rf .libs _libs
-install-fetchingPYTHON: $(fetching_PYTHON)
+install-nobase_pythonPYTHON: $(nobase_python_PYTHON)
 	@$(NORMAL_INSTALL)
-	@list='$(fetching_PYTHON)'; dlist=; list2=; test -n "$(fetchingdir)" || list=; \
+	@list='$(nobase_python_PYTHON)'; test -n "$(pythondir)" || list=; \
 	if test -n "$$list"; then \
-	  echo " $(MKDIR_P) '$(DESTDIR)$(fetchingdir)'"; \
-	  $(MKDIR_P) "$(DESTDIR)$(fetchingdir)" || exit 1; \
+	  echo " $(MKDIR_P) '$(DESTDIR)$(pythondir)'"; \
+	  $(MKDIR_P) "$(DESTDIR)$(pythondir)" || exit 1; \
 	fi; \
-	for p in $$list; do \
-	  if test -f "$$p"; then b=; else b="$(srcdir)/"; fi; \
-	  if test -f $$b$$p; then \
-	    $(am__strip_dir) \
-	    dlist="$$dlist $$f"; \
-	    list2="$$list2 $$b$$p"; \
-	  else :; fi; \
-	done; \
-	for file in $$list2; do echo $$file; done | $(am__base_list) | \
-	while read files; do \
-	  echo " $(INSTALL_DATA) $$files '$(DESTDIR)$(fetchingdir)'"; \
-	  $(INSTALL_DATA) $$files "$(DESTDIR)$(fetchingdir)" || exit $$?; \
-	done || exit $$?; \
-	if test -n "$$dlist"; then \
-	  $(am__py_compile) --destdir "$(DESTDIR)" \
-	                    --basedir "$(fetchingdir)" $$dlist; \
-	else :; fi
+	$(am__nobase_list) | while read dir files; do \
+	  xfiles=; for p in $$files; do \
+	    if test -f "$$p"; then b=; else b="$(srcdir)/"; fi; \
+	    if test -f "$$b$$p"; then xfiles="$$xfiles $$b$$p"; dlist="$$dlist $$p"; \
+	    else :; fi; done; \
+	  test -z "$$xfiles" || { \
+	    test "x$$dir" = x. || { \
+	      echo "$(MKDIR_P) '$(DESTDIR)$(pythondir)/$$dir'"; \
+	      $(MKDIR_P) "$(DESTDIR)$(pythondir)/$$dir"; }; \
+	    echo " $(INSTALL_DATA) $$xfiles '$(DESTDIR)$(pythondir)/$$dir'"; \
+	    $(INSTALL_DATA) $$xfiles "$(DESTDIR)$(pythondir)/$$dir" || exit $$?; }; \
+	  if test -n "$$dlist"; then \
+	    $(am__py_compile) --destdir "$(DESTDIR)" \
+	                      --basedir "$(pythondir)" $$dlist; \
+	  else :; fi \
+	done
 
-uninstall-fetchingPYTHON:
+uninstall-nobase_pythonPYTHON:
 	@$(NORMAL_UNINSTALL)
-	@list='$(fetching_PYTHON)'; test -n "$(fetchingdir)" || list=; \
-	py_files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
+	@list='$(nobase_python_PYTHON)'; test -n "$(pythondir)" || list=; \
+	$(am__nobase_strip_setup); py_files=`$(am__nobase_strip)`; \
 	test -n "$$py_files" || exit 0; \
-	dir='$(DESTDIR)$(fetchingdir)'; \
+	dir='$(DESTDIR)$(pythondir)'; \
 	pyc_files=`echo "$$py_files" | sed 's|$$|c|'`; \
 	pyo_files=`echo "$$py_files" | sed 's|$$|o|'`; \
 	py_files_pep3147=`echo "$$py_files" | $(am__pep3147_tweak)`; \
@@ -455,7 +453,7 @@ check-am: all-am
 check: check-am
 all-am: Makefile $(SCRIPTS)
 installdirs:
-	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(fetchingdir)"; do \
+	for dir in "$(DESTDIR)$(bindir)" "$(DESTDIR)$(pythondir)"; do \
 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
 	done
 install: install-am
@@ -508,7 +506,7 @@ info: info-am
 
 info-am:
 
-install-data-am: install-fetchingPYTHON
+install-data-am: install-nobase_pythonPYTHON
 
 install-dvi: install-dvi-am
 
@@ -552,7 +550,7 @@ ps: ps-am
 
 ps-am:
 
-uninstall-am: uninstall-binSCRIPTS uninstall-fetchingPYTHON
+uninstall-am: uninstall-binSCRIPTS uninstall-nobase_pythonPYTHON
 
 .MAKE: install-am install-strip
 
@@ -561,14 +559,14 @@ uninstall-am: uninstall-binSCRIPTS uninstall-fetchingPYTHON
 	distclean-libtool distdir dvi dvi-am html html-am info info-am \
 	install install-am install-binSCRIPTS install-data \
 	install-data-am install-dvi install-dvi-am install-exec \
-	install-exec-am install-fetchingPYTHON install-html \
-	install-html-am install-info install-info-am install-man \
+	install-exec-am install-html install-html-am install-info \
+	install-info-am install-man install-nobase_pythonPYTHON \
 	install-pdf install-pdf-am install-ps install-ps-am \
 	install-strip installcheck installcheck-am installdirs \
 	maintainer-clean maintainer-clean-generic mostlyclean \
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags-am uninstall uninstall-am uninstall-binSCRIPTS \
-	uninstall-fetchingPYTHON
+	uninstall-nobase_pythonPYTHON
 
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
