@@ -115,8 +115,46 @@
  * have a very good compression ratio).
  *
  *
- * \
+ * \subsection filtering_sec CFHTLenS_catalogue_filtering
+ *
+ * This folder contains the source to build an executable which will filter the catalogues,
+ * separating into lens and source catalogues and removing unnecessary columns. It manually
+ * applies the masks (since the values in the catalogue don't always match with the mask files)
+ * and removes galaxies which don't meed some cuts.
+ *
+ * It generates the executable "CFHTLenS_Mag_filter_catalogues".
+ *
+ * 
+ * \subsection mask_fracs_sec CFHTLenS_get_unmasked_fractions
+ *
+ * This folder contains source to build an executable which will determine the unmasked fraction
+ * in annuli surrounding every lens galaxy. At present, it uses a hard-coded set of annuli. I'll
+ * try to update this soon so it can take a configuration file.
+ *
+ * It generates the executable "CFHTLenS_Mag_get_unmasked_fractions".
  *
  *
- * \subsection
+ * \subsection source_counting_sec CFHTLenS_source_counting
+ *
+ * This folder contains source to build an executable which will count the number of source galaxies
+ * in magnitude bins which lie at or beyond a given redshift.
+ *
+ * It generates the executable "CFHTLenS_Mag_count_sources".
+ *
+ *
+ * \subsection weak_lensing_sec CFHTLenS_gg_lensing
+ *
+ * This folder contains source to build an executable which will perform the weak lensing measurement
+ * (including both shear and magnification) for a sample of lens galaxies. It allows use of a config
+ * file to determine how lenses are binned.
+ *
+ * It generates the executable "CFHTLenS_measure_weak_lensing".
+ *
+ *
+ * \subsection lensing_model_sec CFHTLenS_fit_lensing_models
+ *
+ * This folder contains source to build an executable which will fit a model halo profile to the
+ * measured lensing signals.
+ *
+ * It generates the executable "CFHTLenS_fit_lensing_model".
  */
