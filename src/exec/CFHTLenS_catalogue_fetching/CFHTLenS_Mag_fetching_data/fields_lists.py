@@ -1,4 +1,4 @@
-""" fields_lists.py
+""" @file fields_lists.py
 
     Created on 6 Jul 2015 as part of project CFHTLenS_catalogue_fetching
     

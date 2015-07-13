@@ -201,6 +201,7 @@ MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
 MY_CXXFLAGS = @MY_CXXFLAGS@
 MY_LDADD = @MY_LDADD@
+MY_LDADD_ICEBRG = @MY_LDADD_ICEBRG@
 MY_LDFLAGS = @MY_LDFLAGS@
 MY_LIBCXXFLAGS = @MY_LIBCXXFLAGS@
 NM = @NM@
@@ -289,7 +290,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
-bin_SCRIPTS = CFHTLenS_Mag_get_fields.py
+bin_SCRIPTS = CFHTLenS_Mag_get_fields.py CFHTLenS_Mag_get_masks.py
 nobase_python_PYTHON = CFHTLenS_Mag_fetching_data/fields_lists.py  CFHTLenS_Mag_fetching_data/match_command.py CFHTLenS_Mag_fetching_data/__init__.py      CFHTLenS_Mag_fetching_data/query.py CFHTLenS_Mag_fetching_data/magic_values.py
 all: all-am
 

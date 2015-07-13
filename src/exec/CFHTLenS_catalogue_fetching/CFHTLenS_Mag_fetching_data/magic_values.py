@@ -1,4 +1,4 @@
-""" magic_values.py
+""" @file magic_values.py
 
     Created on 6 Jul 2015 as part of project CFHTLenS_catalogue_fetching
     
@@ -26,6 +26,7 @@
 full_tables_path = "full_tables/"
 filtered_tables_path = "filtered_tables/"
 spec_matched_tables_path = "spec_matched_tables/"
+mask_path = "masks/"
 
 base_good_fields_filename = "good_fields_list.txt"
 base_bad_fields_filename = "bad_fields_list.txt"

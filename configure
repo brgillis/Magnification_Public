@@ -638,6 +638,7 @@ LTLIBOBJS
 LIBOBJS
 mypj_compile_get_unmasked_fractions
 MY_LDFLAGS
+MY_LDADD_ICEBRG
 MY_LDADD
 MY_LIBCXXFLAGS
 MY_CXXFLAGS
@@ -17909,7 +17910,10 @@ MY_CXXFLAGS="-std=c++11 $parallelization_flags -funroll-loops -march=native -mfp
 MY_LIBCXXFLAGS="-fPIC $MY_CXXFLAGS"
 
 
-MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
+MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
+
+
+MY_LDADD_ICEBRG="-lIceBRG_lensing -lIceBRG_physics -lIceBRG_main"
 
 
 MY_LDFLAGS="$parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"

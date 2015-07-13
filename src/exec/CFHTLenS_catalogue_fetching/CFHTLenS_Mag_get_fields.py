@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-""" get_fields.py
+""" @file CFHTLenS_Mag_get_fields.py
 
     Created on 11 Sep 2014 as part of project CFHTLenS_catalogue_filtering
 
@@ -28,13 +28,21 @@ import subprocess as sbp
 from os.path import join
 
 from CFHTLenS_Mag_fetching_data.fields_lists import *
-from CFHTLenS_Mag_fetching_data.query import *
+from CFHTLenS_Mag_fetching_data.query import get_wget_command, get_query
 
 import CFHTLenS_Mag_fetching_data.magic_values as mv
 
 def main(argv):
-    """ TODO Docstring for main.
-    
+    """ Main function for CFHTLenS_Mag_get_fields - sets up a list of fields and downloads
+        them from the CFHTLenS server.
+        
+        Takes at command-line:
+        
+        -data_dir <string> (data directory, defaults to './Data')
+        -use_all_fields <bool> (whether or not to get all fields (True) or just one
+                                (False). Defaults to False.)
+        -fetch_fields <bool> (whether or not to also download, defaults to True. If False,
+                              will just create a list of all fields.)
     """
     
     # Check if we've passed an argument. If so, this will be the data directory to use
@@ -121,7 +129,9 @@ def main(argv):
         my_filter = field_and_filter[1]
         
         # Set up the query
-        query = query_base.replace(mv.query_field_replace_tag,field).replace(mv.query_i_or_y_replace_tag,my_filter).replace("=","%3D").replace("'","%27")
+        query = query_base.replace(mv.query_field_replace_tag,field).replace( \
+                            mv.query_i_or_y_replace_tag,my_filter).replace("=","%3D").replace( \
+                            "'","%27")
         
         # Set up the output file name
         output_name = join(data_dir,mv.full_tables_path,
@@ -129,7 +139,8 @@ def main(argv):
         temp_name = output_name + ".tmp"
         
         # Set up the command
-        cmd = command_base.replace(mv.command_output_replace_tag,temp_name).replace(mv.command_query_replace_tag,query)
+        cmd = command_base.replace(mv.command_output_replace_tag,temp_name).replace( \
+                    mv.command_query_replace_tag,query)
         # Execute the command
         sbp.call(cmd,shell=True)
         

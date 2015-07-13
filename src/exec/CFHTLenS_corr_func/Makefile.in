@@ -239,6 +239,7 @@ MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
 MY_CXXFLAGS = @MY_CXXFLAGS@
 MY_LDADD = @MY_LDADD@
+MY_LDADD_ICEBRG = @MY_LDADD_ICEBRG@
 MY_LDFLAGS = @MY_LDFLAGS@
 MY_LIBCXXFLAGS = @MY_LIBCXXFLAGS@
 NM = @NM@
@@ -329,7 +330,7 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 AM_CXXFLAGS = @MY_CXXFLAGS@
-LDADD = @MY_LDADD@
+LDADD = @MY_LDADD@ @MY_LDADD_ICEBRG@
 AM_LDFLAGS = @MY_LDFLAGS@
 CFHTLenS_Mag_measure_corr_funcs_SOURCES = corr_func_bin.hpp  corr_func_config.cpp  corr_func_config.h  main_corr_func.cpp
 all: all-am

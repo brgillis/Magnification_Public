@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-""" CFHTLenS_Mag_get_fields.py
+""" @file match_to_spec.py
 
     Created Sep 2014 as part of project CFHTLenS_catalogue_filtering
 
@@ -31,9 +31,9 @@ import fetching_data.magic_values as mv
 from fetching_data.match_command import *
 
 def main(argv):
-    """ Matches the CFHTLenS photo-z catalogues to spectro-z catalogues. Note: Due to the
-        size of the required spectro-z catalogue, it isn't distributed with this repo and
-        this script isn't normally installed.
+    """ main for match_to_spec - Matches the CFHTLenS photo-z catalogues to spectro-z catalogues.
+        Note: Due to the size of the required spectro-z catalogue, it isn't distributed with this
+        repo and this script isn't normally installed.
     
     """
     

@@ -167,6 +167,7 @@ MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
 MY_CXXFLAGS = @MY_CXXFLAGS@
 MY_LDADD = @MY_LDADD@
+MY_LDADD_ICEBRG = @MY_LDADD_ICEBRG@
 MY_LDFLAGS = @MY_LDFLAGS@
 MY_LIBCXXFLAGS = @MY_LIBCXXFLAGS@
 NM = @NM@
@@ -463,6 +464,8 @@ uninstall-am:
 @HAVE_DOXYGEN_TRUE@all-local: doxyfile.stamp
 @HAVE_DOXYGEN_TRUE@clean-local:
 @HAVE_DOXYGEN_TRUE@	rm -rf $(top_srcdir)/docs/man
+@HAVE_DOXYGEN_TRUE@	rm -rf $(top_srcdir)/docs/html
+@HAVE_DOXYGEN_TRUE@	rm -rf $(top_srcdir)/docs/latex
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

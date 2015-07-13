@@ -240,6 +240,7 @@ MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
 MY_CXXFLAGS = @MY_CXXFLAGS@
 MY_LDADD = @MY_LDADD@
+MY_LDADD_ICEBRG = @MY_LDADD_ICEBRG@
 MY_LDFLAGS = @MY_LDFLAGS@
 MY_LIBCXXFLAGS = @MY_LIBCXXFLAGS@
 NM = @NM@
@@ -330,7 +331,7 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 AM_CXXFLAGS = @MY_CXXFLAGS@
-LDADD = @MY_LDADD@
+LDADD = @MY_LDADD@ @MY_LDADD_ICEBRG@
 AM_LDFLAGS = @MY_LDFLAGS@
 CFHTLenS_Mag_fit_source_counts_SOURCES = count_fitting_functor.hpp  Schechter_like_functor.cpp main_source_count_fitting.cpp Schechter_like_functor.h
 all: all-am

@@ -1,4 +1,4 @@
-""" magic_values.py
+""" @file query.py
 
     Created on 6 Jul 2015 as part of project CFHTLenS_catalogue_fetching
     
@@ -52,3 +52,11 @@ def get_wget_command():
     return "wget -O " + mv.command_output_replace_tag + " --recursive --level=inf " + \
         "'http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/community/CFHTLens/cgi/queryt.pl?format=ascii&query=" + \
         mv.command_query_replace_tag + "'"
+        
+def get_mask_wget_command():
+        import magic_values as mv
+    
+        return "wget -O " + mv.output_replace_tag + \
+            " 'http://www.cadc-ccda.hia-iha.nrc-cnrc.gc.ca/data/pub/vospace/CFHTLens/images/" + \
+            mv.query_field_replace_tag + "_" + mv.query_i_or_y_replace_tag + \
+            "zrgu_finalmask_mosaic.fits'"

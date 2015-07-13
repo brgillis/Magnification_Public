@@ -239,6 +239,7 @@ MKDIR_P = @MKDIR_P@
 MY_CPPFLAGS = @MY_CPPFLAGS@
 MY_CXXFLAGS = @MY_CXXFLAGS@
 MY_LDADD = @MY_LDADD@
+MY_LDADD_ICEBRG = @MY_LDADD_ICEBRG@
 MY_LDFLAGS = @MY_LDFLAGS@
 MY_LIBCXXFLAGS = @MY_LIBCXXFLAGS@
 NM = @NM@
@@ -329,7 +330,7 @@ top_srcdir = @top_srcdir@
 xy2sky_found = @xy2sky_found@
 AM_CPPFLAGS = @MY_CPPFLAGS@
 AM_CXXFLAGS = @MY_CXXFLAGS@
-LDADD = @MY_LDADD@
+LDADD = @MY_LDADD@ @MY_LDADD_ICEBRG@
 AM_LDFLAGS = @MY_LDFLAGS@
 CFHTLenS_Mag_fit_lensing_model_SOURCES = common.h         get_errors_on_fit.hpp    main_lensing_model_fitter.cpp fitting_bin.hpp  lensing_fitting_bin.hpp
 all: all-am

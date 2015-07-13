@@ -101,8 +101,11 @@ AC_SUBST(MY_CXXFLAGS)
 MY_LIBCXXFLAGS="-fPIC $MY_CXXFLAGS"
 AC_SUBST(MY_LIBCXXFLAGS)
 
-MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lIceBRG_lensing -lIceBRG_physics -lIceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
+MY_LDADD="-L\$(top_builddir)/src/lib/IceBRG_lensing -L\$(top_builddir)/src/lib/IceBRG_physics -L\$(top_builddir)/src/lib/IceBRG_main -lboost_serialization -lCCfits $parallelization_flags $BOOST_LDADD $CCFITS_LDADD"
 AC_SUBST(MY_LDADD)
+
+MY_LDADD_ICEBRG="-lIceBRG_lensing -lIceBRG_physics -lIceBRG_main"
+AC_SUBST(MY_LDADD_ICEBRG)
 
 MY_LDFLAGS="$parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
 AC_SUBST(MY_LDFLAGS)

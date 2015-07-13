@@ -1,4 +1,4 @@
-""" match_command.py
+""" @file match_command.py
 
     Created on 6 Jul 2015 as part of project CFHTLenS_catalogue_fetching
 
