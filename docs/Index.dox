@@ -157,4 +157,40 @@
  * measured lensing signals.
  *
  * It generates the executable "CFHTLenS_fit_lensing_model".
+ *
+ *
+ * \subsection mock_cats_sec CFHTLenS_make_mock_cats
+ *
+ * This folder contains source to build an executable which will generate mock lens and source
+ * catalogues, which are needed for a correlation-function analysis. This isn't part of the main
+ * pipeline, so its code hasn't been made as user-friendly yet.
+ *
+ * It generates the executable "CFHTLenS_Mag_make_mock_cats".
+ *
+ *
+ * \subsection corr_func_sec CFHTLenS_corr_func
+ *
+ * This folder contains source to build an executable which will measure the correlation functions
+ * between lens and source galaxies, as an alternate means of analysis. This isn't part of the main
+ * pipeline, so its code hasn't been made as user-friendly yet.
+ *
+ * It generates the executable "CFHTLenS_Mag_measure_corr_funcs".
+ *
+ *
+ * \subsection field_stats_sec CFHTLenS_field_stats
+ *
+ * This folder contains source to build an executable which will count the number density of lenses
+ * in each field in the CFHTLenS at various redshift slices. This isn't part of the main
+ * pipeline, so its code hasn't been made as user-friendly yet.
+ *
+ * It generates the executable "CFHTLenS_Mag_get_field_stats".
+ *
+ *
+ * \subsection source_count_fitting_sec CFHTLenS_source_count_fitting
+ *
+ * This folder contains source to build an executable which will attempt to fit an analytic function
+ * to the source number count distribute, and will report on the quality of the fit. This isn't part
+ * of the main pipeline, so its code hasn't been made as user-friendly yet.
+ *
+ * It generates the executable "CFHTLenS_Mag_fit_source_counts".
  */
