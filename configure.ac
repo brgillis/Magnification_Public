@@ -42,6 +42,8 @@ AC_PROG_AWK
 
 AC_CHECK_PROG(sky2xy_found,sky2xy,"yes","no")
 AC_CHECK_PROG(xy2sky_found,xy2sky,"yes","no")
+AC_CHECK_PROG(fpack_found,fpack,"yes","no")
+AC_CHECK_PROG(funpack_found,funpack,"yes","no")
 AC_CHECK_PROG(doxygen_found,doxygen,"yes","no")
 
 AM_CONDITIONAL([HAVE_DOXYGEN], [test "x$doxygen_found" == "xyes"])
@@ -113,10 +115,13 @@ AC_SUBST(MY_LDFLAGS)
 # Print all warnings and errors at the end
 
 AS_IF([test "x$sky2xy_found" == "xyes" -a "x$xy2sky_found" == "xyes"], [],
-	[AC_MSG_WARN([Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package.])])
+	[AC_MSG_WARN([Unable to find sky2xy and/or xy2sky. This package can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package.])])
+	
+AS_IF([test "x$fpack_found" == "xyes" -a "x$funpack_found" == "xyes"], [],
+	[AC_MSG_WARN([Unable to find fpack and/or funpack. This package can compile, but certain executables which call these programs will fail until these are installed.])])
 
 AS_IF([test "x$doxygen_found" == "xyes"], [],
-	[AC_MSG_WARN([Unable to find Doxygen. This program can compile, but documentation will not be generated.])])
+	[AC_MSG_WARN([Unable to find Doxygen. This package can compile, but documentation will not be generated.])])
 
 AS_IF([test "x$mypj_found_std_headers" != "xyes"],
 	[AC_MSG_WARN([Unable to find the standard definitions headers.])])

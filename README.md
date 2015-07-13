@@ -80,6 +80,7 @@ Boost headers and Boost Serialization library (tested on v1.56)
 Eigen 3 headers
 CCfits headers and library
 wcstools (needed at runtime for certain executables, but not needed at installation)
+fpack/funpack (as wcstools, only needed at runtime)
 
 * How to run tests
 

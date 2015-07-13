@@ -68,4 +68,28 @@
  * IceBRG_main contains all useful functions and classes I've written which don't have
  * anything specifically to do with my astrophysics work. That is, anything that might be
  * useful to someone completely outside of astrophysics would go in this library.
+ *
+ *
+ * \subsection icebrg_physics_sec IceBRG_physics Library
+ *
+ * IceBRG_physics contains functions and classes related to (astro)physics, but not
+ * specifically to a subfield which has its own library.
+ *
+ *
+ * \subsection icebrg_lensing_sec IceBRG_lensing Library
+ *
+ * IceBRG_lensing contains functions and classes related to gravitational lensing in one
+ * way or another.
+ *
+ *
+ * \section CFHTLenS_Mag executables
+ *
+ * The various programs here generate executables for performing most of the necessary steps for
+ * a gravitational lensing analysis as done in GT15. Much of the heavy lifting for these
+ * executables is performed by functions and classes within the IceBRG libraries. The code in
+ * these executables is typically designed to work specifically with the CFHTLenS catalogues and
+ * isn't as portable as the code in the libraries.
+ *
+ *
+ * \subsection
  */
