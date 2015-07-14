@@ -84,3 +84,56 @@ This folder contains code developed by others (licensed under the GPL), which I'
 which allows this and other types of interpolation.
 -[sgsmooth.h](@ref sgsmooth.h) - An implementation of Savitsky-Golay smoothing, useful for handling noisy data which needs to be
 differentiated.
+
+### file_access
+
+This folder contains various functions for handling file access and ASCII tables. Most of the functions and classes related to
+ASCII tables are subsumed by the functionality of the labeled_array class, which provides a superior interface. These are
+still used behind the scenes in order to create a labeled_array, however. Some notable headers here are:
+
+-[open_file.hpp](@ref open_file.hpp) - Functions to handle the boilerplate of opening up a file stream.
+-[table_utility.hpp](@ref table_utility.hpp) - Various utility functions for loading in a table.
+-[file_functions.hpp](@ref file_functions.hpp) - Functions for trimming the comments from files
+
+### math
+
+This folder contains functions for various mathematical operations, sorted into further subfolders.
+
+#### math
+
+The following useful headers are in the root "math" folder:
+
+-[ipow.hpp](@ref ipow.hpp) - Defines the function "ipow" in a few different manners, which represents taking an integral
+power. In the C++11 standard, compilers can't optimize integral powers with std::pow, so this function can be used instead
+when the power is integral. Variations exist for when the power is and isn't known at runtime.
+-[misc_math.hpp](@ref misc_math.hpp) - Miscellaneous useful functions, such as testing if a value is good (or NaN or inf),
+squaring/cubing/etc. values, adding/subtracting in quadruture, getting distance between two points, and a few useful
+functions for calculating errors under certain operations.
+-[safe_math.hpp](@ref safe_math.hpp) - "Safe" functions, to allow operations such as sqrt or division without worrying
+about edge cases (sqrt of a negative number or division by zero) causing too much of an issue. The results won't always
+be sensible, but they'll be numerical, so you don't have to worry about a NaN contaminating all future math if it might
+be ignored (eg. 0/safe_d(0) will result in 0 rather than NaN, which is often a more useful result for eg. taking a
+weighted average).
+
+#### cache
+
+The headers here define abstract base classes which help with caching the result of a function which is expensive to
+evaluate. The user will define a derived class from the cache of the desired dimension, define the desired bounds of
+input variables to use for the limits of the cache, and define a function to calculate the function. The cache can
+then be used to get the value at any point, interpolating between cached values.
+
+The different header files define caches for functions of different dimensionality. When possible, the 1-4d caches
+should be used, as the cache for arbitrary dimensionality is significantly slower.
+
+Examples of caches being used can be seen in the [astro_caches.h] and [astro_caches.cpp] files.
+
+#### calculus
+
+
+
+#### functor
+
+The header "[functor_product.hpp]" here is useful for easily defining a functor whose result is the product of two other
+functions or functors applied to the input value.
+
+
