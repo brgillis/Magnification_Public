@@ -2,7 +2,8 @@
  @file call_program.hpp
  ------------------
 
- TODO <Insert file description here>
+ This header defines functions to call another program as if through
+ the command-line.
 
  **********************************************************************
 
@@ -47,9 +48,9 @@ int_type call_program_noexcept(const char *program_name, int_type num_retries, A
 	{
 		good_result = true;
 		// Spawn a subprocess to delete the unpacked file
-#ifdef _OPENMP
-#pragma omp critical(call_program_noexcept)
-#endif
+		#ifdef _OPENMP
+		#pragma omp critical(call_program_noexcept)
+		#endif
 		{
 			pid = fork();
 		}
@@ -86,7 +87,7 @@ int_type call_program_noexcept(const char *program_name, int_type num_retries, A
 
 inline int_type call_program_noexcept(const char *program_name)
 {
-	return call_program_noexcept(program_name,int_type(0));
+	return call_program_noexcept(program_name,0);
 }
 
 template<typename... Args>
