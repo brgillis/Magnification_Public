@@ -129,11 +129,56 @@ Examples of caches being used can be seen in the [astro_caches.h] and [astro_cac
 
 #### calculus
 
+This folder contains the following calculus-related headers:
 
+-[DE.hpp] - Differential equation solving methods
+-[differentiate.hpp] - Functions to numerically differentiate a function of one or arbitrary dimensions
+-[calculus.hpp] - Functions to numerically integrate a function of one or arbitrary dimensions, using various different methods
 
 #### functor
 
 The header "[functor_product.hpp]" here is useful for easily defining a functor whose result is the product of two other
 functions or functors applied to the input value.
+
+#### Fourier
+
+This folder contains headers to easily perform Fourier transforms with the FFTW library, handling the necessary boilerplate:
+
+-[radial_vector.hpp] - A class for handling transforms of spherically-symmetric functions easily.
+-[transform.hpp] - Functions which handle the necessary boilerplate for Fourier transforms
+
+#### interpolator
+
+This folder contains the header [interpolator.h] for a class which helps determine the interpolation between known points,
+using one of multiple interpolation methods, and the header [interpolator_derivative.h] for a class which calculates the
+(smoothed) derivative of an interpolator.
+
+#### random
+
+This folder contains functions related to random-number generation.
+
+-[distributions.hpp] - Functions to get aspects of common distributions (eg. pdf/cdf values)
+-[random_functions.hpp] - Functions to generate a random number with given distributions, optionally using a generator object.
+
+#### solvers
+
+Functions to solve or minimize functions, and the ability to get the errors on best-fit values.
+
+-[solvers.hpp] - Functions to solve or minimize
+-[solver_classes.hpp] - Classes which perform minimize functions and retain data needed to also get errors on solutions
+
+#### statistics
+
+This folder contains class definitions which are used with Boost::accumulators to get additional statistics from them, and
+other statistical operations.
+
+Headers for accumulators:
+-[effective_count.hpp] - Using the definition: Square of sum of weights / sum of squares of weights
+-[error_of_weighted_mean.hpp] - Using an old definition; shouldn't be used until I update to a better one
+-[mean_weight.hpp] - Mean of weights
+-[sum_of_square_weights.hpp] - Sum of squares of weights
+
+Other:
+-[resampling.hpp] - Functions to generate a bootstrap or jackknife resampled version of a dataset.
 
 
