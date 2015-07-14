@@ -181,4 +181,23 @@ Headers for accumulators:
 Other:
 -[resampling.hpp] - Functions to generate a bootstrap or jackknife resampled version of a dataset.
 
+### units
 
+This folder deals with the set-up for dimensional analysis. Notable headers are:
+
+-[units.hpp] - Defines typedefs for common unit types and base units, plus function overloads which can be used on
+quantities and return quantities with the correct units (eg. eqrt, ipow)
+-[unit_conversions.hpp] - Defines conversions to and from the base SI unit set.
+
+### vector
+
+This folder contains headers for operations on vectors and the definitions of some derived classes. Notable headers
+inlude:
+
+-[elementwise_functions.hpp] - Elementwise operations on vectors and other containers, which work recursively to
+allow function on vectors of vectors as well
+-[limit_vector.hpp] - A class representing a set of bin limits. It includes various operations to quickly determine
+the bin which a given value falls within.
+-[manipulations.hpp] - Functions to concatenate vectors, transpose and vertically flip vectors of vectors.
+-[summary_functions.hpp] - Functions which provide summary statistics of vectors (eg. the sum of all elements). As
+with the elementwise functions, these also work recursively.
