@@ -60,15 +60,15 @@ Relevant configure options:
 ```
 #!bash
 
---help (view help and configure options)
---prefix=??? (install in a particular directory. --prefix=$HOME will do install in userspace)
---disable-parallelization (unless this flag is used, the executables will be installed using parallelization. With this, only one thread will be run at a time.)
---enable-full-optimization (overrides default C++ compilation flags (-g -O2) and uses a recommended set for better optimization. I recommend using this unless you want to tweak the flags yourself.)
---with-boost=??? (point to a specific location to find boost headers)
---with-boost-libdir=??? (point to a specific location to find boost libraries)
---with-ccfits=??? (point to a specific location to find CCfits headers)
---with-ccfits-libdir=??? (point to a specific location to find the CCfits library)
-CPPFLAGS=??? (set specific preprocessor flags. For instance, CPPFLAGS='-I/path/to/Eigen/' to help find the Eigen headers.
+--help # View help and configure options
+--prefix=??? # Install in a particular directory. --prefix=$HOME will do install in userspace
+--disable-parallelization # Unless this flag is used, the executables will be installed using parallelization. With this, only one thread will be run at a time.
+--enable-full-optimization # Overrides default C++ compilation flags (-g -O2) and uses a recommended set for better optimization. I recommend using this unless you want to tweak the flags yourself.
+--with-boost=??? # Point to a specific location to find boost headers
+--with-boost-libdir=??? # Point to a specific location to find boost libraries
+--with-ccfits=??? # Point to a specific location to find CCfits headers
+--with-ccfits-libdir=??? # Point to a specific location to find the CCfits library
+CPPFLAGS=??? # Set specific preprocessor flags. For instance, CPPFLAGS='-I/path/to/Eigen/' to help find the Eigen headers.
 ```
 
 
