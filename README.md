@@ -1,6 +1,7 @@
 # README #
 
-This is a pre-release public posting of the code used for Gillis and Taylor (2015). There's still a lot of documentation to do, though.
+This is a pre-release public posting of the code used for Gillis and Taylor (2015), available at
+http://arxiv.org/abs/1507.01858.
 
 ### What is this repository for? ###
 
