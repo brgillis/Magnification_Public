@@ -1,4 +1,7 @@
-The IceBRG_lensing library contains functions and classes related to gravitational lensing.
+The IceBRG_lensing library contains functions and classes related to gravitational lensing. This library
+relies on functions and classes defined in the IceBRG_main and IceBRG_physics libraries, so those must be
+included and linked as well when this is used. The proper link order is "-lIceBRG_lensing -lIceBRG_physics
+-lIceBRG_main".
 
 This section will go over various functions and classes available in the library, sorted by the files and
 folders they're contained within.
