@@ -6,8 +6,7 @@ http://arxiv.org/abs/1507.01858.
 ### What is this repository for? ###
 
 * Code used for Gillis and Taylor (2015), including a release of my C++ library, "IceBRG"
-* v0.9.4 (I'll be updating the documentation over the coming days to bring it up to v1.0.0)
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* v1.0.0
 
 ### How do I get set up? ###
 
