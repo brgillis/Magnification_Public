@@ -1,0 +1,120 @@
+\hypertarget{classIceBRG_1_1MCMC__solver}{}\section{Ice\+B\+R\+G\+:\+:M\+C\+M\+C\+\_\+solver$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$ Class Template Reference}
+\label{classIceBRG_1_1MCMC__solver}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$}}
+
+
+{\ttfamily \#include $<$solver\+\_\+classes.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T\+\_\+value\+\_\+type \hyperlink{classIceBRG_1_1MCMC__solver_a900afb5655f8fd450d507b642c4a5a8b}{value\+\_\+type}
+\item 
+typedef Eigen\+::\+Array$<$ \hyperlink{classIceBRG_1_1MCMC__solver_a900afb5655f8fd450d507b642c4a5a8b}{value\+\_\+type}, T\+\_\+num\+\_\+params, 1 $>$ \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type}
+\item 
+typedef Eigen\+::\+Array$<$ \hyperlink{classIceBRG_1_1MCMC__solver_a900afb5655f8fd450d507b642c4a5a8b}{value\+\_\+type}, T\+\_\+num\+\_\+params, Eigen\+::\+Dynamic $>$ \hyperlink{classIceBRG_1_1MCMC__solver_a078c222e71acc977dd50aa67f50a9983}{array2d\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classIceBRG_1_1MCMC__solver_a1ee26d93eb8fd10986b93c2e0cd533d8}{clear} ()
+\item 
+{\footnotesize template$<$typename f $>$ }\\const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a57b3d82d6e72f096558db141bd7e7620}{solve} (const f \&func, const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \&init\+\_\+in\+\_\+params, const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \&init\+\_\+min\+\_\+in\+\_\+params, const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \&init\+\_\+max\+\_\+in\+\_\+params, const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \&init\+\_\+in\+\_\+param\+\_\+step\+\_\+sigmas, const \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} \&max\+\_\+steps=1000000, const \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} \&annealing\+\_\+period=100000, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&annealing\+\_\+factor=4, const \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} \&skip\+\_\+factor=10)
+\item 
+const \hyperlink{classIceBRG_1_1MCMC__solver_a078c222e71acc977dd50aa67f50a9983}{array2d\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a1e85a59dffdc1589e133154a1c0465f2}{get\+\_\+test\+\_\+run\+\_\+points} () const 
+\item 
+const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a8f5964ff67e7cebf7074debece4ffb3c}{get\+\_\+means} () const 
+\item 
+const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a8fbaaf4322f46115befd0069cc8e52c0}{get\+\_\+best\+\_\+fits} () const 
+\item 
+const \hyperlink{classIceBRG_1_1MCMC__solver_a078c222e71acc977dd50aa67f50a9983}{array2d\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a1c818ada4e4f307c36ef16d5ff9433a7}{get\+\_\+covars} () const 
+\item 
+const \hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type} \& \hyperlink{classIceBRG_1_1MCMC__solver_a1702ce0edb7ed78b7a18513c3333c180}{get\+\_\+stddevs} () const 
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+decltype(\hyperlink{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{array\+\_\+type}().size()) typedef \hyperlink{classIceBRG_1_1MCMC__solver_ae03c5e41621464a1bfcc7aac7cace475}{size\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1MCMC__solver_a078c222e71acc977dd50aa67f50a9983}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!array2d\+\_\+type@{array2d\+\_\+type}}
+\index{array2d\+\_\+type@{array2d\+\_\+type}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{array2d\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ typedef Eigen\+::\+Array$<${\bf value\+\_\+type},T\+\_\+num\+\_\+params,Eigen\+::\+Dynamic$>$ {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::{\bf array2d\+\_\+type}}\label{classIceBRG_1_1MCMC__solver_a078c222e71acc977dd50aa67f50a9983}
+\hypertarget{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!array\+\_\+type@{array\+\_\+type}}
+\index{array\+\_\+type@{array\+\_\+type}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{array\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ typedef Eigen\+::\+Array$<${\bf value\+\_\+type},T\+\_\+num\+\_\+params,1$>$ {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::{\bf array\+\_\+type}}\label{classIceBRG_1_1MCMC__solver_ad97acf248381de04fa6fc4bdcd3f9a63}
+\hypertarget{classIceBRG_1_1MCMC__solver_a900afb5655f8fd450d507b642c4a5a8b}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ typedef T\+\_\+value\+\_\+type {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::{\bf value\+\_\+type}}\label{classIceBRG_1_1MCMC__solver_a900afb5655f8fd450d507b642c4a5a8b}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1MCMC__solver_a1ee26d93eb8fd10986b93c2e0cd533d8}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!clear@{clear}}
+\index{clear@{clear}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ void {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a1ee26d93eb8fd10986b93c2e0cd533d8}
+\hypertarget{classIceBRG_1_1MCMC__solver_a8fbaaf4322f46115befd0069cc8e52c0}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!get\+\_\+best\+\_\+fits@{get\+\_\+best\+\_\+fits}}
+\index{get\+\_\+best\+\_\+fits@{get\+\_\+best\+\_\+fits}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{get\+\_\+best\+\_\+fits() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ const {\bf array\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::get\+\_\+best\+\_\+fits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a8fbaaf4322f46115befd0069cc8e52c0}
+\hypertarget{classIceBRG_1_1MCMC__solver_a1c818ada4e4f307c36ef16d5ff9433a7}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!get\+\_\+covars@{get\+\_\+covars}}
+\index{get\+\_\+covars@{get\+\_\+covars}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{get\+\_\+covars() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ const {\bf array2d\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::get\+\_\+covars (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a1c818ada4e4f307c36ef16d5ff9433a7}
+\hypertarget{classIceBRG_1_1MCMC__solver_a8f5964ff67e7cebf7074debece4ffb3c}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!get\+\_\+means@{get\+\_\+means}}
+\index{get\+\_\+means@{get\+\_\+means}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{get\+\_\+means() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ const {\bf array\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::get\+\_\+means (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a8f5964ff67e7cebf7074debece4ffb3c}
+\hypertarget{classIceBRG_1_1MCMC__solver_a1702ce0edb7ed78b7a18513c3333c180}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!get\+\_\+stddevs@{get\+\_\+stddevs}}
+\index{get\+\_\+stddevs@{get\+\_\+stddevs}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{get\+\_\+stddevs() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ const {\bf array\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::get\+\_\+stddevs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a1702ce0edb7ed78b7a18513c3333c180}
+\hypertarget{classIceBRG_1_1MCMC__solver_a1e85a59dffdc1589e133154a1c0465f2}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!get\+\_\+test\+\_\+run\+\_\+points@{get\+\_\+test\+\_\+run\+\_\+points}}
+\index{get\+\_\+test\+\_\+run\+\_\+points@{get\+\_\+test\+\_\+run\+\_\+points}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{get\+\_\+test\+\_\+run\+\_\+points() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ const {\bf array2d\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::get\+\_\+test\+\_\+run\+\_\+points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a1e85a59dffdc1589e133154a1c0465f2}
+\hypertarget{classIceBRG_1_1MCMC__solver_a57b3d82d6e72f096558db141bd7e7620}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!solve@{solve}}
+\index{solve@{solve}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{solve(const f \&func, const array\+\_\+type \&init\+\_\+in\+\_\+params, const array\+\_\+type \&init\+\_\+min\+\_\+in\+\_\+params, const array\+\_\+type \&init\+\_\+max\+\_\+in\+\_\+params, const array\+\_\+type \&init\+\_\+in\+\_\+param\+\_\+step\+\_\+sigmas, const size\+\_\+type \&max\+\_\+steps=1000000, const size\+\_\+type \&annealing\+\_\+period=100000, const flt\+\_\+type \&annealing\+\_\+factor=4, const size\+\_\+type \&skip\+\_\+factor=10)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ template$<$typename f $>$ const {\bf array\+\_\+type}\& {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::solve (
+\begin{DoxyParamCaption}
+\item[{const f \&}]{func, }
+\item[{const {\bf array\+\_\+type} \&}]{init\+\_\+in\+\_\+params, }
+\item[{const {\bf array\+\_\+type} \&}]{init\+\_\+min\+\_\+in\+\_\+params, }
+\item[{const {\bf array\+\_\+type} \&}]{init\+\_\+max\+\_\+in\+\_\+params, }
+\item[{const {\bf array\+\_\+type} \&}]{init\+\_\+in\+\_\+param\+\_\+step\+\_\+sigmas, }
+\item[{const {\bf size\+\_\+type} \&}]{max\+\_\+steps = {\ttfamily 1000000}, }
+\item[{const {\bf size\+\_\+type} \&}]{annealing\+\_\+period = {\ttfamily 100000}, }
+\item[{const {\bf flt\+\_\+type} \&}]{annealing\+\_\+factor = {\ttfamily 4}, }
+\item[{const {\bf size\+\_\+type} \&}]{skip\+\_\+factor = {\ttfamily 10}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1MCMC__solver_a57b3d82d6e72f096558db141bd7e7620}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classIceBRG_1_1MCMC__solver_ae03c5e41621464a1bfcc7aac7cace475}{}\index{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver@{Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}}
+\subsubsection[{size\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+value\+\_\+type , int\+\_\+type T\+\_\+num\+\_\+params = Eigen\+::\+Dynamic$>$ decltype({\bf array\+\_\+type}().size()) typedef {\bf Ice\+B\+R\+G\+::\+M\+C\+M\+C\+\_\+solver}$<$ T\+\_\+value\+\_\+type, T\+\_\+num\+\_\+params $>$\+::{\bf size\+\_\+type}}\label{classIceBRG_1_1MCMC__solver_ae03c5e41621464a1bfcc7aac7cace475}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/solvers/\hyperlink{solver__classes_8hpp}{solver\+\_\+classes.\+hpp}\end{DoxyCompactItemize}

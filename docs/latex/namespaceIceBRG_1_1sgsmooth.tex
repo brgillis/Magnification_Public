@@ -1,0 +1,110 @@
+\hypertarget{namespaceIceBRG_1_1sgsmooth}{}\section{Ice\+B\+R\+G\+:\+:sgsmooth Namespace Reference}
+\label{namespaceIceBRG_1_1sgsmooth}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat}
+\begin{DoxyCompactList}\small\item\em two dimensional floating point array \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ size\+\_\+t $>$ \hyperlink{namespaceIceBRG_1_1sgsmooth_ad7ed0983e4da9c1babc83f2da0a17c51}{uint\+\_\+vect}
+\begin{DoxyCompactList}\small\item\em comfortable array of ints; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{permute} (\hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat} \&A, \hyperlink{namespaceIceBRG_1_1sgsmooth_ad7ed0983e4da9c1babc83f2da0a17c51}{uint\+\_\+vect} \&idx)
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{permute()} orders the rows of A to match the integers in the index array. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat} \hyperlink{namespaceIceBRG_1_1sgsmooth_aa92e2446e9622897f99011b9e9f3b462}{operator$\ast$} (const \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat} \&a, const \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat} \&b)
+\begin{DoxyCompactList}\small\item\em matrix multiplication. \end{DoxyCompactList}\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \hyperlink{namespaceIceBRG_1_1sgsmooth_aec9a47f68e8ff4d230ef5ddfcaf0db53}{sg\+\_\+smooth} (const \hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg)
+\begin{DoxyCompactList}\small\item\em savitzky golay smoothing. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \hyperlink{namespaceIceBRG_1_1sgsmooth_aab6c3ca9cc4e41ba7474e14cc5b33d6e}{sg\+\_\+derivative} (const std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&h)
+\begin{DoxyCompactList}\small\item\em savitzky golay smoothed numerical derivative. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceIceBRG_1_1sgsmooth_a37245b3b20825085d86d9d1fbe86e032}{sgs\+\_\+error} (const char $\ast$errmsg)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \hyperlink{namespaceIceBRG_1_1sgsmooth_ac45ce50c22cf69d2c46653732031ceaa}{sg\+\_\+derivative} (const \hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \&input, const size\+\_\+t \&window, const size\+\_\+t \&order, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&delta=1.\+0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceIceBRG_1_1sgsmooth_ad7ed0983e4da9c1babc83f2da0a17c51}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!uint\+\_\+vect@{uint\+\_\+vect}}
+\index{uint\+\_\+vect@{uint\+\_\+vect}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{uint\+\_\+vect}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$size\+\_\+t$>$ {\bf Ice\+B\+R\+G\+::sgsmooth\+::uint\+\_\+vect}}\label{namespaceIceBRG_1_1sgsmooth_ad7ed0983e4da9c1babc83f2da0a17c51}
+
+
+comfortable array of ints; 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceIceBRG_1_1sgsmooth_aa92e2446e9622897f99011b9e9f3b462}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{operator$\ast$(const float\+\_\+mat \&a, const float\+\_\+mat \&b)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf float\+\_\+mat} Ice\+B\+R\+G\+::sgsmooth\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf float\+\_\+mat} \&}]{a, }
+\item[{const {\bf float\+\_\+mat} \&}]{b}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_aa92e2446e9622897f99011b9e9f3b462}
+
+
+matrix multiplication. 
+
+\hypertarget{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!permute@{permute}}
+\index{permute@{permute}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{permute(float\+\_\+mat \&\+A, uint\+\_\+vect \&idx)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::sgsmooth\+::permute (
+\begin{DoxyParamCaption}
+\item[{{\bf float\+\_\+mat} \&}]{A, }
+\item[{{\bf uint\+\_\+vect} \&}]{idx}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}
+
+
+\hyperlink{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{permute()} orders the rows of A to match the integers in the index array. 
+
+\hypertarget{namespaceIceBRG_1_1sgsmooth_ac45ce50c22cf69d2c46653732031ceaa}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!sg\+\_\+derivative@{sg\+\_\+derivative}}
+\index{sg\+\_\+derivative@{sg\+\_\+derivative}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{sg\+\_\+derivative(const flt\+\_\+vector\+\_\+type \&input, const size\+\_\+t \&window, const size\+\_\+t \&order, const flt\+\_\+type \&delta=1.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+vector\+\_\+type} Ice\+B\+R\+G\+::sgsmooth\+::sg\+\_\+derivative (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+vector\+\_\+type} \&}]{input, }
+\item[{const size\+\_\+t \&}]{window, }
+\item[{const size\+\_\+t \&}]{order, }
+\item[{const {\bf flt\+\_\+type} \&}]{delta = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_ac45ce50c22cf69d2c46653732031ceaa}
+\hypertarget{namespaceIceBRG_1_1sgsmooth_aab6c3ca9cc4e41ba7474e14cc5b33d6e}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!sg\+\_\+derivative@{sg\+\_\+derivative}}
+\index{sg\+\_\+derivative@{sg\+\_\+derivative}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{sg\+\_\+derivative(const std\+::vector$<$ flt\+\_\+type $>$ \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg, const flt\+\_\+type \&h)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf flt\+\_\+type}$>$ Ice\+B\+R\+G\+::sgsmooth\+::sg\+\_\+derivative (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf flt\+\_\+type} $>$ \&}]{v, }
+\item[{const size\+\_\+t \&}]{width, }
+\item[{const size\+\_\+t \&}]{deg, }
+\item[{const {\bf flt\+\_\+type} \&}]{h}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_aab6c3ca9cc4e41ba7474e14cc5b33d6e}
+
+
+savitzky golay smoothed numerical derivative. 
+
+This method means fitting a polynome of degree \textquotesingle{}deg\textquotesingle{} to a sliding window of width 2w+1 throughout the data.
+
+In contrast to the sg\+\_\+smooth function we do a brute force attempt by always fitting the data to a polynome of degree \textquotesingle{}deg\textquotesingle{} and using the result. \hypertarget{namespaceIceBRG_1_1sgsmooth_aec9a47f68e8ff4d230ef5ddfcaf0db53}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!sg\+\_\+smooth@{sg\+\_\+smooth}}
+\index{sg\+\_\+smooth@{sg\+\_\+smooth}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{sg\+\_\+smooth(const flt\+\_\+vector\+\_\+type \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+vector\+\_\+type} Ice\+B\+R\+G\+::sgsmooth\+::sg\+\_\+smooth (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+vector\+\_\+type} \&}]{v, }
+\item[{const size\+\_\+t \&}]{width, }
+\item[{const size\+\_\+t \&}]{deg}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_aec9a47f68e8ff4d230ef5ddfcaf0db53}
+
+
+savitzky golay smoothing. 
+
+This method means fitting a polynome of degree \textquotesingle{}deg\textquotesingle{} to a sliding window of width 2w+1 throughout the data. The needed coefficients are generated dynamically by doing a least squares fit on a \char`\"{}symmetric\char`\"{} unit vector of size 2w+1, e.\+g. for w=2 b=(0,0,1,0,0). evaluating the polynome yields the sg-\/coefficients. at the border non symmectric vectors b are used. \hypertarget{namespaceIceBRG_1_1sgsmooth_a37245b3b20825085d86d9d1fbe86e032}{}\index{Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}!sgs\+\_\+error@{sgs\+\_\+error}}
+\index{sgs\+\_\+error@{sgs\+\_\+error}!Ice\+B\+R\+G\+::sgsmooth@{Ice\+B\+R\+G\+::sgsmooth}}
+\subsubsection[{sgs\+\_\+error(const char $\ast$errmsg)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::sgsmooth\+::sgs\+\_\+error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{errmsg}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1sgsmooth_a37245b3b20825085d86d9d1fbe86e032}

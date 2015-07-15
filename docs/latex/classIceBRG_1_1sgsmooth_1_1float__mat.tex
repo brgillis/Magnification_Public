@@ -1,0 +1,101 @@
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat}{}\section{Ice\+B\+R\+G\+:\+:sgsmooth\+:\+:float\+\_\+mat Class Reference}
+\label{classIceBRG_1_1sgsmooth_1_1float__mat}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+
+
+two dimensional floating point array  
+
+
+Inheritance diagram for Ice\+B\+R\+G\+:\+:sgsmooth\+:\+:float\+\_\+mat\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIceBRG_1_1sgsmooth_1_1float__mat}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat_aadcf2088badc653044d76db9fa92c8f6}{float\+\_\+mat} (const size\+\_\+t rows, const size\+\_\+t cols, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&def=0.\+0)
+\begin{DoxyCompactList}\small\item\em constructor with sizes \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat_a0b8a9a2f6c0cde0981937ea074ddbf26}{float\+\_\+mat} (const \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{float\+\_\+mat} \&\hyperlink{namespaceIceBRG_ada6365c5d16106f0608afbd34f010bcc}{m})
+\begin{DoxyCompactList}\small\item\em copy constructor for matrix \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat_a6534c2f7d23dc74f143d737eaff9966a}{float\+\_\+mat} (const \hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \&v)
+\begin{DoxyCompactList}\small\item\em copy constructor for vector \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat_a529d1c4e6c3099d1605a210e9af15d27}{nr\+\_\+rows} (void) const 
+\begin{DoxyCompactList}\small\item\em use default destructor \end{DoxyCompactList}\item 
+size\+\_\+t \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat_aefce21794625942d8be758522644d1c1}{nr\+\_\+cols} (void) const 
+\begin{DoxyCompactList}\small\item\em get size \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+two dimensional floating point array 
+
+matrix class.
+
+This is a matrix class derived from a vector of float\+\_\+vects. Note that the matrix elements indexed \mbox{[}row\mbox{]}\mbox{[}column\mbox{]} with indices starting at 0 (c style). Also note that because of its design looping through rows should be faster than looping through columns. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat_aadcf2088badc653044d76db9fa92c8f6}{}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}!float\+\_\+mat@{float\+\_\+mat}}
+\index{float\+\_\+mat@{float\+\_\+mat}!Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+\subsubsection[{float\+\_\+mat(const size\+\_\+t rows, const size\+\_\+t cols, const flt\+\_\+type \&def=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat\+::float\+\_\+mat (
+\begin{DoxyParamCaption}
+\item[{const size\+\_\+t}]{rows, }
+\item[{const size\+\_\+t}]{cols, }
+\item[{const {\bf flt\+\_\+type} \&}]{def = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1sgsmooth_1_1float__mat_aadcf2088badc653044d76db9fa92c8f6}
+
+
+constructor with sizes 
+
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat_a0b8a9a2f6c0cde0981937ea074ddbf26}{}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}!float\+\_\+mat@{float\+\_\+mat}}
+\index{float\+\_\+mat@{float\+\_\+mat}!Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+\subsubsection[{float\+\_\+mat(const float\+\_\+mat \&m)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat\+::float\+\_\+mat (
+\begin{DoxyParamCaption}
+\item[{const {\bf float\+\_\+mat} \&}]{m}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1sgsmooth_1_1float__mat_a0b8a9a2f6c0cde0981937ea074ddbf26}
+
+
+copy constructor for matrix 
+
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat_a6534c2f7d23dc74f143d737eaff9966a}{}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}!float\+\_\+mat@{float\+\_\+mat}}
+\index{float\+\_\+mat@{float\+\_\+mat}!Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+\subsubsection[{float\+\_\+mat(const flt\+\_\+vector\+\_\+type \&v)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat\+::float\+\_\+mat (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+vector\+\_\+type} \&}]{v}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1sgsmooth_1_1float__mat_a6534c2f7d23dc74f143d737eaff9966a}
+
+
+copy constructor for vector 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat_aefce21794625942d8be758522644d1c1}{}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}!nr\+\_\+cols@{nr\+\_\+cols}}
+\index{nr\+\_\+cols@{nr\+\_\+cols}!Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+\subsubsection[{nr\+\_\+cols(void) const }]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat\+::nr\+\_\+cols (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1sgsmooth_1_1float__mat_aefce21794625942d8be758522644d1c1}
+
+
+get size 
+
+\hypertarget{classIceBRG_1_1sgsmooth_1_1float__mat_a529d1c4e6c3099d1605a210e9af15d27}{}\index{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}!nr\+\_\+rows@{nr\+\_\+rows}}
+\index{nr\+\_\+rows@{nr\+\_\+rows}!Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat@{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}}
+\subsubsection[{nr\+\_\+rows(void) const }]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat\+::nr\+\_\+rows (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1sgsmooth_1_1float__mat_a529d1c4e6c3099d1605a210e9af15d27}
+
+
+use default destructor 
+
+get size 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/\hyperlink{sgsmooth_8cpp}{sgsmooth.\+cpp}\end{DoxyCompactItemize}

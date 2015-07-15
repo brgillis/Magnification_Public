@@ -1,0 +1,127 @@
+This is a pre-\/release public posting of the code used for Gillis and Taylor (2015), available at \href{http://arxiv.org/abs/1507.01858}{\tt http\+://arxiv.\+org/abs/1507.\+01858}.
+
+\subsubsection*{What is this repository for?}
+
+
+\begin{DoxyItemize}
+\item Code used for Gillis and Taylor (2015), including a release of my C++ library, \char`\"{}\+Ice\+B\+R\+G\char`\"{}
+\item v1.\+0.\+0
+\end{DoxyItemize}
+
+\subsubsection*{How do I get set up?}
+
+
+\begin{DoxyItemize}
+\item Summary of set up
+\end{DoxyItemize}
+
+This project is set up with autotools, so it can be built from source on a Linux-\/like system with the standard\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 ./configure <options>
+4 make <options>
+5 make install
+\end{DoxyCode}
+
+
+My quick recommendation for options is\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 ./configure --enable-full-optimization (add --prefix=$HOME for a user-space install)
+4 make -j8
+5 make install
+\end{DoxyCode}
+
+
+If the configuration step fails, see below for relevant options that may help point to dependencies.
+
+You can uninstall through\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 make uninstall
+\end{DoxyCode}
+
+
+and clean up the installation directory through\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 make clean
+\end{DoxyCode}
+
+
+The executables will be installed in \$\+P\+R\+E\+F\+I\+X/bin, the needed python package will be installed in \$\+P\+Y\+T\+H\+O\+N\+P\+R\+E\+F\+I\+X/site-\/packages, and unless --disable-\/install-\/\+Ice\+B\+R\+G is set, the libraries will be installed in \$\+P\+R\+E\+F\+I\+X/lib, and their headers in \$\+P\+R\+E\+F\+I\+X/include/cfhtlens\+\_\+magnification.
+
+
+\begin{DoxyItemize}
+\item Configuration
+\end{DoxyItemize}
+
+Relevant configure options\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 --help # View help and configure options
+4 --prefix=??? # Install in a particular directory. --prefix=$HOME will do install in userspace
+5 --disable-parallelization # Unless this flag is used, the executables will be installed using
+       parallelization. With this, only one thread will be run at a time.
+6 --enable-full-optimization # Overrides default C++ compilation flags (-g -O2) and uses a recommended set
+       for better optimization. I recommend using this unless you want to tweak the flags yourself.
+7 --with-boost=??? # Point to a specific location to find boost headers
+8 --with-boost-libdir=??? # Point to a specific location to find boost libraries
+9 --with-ccfits=??? # Point to a specific location to find CCfits headers
+10 --with-ccfits-libdir=??? # Point to a specific location to find the CCfits library
+11 CPPFLAGS=??? # Set specific preprocessor flags. For instance, CPPFLAGS='-I/path/to/Eigen/' to help find the
+       Eigen headers.
+\end{DoxyCode}
+
+
+
+\begin{DoxyItemize}
+\item Dependencies
+\end{DoxyItemize}
+
+C++11-\/compliant C++ compiler Python interpreter (tested on Python 2.\+7) Boost headers and Boost Serialization library (tested on v1.\+56) Eigen 3 headers C\+Cfits headers and library wcstools (needed at runtime for certain executables, but not needed at installation) fpack/funpack (as wcstools, only needed at runtime)
+
+
+\begin{DoxyItemize}
+\item How to run tests
+\end{DoxyItemize}
+
+Once it\textquotesingle{}s installed, you can run a test analysis through going to a directory where you want to store data, then running the series of commands\+:
+
+
+\begin{DoxyCode}
+1 #!bash
+2 
+3 CFHTLenS\_Mag\_get\_fields.py
+4 CFHTLenS\_Mag\_get\_masks.py
+5 CFHTLenS\_Mag\_filter\_catalogues
+6 CFHTLenS\_Mag\_get\_unmasked\_fractions
+7 CFHTLenS\_Mag\_count\_sources
+8 CFHTLenS\_Mag\_measure\_weak\_lensing
+9 CFHTLenS\_Mag\_fit\_lensing\_model
+\end{DoxyCode}
+
+
+This will run all necessary steps on the process up through fitting a lensing model to the data. By default, this only downloads one pointing from the C\+F\+H\+T\+Len\+S server (to lighten the load on it and speed things up for those only performing quick tests). A configure file (not distributed at the moment) may be used with the C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+measure\+\_\+weak\+\_\+lensing step to modify the lens bins for which the lensing signal is measured.
+
+\subsubsection*{Who do I talk to?}
+
+
+\begin{DoxyItemize}
+\item Bryan Gillis -\/ repo owner 
+\end{DoxyItemize}

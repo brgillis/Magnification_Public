@@ -1,0 +1,233 @@
+\hypertarget{classIceBRG_1_1interpolator}{}\section{Ice\+B\+R\+G\+:\+:interpolator Class Reference}
+\label{classIceBRG_1_1interpolator}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+
+
+{\ttfamily \#include $<$interpolator.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} \{ \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aa0e985c423ddff0958b7c077f040e5910}{L\+O\+W\+E\+R}, 
+\hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaef8ca61ed663ed472fff05ac0eb84e2c}{U\+P\+P\+E\+R}, 
+\hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aae6ba3f064dbbd6f454104dd90acb04d4}{L\+I\+N\+E\+A\+R}, 
+\hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaca79b1f8a9979bf41b4216bc8030232d}{S\+P\+L\+I\+N\+E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a488f11b2ff91e3f456262044751605c1}{swap} (\hyperlink{classIceBRG_1_1interpolator}{interpolator} \&other)
+\item 
+\hyperlink{classIceBRG_1_1interpolator_af9b52bd9f9bff5bcf2b889bf85c1403e}{interpolator} ()
+\item 
+\hyperlink{classIceBRG_1_1interpolator_a719e0c86158635e78a37832af704e099}{interpolator} (const \hyperlink{classIceBRG_1_1interpolator}{interpolator} \&other)
+\item 
+virtual \hyperlink{classIceBRG_1_1interpolator_a52f31fe44b62983db86549c3c97773e9}{$\sim$interpolator} ()
+\item 
+\hyperlink{classIceBRG_1_1interpolator}{interpolator} \& \hyperlink{classIceBRG_1_1interpolator_ad65df5a080aa25a23fa25b5d7b9554e0}{operator=} (\hyperlink{classIceBRG_1_1interpolator}{interpolator} other)
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a747f23ddfe74f619735585b0b3066f24}{clear} ()
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_aad3a72c0c8903d0fad7e60b6dd348ba3}{clear\+\_\+points} ()
+\item 
+const \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} \hyperlink{classIceBRG_1_1interpolator_a8caf984a6aec487fcc5f1afc54fa6f00}{interpolation\+\_\+type} () const 
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a3651662a03abe69c94c6c92cae5bb93b}{set\+\_\+default\+\_\+interpolation\+\_\+type} (const \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} new\+\_\+default\+\_\+type, const bool override\+\_\+current)
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_ada00768286864c05246f3bbe2862093e}{set\+\_\+interpolation\+\_\+type} (const \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} new\+\_\+type)
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a8ef091301e4ca894181bc1b267b5d42a}{add\+\_\+point} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&x, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&y)
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a1ee08ef4a77324cea79a34179cf89347}{try\+\_\+add\+\_\+point} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&x, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&y)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ab322a3e50421dc5f0c43316b1b373592}{ssize\+\_\+t} \hyperlink{classIceBRG_1_1interpolator_a38db60d597a090cfe8b11a33b2df16ae}{size} () const 
+\item 
+bool \hyperlink{classIceBRG_1_1interpolator_a3611e6f3180070759001cb579e642aef}{empty} () const 
+\item 
+std\+::vector$<$ std\+::pair$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type}, \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ $>$ \& \hyperlink{classIceBRG_1_1interpolator_a5c376ba6ae01d622f11e536ed0ddde18}{sorted\+\_\+data} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1interpolator_a28f5f8c6a6021ba711305cd7750ae8d7}{operator()} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&x) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} \hyperlink{classIceBRG_1_1interpolator_a64e227abbf2dae875a06a043b828650e}{default\+\_\+interpolation\+\_\+type} ()
+\item 
+static void \hyperlink{classIceBRG_1_1interpolator_ad4b3b2f74d79a055a07a8fcf3869512a}{set\+\_\+default\+\_\+interpolation\+\_\+type} (const \hyperlink{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{allowed\+\_\+interpolation\+\_\+type} new\+\_\+default\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classIceBRG_1_1interpolator_a0152b79b14a90108930558d46563e7c0}{swap} (\hyperlink{classIceBRG_1_1interpolator}{interpolator} \&same, \hyperlink{classIceBRG_1_1interpolator}{interpolator} \&other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!allowed\+\_\+interpolation\+\_\+type@{allowed\+\_\+interpolation\+\_\+type}}
+\index{allowed\+\_\+interpolation\+\_\+type@{allowed\+\_\+interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{allowed\+\_\+interpolation\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ice\+B\+R\+G\+::interpolator\+::allowed\+\_\+interpolation\+\_\+type}}\label{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544a}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{L\+O\+W\+E\+R@{L\+O\+W\+E\+R}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!L\+O\+W\+E\+R@{L\+O\+W\+E\+R}}\item[{\em 
+\hypertarget{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aa0e985c423ddff0958b7c077f040e5910}{}L\+O\+W\+E\+R\label{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aa0e985c423ddff0958b7c077f040e5910}
+}]\index{U\+P\+P\+E\+R@{U\+P\+P\+E\+R}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!U\+P\+P\+E\+R@{U\+P\+P\+E\+R}}\item[{\em 
+\hypertarget{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaef8ca61ed663ed472fff05ac0eb84e2c}{}U\+P\+P\+E\+R\label{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaef8ca61ed663ed472fff05ac0eb84e2c}
+}]\index{L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}}\item[{\em 
+\hypertarget{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aae6ba3f064dbbd6f454104dd90acb04d4}{}L\+I\+N\+E\+A\+R\label{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aae6ba3f064dbbd6f454104dd90acb04d4}
+}]\index{S\+P\+L\+I\+N\+E@{S\+P\+L\+I\+N\+E}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!S\+P\+L\+I\+N\+E@{S\+P\+L\+I\+N\+E}}\item[{\em 
+\hypertarget{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaca79b1f8a9979bf41b4216bc8030232d}{}S\+P\+L\+I\+N\+E\label{classIceBRG_1_1interpolator_af85c1c6a292cff6fa033c8884377544aaca79b1f8a9979bf41b4216bc8030232d}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1interpolator_af9b52bd9f9bff5bcf2b889bf85c1403e}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!interpolator@{interpolator}}
+\index{interpolator@{interpolator}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{interpolator()}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::interpolator\+::interpolator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_af9b52bd9f9bff5bcf2b889bf85c1403e}
+\hypertarget{classIceBRG_1_1interpolator_a719e0c86158635e78a37832af704e099}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!interpolator@{interpolator}}
+\index{interpolator@{interpolator}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{interpolator(const interpolator \&other)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::interpolator\+::interpolator (
+\begin{DoxyParamCaption}
+\item[{const {\bf interpolator} \&}]{other}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a719e0c86158635e78a37832af704e099}
+\hypertarget{classIceBRG_1_1interpolator_a52f31fe44b62983db86549c3c97773e9}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!````~interpolator@{$\sim$interpolator}}
+\index{````~interpolator@{$\sim$interpolator}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{$\sim$interpolator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ice\+B\+R\+G\+::interpolator\+::$\sim$interpolator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1interpolator_a52f31fe44b62983db86549c3c97773e9}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1interpolator_a8ef091301e4ca894181bc1b267b5d42a}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!add\+\_\+point@{add\+\_\+point}}
+\index{add\+\_\+point@{add\+\_\+point}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{add\+\_\+point(const flt\+\_\+type \&x, const flt\+\_\+type \&y)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::add\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{x, }
+\item[{const {\bf flt\+\_\+type} \&}]{y}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a8ef091301e4ca894181bc1b267b5d42a}
+\hypertarget{classIceBRG_1_1interpolator_a747f23ddfe74f619735585b0b3066f24}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!clear@{clear}}
+\index{clear@{clear}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a747f23ddfe74f619735585b0b3066f24}
+\hypertarget{classIceBRG_1_1interpolator_aad3a72c0c8903d0fad7e60b6dd348ba3}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!clear\+\_\+points@{clear\+\_\+points}}
+\index{clear\+\_\+points@{clear\+\_\+points}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{clear\+\_\+points()}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::clear\+\_\+points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_aad3a72c0c8903d0fad7e60b6dd348ba3}
+\hypertarget{classIceBRG_1_1interpolator_a64e227abbf2dae875a06a043b828650e}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!default\+\_\+interpolation\+\_\+type@{default\+\_\+interpolation\+\_\+type}}
+\index{default\+\_\+interpolation\+\_\+type@{default\+\_\+interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{default\+\_\+interpolation\+\_\+type()}]{\setlength{\rightskip}{0pt plus 5cm}static const {\bf allowed\+\_\+interpolation\+\_\+type} Ice\+B\+R\+G\+::interpolator\+::default\+\_\+interpolation\+\_\+type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classIceBRG_1_1interpolator_a64e227abbf2dae875a06a043b828650e}
+\hypertarget{classIceBRG_1_1interpolator_a3611e6f3180070759001cb579e642aef}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!empty@{empty}}
+\index{empty@{empty}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{empty() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ice\+B\+R\+G\+::interpolator\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1interpolator_a3611e6f3180070759001cb579e642aef}
+\hypertarget{classIceBRG_1_1interpolator_a8caf984a6aec487fcc5f1afc54fa6f00}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!interpolation\+\_\+type@{interpolation\+\_\+type}}
+\index{interpolation\+\_\+type@{interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{interpolation\+\_\+type() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf allowed\+\_\+interpolation\+\_\+type} Ice\+B\+R\+G\+::interpolator\+::interpolation\+\_\+type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1interpolator_a8caf984a6aec487fcc5f1afc54fa6f00}
+\hypertarget{classIceBRG_1_1interpolator_a28f5f8c6a6021ba711305cd7750ae8d7}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{operator()(const flt\+\_\+type \&x) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} Ice\+B\+R\+G\+::interpolator\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{x}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1interpolator_a28f5f8c6a6021ba711305cd7750ae8d7}
+\hypertarget{classIceBRG_1_1interpolator_ad65df5a080aa25a23fa25b5d7b9554e0}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{operator=(interpolator other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ice\+B\+R\+G\+::interpolator} \& Ice\+B\+R\+G\+::interpolator\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf interpolator}}]{other}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_ad65df5a080aa25a23fa25b5d7b9554e0}
+\hypertarget{classIceBRG_1_1interpolator_ad4b3b2f74d79a055a07a8fcf3869512a}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!set\+\_\+default\+\_\+interpolation\+\_\+type@{set\+\_\+default\+\_\+interpolation\+\_\+type}}
+\index{set\+\_\+default\+\_\+interpolation\+\_\+type@{set\+\_\+default\+\_\+interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{set\+\_\+default\+\_\+interpolation\+\_\+type(const allowed\+\_\+interpolation\+\_\+type new\+\_\+default\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::set\+\_\+default\+\_\+interpolation\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{const {\bf allowed\+\_\+interpolation\+\_\+type}}]{new\+\_\+default\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{classIceBRG_1_1interpolator_ad4b3b2f74d79a055a07a8fcf3869512a}
+\hypertarget{classIceBRG_1_1interpolator_a3651662a03abe69c94c6c92cae5bb93b}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!set\+\_\+default\+\_\+interpolation\+\_\+type@{set\+\_\+default\+\_\+interpolation\+\_\+type}}
+\index{set\+\_\+default\+\_\+interpolation\+\_\+type@{set\+\_\+default\+\_\+interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{set\+\_\+default\+\_\+interpolation\+\_\+type(const allowed\+\_\+interpolation\+\_\+type new\+\_\+default\+\_\+type, const bool override\+\_\+current)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::set\+\_\+default\+\_\+interpolation\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{const {\bf allowed\+\_\+interpolation\+\_\+type}}]{new\+\_\+default\+\_\+type, }
+\item[{const bool}]{override\+\_\+current}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a3651662a03abe69c94c6c92cae5bb93b}
+\hypertarget{classIceBRG_1_1interpolator_ada00768286864c05246f3bbe2862093e}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!set\+\_\+interpolation\+\_\+type@{set\+\_\+interpolation\+\_\+type}}
+\index{set\+\_\+interpolation\+\_\+type@{set\+\_\+interpolation\+\_\+type}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{set\+\_\+interpolation\+\_\+type(const allowed\+\_\+interpolation\+\_\+type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::set\+\_\+interpolation\+\_\+type (
+\begin{DoxyParamCaption}
+\item[{const {\bf allowed\+\_\+interpolation\+\_\+type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_ada00768286864c05246f3bbe2862093e}
+\hypertarget{classIceBRG_1_1interpolator_a38db60d597a090cfe8b11a33b2df16ae}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!size@{size}}
+\index{size@{size}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf ssize\+\_\+t} Ice\+B\+R\+G\+::interpolator\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1interpolator_a38db60d597a090cfe8b11a33b2df16ae}
+\hypertarget{classIceBRG_1_1interpolator_a5c376ba6ae01d622f11e536ed0ddde18}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!sorted\+\_\+data@{sorted\+\_\+data}}
+\index{sorted\+\_\+data@{sorted\+\_\+data}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{sorted\+\_\+data() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::pair$<$ {\bf flt\+\_\+type}, {\bf flt\+\_\+type} $>$ $>$ \& Ice\+B\+R\+G\+::interpolator\+::sorted\+\_\+data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1interpolator_a5c376ba6ae01d622f11e536ed0ddde18}
+\hypertarget{classIceBRG_1_1interpolator_a488f11b2ff91e3f456262044751605c1}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{swap(interpolator \&other)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf interpolator} \&}]{other}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a488f11b2ff91e3f456262044751605c1}
+\hypertarget{classIceBRG_1_1interpolator_a1ee08ef4a77324cea79a34179cf89347}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!try\+\_\+add\+\_\+point@{try\+\_\+add\+\_\+point}}
+\index{try\+\_\+add\+\_\+point@{try\+\_\+add\+\_\+point}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{try\+\_\+add\+\_\+point(const flt\+\_\+type \&x, const flt\+\_\+type \&y)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::interpolator\+::try\+\_\+add\+\_\+point (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{x, }
+\item[{const {\bf flt\+\_\+type} \&}]{y}
+\end{DoxyParamCaption}
+)}\label{classIceBRG_1_1interpolator_a1ee08ef4a77324cea79a34179cf89347}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classIceBRG_1_1interpolator_a0152b79b14a90108930558d46563e7c0}{}\index{Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::interpolator@{Ice\+B\+R\+G\+::interpolator}}
+\subsubsection[{swap}]{\setlength{\rightskip}{0pt plus 5cm}void swap (
+\begin{DoxyParamCaption}
+\item[{{\bf interpolator} \&}]{same, }
+\item[{{\bf interpolator} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\label{classIceBRG_1_1interpolator_a0152b79b14a90108930558d46563e7c0}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/interpolator/\hyperlink{interpolator_8h}{interpolator.\+h}\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/interpolator/\hyperlink{interpolator_8cpp}{interpolator.\+cpp}\end{DoxyCompactItemize}

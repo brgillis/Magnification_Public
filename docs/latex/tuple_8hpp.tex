@@ -1,0 +1,959 @@
+\hypertarget{tuple_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/tuple.hpp File Reference}
+\label{tuple_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/tuple.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/tuple.\+hpp}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$boost/tuple/tuple.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/type\+\_\+traits/is\+\_\+convertible.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/units/units.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/vector/elementwise\+\_\+functions.\+hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__NOT__TUPLE_07T2_08_4}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_1tuc2970434d93561fa1e1db195cb99b491}{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08c8e4888bfd8d316092f0dc03c7128272}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08131694fe54a3c7a6002fbebfff754799}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_055529bde261c2acf7cf4746a6301cbf1}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_80010c4fbaf3d761a5da3d020e0023b6}{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_081d8a4cfcf4cba4b6dba7b46ae822b392}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08d0dac86c84971415068079a4f4319b30}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_0f8b2bfe2074bcff168e50ce88774b3d8}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_3879c0d85d6ebd176aeb832142f492bd}{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_086c96d3c3ec89211a6e76f31c5665b8a}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_f2134547733f778a855586b5d8107f2b}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_bd03af67120e73dd34936ad50f2c1b33}{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1unary__rand__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, Enable1 $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2, Enable1, Enable2 $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T1_00_01T2_00_01BRG__S__IS__TU17fb7ccd40b5d61da5648c1c2c034d10}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T1_00_01T2_00_01BRG__S__IS__TU0ef4e05af1a56449fbbcc207cdc65c2c}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T1_00_01T2_00_01BRG__S__NOT__Taf66ad01f9236805ac3540fbfcbdbe8d}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, T, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T, boost\+::tuples\+::null\+\_\+type, void $>$}
+\item 
+struct \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_5c02c427c306686c3b1206a9b133bf57}{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\item 
+ \hyperlink{namespaceIceBRG_1_1tuples}{Ice\+B\+R\+G\+::tuples}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T0  = boost\+::tuples\+::null\+\_\+type, class T1  = boost\+::tuples\+::null\+\_\+type, class T2  = boost\+::tuples\+::null\+\_\+type, class T3  = boost\+::tuples\+::null\+\_\+type, class T4  = boost\+::tuples\+::null\+\_\+type, class T5  = boost\+::tuples\+::null\+\_\+type, class T6  = boost\+::tuples\+::null\+\_\+type, class T7  = boost\+::tuples\+::null\+\_\+type, class T8  = boost\+::tuples\+::null\+\_\+type, class T9  = boost\+::tuples\+::null\+\_\+type$>$ }\\using \hyperlink{namespaceIceBRG_a5148ef56bdd96f27ce60555b6aaa979e}{Ice\+B\+R\+G\+::tuple} = boost\+::tuple$<$ T0, T1, T2, T3, T4, T5, T6, T7, T8, T9 $>$
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Th , typename Tt $>$ }\\boost\+::tuples\+::cons$<$ Th, Tt $>$ \hyperlink{namespaceIceBRG_1_1tuples_ac21b3a3433cc3c2ee33c4950b92689e6}{Ice\+B\+R\+G\+::tuples\+::make\+\_\+cons} (Th \&\&h, Tt \&\&t)
+\begin{DoxyCompactList}\small\item\em Helper function to construct a cons list with argument deduction. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename f $>$ }\\void \hyperlink{namespaceIceBRG_a3ce931aa21aaf3aa29d3d6b7f18572af}{Ice\+B\+R\+G\+::unary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::null\+\_\+type \&)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt $>$ }\\void \hyperlink{namespaceIceBRG_ad343ae0a099d104a93327826bd0b3ae6}{Ice\+B\+R\+G\+::unary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt $>$ }\\void \hyperlink{namespaceIceBRG_a0972f52ef0036f145d36ef72fe30c0cd}{Ice\+B\+R\+G\+::unary\+\_\+for\+\_\+each} (const f \&func, boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1)
+\item 
+{\footnotesize template$<$typename f $>$ }\\void \hyperlink{namespaceIceBRG_abb18e99d1d2a8d9d4bb6c7a7c6bf612e}{Ice\+B\+R\+G\+::binary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::null\+\_\+type \&, const boost\+::tuples\+::null\+\_\+type \&)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt , typename T2 $>$ }\\void \hyperlink{namespaceIceBRG_aad1e93a9503d54382cc33627a2fc3fd2}{Ice\+B\+R\+G\+::binary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1, T2 \&\&t2)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt , typename T2 $>$ }\\void \hyperlink{namespaceIceBRG_a493a5731d276b5caebf58044bd458dd8}{Ice\+B\+R\+G\+::binary\+\_\+for\+\_\+each} (const f \&func, boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1, T2 \&\&t2)
+\item 
+{\footnotesize template$<$typename f $>$ }\\void \hyperlink{namespaceIceBRG_a6a88a4930e8c382bce5d55d4630c131f}{Ice\+B\+R\+G\+::trinary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::null\+\_\+type \&, const boost\+::tuples\+::null\+\_\+type \&)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt , typename T2 , typename T3 $>$ }\\void \hyperlink{namespaceIceBRG_ab9fe1517fcdfa97efaf8d8ce9923855b}{Ice\+B\+R\+G\+::trinary\+\_\+for\+\_\+each} (const f \&func, const boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1, T2 \&\&t2, T3 \&\&t3)
+\item 
+{\footnotesize template$<$typename f , class Th , class Tt , typename T2 , typename T3 $>$ }\\void \hyperlink{namespaceIceBRG_a79ab6db846823a5ab49f0f530d605512}{Ice\+B\+R\+G\+::trinary\+\_\+for\+\_\+each} (const f \&func, boost\+::tuples\+::cons$<$ Th, Tt $>$ \&t1, T2 \&\&t2, T3 \&\&t3)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1, T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a3b6257f50ca02b4f31a39ec81ab1b38d}{Ice\+B\+R\+G\+::add} (T1 \&\&, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2 $>$\+::type \hyperlink{namespaceIceBRG_a073df9445861d65d982a2defc81f3291}{Ice\+B\+R\+G\+::add} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1, T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ae47ad1ad601f3c2f4e6b20fbe3e7006f}{Ice\+B\+R\+G\+::subtract} (T1 \&\&, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2 $>$\+::type \hyperlink{namespaceIceBRG_a26622f7657144b52b7d18be7033fe5f2}{Ice\+B\+R\+G\+::subtract} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1, T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ab535c998baac3ffc8412fdbae750b7d1}{Ice\+B\+R\+G\+::multiply} (T1 \&\&, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2 $>$\+::type \hyperlink{namespaceIceBRG_ad579274ad3c2e2455f1116bfdcf7544a}{Ice\+B\+R\+G\+::multiply} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1, T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ab43969c262e2747108975f52fc9b47fd}{Ice\+B\+R\+G\+::divide} (T1 \&\&, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2 $>$\+::type \hyperlink{namespaceIceBRG_a08411d216e202daf8f5bd9ff54065b3e}{Ice\+B\+R\+G\+::divide} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\const T1 \& \hyperlink{namespaceIceBRG_a06f5e1f4699ca69ee50e614fc314fc61}{Ice\+B\+R\+G\+::add\+\_\+equal} (const T1 \&t1, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_abb979116386359a9542c9bca10712bc2}{Ice\+B\+R\+G\+::add\+\_\+equal} (T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\const T1 \& \hyperlink{namespaceIceBRG_aba433f0f1df8de11e5f738da8ef67d39}{Ice\+B\+R\+G\+::subtract\+\_\+equal} (const T1 \&t1, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_aa00439fb1f98b5ab3fd4435a4ff85325}{Ice\+B\+R\+G\+::subtract\+\_\+equal} (T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\const T1 \& \hyperlink{namespaceIceBRG_a7a4405ff31b49e9215bd1ace7a8d1e9d}{Ice\+B\+R\+G\+::multiply\+\_\+equal} (const T1 \&t1, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a8a9b9c18a8f33f1e7a11e3c5074ad657}{Ice\+B\+R\+G\+::multiply\+\_\+equal} (T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\const T1 \& \hyperlink{namespaceIceBRG_afa3822bbe4a1004507a161f17facc454}{Ice\+B\+R\+G\+::divide\+\_\+equal} (const T1 \&t1, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a5634c6e0abab0629573daa2c53f9101b}{Ice\+B\+R\+G\+::divide\+\_\+equal} (T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a2711f4882a0617bdc9f86be0b55c3c62}{Ice\+B\+R\+G\+::abs} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\T1 \hyperlink{namespaceIceBRG_a26641f6efbb3a938bb24d35ed496af37}{Ice\+B\+R\+G\+::abs} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a29ad5c8dedd7627497789f6c9e4b1068}{Ice\+B\+R\+G\+::sqrt} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_a3deab82e87d7871fcee1c80229eae766}{Ice\+B\+R\+G\+::sqrt} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_afaba16ae171db13e29a3e0817c663f63}{Ice\+B\+R\+G\+::pow} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a1df1260c6f6ca6ef2b2d336f2908825b}{Ice\+B\+R\+G\+::pow} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1, T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ae5afc3a219af15dc1c73a15ca40486ce}{Ice\+B\+R\+G\+::runtime\+\_\+ipow} (const T1 \&t1, T2 \&\&)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a7b6ce9eb65d0d796d9a8239a620aa50c}{Ice\+B\+R\+G\+::runtime\+\_\+ipow} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$int\+\_\+type p$>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ae7f18ccc5167613b85197709db7a0622}{Ice\+B\+R\+G\+::ipow} (const boost\+::tuples\+::null\+\_\+type \&t1)
+\item 
+{\footnotesize template$<$int\+\_\+type p, class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1 $>$\+::type \hyperlink{namespaceIceBRG_a32105d97f288cf7ddc6359c296ad616b}{Ice\+B\+R\+G\+::ipow} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a7d2b97ebbeb202a1ca4f445bda7390b3}{Ice\+B\+R\+G\+::sin} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_a57632b44d01f63ff4a21726aee92500f}{Ice\+B\+R\+G\+::sin} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a0c9d048c22cc1bb0e0f593417819bab8}{Ice\+B\+R\+G\+::cos} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_a025c97fe4f05e35a0c4ec0cbd8a7ef0d}{Ice\+B\+R\+G\+::cos} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_ab50f9564c9e79be7b53b1d19f6cebab1}{Ice\+B\+R\+G\+::tan} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_ac1c4e93a0efb030bb1bdfc95401d0c11}{Ice\+B\+R\+G\+::tan} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a3748adeccfe6224ed0f6d39abcc87196}{Ice\+B\+R\+G\+::asin} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_ae628f0785b41278377ed3143774c9346}{Ice\+B\+R\+G\+::asin} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a46a20b06ce2c8a11d5fa09bae0f3d6d3}{Ice\+B\+R\+G\+::acos} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_a746db7e9f5b6a5dcc357bfb11c6f5458}{Ice\+B\+R\+G\+::acos} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a24b307329ff3c6b61fdaee3ba16079b5}{Ice\+B\+R\+G\+::atan} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1 $>$\+::type \hyperlink{namespaceIceBRG_a9c3bd35a13475944dc1624b05def6605}{Ice\+B\+R\+G\+::atan} (const T1 \&t1)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_aa6b6fb2d7875bb865ebaf20c5c9cbc85}{Ice\+B\+R\+G\+::min} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a12b9b6f4525e902edd948303a8f45987}{Ice\+B\+R\+G\+::min} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_af8123f867f9a8c6a9703da8556182c84}{Ice\+B\+R\+G\+::max} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a60b6b976c835b6e3bc8a6861f775cc64}{Ice\+B\+R\+G\+::max} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$typename f , typename T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_aea930a94516df403771b22be12d2637e}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1)
+\item 
+{\footnotesize template$<$typename f , typename T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1 $>$\+::type \hyperlink{namespaceIceBRG_a8f4b1d91ba4911195762ca81b1621a42}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1)
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+T2) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a866a9fbc9ad826a9badb027b34381227}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2 $>$\+::type \hyperlink{namespaceIceBRG_afdc9f858c86c14286f32fbf3854be88f}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T , typename f , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+Tout) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a6e3514f6f2b204827bd19d46818fe71a}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+Tout) $>$ }\\Tout \hyperlink{namespaceIceBRG_a36220fb059d97255a863e2ddb0af3a4c}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+Tout) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_acccaf0bfcc0f9e751010c99143a114b0}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+Tout) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) $>$ }\\Tout \hyperlink{namespaceIceBRG_ab9909381a61dbdafd69115b03725733c}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename T2 , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(\+Tout) $>$ }\\boost\+::tuples\+::null\+\_\+type \hyperlink{namespaceIceBRG_a46ee3c23c4b6da22dbe9b89f77cb7639}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const T2 \&v2, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename T2 , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+Tout) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\Tout \hyperlink{namespaceIceBRG_aefd19d7a32a95306171961805a41db18}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const T2 \&v2, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{Class Documentation}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class T2, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of adding two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of adding two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_ae86ef7e43c4c8a4f94a25646b71e3b7e}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a8174c2af95d1a0d1dc44fff6d8c544e2}{type}\label{namespaceIceBRG_1_1tuples_ae86ef7e43c4c8a4f94a25646b71e3b7e}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a0d4426894c7f0b168a9e977776768c30}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a8174c2af95d1a0d1dc44fff6d8c544e2}{type}\label{namespaceIceBRG_1_1tuples_a0d4426894c7f0b168a9e977776768c30}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a8174c2af95d1a0d1dc44fff6d8c544e2}{}get\+\_\+tail()), decltype(\hyperlink{namespaceIceBRG_1_1tuples_a0d4426894c7f0b168a9e977776768c30}{T2d}()\label{namespaceIceBRG_1_1tuples_a8174c2af95d1a0d1dc44fff6d8c544e2}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__NOT__TUPLE_07T2_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__NOT__TUPLE_07T2_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of adding two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a12ae66934f161a5bf4f475165542b2f1}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a15f91e2e79b711689bbaff1a3f697909}{type}\label{namespaceIceBRG_1_1tuples_a12ae66934f161a5bf4f475165542b2f1}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a122bf8da284a5c5cf8a0bd39e95bf340}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a15f91e2e79b711689bbaff1a3f697909}{type}\label{namespaceIceBRG_1_1tuples_a122bf8da284a5c5cf8a0bd39e95bf340}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a15f91e2e79b711689bbaff1a3f697909}{}get\+\_\+head(), \hyperlink{namespaceIceBRG_1_1tuples_a122bf8da284a5c5cf8a0bd39e95bf340}{T2d}())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper}{add\+\_\+typeof\+\_\+helper}$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_a12ae66934f161a5bf4f475165542b2f1}{T1d}()\label{namespaceIceBRG_1_1tuples_a15f91e2e79b711689bbaff1a3f697909}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of adding two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a4fb70245108f8c14684768b4f2ffbd5f}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_ad09c1743911cee7306fca7eeacb88b1d}{type}\label{namespaceIceBRG_1_1tuples_a4fb70245108f8c14684768b4f2ffbd5f}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a21e6c1a62f0b8388537f27edac9cedd6}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_ad09c1743911cee7306fca7eeacb88b1d}{type}\label{namespaceIceBRG_1_1tuples_a21e6c1a62f0b8388537f27edac9cedd6}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_ad09c1743911cee7306fca7eeacb88b1d}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper}{add\+\_\+typeof\+\_\+helper}$<$ \hyperlink{namespaceIceBRG_1_1tuples_a4fb70245108f8c14684768b4f2ffbd5f}{T1d}, \\*
+decltype(\hyperlink{namespaceIceBRG_1_1tuples_a21e6c1a62f0b8388537f27edac9cedd6}{T2d}()\label{namespaceIceBRG_1_1tuples_ad09c1743911cee7306fca7eeacb88b1d}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, T, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a0503c150c599461739fa22e618e07ece}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a0503c150c599461739fa22e618e07ece}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ T, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a061219a3f5427911524ac770ddc232eb}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a061219a3f5427911524ac770ddc232eb}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_1tuc2970434d93561fa1e1db195cb99b491}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1add__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_1tuc2970434d93561fa1e1db195cb99b491}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:add\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::add\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a42185186c3594c65a4b8bfc24149ce2e}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a42185186c3594c65a4b8bfc24149ce2e}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class T2, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of subtracting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08c8e4888bfd8d316092f0dc03c7128272}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08c8e4888bfd8d316092f0dc03c7128272}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of subtracting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a1b8bb4d7aee76ef5720b840bcf38e892}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a31f2a5c17258aa6e326dc7423d396485}{type}\label{namespaceIceBRG_1_1tuples_a1b8bb4d7aee76ef5720b840bcf38e892}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a3e7f1fdd6036bc7e27edaeecc8916b4a}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a31f2a5c17258aa6e326dc7423d396485}{type}\label{namespaceIceBRG_1_1tuples_a3e7f1fdd6036bc7e27edaeecc8916b4a}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a31f2a5c17258aa6e326dc7423d396485}{}get\+\_\+tail()), decltype(\hyperlink{namespaceIceBRG_1_1tuples_a3e7f1fdd6036bc7e27edaeecc8916b4a}{T2d}()\label{namespaceIceBRG_1_1tuples_a31f2a5c17258aa6e326dc7423d396485}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08131694fe54a3c7a6002fbebfff754799}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08131694fe54a3c7a6002fbebfff754799}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of subtracting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a24369ce989b2bc35403b5197404686cb}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_aff9a31e443e09ed188186e3de584ea5d}{type}\label{namespaceIceBRG_1_1tuples_a24369ce989b2bc35403b5197404686cb}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a982e856de804f5226aedec5e50568fde}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_aff9a31e443e09ed188186e3de584ea5d}{type}\label{namespaceIceBRG_1_1tuples_a982e856de804f5226aedec5e50568fde}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_aff9a31e443e09ed188186e3de584ea5d}{}get\+\_\+head(), \hyperlink{namespaceIceBRG_1_1tuples_a982e856de804f5226aedec5e50568fde}{T2d}())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper}{subtract\+\_\+typeof\+\_\+helper}\\*
+$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_a24369ce989b2bc35403b5197404686cb}{T1d}()\label{namespaceIceBRG_1_1tuples_aff9a31e443e09ed188186e3de584ea5d}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_055529bde261c2acf7cf4746a6301cbf1}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_055529bde261c2acf7cf4746a6301cbf1}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of subtracting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a3a6088841c87612c4979848427bbfffa}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a456742eecd7ca819fae5ff7f63a4b789}{type}\label{namespaceIceBRG_1_1tuples_a3a6088841c87612c4979848427bbfffa}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a20517a7169e509c9854375d1329461b8}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a456742eecd7ca819fae5ff7f63a4b789}{type}\label{namespaceIceBRG_1_1tuples_a20517a7169e509c9854375d1329461b8}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a456742eecd7ca819fae5ff7f63a4b789}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper}{subtract\+\_\+typeof\+\_\+helper}$<$ \hyperlink{namespaceIceBRG_1_1tuples_a3a6088841c87612c4979848427bbfffa}{T1d}, \\*
+decltype(\hyperlink{namespaceIceBRG_1_1tuples_a20517a7169e509c9854375d1329461b8}{T2d}()\label{namespaceIceBRG_1_1tuples_a456742eecd7ca819fae5ff7f63a4b789}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, T, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_af35e1afe4efe44b31e066cecedb2f275}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_af35e1afe4efe44b31e066cecedb2f275}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ T, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a3ac5f6d7ed167ef5757b624c09149f96}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a3ac5f6d7ed167ef5757b624c09149f96}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_80010c4fbaf3d761a5da3d020e0023b6}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1subtract__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_80010c4fbaf3d761a5da3d020e0023b6}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:subtract\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::subtract\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a57bea50e4b845e4dc575c3f382d6a774}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a57bea50e4b845e4dc575c3f382d6a774}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class T2, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of multiplying two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_081d8a4cfcf4cba4b6dba7b46ae822b392}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_081d8a4cfcf4cba4b6dba7b46ae822b392}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of multiplying two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_aab307083c178318760b27db29f19cf65}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a364d75e832c65a371dae7fd6ae0702f9}{type}\label{namespaceIceBRG_1_1tuples_aab307083c178318760b27db29f19cf65}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_ae6c39ce39ba34e94adb6679a7304326e}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a364d75e832c65a371dae7fd6ae0702f9}{type}\label{namespaceIceBRG_1_1tuples_ae6c39ce39ba34e94adb6679a7304326e}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a364d75e832c65a371dae7fd6ae0702f9}{}get\+\_\+tail()), decltype(\hyperlink{namespaceIceBRG_1_1tuples_ae6c39ce39ba34e94adb6679a7304326e}{T2d}()\label{namespaceIceBRG_1_1tuples_a364d75e832c65a371dae7fd6ae0702f9}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08d0dac86c84971415068079a4f4319b30}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08d0dac86c84971415068079a4f4319b30}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of multiplying two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_aa2583e993d44e330d94823cd43602ad5}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_abea59dce5657fb6ea23a6f398a16b9ff}{type}\label{namespaceIceBRG_1_1tuples_aa2583e993d44e330d94823cd43602ad5}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a3a7c562e835b743e2e6b95a2449f30c1}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_abea59dce5657fb6ea23a6f398a16b9ff}{type}\label{namespaceIceBRG_1_1tuples_a3a7c562e835b743e2e6b95a2449f30c1}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_abea59dce5657fb6ea23a6f398a16b9ff}{}get\+\_\+head(), \hyperlink{namespaceIceBRG_1_1tuples_a3a7c562e835b743e2e6b95a2449f30c1}{T2d}())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper}{multiply\+\_\+typeof\+\_\+helper}\\*
+$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_aa2583e993d44e330d94823cd43602ad5}{T1d}()\label{namespaceIceBRG_1_1tuples_abea59dce5657fb6ea23a6f398a16b9ff}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_0f8b2bfe2074bcff168e50ce88774b3d8}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_0f8b2bfe2074bcff168e50ce88774b3d8}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of multiplying two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_aeb527db06a943494eb8e1b53b3bb1ac4}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a9a6a86c894d9573bf12cdca5810c7d31}{type}\label{namespaceIceBRG_1_1tuples_aeb527db06a943494eb8e1b53b3bb1ac4}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a2d1618c5821f55cdbd9b5a9d470ac18e}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a9a6a86c894d9573bf12cdca5810c7d31}{type}\label{namespaceIceBRG_1_1tuples_a2d1618c5821f55cdbd9b5a9d470ac18e}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a9a6a86c894d9573bf12cdca5810c7d31}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper}{multiply\+\_\+typeof\+\_\+helper}$<$ \hyperlink{namespaceIceBRG_1_1tuples_aeb527db06a943494eb8e1b53b3bb1ac4}{T1d}, \\*
+decltype(\hyperlink{namespaceIceBRG_1_1tuples_a2d1618c5821f55cdbd9b5a9d470ac18e}{T2d}()\label{namespaceIceBRG_1_1tuples_a9a6a86c894d9573bf12cdca5810c7d31}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, T, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a374ba5bed0de21d1567f5111293720ac}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a374ba5bed0de21d1567f5111293720ac}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ T, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a5105d0eef1d795e1a6213ed7c405592f}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a5105d0eef1d795e1a6213ed7c405592f}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_3879c0d85d6ebd176aeb832142f492bd}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1multiply__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_3879c0d85d6ebd176aeb832142f492bd}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:multiply\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::multiply\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a7a2232870a048d62eef032f9e00bf7d9}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a7a2232870a048d62eef032f9e00bf7d9}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class T2, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of divideing two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_00_01BRG__S__IS__TUPLE_07T2_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of divideing two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a5dd19ded108a7f6bd9a1b80f80ef27ef}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_ab30c942f5de4c1473701c0a3a7454453}{type}\label{namespaceIceBRG_1_1tuples_a5dd19ded108a7f6bd9a1b80f80ef27ef}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_acb789365c7ce7dbcbcb954d579bd4797}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_ab30c942f5de4c1473701c0a3a7454453}{type}\label{namespaceIceBRG_1_1tuples_acb789365c7ce7dbcbcb954d579bd4797}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_ab30c942f5de4c1473701c0a3a7454453}{}get\+\_\+tail()), decltype(\hyperlink{namespaceIceBRG_1_1tuples_acb789365c7ce7dbcbcb954d579bd4797}{T2d}()\label{namespaceIceBRG_1_1tuples_ab30c942f5de4c1473701c0a3a7454453}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_086c96d3c3ec89211a6e76f31c5665b8a}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__IS__TUPLE_07T1_08_086c96d3c3ec89211a6e76f31c5665b8a}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of divideing two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a8557420cff2527ee10fcebd5efec0dfa}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a81675a05e5b378685be3983580f2c6a5}{type}\label{namespaceIceBRG_1_1tuples_a8557420cff2527ee10fcebd5efec0dfa}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a8a492fc9ba9dac5f8715af9f44c019e2}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a81675a05e5b378685be3983580f2c6a5}{type}\label{namespaceIceBRG_1_1tuples_a8a492fc9ba9dac5f8715af9f44c019e2}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a81675a05e5b378685be3983580f2c6a5}{}get\+\_\+head(), \hyperlink{namespaceIceBRG_1_1tuples_a8a492fc9ba9dac5f8715af9f44c019e2}{T2d}())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper}{divide\+\_\+typeof\+\_\+helper}$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_a8557420cff2527ee10fcebd5efec0dfa}{T1d}()\label{namespaceIceBRG_1_1tuples_a81675a05e5b378685be3983580f2c6a5}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_f2134547733f778a855586b5d8107f2b}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T1_00_01T2_00_01BRG__S__NOT__TUPLE_07T1_08_f2134547733f778a855586b5d8107f2b}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T2)$>$}
+\subsubsection*{template$<$class T1, class T2$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T1, T2, B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(\+T1), B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2)$>$}
+
+Helper structure to determine the type of divideing two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a33ba3919709592010628fa1516bd3b7b}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a94b4388c855c8a54d726c4045d1c1059}{type}\label{namespaceIceBRG_1_1tuples_a33ba3919709592010628fa1516bd3b7b}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a89ddecb81b091b33f9c2d07a9f6370a8}{}typedef decay$<$ T2 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a94b4388c855c8a54d726c4045d1c1059}{type}\label{namespaceIceBRG_1_1tuples_a89ddecb81b091b33f9c2d07a9f6370a8}
+&
+T2d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a94b4388c855c8a54d726c4045d1c1059}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper}{divide\+\_\+typeof\+\_\+helper}$<$ \hyperlink{namespaceIceBRG_1_1tuples_a33ba3919709592010628fa1516bd3b7b}{T1d}, \\*
+decltype(\hyperlink{namespaceIceBRG_1_1tuples_a89ddecb81b091b33f9c2d07a9f6370a8}{T2d}()\label{namespaceIceBRG_1_1tuples_a94b4388c855c8a54d726c4045d1c1059}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, T, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, T, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a7cfc445edc292d533aa157bb68adeca7}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a7cfc445edc292d533aa157bb68adeca7}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ T, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$typename T$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ T, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_aff0ca5b155cb513918ee25d96b94a9a8}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_aff0ca5b155cb513918ee25d96b94a9a8}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_bd03af67120e73dd34936ad50f2c1b33}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1divide__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01boost_1_bd03af67120e73dd34936ad50f2c1b33}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:divide\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::divide\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a3b0c6a33f7c35a75c21f00d781ada664}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a3b0c6a33f7c35a75c21f00d781ada664}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1sqrt__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sqrt\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of sqrting a tuple. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}\label{structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sqrt\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1)$>$}
+\subsubsection*{template$<$class T1$>$struct Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+
+Helper structure to determine the type of sqrting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a72b5de2684a13e04d40d8c4d99c449a5}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a0a6b119c6ecb453a52b9c4e9a7dc9942}{type}\label{namespaceIceBRG_1_1tuples_a72b5de2684a13e04d40d8c4d99c449a5}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a0a6b119c6ecb453a52b9c4e9a7dc9942}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper}{sqrt\+\_\+typeof\+\_\+helper}$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_a72b5de2684a13e04d40d8c4d99c449a5}{T1d}()\label{namespaceIceBRG_1_1tuples_a0a6b119c6ecb453a52b9c4e9a7dc9942}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sqrt__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sqrt\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::sqrt\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a18937c38bf20064bca7041e358671bfc}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a18937c38bf20064bca7041e358671bfc}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1ipow__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:ipow\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$int\+\_\+type p, class T1, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of ipowing a tuple. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}\label{structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:ipow\+\_\+typeof\+\_\+helper$<$ p, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1)$>$}
+\subsubsection*{template$<$int\+\_\+type p, class T1$>$struct Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+
+Helper structure to determine the type of ipowing two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a1368a0d7b4c47bd64f1f57c45a764085}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_aed1bfdd2be2297b3023a4480680a5ec0}{type}\label{namespaceIceBRG_1_1tuples_a1368a0d7b4c47bd64f1f57c45a764085}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_aed1bfdd2be2297b3023a4480680a5ec0}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper}{ipow\+\_\+typeof\+\_\+helper}$<$ p, \\*
+decltype(\hyperlink{namespaceIceBRG_1_1tuples_a1368a0d7b4c47bd64f1f57c45a764085}{T1d}()\label{namespaceIceBRG_1_1tuples_aed1bfdd2be2297b3023a4480680a5ec0}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1ipow__typeof__helper_3_01p_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:ipow\+\_\+typeof\+\_\+helper$<$ p, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$int\+\_\+type p$>$struct Ice\+B\+R\+G\+::tuples\+::ipow\+\_\+typeof\+\_\+helper$<$ p, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a57be2e737cd2b0be82546d8aa85323c6}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a57be2e737cd2b0be82546d8aa85323c6}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1sct__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sct\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of scting a tuple. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}\label{structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1)$>$}
+\subsubsection*{template$<$class T1$>$struct Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+
+Helper structure to determine the type of scting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_aee11156a089e68658dbf646cee662dd9}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_ae8d44ac1b67db98010ff993be194c629}{type}\label{namespaceIceBRG_1_1tuples_aee11156a089e68658dbf646cee662dd9}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_ae8d44ac1b67db98010ff993be194c629}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper}{sct\+\_\+typeof\+\_\+helper}$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_aee11156a089e68658dbf646cee662dd9}{T1d}()\label{namespaceIceBRG_1_1tuples_ae8d44ac1b67db98010ff993be194c629}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1sct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:sct\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::sct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a5bdafd92e206713e6c9c567192e3be0b}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a5bdafd92e206713e6c9c567192e3be0b}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1asct__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:asct\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class T1, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of scting a tuple. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}\label{structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:asct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1)$>$}
+\subsubsection*{template$<$class T1$>$struct Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+
+Helper structure to determine the type of scting two values or tuples together. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a727efa761d29eff947b1da46427e5bf8}{}typedef decay$<$ T1 $>$\+::\hyperlink{namespaceIceBRG_1_1tuples_a1d496189651c53e9d2271ac49e503c2a}{type}\label{namespaceIceBRG_1_1tuples_a727efa761d29eff947b1da46427e5bf8}
+&
+T1d&
+\\
+\hline
+
+\hypertarget{namespaceIceBRG_1_1tuples_a1d496189651c53e9d2271ac49e503c2a}{}get\+\_\+head())), typename \\*
+\hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper}{asct\+\_\+typeof\+\_\+helper}$<$ decltype(\hyperlink{namespaceIceBRG_1_1tuples_a727efa761d29eff947b1da46427e5bf8}{T1d}()\label{namespaceIceBRG_1_1tuples_a1d496189651c53e9d2271ac49e503c2a}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1asct__typeof__helper_3_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:asct\+\_\+typeof\+\_\+helper$<$ boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$$>$struct Ice\+B\+R\+G\+::tuples\+::asct\+\_\+typeof\+\_\+helper$<$ boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a9a6e4f934d283ccdc51be79f48c96f08}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a9a6e4f934d283ccdc51be79f48c96f08}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1unary__rand__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:unary\+\_\+rand\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class f, class T1, class Enable1 = void$>$struct Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, Enable1 $>$}
+
+Helper structure to determine the type of generating a random tuple from a function. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$class f$>$struct Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a797e7251aa26c898d15325e9892931f5}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a797e7251aa26c898d15325e9892931f5}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper@{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper}}\label{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:binary\+\_\+rand\+\_\+typeof\+\_\+helper}
+\subsubsection*{template$<$class f, class T1, class T2, class Enable1 = void, class Enable2 = void$>$struct Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, T2, Enable1, Enable2 $>$}
+
+Helper structure to determine the type of generating a random tuple from a function. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. \index{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, T, void $>$@{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, T, void $>$}}\label{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_00_01T_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+:\+:tuples\+:\+:null\+\_\+type, T, void $>$}
+\subsubsection*{template$<$class f, typename T$>$struct Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, T, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a9fdd4714d412693da9a56de67fbb8faa}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a9fdd4714d412693da9a56de67fbb8faa}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01T_00_01boost_1_1tuples_1_1null__type_00_01void_01_4}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$class f, typename T$>$struct Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a3f8d9d33739ad79e775208cdf6ebc2eb}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a3f8d9d33739ad79e775208cdf6ebc2eb}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}
+\index{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$@{Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}}\label{structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_5c02c427c306686c3b1206a9b133bf57}
+\hypertarget{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1binary__rand__typeof__helper_3_01f_00_01boost_1_1tuples_1_1null__type_5c02c427c306686c3b1206a9b133bf57}{}
+\subsubsection{struct Ice\+B\+R\+G\+:\+:tuples\+:\+:binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+:\+:tuples\+:\+:null\+\_\+type, boost\+:\+:tuples\+:\+:null\+\_\+type, void $>$}
+\subsubsection*{template$<$class f$>$struct Ice\+B\+R\+G\+::tuples\+::binary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, boost\+::tuples\+::null\+\_\+type, boost\+::tuples\+::null\+\_\+type, void $>$}
+
+Null type overload to end recursion. \begin{DoxyFields}{Class Members}
+\hypertarget{namespaceIceBRG_1_1tuples_a0236af1786620d7501c4b5dea46375f3}{}typedef null\+\_\+type\label{namespaceIceBRG_1_1tuples_a0236af1786620d7501c4b5dea46375f3}
+&
+type&
+\\
+\hline
+
+\end{DoxyFields}

@@ -1,0 +1,173 @@
+\hypertarget{classIceBRG_1_1bootstrap}{}\section{Ice\+B\+R\+G\+:\+:bootstrap$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$ Class Template Reference}
+\label{classIceBRG_1_1bootstrap}\index{Ice\+B\+R\+G\+::bootstrap$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$@{Ice\+B\+R\+G\+::bootstrap$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$}}
+
+
+{\ttfamily \#include $<$resampling.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T\+\_\+vec \hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type}
+\item 
+typedef T\+\_\+func \hyperlink{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}{func\+\_\+type}
+\item 
+typedef Eigen\+::\+Array$<$ \hyperlink{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}{func\+\_\+output\+\_\+type}, 1, Eigen\+::\+Dynamic $>$ \hyperlink{classIceBRG_1_1bootstrap_ac0d254f146b5ea54905304d2e54d9cac}{func\+\_\+output\+\_\+array\+\_\+type}
+\item 
+typedef T\+\_\+gen \hyperlink{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}{gen\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1bootstrap_a4e5d75942f9e2387a4a767314ce684b4}{bootstrap} (const T\+\_\+vec \&data, const T\+\_\+func \&callback=\mbox{[}$\,$\mbox{]}(const \hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type} \&vec)\{return vec.\+mean();\}, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&num\+\_\+resamples=\+\_\+default\+\_\+num\+\_\+resamples\+\_\+, \hyperlink{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}{gen\+\_\+type} \&gen=\hyperlink{namespaceIceBRG_a43349d2fe56e49b46f2da45c2472137d}{rng})
+\item 
+\hyperlink{classIceBRG_1_1bootstrap_a9daa28326739a0874d53ad146cc6f5b2}{bootstrap} ()
+\item 
+const \hyperlink{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}{func\+\_\+type} \& \hyperlink{classIceBRG_1_1bootstrap_adce1acf32ab05d025eafb64b51796cec}{get\+\_\+callback} () const 
+\item 
+void \hyperlink{classIceBRG_1_1bootstrap_a9fd244b68f983b537704ec5e470cf356}{set\+\_\+callback} (const \hyperlink{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}{func\+\_\+type} \&callback)
+\item 
+const \hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type} \& \hyperlink{classIceBRG_1_1bootstrap_aead38346ac8b76ef969beddd03ec02d4}{get\+\_\+data} () const 
+\item 
+void \hyperlink{classIceBRG_1_1bootstrap_ad508062011d50b90b0111fc898036a00}{set\+\_\+data} (const \hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type} \&data)
+\item 
+\hyperlink{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}{gen\+\_\+type} \& \hyperlink{classIceBRG_1_1bootstrap_a3dfbbadb5553f020cfe0cd03e682a799}{get\+\_\+gen} () const 
+\item 
+void \hyperlink{classIceBRG_1_1bootstrap_a289afcca28870c8871576f78483de140}{set\+\_\+gen} (\hyperlink{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}{gen\+\_\+type} \&gen)
+\item 
+const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \& \hyperlink{classIceBRG_1_1bootstrap_a5e6f851ead11399fe933121a41a537bd}{get\+\_\+num\+\_\+resamples} () const  noexcept
+\item 
+void \hyperlink{classIceBRG_1_1bootstrap_afb9fc871c2a47bcb87de5bdf403b8bf6}{set\+\_\+num\+\_\+resamples} (const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&num\+\_\+resamples)
+\item 
+\hyperlink{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}{func\+\_\+output\+\_\+type} \hyperlink{classIceBRG_1_1bootstrap_ad708a2b89ef927ea06abfc2393b73f49}{get\+\_\+mean} ()
+\item 
+\hyperlink{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}{func\+\_\+output\+\_\+type} \hyperlink{classIceBRG_1_1bootstrap_aecec773649e47e5991621fa3a8f24dc3}{get\+\_\+std} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+decltype(\hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type}()\mbox{[}0\mbox{]}) typedef \hyperlink{classIceBRG_1_1bootstrap_a484f51dd78ae0dffeb18ef22bfdc4c6f}{value\+\_\+type}
+\item 
+decltype(\hyperlink{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}{func\+\_\+type}(\hyperlink{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{array\+\_\+type}())) typedef \hyperlink{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}{func\+\_\+output\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!array\+\_\+type@{array\+\_\+type}}
+\index{array\+\_\+type@{array\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{array\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ typedef T\+\_\+vec {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf array\+\_\+type}}\label{classIceBRG_1_1bootstrap_ad055f31f4e3e35b1cb99ea2f846f2f91}
+\hypertarget{classIceBRG_1_1bootstrap_ac0d254f146b5ea54905304d2e54d9cac}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!func\+\_\+output\+\_\+array\+\_\+type@{func\+\_\+output\+\_\+array\+\_\+type}}
+\index{func\+\_\+output\+\_\+array\+\_\+type@{func\+\_\+output\+\_\+array\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{func\+\_\+output\+\_\+array\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ typedef Eigen\+::\+Array$<${\bf func\+\_\+output\+\_\+type},1,Eigen\+::\+Dynamic$>$ {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf func\+\_\+output\+\_\+array\+\_\+type}}\label{classIceBRG_1_1bootstrap_ac0d254f146b5ea54905304d2e54d9cac}
+\hypertarget{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!func\+\_\+type@{func\+\_\+type}}
+\index{func\+\_\+type@{func\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{func\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ typedef T\+\_\+func {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf func\+\_\+type}}\label{classIceBRG_1_1bootstrap_a4031940b86921fbeb3db1d05a823c7e7}
+\hypertarget{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!gen\+\_\+type@{gen\+\_\+type}}
+\index{gen\+\_\+type@{gen\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{gen\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ typedef T\+\_\+gen {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf gen\+\_\+type}}\label{classIceBRG_1_1bootstrap_a020ba191b3581f1896c0f4b968f7c5b6}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1bootstrap_a4e5d75942f9e2387a4a767314ce684b4}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!bootstrap@{bootstrap}}
+\index{bootstrap@{bootstrap}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{bootstrap(const T\+\_\+vec \&data, const T\+\_\+func \&callback=[](const array\+\_\+type \&vec)\lcurly{}return vec.\+mean();\rcurly{}, const int\+\_\+type \&num\+\_\+resamples=\+\_\+default\+\_\+num\+\_\+resamples\+\_\+, gen\+\_\+type \&gen=rng)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf bootstrap} (
+\begin{DoxyParamCaption}
+\item[{const T\+\_\+vec \&}]{data, }
+\item[{const T\+\_\+func \&}]{callback = {\ttfamily \mbox{[}\mbox{]}~(const~{\bf array\+\_\+type}~\&~vec)~\{return~vec.mean();\}}, }
+\item[{const {\bf int\+\_\+type} \&}]{num\+\_\+resamples = {\ttfamily \+\_\+default\+\_\+num\+\_\+resamples\+\_\+}, }
+\item[{{\bf gen\+\_\+type} \&}]{gen = {\ttfamily {\bf rng}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_a4e5d75942f9e2387a4a767314ce684b4}
+\hypertarget{classIceBRG_1_1bootstrap_a9daa28326739a0874d53ad146cc6f5b2}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!bootstrap@{bootstrap}}
+\index{bootstrap@{bootstrap}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{bootstrap()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::{\bf bootstrap} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_a9daa28326739a0874d53ad146cc6f5b2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1bootstrap_adce1acf32ab05d025eafb64b51796cec}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+callback@{get\+\_\+callback}}
+\index{get\+\_\+callback@{get\+\_\+callback}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+callback() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ const {\bf func\+\_\+type}\& {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+callback (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_adce1acf32ab05d025eafb64b51796cec}
+\hypertarget{classIceBRG_1_1bootstrap_aead38346ac8b76ef969beddd03ec02d4}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+data@{get\+\_\+data}}
+\index{get\+\_\+data@{get\+\_\+data}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+data() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ const {\bf array\+\_\+type}\& {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_aead38346ac8b76ef969beddd03ec02d4}
+\hypertarget{classIceBRG_1_1bootstrap_a3dfbbadb5553f020cfe0cd03e682a799}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+gen@{get\+\_\+gen}}
+\index{get\+\_\+gen@{get\+\_\+gen}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+gen() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ {\bf gen\+\_\+type}\& {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+gen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_a3dfbbadb5553f020cfe0cd03e682a799}
+\hypertarget{classIceBRG_1_1bootstrap_ad708a2b89ef927ea06abfc2393b73f49}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+mean@{get\+\_\+mean}}
+\index{get\+\_\+mean@{get\+\_\+mean}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+mean()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ {\bf func\+\_\+output\+\_\+type} {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_ad708a2b89ef927ea06abfc2393b73f49}
+\hypertarget{classIceBRG_1_1bootstrap_a5e6f851ead11399fe933121a41a537bd}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+num\+\_\+resamples@{get\+\_\+num\+\_\+resamples}}
+\index{get\+\_\+num\+\_\+resamples@{get\+\_\+num\+\_\+resamples}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+num\+\_\+resamples() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ const {\bf int\+\_\+type}\& {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+num\+\_\+resamples (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1bootstrap_a5e6f851ead11399fe933121a41a537bd}
+\hypertarget{classIceBRG_1_1bootstrap_aecec773649e47e5991621fa3a8f24dc3}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!get\+\_\+std@{get\+\_\+std}}
+\index{get\+\_\+std@{get\+\_\+std}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{get\+\_\+std()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ {\bf func\+\_\+output\+\_\+type} {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::get\+\_\+std (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_aecec773649e47e5991621fa3a8f24dc3}
+\hypertarget{classIceBRG_1_1bootstrap_a9fd244b68f983b537704ec5e470cf356}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!set\+\_\+callback@{set\+\_\+callback}}
+\index{set\+\_\+callback@{set\+\_\+callback}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{set\+\_\+callback(const func\+\_\+type \&callback)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ void {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::set\+\_\+callback (
+\begin{DoxyParamCaption}
+\item[{const {\bf func\+\_\+type} \&}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_a9fd244b68f983b537704ec5e470cf356}
+\hypertarget{classIceBRG_1_1bootstrap_ad508062011d50b90b0111fc898036a00}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!set\+\_\+data@{set\+\_\+data}}
+\index{set\+\_\+data@{set\+\_\+data}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{set\+\_\+data(const array\+\_\+type \&data)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ void {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::set\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{const {\bf array\+\_\+type} \&}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_ad508062011d50b90b0111fc898036a00}
+\hypertarget{classIceBRG_1_1bootstrap_a289afcca28870c8871576f78483de140}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!set\+\_\+gen@{set\+\_\+gen}}
+\index{set\+\_\+gen@{set\+\_\+gen}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{set\+\_\+gen(gen\+\_\+type \&gen)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ void {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::set\+\_\+gen (
+\begin{DoxyParamCaption}
+\item[{{\bf gen\+\_\+type} \&}]{gen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_a289afcca28870c8871576f78483de140}
+\hypertarget{classIceBRG_1_1bootstrap_afb9fc871c2a47bcb87de5bdf403b8bf6}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!set\+\_\+num\+\_\+resamples@{set\+\_\+num\+\_\+resamples}}
+\index{set\+\_\+num\+\_\+resamples@{set\+\_\+num\+\_\+resamples}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{set\+\_\+num\+\_\+resamples(const int\+\_\+type \&num\+\_\+resamples)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ void {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::set\+\_\+num\+\_\+resamples (
+\begin{DoxyParamCaption}
+\item[{const {\bf int\+\_\+type} \&}]{num\+\_\+resamples}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1bootstrap_afb9fc871c2a47bcb87de5bdf403b8bf6}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!func\+\_\+output\+\_\+type@{func\+\_\+output\+\_\+type}}
+\index{func\+\_\+output\+\_\+type@{func\+\_\+output\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{func\+\_\+output\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ decltype({\bf func\+\_\+type}({\bf array\+\_\+type}())) typedef {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::func\+\_\+output\+\_\+type}\label{classIceBRG_1_1bootstrap_a1639d76d292b98b3e4369a944d7bc13b}
+\hypertarget{classIceBRG_1_1bootstrap_a484f51dd78ae0dffeb18ef22bfdc4c6f}{}\index{Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::bootstrap@{Ice\+B\+R\+G\+::bootstrap}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+vec , typename T\+\_\+func  = std\+::function$<$decltype(\+T\+\_\+vec().\+mean())(const T\+\_\+vec \&)$>$, typename T\+\_\+gen  = decltype(rng)$>$ decltype({\bf array\+\_\+type}()\mbox{[}0\mbox{]}) typedef {\bf Ice\+B\+R\+G\+::bootstrap}$<$ T\+\_\+vec, T\+\_\+func, T\+\_\+gen $>$\+::value\+\_\+type}\label{classIceBRG_1_1bootstrap_a484f51dd78ae0dffeb18ef22bfdc4c6f}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/statistics/\hyperlink{resampling_8hpp}{resampling.\+hpp}\end{DoxyCompactItemize}

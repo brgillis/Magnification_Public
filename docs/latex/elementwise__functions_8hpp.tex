@@ -1,0 +1,193 @@
+\hypertarget{elementwise__functions_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/vector/elementwise\+\_\+functions.hpp File Reference}
+\label{elementwise__functions_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/vector/elementwise\+\_\+functions.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/vector/elementwise\+\_\+functions.\+hpp}}
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/misc\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/safe\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/utility.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\T \hyperlink{namespaceIceBRG_a64188b3b7eac4a6e5a45251eeeae4b29}{Ice\+B\+R\+G\+::apply} (const f \&func, T v1)
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_afdee92c19500126c2295f1a37fa56b41}{Ice\+B\+R\+G\+::apply} (const f \&func, T1 v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_a7e4010db72267b0919f514be5eaf68c0}{Ice\+B\+R\+G\+::apply} (const f \&func, const T1 \&v1, T2 v2)
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a171e97e6b0cf6304cdec912e18c091fa}{Ice\+B\+R\+G\+::apply} (const f \&func, const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T , typename f , typename Tout  = typename std\+::decay$<$\+T$>$\+::type, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+Tout) $>$ }\\Tout \hyperlink{namespaceIceBRG_a36220fb059d97255a863e2ddb0af3a4c}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename Tout  = T, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+Tout) $>$ }\\Tout \hyperlink{namespaceIceBRG_a86cdfc54cc08e751c0d980837ff98faa}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&size)
+\item 
+{\footnotesize template$<$typename T , typename f , typename T1 , typename T2 , typename Tout  = T, B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+Tout) $>$ }\\Tout \hyperlink{namespaceIceBRG_a71010e4416bd2ab45ac00157ade30a7d}{Ice\+B\+R\+G\+::rand\+\_\+container\+\_\+of\+\_\+size} (const f func, const T1 \&v1, const T2 \&v2, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&size)
+\item 
+{\footnotesize template$<$typename f , typename T1 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T1) $>$ }\\auto \hyperlink{namespaceIceBRG_a97383a4ef2048a1b8cfbd8ea0b9e0b47}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1) -\/$>$ std\+::vector$<$ decltype(func(v1\mbox{[}0\mbox{]}))$>$
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\auto \hyperlink{namespaceIceBRG_a7e2e890c5c5bc5592fdd0ff468324736}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1, const T2 \&v2) -\/$>$ std\+::vector$<$ decltype(func(v1\mbox{[}0\mbox{]}, v2\mbox{[}0\mbox{]}))$>$
+\item 
+{\footnotesize template$<$typename f , typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T2) $>$ }\\auto \hyperlink{namespaceIceBRG_a34423cb5cecffc2d405e61dda0dc4853}{Ice\+B\+R\+G\+::rand\+\_\+container} (const f func, const T1 \&v1, const T2 \&v2) -\/$>$ Eigen\+::\+Array$<$ decltype(func(v1\mbox{[}0\mbox{]}, v2\mbox{[}0\mbox{]})), Eigen\+::\+Dynamic, 1 $>$
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\auto \hyperlink{namespaceIceBRG_a16015bc60c44bf4614b947eeb2b448b1}{Ice\+B\+R\+G\+::add} (const T1 \&v1, const T2 \&v2) -\/$>$ decltype(v1+v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\auto \hyperlink{namespaceIceBRG_aa812d92977bfa46933919cc9d716a827}{Ice\+B\+R\+G\+::subtract} (const T1 \&v1, const T2 \&v2) -\/$>$ decltype(v1-\/v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\auto \hyperlink{namespaceIceBRG_ab46bb72846a72b0272839f8565c67dd2}{Ice\+B\+R\+G\+::multiply} (const T1 \&v1, const T2 \&v2) -\/$>$ decltype(v1 $\ast$v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\auto \hyperlink{namespaceIceBRG_a09e8042c49c61e8ed5afe0c5abe33560}{Ice\+B\+R\+G\+::divide} (const T1 \&v1, const T2 \&v2) -\/$>$ decltype(v1/v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a608b4383d87426c6c580589479142d6f}{Ice\+B\+R\+G\+::pow} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_abfc85e29061e58044f32d7164394ab1c}{Ice\+B\+R\+G\+::pow} (T1 v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_aa42fcad652ea8f5eb852b980db53703e}{Ice\+B\+R\+G\+::pow} (const T1 \&v1, T2 v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a103f2beeb1b3437601f364189bfe96c5}{Ice\+B\+R\+G\+::runtime\+\_\+ipow} (T1 v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a35bc45172b1ae3aa1a1eb3bdc38c66ed}{Ice\+B\+R\+G\+::runtime\+\_\+ipow} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a78af4ecc72d253d05473d3d7c2de59d1}{Ice\+B\+R\+G\+::safe\+\_\+pow} (T1 v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_a2ce745aa5aae2b2eb0b9c11401b18e53}{Ice\+B\+R\+G\+::safe\+\_\+pow} (const T1 \&v1, T2 v2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a60b6b976c835b6e3bc8a6861f775cc64}{Ice\+B\+R\+G\+::max} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a49fc08c69c7c1410646ae71b65e8d7d9}{Ice\+B\+R\+G\+::max} (T1 \&\&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a3f712c88cb13dee58c517feadd58d56f}{Ice\+B\+R\+G\+::max} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_aa7c1dd695b32d75f8960eb79b6bf3f47}{Ice\+B\+R\+G\+::max} (T1 \&\&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T2) , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T2 $>$\+::value, char $>$\+::type  = 0$>$ }\\T1 \hyperlink{namespaceIceBRG_a7b06eec2559936490f7664b4e7fd0b1b}{Ice\+B\+R\+G\+::max} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T2) , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T2 $>$\+::value, char $>$\+::type  = 0$>$ }\\T1 \hyperlink{namespaceIceBRG_a68c20de7810cc8fe09874eea809d58e8}{Ice\+B\+R\+G\+::max} (T1 \&\&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_a771d86608bc48f7633dea86d345e85e7}{Ice\+B\+R\+G\+::max} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_a064fa851b24be3a0f16df5fd7e778307}{Ice\+B\+R\+G\+::max} (const T1 \&v1, T2 \&\&v2)
+\item 
+{\footnotesize template$<$class T1 , class T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a12b9b6f4525e902edd948303a8f45987}{Ice\+B\+R\+G\+::min} (const T1 \&t1, const T2 \&t2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(\+T2) $>$ }\\T1 \hyperlink{namespaceIceBRG_a18c1da312ebca1c790a1cadc488e5ef0}{Ice\+B\+R\+G\+::min} (T1 \&\&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T2) , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T2 $>$\+::value, char $>$\+::type  = 0$>$ }\\T1 \hyperlink{namespaceIceBRG_a5aeeb131d380c8e7fa1e0ad902a0b235}{Ice\+B\+R\+G\+::min} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T2) , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T2 $>$\+::value, char $>$\+::type  = 0$>$ }\\T1 \hyperlink{namespaceIceBRG_aa02603bb006552a228cc8bb4c025d69c}{Ice\+B\+R\+G\+::min} (T1 \&\&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_a19ebc73d10b40c1b70ae7421723cb82f}{Ice\+B\+R\+G\+::min} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T1) , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\T2 \hyperlink{namespaceIceBRG_af73f1aa40a37b83ae2ba115e8c46d4ac}{Ice\+B\+R\+G\+::min} (const T1 \&v1, T2 \&\&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , typename T3 , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container$<$ T1 $>$\+::value$\vert$$\vert$\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T1 $>$\+::value$\vert$$\vert$\+Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container$<$ T2 $>$\+::value$\vert$$\vert$\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T2 $>$\+::value$\vert$$\vert$\+Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container$<$ T3 $>$\+::value$\vert$$\vert$\+Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container$<$ T3 $>$\+::value, char $>$\+::type  = 0$>$ }\\T2 \hyperlink{namespaceIceBRG_afb9d707ea1f160da7f32d1005ccff199}{Ice\+B\+R\+G\+::bound} (T1 \&\&lower\+\_\+bound, T2 \&\&a, T3 \&\&upper\+\_\+bound)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a840c2bf73d4fe2f99006a0057b58e709}{Ice\+B\+R\+G\+::negate} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a03db4c808b800d589c05437ff083f7da}{Ice\+B\+R\+G\+::negate} (const T \&v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a9935318c04d99a09b99e4b87d88ba856}{Ice\+B\+R\+G\+::abs} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a79dbde230197b096e9c185f82de1c4a6}{Ice\+B\+R\+G\+::sqrt} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a29934e2c9bad92a531fb21b4067cd997}{Ice\+B\+R\+G\+::safe\+\_\+sqrt} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_aeb3fa61993d04b9be3cff2c32cadab13}{Ice\+B\+R\+G\+::exp} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a7b12afefe78507c9db209418443b3ead}{Ice\+B\+R\+G\+::log} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a97aa4e94a7b6218fcb6f9689e1f6b557}{Ice\+B\+R\+G\+::square} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a2cdc8520f62b9c88cfcd50132fd80ee4}{Ice\+B\+R\+G\+::cube} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_af54e101d5c62b8c91bfb607c86335ac8}{Ice\+B\+R\+G\+::quart} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_ab6a58902bc117f9f8bf7ba9f8211a4bb}{Ice\+B\+R\+G\+::inverse} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a49bbe2d1cefc03dfb98f65daa1ebf19b}{Ice\+B\+R\+G\+::inv\+\_\+square} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a6ffc82b0f391872a4a42bfa5a2fdb843}{Ice\+B\+R\+G\+::inv\+\_\+cube} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_aa9817804e41ecd000dfbd83394b93d27}{Ice\+B\+R\+G\+::inv\+\_\+quart} (T v)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T) $>$ }\\T \hyperlink{namespaceIceBRG_a9a89fcacc3ccd94858bbacb8136e0c4a}{Ice\+B\+R\+G\+::safe\+\_\+d} (T v)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_ab21dd9318b49555455e55da08556189c}{Ice\+B\+R\+G\+::add\+\_\+equal} (T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a95be95920f4fb62f65b451929aba41e2}{Ice\+B\+R\+G\+::add\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_aa2b7769fa098ff13b1726b741321ffe9}{Ice\+B\+R\+G\+::subtract\+\_\+equal} (T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a9a5378e1a8aa51111c3e838a12fc119a}{Ice\+B\+R\+G\+::subtract\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a94f7d3a6e835b43a374e8f0f6f3b89ea}{Ice\+B\+R\+G\+::multiply\+\_\+equal} (T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_aa66c71e85623b0be9cd03d3a295947f7}{Ice\+B\+R\+G\+::multiply\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a5106c5eed809484b3622b6e07e31a660}{Ice\+B\+R\+G\+::divide\+\_\+equal} (T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(\+T1, T2) $>$ }\\T1 \& \hyperlink{namespaceIceBRG_a9130da5983c859a212eea03b6c692b8b}{Ice\+B\+R\+G\+::divide\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+const std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a6b8e5b6feec061a24ee1e3855b3835a9}{Ice\+B\+R\+G\+::v\+\_\+not} (std\+::vector$<$ bool $>$ v)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_adab1f0f0c46bcb24d623ee681bd3a053}{Ice\+B\+R\+G\+::equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a1ebec5772373de03ee0343f31cf87ca2}{Ice\+B\+R\+G\+::equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_ad45410c31d75fe373de350af8cb4dae1}{Ice\+B\+R\+G\+::equal} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_ac85bf4dc1998925b4bb559f533f7e9a4}{Ice\+B\+R\+G\+::equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_aa23cf661d6102c580121d8861394143d}{Ice\+B\+R\+G\+::not\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_ae2a472a378de04c88c60a122b81aec55}{Ice\+B\+R\+G\+::not\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a4ae596505d9c9552fe386013ddeb5613}{Ice\+B\+R\+G\+::not\+\_\+equal} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_ad207b5d4fe8f8273639819f70a57037a}{Ice\+B\+R\+G\+::not\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a85cdda81b3b5484b0ee9f05854d664be}{Ice\+B\+R\+G\+::less\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_ad9a6b93cf1e50003bcaf98d4ef6f537a}{Ice\+B\+R\+G\+::less\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a56d63b814bffc9554df6af62e49826d8}{Ice\+B\+R\+G\+::less\+\_\+than} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_a68bb47b54ce71cba64e8994fe85dfc24}{Ice\+B\+R\+G\+::less\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a667ec2c1856e47fd50618cb76bc7d788}{Ice\+B\+R\+G\+::greater\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a0048345d5175e50882e7785f6b9c66ac}{Ice\+B\+R\+G\+::greater\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a59cb42b81ab02e1d00efad0d798a3e2d}{Ice\+B\+R\+G\+::greater\+\_\+than} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_a1d302939f700d169e47b7224d5280063}{Ice\+B\+R\+G\+::greater\+\_\+than} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_ad5d8afb799d3614d320ec3dce458551e}{Ice\+B\+R\+G\+::less\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_aac59a44862c5669775ff2eb2ee78c92e}{Ice\+B\+R\+G\+::less\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_abf00adcaf63fe850211a15ed53809400}{Ice\+B\+R\+G\+::less\+\_\+than\+\_\+or\+\_\+equal} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_a12020ef392d57258d20eea92c0033a74}{Ice\+B\+R\+G\+::less\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a46e9e5afa2077df1993dbcdc06af32b6}{Ice\+B\+R\+G\+::greater\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(\+T2) $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a754e0fd68894a6914c0b069594a45e90}{Ice\+B\+R\+G\+::greater\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\std\+::vector$<$ bool $>$ \hyperlink{namespaceIceBRG_a4a9541ae4d7ace0ccf0dac1df41ea0e7}{Ice\+B\+R\+G\+::greater\+\_\+than\+\_\+or\+\_\+equal} (const T2 \&v1, const T1 \&v2)
+\item 
+{\footnotesize template$<$typename T1 , typename T2 $>$ }\\bool \hyperlink{namespaceIceBRG_ae127b6cb8c91e296de8533f11d67592a}{Ice\+B\+R\+G\+::greater\+\_\+than\+\_\+or\+\_\+equal} (const T1 \&v1, const T2 \&v2)
+\item 
+{\footnotesize template$<$typename T $>$ }\\const T \hyperlink{namespaceIceBRG_a984be4397fcd5e074b7868a630ea1726}{Ice\+B\+R\+G\+::v\+\_\+not} (T v)
+\item 
+const bool \hyperlink{namespaceIceBRG_a23b9cbe4ecc6be9a47f62631832ca8b1}{Ice\+B\+R\+G\+::v\+\_\+not} (const bool v)
+\end{DoxyCompactItemize}

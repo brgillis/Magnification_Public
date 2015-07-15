@@ -1,0 +1,36 @@
+\hypertarget{random__functions_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/random/random\+\_\+functions.hpp File Reference}
+\label{random__functions_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/random/random\+\_\+functions.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/random/random\+\_\+functions.\+hpp}}
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$random$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/misc\+\_\+math.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T  = int\+\_\+type, typename T\+\_\+in  = int\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_ab6adcd84220e59c9d57ea09c717e0632}{Ice\+B\+R\+G\+::irand} (T\+\_\+in \&\&min, T\+\_\+in \&\&max, T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a3dc62dbc81a4973ecc1038db665b07f0}{Ice\+B\+R\+G\+::drand} (T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+in  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a78b425be2a3d71234c706b330b71acbc}{Ice\+B\+R\+G\+::drand} (T\+\_\+in \&\&min, T\+\_\+in \&\&max, T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_ab4693120c7a7cdf4e14f7524ab723ec0}{Ice\+B\+R\+G\+::\+Gaus\+\_\+rand} (T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+in  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a1e02559a05bc53757d08f048a3fb018f}{Ice\+B\+R\+G\+::\+Gaus\+\_\+rand} (T\+\_\+in \&\&mean, T\+\_\+in \&\&stddev=1.\+0, T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a855ebb82510a9cbbec19be3ce5b160c0}{Ice\+B\+R\+G\+::log10\+Gaus\+\_\+rand} (T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+in  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a1bc93f595f23f7e31e7a2b8a721a9d64}{Ice\+B\+R\+G\+::log10\+Gaus\+\_\+rand} (T\+\_\+in \&\&mean, T\+\_\+in \&\&stddev=1., T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_ad5beaf7f31c4ecdbabf5c1f1fa0f7f6b}{Ice\+B\+R\+G\+::\+Rayleigh\+\_\+rand} (T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = flt\+\_\+type, typename T\+\_\+in  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a9fab2dcec2635a4e59ba071c32da779d}{Ice\+B\+R\+G\+::\+Rayleigh\+\_\+rand} (T\+\_\+in \&\&sigma, T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = int\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a1c9e722659890cce624c4ce86284b114}{Ice\+B\+R\+G\+::\+Pois\+\_\+rand} (T\+\_\+gen \&gen=rng)
+\item 
+{\footnotesize template$<$typename T  = int\+\_\+type, typename T\+\_\+in  = flt\+\_\+type, typename T\+\_\+gen  = decltype(rng)$>$ }\\T \hyperlink{namespaceIceBRG_a37cc4f8621b4da03b565610c6849aa25}{Ice\+B\+R\+G\+::\+Pois\+\_\+rand} (T\+\_\+in \&\&lambda=1., T\+\_\+gen \&gen=rng)
+\end{DoxyCompactItemize}

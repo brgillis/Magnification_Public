@@ -1,0 +1,157 @@
+\hypertarget{lensing__tNFW__caches_8cpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+lensing/lensing\+\_\+t\+N\+F\+W\+\_\+caches.cpp File Reference}
+\label{lensing__tNFW__caches_8cpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+lensing/lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+lensing/lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/cache/cache\+\_\+4d.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+lensing/lensing\+\_\+t\+N\+F\+W\+\_\+profile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+physics/astro.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/units/units.\+hpp\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_a253db235d6abc0866028653240ad818f}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+sig\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/300, 0.\+1, 1.\+5, 0.\+1, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/300)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_ab45cbb524075d2c9d70e6f760d50431b}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+offset\+\_\+sig\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/1000, std\+::log(0.\+01 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+01))/100)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_add6b5654f70bd9eaf522de22464302c3}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+group\+\_\+sig\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e15 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/100, 2.\+5, 10., 2.\+5)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_ad259b4a1a53e50d1df8f23666219ac2b}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+shifted\+\_\+sig\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/100, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/100)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_a0dea51a51e7e3d468a1032b257a68b28}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+\+Sigma\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/300, 0.\+1, 1.\+5, 0.\+1, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/300)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_a8c0541d70559630907364834e5445d61}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+offset\+\_\+\+Sigma\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/1000, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+01))/100)
+\item 
+\hyperlink{lensing__tNFW__caches_8cpp_a98af5c956241ebcce6cec43ba1d31c74}{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S} (t\+N\+F\+W\+\_\+group\+\_\+\+Sigma\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/200, 2.\+5, 5.\+0, 2.\+5)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lensing__tNFW__caches_8cpp_a253db235d6abc0866028653240ad818f}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+sig\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/300, 0.\+1, 1.\+5, 0.\+1, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/300)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+sig\+\_\+cache}]{, }
+\item[{std\+::}]{log1e7 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e7))/}]{300, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{1, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log2000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(2000)-\/std\+::log(0.\+1))/}]{300}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_a253db235d6abc0866028653240ad818f}
+\hypertarget{lensing__tNFW__caches_8cpp_ad259b4a1a53e50d1df8f23666219ac2b}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+shifted\+\_\+sig\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/100, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/100)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+shifted\+\_\+sig\+\_\+cache}]{, }
+\item[{std\+::}]{log1e7 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e7))/}]{100, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{4, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log2000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(2000)-\/std\+::log(0.\+1))/}]{100}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_ad259b4a1a53e50d1df8f23666219ac2b}
+\hypertarget{lensing__tNFW__caches_8cpp_a0dea51a51e7e3d468a1032b257a68b28}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+\+Sigma\+\_\+cache, std\+::log(1e7 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e7))/300, 0.\+1, 1.\+5, 0.\+1, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/300)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+3\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+\+Sigma\+\_\+cache}]{, }
+\item[{std\+::}]{log1e7 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e7))/}]{300, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{1, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log2000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(2000)-\/std\+::log(0.\+1))/}]{300}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_a0dea51a51e7e3d468a1032b257a68b28}
+\hypertarget{lensing__tNFW__caches_8cpp_ab45cbb524075d2c9d70e6f760d50431b}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+offset\+\_\+sig\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/1000, std\+::log(0.\+01 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+01))/100)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+offset\+\_\+sig\+\_\+cache}]{, }
+\item[{std\+::}]{log1e13 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e13))/}]{30, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{4, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log4000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(4000)-\/std\+::log(0.\+1))/}]{1000, }
+\item[{std\+::}]{log0.\+01 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log2000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(2000)-\/std\+::log(0.\+01))/}]{100}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_ab45cbb524075d2c9d70e6f760d50431b}
+\hypertarget{lensing__tNFW__caches_8cpp_add6b5654f70bd9eaf522de22464302c3}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+group\+\_\+sig\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e15 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(2000 $\ast$unitconv\+::kpctom),(std\+::log(2000)-\/std\+::log(0.\+1))/100, 2.\+5, 10., 2.\+5)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+group\+\_\+sig\+\_\+cache}]{, }
+\item[{std\+::}]{log1e13 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e15 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e13))/}]{30, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{4, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log2000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(2000)-\/std\+::log(0.\+1))/}]{100, }
+\item[{2.}]{5, }
+\item[{10.}]{, }
+\item[{2.}]{5}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_add6b5654f70bd9eaf522de22464302c3}
+\hypertarget{lensing__tNFW__caches_8cpp_a8c0541d70559630907364834e5445d61}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+offset\+\_\+\+Sigma\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/1000, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+01))/100)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+offset\+\_\+\+Sigma\+\_\+cache}]{, }
+\item[{std\+::}]{log1e13 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e13))/}]{30, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{4, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log4000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(4000)-\/std\+::log(0.\+1))/}]{1000, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log4000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(4000)-\/std\+::log(0.\+01))/}]{100}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_a8c0541d70559630907364834e5445d61}
+\hypertarget{lensing__tNFW__caches_8cpp_a98af5c956241ebcce6cec43ba1d31c74}{}\index{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}!D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}}
+\index{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S@{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S}!lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp@{lensing\+\_\+t\+N\+F\+W\+\_\+caches.\+cpp}}
+\subsubsection[{D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S(t\+N\+F\+W\+\_\+group\+\_\+\+Sigma\+\_\+cache, std\+::log(1e13 $\ast$unitconv\+::\+Msuntokg), std\+::log(1e16 $\ast$unitconv\+::\+Msuntokg),(std\+::log(1e16)-\/std\+::log(1e13))/30, 0.\+1, 1.\+5, 0.\+4, std\+::log(0.\+1 $\ast$unitconv\+::kpctom), std\+::log(4000 $\ast$unitconv\+::kpctom),(std\+::log(4000)-\/std\+::log(0.\+1))/200, 2.\+5, 5.\+0, 2.\+5)}]{\setlength{\rightskip}{0pt plus 5cm}D\+E\+F\+I\+N\+E\+\_\+\+B\+R\+G\+\_\+\+C\+A\+C\+H\+E\+\_\+4\+D\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+V\+A\+R\+S (
+\begin{DoxyParamCaption}
+\item[{t\+N\+F\+W\+\_\+group\+\_\+\+Sigma\+\_\+cache}]{, }
+\item[{std\+::}]{log1e13 $\ast$unitconv\+::\+Msuntokg, }
+\item[{std\+::}]{log1e16 $\ast$unitconv\+::\+Msuntokg, }
+\item[{(std\+::log(1e16)-\/std\+::log(1e13))/}]{30, }
+\item[{0.}]{1, }
+\item[{1.}]{5, }
+\item[{0.}]{4, }
+\item[{std\+::}]{log0.\+1 $\ast$unitconv\+::kpctom, }
+\item[{std\+::}]{log4000 $\ast$unitconv\+::kpctom, }
+\item[{(std\+::log(4000)-\/std\+::log(0.\+1))/}]{200, }
+\item[{2.}]{5, }
+\item[{5.}]{0, }
+\item[{2.}]{5}
+\end{DoxyParamCaption}
+)}\label{lensing__tNFW__caches_8cpp_a98af5c956241ebcce6cec43ba1d31c74}

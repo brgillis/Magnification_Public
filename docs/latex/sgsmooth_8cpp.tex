@@ -1,0 +1,40 @@
+\hypertarget{sgsmooth_8cpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/sgsmooth.cpp File Reference}
+\label{sgsmooth_8cpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/sgsmooth.\+cpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/sgsmooth.\+cpp}}
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stddef.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/misc\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sgsmooth.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1sgsmooth_1_1float__mat}{Ice\+B\+R\+G\+::sgsmooth\+::float\+\_\+mat}
+\begin{DoxyCompactList}\small\item\em two dimensional floating point array \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\item 
+ \hyperlink{namespaceIceBRG_1_1sgsmooth}{Ice\+B\+R\+G\+::sgsmooth}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ size\+\_\+t $>$ \hyperlink{namespaceIceBRG_1_1sgsmooth_ad7ed0983e4da9c1babc83f2da0a17c51}{Ice\+B\+R\+G\+::sgsmooth\+::uint\+\_\+vect}
+\begin{DoxyCompactList}\small\item\em comfortable array of ints; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{Ice\+B\+R\+G\+::sgsmooth\+::permute} (float\+\_\+mat \&A, uint\+\_\+vect \&idx)
+\begin{DoxyCompactList}\small\item\em \hyperlink{namespaceIceBRG_1_1sgsmooth_a327eec08134fde8d831cdb8d5cc6ef41}{permute()} orders the rows of A to match the integers in the index array. \end{DoxyCompactList}\item 
+float\+\_\+mat \hyperlink{namespaceIceBRG_1_1sgsmooth_aa92e2446e9622897f99011b9e9f3b462}{Ice\+B\+R\+G\+::sgsmooth\+::operator$\ast$} (const float\+\_\+mat \&a, const float\+\_\+mat \&b)
+\begin{DoxyCompactList}\small\item\em matrix multiplication. \end{DoxyCompactList}\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \hyperlink{namespaceIceBRG_1_1sgsmooth_aec9a47f68e8ff4d230ef5ddfcaf0db53}{Ice\+B\+R\+G\+::sgsmooth\+::sg\+\_\+smooth} (const \hyperlink{lib_2IceBRG__main_2common_8h_ab7b04bb475996b18d7653bb03d72f2c6}{flt\+\_\+vector\+\_\+type} \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg)
+\begin{DoxyCompactList}\small\item\em savitzky golay smoothing. \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \hyperlink{namespaceIceBRG_1_1sgsmooth_aab6c3ca9cc4e41ba7474e14cc5b33d6e}{Ice\+B\+R\+G\+::sgsmooth\+::sg\+\_\+derivative} (const std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \&v, const size\+\_\+t \&width, const size\+\_\+t \&deg, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&h)
+\begin{DoxyCompactList}\small\item\em savitzky golay smoothed numerical derivative. \end{DoxyCompactList}\item 
+void \hyperlink{namespaceIceBRG_1_1sgsmooth_a37245b3b20825085d86d9d1fbe86e032}{Ice\+B\+R\+G\+::sgsmooth\+::sgs\+\_\+error} (const char $\ast$errmsg)
+\end{DoxyCompactItemize}

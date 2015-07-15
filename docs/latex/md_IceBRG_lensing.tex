@@ -1,0 +1,37 @@
+The Ice\+B\+R\+G\+\_\+lensing library contains functions and classes related to gravitational lensing. This library relies on functions and classes defined in the Ice\+B\+R\+G\+\_\+main and Ice\+B\+R\+G\+\_\+physics libraries, so those must be included and linked as well when this is used. The proper link order is \char`\"{}-\/l\+Ice\+B\+R\+G\+\_\+lensing -\/l\+Ice\+B\+R\+G\+\_\+physics
+-\/l\+Ice\+B\+R\+G\+\_\+main\char`\"{}.
+
+This section will go over various functions and classes available in the library, sorted by the files and folders they\textquotesingle{}re contained within.
+
+\subsection*{Miscellaneous}
+
+The header files discussed here reside in the root folder, \char`\"{}\+Ice\+B\+R\+G\+\_\+lensing\char`\"{}. They can be included by, for instance \char`\"{}\#include $<$\+Ice\+B\+R\+G\+\_\+lensing/pair\+\_\+binner.\+h$>$\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{source__obj_8hpp}{source\+\_\+obj.\+hpp} -\/ A base class for an object on the sky which has a measured shape
+\item \hyperlink{source__galaxy_8h}{source\+\_\+galaxy.\+h} -\/ A galaxy which also stores data on its shape
+\item \hyperlink{lens__source__pair_8h}{lens\+\_\+source\+\_\+pair.\+h} -\/ A class representing a pair of a lens object and a source object
+\item \hyperlink{pair__binner_8h}{pair\+\_\+binner.\+h} -\/ A class which sorts lens-\/source pairs into bins and measures the lensing signal
+\item \hyperlink{lensing__profile__extension_8hpp}{lensing\+\_\+profile\+\_\+extension.\+hpp} -\/ An extension for density profiles which adds in methods to determine the expected shear and magnification of background sources
+\item \hyperlink{lensing__tNFW__profile_8h}{lensing\+\_\+t\+N\+F\+W\+\_\+profile.\+h} -\/ A t\+N\+F\+W profile extended with lensing methods
+\item \hyperlink{two__halo__term__functions_8hpp}{two\+\_\+halo\+\_\+term\+\_\+functions.\+hpp} and \hyperlink{two__halo__term__methods_8hpp}{two\+\_\+halo\+\_\+term\+\_\+methods.\+hpp} -\/ Work in progress for calculations of the \char`\"{}two halo term.\char`\"{} Will not give sensible results in current state.
+\end{DoxyItemize}
+
+\subsection*{Folders}
+
+\subsubsection*{magnification}
+
+This folder contains functions and classes used for calculations of weak lensing magnification. Notable headers include\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{mag__global__values_8h}{mag\+\_\+global\+\_\+values.\+h} -\/ The definitions of global values used (eg. the magnitude bin limits)
+\item \hyperlink{mag__correlation__function__estimator_8h}{mag\+\_\+correlation\+\_\+function\+\_\+estimator.\+h} -\/ My implementation of the optimally-\/weighted correlation function estimator for measuring magnification
+\item \hyperlink{count__fitting__results_8hpp}{count\+\_\+fitting\+\_\+results.\+hpp}, Schechter\+\_\+like\+\_\+functor.\+h, and \hyperlink{expected__count__fit__loader_8h}{expected\+\_\+count\+\_\+fit\+\_\+loader.\+h} -\/ Headers which were used in attempts to model the source counts with an analytic function. Not used in current implementation.
+\item \hyperlink{mag__calibration__cache_8h}{mag\+\_\+calibration\+\_\+cache.\+h} and \hyperlink{mag__calibration__loader_8h}{mag\+\_\+calibration\+\_\+loader.\+h} -\/ Headers which were used to test if calibrating for numerical errors resulted in any bias reduction in the magnification signal. Not used in current implementation.
+\end{DoxyItemize}
+
+\subsubsection*{shifting}
+
+This folder contains functions and classes that I used to test whether the effect of translation due to lensing has a notable effect of the shear signal. This was planned for an earlier stage of this paper, and may be published in a future paper if it fits in well enough. Headers here aren\textquotesingle{}t expected to be of general interest. 

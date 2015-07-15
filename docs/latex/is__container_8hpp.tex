@@ -1,0 +1,378 @@
+\hypertarget{is__container_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.hpp File Reference}
+\label{is__container_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.\+hpp}}
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+boost\+\_\+tuple.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+eigen\+\_\+container.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+stl\+\_\+container.\+hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIceBRG_1_1is__container}{Ice\+B\+R\+G\+::is\+\_\+container$<$ T $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1is__container__or__boost__tuple}{Ice\+B\+R\+G\+::is\+\_\+container\+\_\+or\+\_\+boost\+\_\+tuple$<$ T $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1is__scalar}{Ice\+B\+R\+G\+::is\+\_\+scalar$<$ T $>$}
+\item 
+struct \hyperlink{structIceBRG_1_1is__scalar__or__eigen}{Ice\+B\+R\+G\+::is\+\_\+scalar\+\_\+or\+\_\+eigen$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{is__container_8hpp_a4789d14e902fdba341e73da2f72a95b4}{B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_a946d3e394ef6340dc1bc3e6d5dcf86e7}{B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_adfcf9668180fde17a20bfefb0cf7bef9}{B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_aadf7b9e5c92ad369260f90f8371549b0}{B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_a97747ddb093c4d57fceefd2a8af6930d}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__eigen__container}{Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_af1a2dd7dffce12361841f9af4d91b42c}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__scalar__or__eigen}{Ice\+B\+R\+G\+::is\+\_\+scalar\+\_\+or\+\_\+eigen}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_a0634ab4d5553c9db8d318d857cd388d1}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__container}{Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_a5525b9c5e2e0bfb2e0a5b31d7c1cb2de}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__stl__container}{Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_a08c2a293636021da26b9ed12f2974d7a}{B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_af160d54d5857a3cbf8e1319cd4e69977}{B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_a63d65e5647cd34661a486034f4c2e450}{B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_ace2fe37166174307b82ab1fa6777174e}{B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_af761db1f133b9b30518b2ef58538c05f}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__eigen__container}{Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_ae110f1672abb9edfbf5c20f1aaed1f8d}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__scalar__or__eigen}{Ice\+B\+R\+G\+::is\+\_\+scalar\+\_\+or\+\_\+eigen}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_a3c7df806a4050b5dbb4d41649e0eb93b}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__container}{Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_ada43da7289dfa86d5d557351e686f51f}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__stl__container}{Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_a31c5ccab1022e8eb9e8fdafe4c24c769}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}(T1)
+\item 
+\#define \hyperlink{is__container_8hpp_aa2ca0450580516a75c4310121f32b663}{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}(T1)~typename std\+::enable\+\_\+if$<$!\hyperlink{structIceBRG_1_1is__boost__tuple}{Ice\+B\+R\+G\+::is\+\_\+boost\+\_\+tuple}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_a7c97cb0ec8106f844610d5d579fc79f0}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__null__type}{Ice\+B\+R\+G\+::is\+\_\+null\+\_\+type}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_aad7081d76e9a151540be02855c214726}{B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_a106d23874f5c62a780a484314869df02}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}(T1)
+\item 
+\#define \hyperlink{is__container_8hpp_ae026f8a3847ad4e0e0bc7908164e9491}{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}(T1)~typename std\+::enable\+\_\+if$<$!\hyperlink{structIceBRG_1_1is__boost__tuple}{Ice\+B\+R\+G\+::is\+\_\+boost\+\_\+tuple}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_a3ef41ec0bfacbe7227b20551dd754008}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__null__type}{Ice\+B\+R\+G\+::is\+\_\+null\+\_\+type}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_a1186afc34107a4bda513fd76896c7aff}{B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}(T1,  T2)
+\item 
+\#define \hyperlink{is__container_8hpp_a8e873eba1553634bf02a20fddc6a439d}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__container}{Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_acb76384a4c15233f5e8c63ca3bf241eb}{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}(T1)
+\item 
+\#define \hyperlink{is__container_8hpp_ac88270a5f98d3ce9e7c1b53c0fba224f}{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__scalar}{Ice\+B\+R\+G\+::is\+\_\+scalar}$<$T1$>$\+::value$>$\+::type
+\item 
+\#define \hyperlink{is__container_8hpp_aa8dc9877780781f3ff7c46fc3bd3bbba}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__container}{Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0
+\item 
+\#define \hyperlink{is__container_8hpp_a904e60e31b3fe2cabb2f96a76fa62fd6}{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}(T1)
+\item 
+\#define \hyperlink{is__container_8hpp_a047b7ab420c6204f13b12407db45cc8c}{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}(T1)~typename std\+::enable\+\_\+if$<$\hyperlink{structIceBRG_1_1is__scalar}{Ice\+B\+R\+G\+::is\+\_\+scalar}$<$T1$>$\+::value,char$>$\+::type = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{is__container_8hpp_a08c2a293636021da26b9ed12f2974d7a}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a08c2a293636021da26b9ed12f2974d7a}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T1>::value && \(\backslash\)
+    IceBRG::is\_stl\_container<T2>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a1186afc34107a4bda513fd76896c7aff}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a1186afc34107a4bda513fd76896c7aff}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_null\_type<T1>::value || \(\backslash\)
+    IceBRG::is\_null\_type<T2>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_af160d54d5857a3cbf8e1319cd4e69977}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_af160d54d5857a3cbf8e1319cd4e69977}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T1>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T2>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_aa8dc9877780781f3ff7c46fc3bd3bbba}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_aa8dc9877780781f3ff7c46fc3bd3bbba}
+\hypertarget{is__container_8hpp_a904e60e31b3fe2cabb2f96a76fa62fd6}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a904e60e31b3fe2cabb2f96a76fa62fd6}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if< \(\backslash\)
+    IceBRG::is\_container\_or\_boost\_tuple<T1>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_af761db1f133b9b30518b2ef58538c05f}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_af761db1f133b9b30518b2ef58538c05f}
+\hypertarget{is__container_8hpp_ae110f1672abb9edfbf5c20f1aaed1f8d}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+scalar\+\_\+or\+\_\+eigen}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_ae110f1672abb9edfbf5c20f1aaed1f8d}
+\hypertarget{is__container_8hpp_a3ef41ec0bfacbe7227b20551dd754008}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+null\+\_\+type}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_a3ef41ec0bfacbe7227b20551dd754008}
+\hypertarget{is__container_8hpp_ada43da7289dfa86d5d557351e686f51f}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_ada43da7289dfa86d5d557351e686f51f}
+\hypertarget{is__container_8hpp_a3c7df806a4050b5dbb4d41649e0eb93b}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_a3c7df806a4050b5dbb4d41649e0eb93b}
+\hypertarget{is__container_8hpp_a106d23874f5c62a780a484314869df02}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a106d23874f5c62a780a484314869df02}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_boost\_tuple<T1>::value && \(\backslash\)
+    !\hyperlink{structIceBRG_1_1is__null__type}{IceBRG::is\_null\_type<T1>::value},\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_ace2fe37166174307b82ab1fa6777174e}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_ace2fe37166174307b82ab1fa6777174e}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_scalar\_or\_eigen<T1>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T2>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a047b7ab420c6204f13b12407db45cc8c}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+scalar}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_a047b7ab420c6204f13b12407db45cc8c}
+\hypertarget{is__container_8hpp_ae026f8a3847ad4e0e0bc7908164e9491}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<$!{\bf Ice\+B\+R\+G\+::is\+\_\+boost\+\_\+tuple}$<$T1$>$\+::value,char$>$\+::type = 0}\label{is__container_8hpp_ae026f8a3847ad4e0e0bc7908164e9491}
+\hypertarget{is__container_8hpp_a63d65e5647cd34661a486034f4c2e450}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+F\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a63d65e5647cd34661a486034f4c2e450}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T2>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T1>::value,\textcolor{keywordtype}{char}>::type = 0
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a4789d14e902fdba341e73da2f72a95b4}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+B\+O\+T\+H\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a4789d14e902fdba341e73da2f72a95b4}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T1>::value && \(\backslash\)
+    IceBRG::is\_stl\_container<T2>::value>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_aad7081d76e9a151540be02855c214726}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+E\+I\+T\+H\+E\+R\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_aad7081d76e9a151540be02855c214726}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_null\_type<T1>::value || \(\backslash\)
+    IceBRG::is\_null\_type<T2>::value>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a946d3e394ef6340dc1bc3e6d5dcf86e7}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+F\+I\+R\+S\+T\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a946d3e394ef6340dc1bc3e6d5dcf86e7}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T1>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T2>::value>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a8e873eba1553634bf02a20fddc6a439d}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_a8e873eba1553634bf02a20fddc6a439d}
+\hypertarget{is__container_8hpp_acb76384a4c15233f5e8c63ca3bf241eb}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R\+\_\+\+O\+R\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_acb76384a4c15233f5e8c63ca3bf241eb}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if< \(\backslash\)
+    IceBRG::is\_container\_or\_boost\_tuple<T1>::value>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_a97747ddb093c4d57fceefd2a8af6930d}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+eigen\+\_\+container}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_a97747ddb093c4d57fceefd2a8af6930d}
+\hypertarget{is__container_8hpp_af1a2dd7dffce12361841f9af4d91b42c}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+E\+I\+G\+E\+N\+\_\+\+O\+R\+\_\+\+S\+C\+A\+L\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+scalar\+\_\+or\+\_\+eigen}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_af1a2dd7dffce12361841f9af4d91b42c}
+\hypertarget{is__container_8hpp_a7c97cb0ec8106f844610d5d579fc79f0}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+N\+U\+L\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+null\+\_\+type}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_a7c97cb0ec8106f844610d5d579fc79f0}
+\hypertarget{is__container_8hpp_a5525b9c5e2e0bfb2e0a5b31d7c1cb2de}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+stl\+\_\+container}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_a5525b9c5e2e0bfb2e0a5b31d7c1cb2de}
+\hypertarget{is__container_8hpp_a0634ab4d5553c9db8d318d857cd388d1}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+S\+T\+L\+\_\+\+O\+R\+\_\+\+E\+I\+G\+E\+N(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+container}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_a0634ab4d5553c9db8d318d857cd388d1}
+\hypertarget{is__container_8hpp_a31c5ccab1022e8eb9e8fdafe4c24c769}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_a31c5ccab1022e8eb9e8fdafe4c24c769}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_boost\_tuple<T1>::value && \(\backslash\)
+    !\hyperlink{structIceBRG_1_1is__null__type}{IceBRG::is\_null\_type<T1>::value}>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_aadf7b9e5c92ad369260f90f8371549b0}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+N\+E\+I\+T\+H\+E\+R\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_aadf7b9e5c92ad369260f90f8371549b0}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_scalar\_or\_eigen<T1>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T2>::value>::type
+\end{DoxyCode}
+\hypertarget{is__container_8hpp_ac88270a5f98d3ce9e7c1b53c0fba224f}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R@{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<${\bf Ice\+B\+R\+G\+::is\+\_\+scalar}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_ac88270a5f98d3ce9e7c1b53c0fba224f}
+\hypertarget{is__container_8hpp_aa2ca0450580516a75c4310121f32b663}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E@{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+N\+O\+T\+\_\+\+T\+U\+P\+L\+E(
+\begin{DoxyParamCaption}
+\item[{}]{T1}
+\end{DoxyParamCaption}
+)~typename std\+::enable\+\_\+if$<$!{\bf Ice\+B\+R\+G\+::is\+\_\+boost\+\_\+tuple}$<$T1$>$\+::value$>$\+::type}\label{is__container_8hpp_aa2ca0450580516a75c4310121f32b663}
+\hypertarget{is__container_8hpp_adfcf9668180fde17a20bfefb0cf7bef9}{}\index{is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}!B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}}
+\index{B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L@{B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}!is\+\_\+container.\+hpp@{is\+\_\+container.\+hpp}}
+\subsubsection[{B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+G\+\_\+\+S\+\_\+\+S\+E\+C\+O\+N\+D\+\_\+\+S\+T\+L(
+\begin{DoxyParamCaption}
+\item[{}]{T1, }
+\item[{}]{T2}
+\end{DoxyParamCaption}
+)}\label{is__container_8hpp_adfcf9668180fde17a20bfefb0cf7bef9}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keyword}{typename} std::enable\_if<IceBRG::is\_stl\_container<T2>::value && \(\backslash\)
+    IceBRG::is\_scalar\_or\_eigen<T1>::value>::type
+\end{DoxyCode}

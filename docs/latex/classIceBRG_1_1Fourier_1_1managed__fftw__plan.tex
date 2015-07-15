@@ -1,0 +1,131 @@
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{}\section{Ice\+B\+R\+G\+:\+:Fourier\+:\+:managed\+\_\+fftw\+\_\+plan Class Reference}
+\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+
+
+{\ttfamily \#include $<$management.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa74e4d70d701caf7e91df9f4fcc66d2f}{managed\+\_\+fftw\+\_\+plan} ()
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a7547232594624c7ae2fd34b6b7678ac3}{managed\+\_\+fftw\+\_\+plan} (\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \&\&other)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a983042eea7e191220f0cb6698e0352b4}{managed\+\_\+fftw\+\_\+plan} (const \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \&other)=delete
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aafab54381a7b5a4c70ef5dda0db36333}{managed\+\_\+fftw\+\_\+plan} (fftw\+\_\+plan \&\&p)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a53efa350723d5c18331591b260518466}{managed\+\_\+fftw\+\_\+plan} (const fftw\+\_\+plan \&p)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_afa8a38eb58a89782b2f376778dc87648}{$\sim$managed\+\_\+fftw\+\_\+plan} ()
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ada8a304473896d3b8a95b70f44ad529b}{destroy} ()
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \& \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a4fa6e150aedbfb5d1e008ca6fc179e0b}{operator=} (const \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \&)=delete
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \& \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa93333000802c75497044f0bf6d1a92b}{operator=} (\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan} \&\&other)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a993448b0fc42004f752d7a449d759ca6}{execute} ()
+\item 
+fftw\+\_\+plan \& \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aff6715dac2bada6752561065363c150e}{get\+\_\+plan} () noexcept
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ad3b8a8e128f89cc1ad41543056f7cce3}{operator fftw\+\_\+plan \&} () noexcept
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A class which manages an fftw\+\_\+plan, making sure it is properly deleted when this object goes out of scope. This class is movable but not copyable. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa74e4d70d701caf7e91df9f4fcc66d2f}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}}
+\index{managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{managed\+\_\+fftw\+\_\+plan()}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa74e4d70d701caf7e91df9f4fcc66d2f}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a7547232594624c7ae2fd34b6b7678ac3}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}}
+\index{managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{managed\+\_\+fftw\+\_\+plan(managed\+\_\+fftw\+\_\+plan \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+\item[{{\bf managed\+\_\+fftw\+\_\+plan} \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a7547232594624c7ae2fd34b6b7678ac3}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a983042eea7e191220f0cb6698e0352b4}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}}
+\index{managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{managed\+\_\+fftw\+\_\+plan(const managed\+\_\+fftw\+\_\+plan \&other)=delete}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+\item[{const {\bf managed\+\_\+fftw\+\_\+plan} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a983042eea7e191220f0cb6698e0352b4}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aafab54381a7b5a4c70ef5dda0db36333}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}}
+\index{managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{managed\+\_\+fftw\+\_\+plan(fftw\+\_\+plan \&\&p)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+\item[{fftw\+\_\+plan \&\&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aafab54381a7b5a4c70ef5dda0db36333}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a53efa350723d5c18331591b260518466}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}}
+\index{managed\+\_\+fftw\+\_\+plan@{managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{managed\+\_\+fftw\+\_\+plan(const fftw\+\_\+plan \&p)}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+\item[{const fftw\+\_\+plan \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a53efa350723d5c18331591b260518466}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_afa8a38eb58a89782b2f376778dc87648}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!````~managed\+\_\+fftw\+\_\+plan@{$\sim$managed\+\_\+fftw\+\_\+plan}}
+\index{````~managed\+\_\+fftw\+\_\+plan@{$\sim$managed\+\_\+fftw\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{$\sim$managed\+\_\+fftw\+\_\+plan()}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::$\sim$managed\+\_\+fftw\+\_\+plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_afa8a38eb58a89782b2f376778dc87648}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ada8a304473896d3b8a95b70f44ad529b}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!destroy@{destroy}}
+\index{destroy@{destroy}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{destroy()}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::destroy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ada8a304473896d3b8a95b70f44ad529b}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a993448b0fc42004f752d7a449d759ca6}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!execute@{execute}}
+\index{execute@{execute}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{execute()}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::execute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a993448b0fc42004f752d7a449d759ca6}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aff6715dac2bada6752561065363c150e}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!get\+\_\+plan@{get\+\_\+plan}}
+\index{get\+\_\+plan@{get\+\_\+plan}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{get\+\_\+plan() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}fftw\+\_\+plan\& Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::get\+\_\+plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aff6715dac2bada6752561065363c150e}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ad3b8a8e128f89cc1ad41543056f7cce3}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!operator fftw\+\_\+plan \&@{operator fftw\+\_\+plan \&}}
+\index{operator fftw\+\_\+plan \&@{operator fftw\+\_\+plan \&}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{operator fftw\+\_\+plan \&() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::operator fftw\+\_\+plan \& (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_ad3b8a8e128f89cc1ad41543056f7cce3}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a4fa6e150aedbfb5d1e008ca6fc179e0b}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{operator=(const managed\+\_\+fftw\+\_\+plan \&)=delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf managed\+\_\+fftw\+\_\+plan}\& Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf managed\+\_\+fftw\+\_\+plan} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [delete]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_a4fa6e150aedbfb5d1e008ca6fc179e0b}
+\hypertarget{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa93333000802c75497044f0bf6d1a92b}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan@{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}}
+\subsubsection[{operator=(managed\+\_\+fftw\+\_\+plan \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf managed\+\_\+fftw\+\_\+plan}\& Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf managed\+\_\+fftw\+\_\+plan} \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1managed__fftw__plan_aa93333000802c75497044f0bf6d1a92b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/\+Fourier/\hyperlink{management_8hpp}{management.\+hpp}\end{DoxyCompactItemize}

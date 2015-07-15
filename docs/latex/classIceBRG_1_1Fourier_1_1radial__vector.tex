@@ -1,0 +1,484 @@
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector}{}\section{Ice\+B\+R\+G\+:\+:Fourier\+:\+:radial\+\_\+vector Class Reference}
+\label{classIceBRG_1_1Fourier_1_1radial__vector}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+
+
+{\ttfamily \#include $<$radial\+\_\+vector.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a4bd62a63fe41112d7f624f420ac42d9f}{radial\+\_\+vector} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a71019894516d58eae9bf6144e8900b86}{radial\+\_\+vector} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_aaef0714b69b1143c5be9ac40bdc1c3b0}{radial\+\_\+vector} (\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_ab7ea2998e5c46b5daad6bac7513ace23}{radial\+\_\+vector} (To \&\&other, Ts \&\&scale=1., boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ wisdom=boost\+::none)
+\begin{DoxyCompactList}\small\item\em Copy/move from Eigen array -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}{radial\+\_\+vector} (const To \&other, Ts \&\&scale=1., boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ wisdom=boost\+::none)
+\begin{DoxyCompactList}\small\item\em Convert from Eigen-\/like array -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ To $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}{radial\+\_\+vector} (const To \&other, Ts \&\&scale=1., boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ wisdom=boost\+::none)
+\begin{DoxyCompactList}\small\item\em Convert from container -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ Ts $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_aabe6f95ba0ccd95675d43fc6d0ff0f2a}{radial\+\_\+vector} (Ts \&\&scale=1., boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ wisdom=boost\+::none)
+\begin{DoxyCompactList}\small\item\em Set up with scale only. \end{DoxyCompactList}\item 
+virtual \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_aa7fe478b701afea873528946b6cbd4da}{$\sim$radial\+\_\+vector} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a7bf23b1ec8a46b7ebaa3b12bc9065dbb}{is\+\_\+good} () const 
+\begin{DoxyCompactList}\small\item\em Full check that this object is in a valid state. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a2ce1419c3156d411c3ed4d3965138542}{operator=} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a3339dd5e52a7177693085a7222816ee6}{operator=} (\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a4e3bb931933d1ecb95ec7922a5760f04}{operator=} (To \&\&other)
+\begin{DoxyCompactList}\small\item\em Copy/move from Eigen array -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a097911a84ad4d039e06a08c7ed04769b}{operator=} (const To \&other)
+\begin{DoxyCompactList}\small\item\em Convert from Eigen-\/like array -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ To $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_af4d180769e6d4f9460865680518a71b1}{operator=} (const To \&other)
+\begin{DoxyCompactList}\small\item\em Convert from container -\/ this loads into real-\/space array. \end{DoxyCompactList}\item 
+const \hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a9288163a5abd0237f5d08b5d63e47e6f}{get\+\_\+k\+\_\+array} () const 
+\item 
+const \hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a7cf76957d0f50de17ed4b961cb6139e5}{get\+\_\+r\+\_\+array} () const 
+\item 
+const \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a1f25ebb018c9b82d54fd9d5dbc8d20e7}{get\+\_\+\+N} () const  noexcept
+\item 
+const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_ab7a62045cafb03671283f76367c47cf8}{get\+\_\+scale} () const  noexcept
+\item 
+boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \& \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a5b7e8de69cfcda31cfb4ce046f30daf7}{get\+\_\+wisdom} () const  noexcept
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_abae33af5555fdc1cf5c32a96985caa25}{set\+\_\+k\+\_\+array} (const \hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \&array)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a36d6cf58120aaf2e4e795cb7664f7e06}{set\+\_\+r\+\_\+array} (const \hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \&array)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a60252cd582fe9f10ca2cc1749f6b6283}{set\+\_\+scale} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&scale)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a64f6befadbdf161684eb35648c7eaa17}{set\+\_\+wisdom} (const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a33ae52f5a86f099cdc203a6d7d748279}{r\+\_\+min} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_ae03c379b205562781280e72c55bf78d7}{r\+\_\+max} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a05d64c344c9c5feb85f7c2d692dc406a}{k\+\_\+min} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a36a60bfadd705c83286018381a7236c5}{k\+\_\+max} () const 
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_af31ac06ceedde33451b49bc8b6ae9649}{rescale} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&new\+\_\+scale, \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} new\+\_\+\+N=-\/1)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a10cf893a48dc6820af965aba77b2b5a3}{rescale\+\_\+r\+\_\+array} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&new\+\_\+scale, \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} new\+\_\+\+N)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a1dbd9d6401c92b1153e8bb3465b64a88}{rescale\+\_\+k\+\_\+array} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&new\+\_\+scale, \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} new\+\_\+\+N)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a4e49151ead8e7a4530086df93fa3136c}{get\+\_\+rescaled} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&new\+\_\+scale, \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} new\+\_\+\+N=-\/1)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a85242c4833d110bbdb4eee1ef8cd2ea9}{rescale\+\_\+r\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a6e451a1867a8b2685cbb1319ecde882d}{rescale\+\_\+k\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a108e3472bca3f9e98d99b617b9a85d5c}{rescale\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_ae3a1fa92b3c127c0489dd4dcb4bd164e}{get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other) const 
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a4ff3d327fa3ea0be2d8470ce7b6cd132}{get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other) const 
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a0fcd21cef156944f87efa8cbff1c09b5}{get\+\_\+rescaled\+\_\+to\+\_\+match} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other) const 
+\item 
+void \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a5120ceb165e75753e5f9e52e78bf9f7b}{convolve\+\_\+with} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other)
+\item 
+\hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_aa43ed2d15cc7566b428ed75866ce39e0}{get\+\_\+convolved\+\_\+with} (const \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector} \&other) const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_aadf66af5a675d48151eb2ffd44e1b96e}{r\+\_\+min} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&scale, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&N)
+\item 
+static \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a5251fa581f691f6b138fd7dda2a74a4f}{r\+\_\+max} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&scale, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&N)
+\item 
+static \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a4e6c0612d98320a95470dcc68553ac61}{k\+\_\+min} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&scale, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&N)
+\item 
+static \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector_a252f5b44f86317b2b17fc47e4e16a72a}{k\+\_\+max} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&scale, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&N)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An array representing some physical value which is spherically-\/symmetric. It stores information on the physical scale as well as Fourier-\/transform data. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a4bd62a63fe41112d7f624f420ac42d9f}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector()}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a4bd62a63fe41112d7f624f420ac42d9f}
+
+
+Default constructor. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a71019894516d58eae9bf6144e8900b86}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(const radial\+\_\+vector \&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a71019894516d58eae9bf6144e8900b86}
+
+
+Copy constructor. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_aaef0714b69b1143c5be9ac40bdc1c3b0}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(radial\+\_\+vector \&\&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{{\bf radial\+\_\+vector} \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_aaef0714b69b1143c5be9ac40bdc1c3b0}
+
+
+Move constructor. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_ab7ea2998e5c46b5daad6bac7513ace23}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(\+To \&\&other, Ts \&\&scale=1., boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{To \&\&}]{other, }
+\item[{Ts \&\&}]{scale = {\ttfamily 1.}, }
+\item[{boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_ab7ea2998e5c46b5daad6bac7513ace23}
+
+
+Copy/move from Eigen array -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(const To \&other, Ts \&\&scale=1., boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const To \&}]{other, }
+\item[{Ts \&\&}]{scale = {\ttfamily 1.}, }
+\item[{boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}
+
+
+Convert from Eigen-\/like array -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(const To \&other, Ts \&\&scale=1., boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ To $>$\+::value, char $>$\+::type  = 0$>$ Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{const To \&}]{other, }
+\item[{Ts \&\&}]{scale = {\ttfamily 1.}, }
+\item[{boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_adab57e66cf0e4d3bf4430430f4388ad3}
+
+
+Convert from container -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_aabe6f95ba0ccd95675d43fc6d0ff0f2a}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!radial\+\_\+vector@{radial\+\_\+vector}}
+\index{radial\+\_\+vector@{radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{radial\+\_\+vector(\+Ts \&\&scale=1., boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ Ts, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ Ts $>$\+::value, char $>$\+::type  = 0$>$ Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::radial\+\_\+vector (
+\begin{DoxyParamCaption}
+\item[{Ts \&\&}]{scale = {\ttfamily 1.}, }
+\item[{boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_aabe6f95ba0ccd95675d43fc6d0ff0f2a}
+
+
+Set up with scale only. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_aa7fe478b701afea873528946b6cbd4da}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!````~radial\+\_\+vector@{$\sim$radial\+\_\+vector}}
+\index{````~radial\+\_\+vector@{$\sim$radial\+\_\+vector}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{$\sim$radial\+\_\+vector()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::$\sim$radial\+\_\+vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_aa7fe478b701afea873528946b6cbd4da}
+
+
+Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a5120ceb165e75753e5f9e52e78bf9f7b}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!convolve\+\_\+with@{convolve\+\_\+with}}
+\index{convolve\+\_\+with@{convolve\+\_\+with}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{convolve\+\_\+with(const radial\+\_\+vector \&other)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::convolve\+\_\+with (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a5120ceb165e75753e5f9e52e78bf9f7b}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_aa43ed2d15cc7566b428ed75866ce39e0}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+convolved\+\_\+with@{get\+\_\+convolved\+\_\+with}}
+\index{get\+\_\+convolved\+\_\+with@{get\+\_\+convolved\+\_\+with}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+convolved\+\_\+with(const radial\+\_\+vector \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+convolved\+\_\+with (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_aa43ed2d15cc7566b428ed75866ce39e0}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a9288163a5abd0237f5d08b5d63e47e6f}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+k\+\_\+array@{get\+\_\+k\+\_\+array}}
+\index{get\+\_\+k\+\_\+array@{get\+\_\+k\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+k\+\_\+array() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf flt\+\_\+array\+\_\+type}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+k\+\_\+array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a9288163a5abd0237f5d08b5d63e47e6f}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a1f25ebb018c9b82d54fd9d5dbc8d20e7}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+\+N@{get\+\_\+\+N}}
+\index{get\+\_\+\+N@{get\+\_\+\+N}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+\+N() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf size\+\_\+type}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+\+N (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a1f25ebb018c9b82d54fd9d5dbc8d20e7}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a7cf76957d0f50de17ed4b961cb6139e5}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+r\+\_\+array@{get\+\_\+r\+\_\+array}}
+\index{get\+\_\+r\+\_\+array@{get\+\_\+r\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+r\+\_\+array() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf flt\+\_\+array\+\_\+type}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+r\+\_\+array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a7cf76957d0f50de17ed4b961cb6139e5}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a4e49151ead8e7a4530086df93fa3136c}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+rescaled@{get\+\_\+rescaled}}
+\index{get\+\_\+rescaled@{get\+\_\+rescaled}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+rescaled(const flt\+\_\+type \&new\+\_\+scale, size\+\_\+type new\+\_\+\+N=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+rescaled (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{new\+\_\+scale, }
+\item[{{\bf size\+\_\+type}}]{new\+\_\+\+N = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a4e49151ead8e7a4530086df93fa3136c}
+Get a rescaled copy of this. The rescale \hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a4ff3d327fa3ea0be2d8470ce7b6cd132}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match}}
+\index{get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match(const radial\+\_\+vector \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+rescaled\+\_\+k\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a4ff3d327fa3ea0be2d8470ce7b6cd132}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_ae3a1fa92b3c127c0489dd4dcb4bd164e}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match}}
+\index{get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match(const radial\+\_\+vector \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+rescaled\+\_\+r\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_ae3a1fa92b3c127c0489dd4dcb4bd164e}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a0fcd21cef156944f87efa8cbff1c09b5}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+rescaled\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+to\+\_\+match}}
+\index{get\+\_\+rescaled\+\_\+to\+\_\+match@{get\+\_\+rescaled\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+rescaled\+\_\+to\+\_\+match(const radial\+\_\+vector \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+rescaled\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a0fcd21cef156944f87efa8cbff1c09b5}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_ab7a62045cafb03671283f76367c47cf8}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+scale@{get\+\_\+scale}}
+\index{get\+\_\+scale@{get\+\_\+scale}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+scale() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf flt\+\_\+type}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_ab7a62045cafb03671283f76367c47cf8}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a5b7e8de69cfcda31cfb4ce046f30daf7}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!get\+\_\+wisdom@{get\+\_\+wisdom}}
+\index{get\+\_\+wisdom@{get\+\_\+wisdom}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{get\+\_\+wisdom() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}boost\+::optional$<${\bf fftw\+\_\+wisdom\+\_\+accumulator} \&$>$\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::get\+\_\+wisdom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a5b7e8de69cfcda31cfb4ce046f30daf7}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a7bf23b1ec8a46b7ebaa3b12bc9065dbb}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!is\+\_\+good@{is\+\_\+good}}
+\index{is\+\_\+good@{is\+\_\+good}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{is\+\_\+good() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::is\+\_\+good (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a7bf23b1ec8a46b7ebaa3b12bc9065dbb}
+
+
+Full check that this object is in a valid state. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a36a60bfadd705c83286018381a7236c5}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!k\+\_\+max@{k\+\_\+max}}
+\index{k\+\_\+max@{k\+\_\+max}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{k\+\_\+max() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::k\+\_\+max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a36a60bfadd705c83286018381a7236c5}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a252f5b44f86317b2b17fc47e4e16a72a}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!k\+\_\+max@{k\+\_\+max}}
+\index{k\+\_\+max@{k\+\_\+max}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{k\+\_\+max(const flt\+\_\+type \&scale, const int\+\_\+type \&\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::k\+\_\+max (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{scale, }
+\item[{const {\bf int\+\_\+type} \&}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a252f5b44f86317b2b17fc47e4e16a72a}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a05d64c344c9c5feb85f7c2d692dc406a}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!k\+\_\+min@{k\+\_\+min}}
+\index{k\+\_\+min@{k\+\_\+min}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{k\+\_\+min() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::k\+\_\+min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a05d64c344c9c5feb85f7c2d692dc406a}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a4e6c0612d98320a95470dcc68553ac61}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!k\+\_\+min@{k\+\_\+min}}
+\index{k\+\_\+min@{k\+\_\+min}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{k\+\_\+min(const flt\+\_\+type \&scale, const int\+\_\+type \&\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::k\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{scale, }
+\item[{const {\bf int\+\_\+type} \&}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a4e6c0612d98320a95470dcc68553ac61}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a2ce1419c3156d411c3ed4d3965138542}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{operator=(const radial\+\_\+vector \&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a2ce1419c3156d411c3ed4d3965138542}
+
+
+Copy assignment. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a3339dd5e52a7177693085a7222816ee6}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{operator=(radial\+\_\+vector \&\&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf radial\+\_\+vector}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf radial\+\_\+vector} \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a3339dd5e52a7177693085a7222816ee6}
+
+
+Move assignment. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a4e3bb931933d1ecb95ec7922a5760f04}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{operator=(\+To \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf radial\+\_\+vector}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::operator= (
+\begin{DoxyParamCaption}
+\item[{To \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a4e3bb931933d1ecb95ec7922a5760f04}
+
+
+Copy/move from Eigen array -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a097911a84ad4d039e06a08c7ed04769b}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{operator=(const To \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf radial\+\_\+vector}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const To \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a097911a84ad4d039e06a08c7ed04769b}
+
+
+Convert from Eigen-\/like array -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_af4d180769e6d4f9460865680518a71b1}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{operator=(const To \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename To , typename Ts , typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ typename std\+::decay$<$ To $>$\+::type, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ To, flt\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ To $>$\+::value, char $>$\+::type  = 0$>$ {\bf radial\+\_\+vector}\& Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const To \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_af4d180769e6d4f9460865680518a71b1}
+
+
+Convert from container -\/ this loads into real-\/space array. 
+
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_ae03c379b205562781280e72c55bf78d7}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!r\+\_\+max@{r\+\_\+max}}
+\index{r\+\_\+max@{r\+\_\+max}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{r\+\_\+max() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::r\+\_\+max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_ae03c379b205562781280e72c55bf78d7}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a5251fa581f691f6b138fd7dda2a74a4f}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!r\+\_\+max@{r\+\_\+max}}
+\index{r\+\_\+max@{r\+\_\+max}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{r\+\_\+max(const flt\+\_\+type \&scale, const int\+\_\+type \&\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::r\+\_\+max (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{scale, }
+\item[{const {\bf int\+\_\+type} \&}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a5251fa581f691f6b138fd7dda2a74a4f}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a33ae52f5a86f099cdc203a6d7d748279}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!r\+\_\+min@{r\+\_\+min}}
+\index{r\+\_\+min@{r\+\_\+min}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{r\+\_\+min() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::r\+\_\+min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a33ae52f5a86f099cdc203a6d7d748279}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_aadf66af5a675d48151eb2ffd44e1b96e}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!r\+\_\+min@{r\+\_\+min}}
+\index{r\+\_\+min@{r\+\_\+min}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{r\+\_\+min(const flt\+\_\+type \&scale, const int\+\_\+type \&\+N)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf flt\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::r\+\_\+min (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{scale, }
+\item[{const {\bf int\+\_\+type} \&}]{N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_aadf66af5a675d48151eb2ffd44e1b96e}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_af31ac06ceedde33451b49bc8b6ae9649}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale@{rescale}}
+\index{rescale@{rescale}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale(const flt\+\_\+type \&new\+\_\+scale, size\+\_\+type new\+\_\+\+N=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{new\+\_\+scale, }
+\item[{{\bf size\+\_\+type}}]{new\+\_\+\+N = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_af31ac06ceedde33451b49bc8b6ae9649}
+Rescale -\/ change scale and conserving data so it represents the same physical data as well as possible. \hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a1dbd9d6401c92b1153e8bb3465b64a88}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale\+\_\+k\+\_\+array@{rescale\+\_\+k\+\_\+array}}
+\index{rescale\+\_\+k\+\_\+array@{rescale\+\_\+k\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale\+\_\+k\+\_\+array(const flt\+\_\+type \&new\+\_\+scale, size\+\_\+type new\+\_\+\+N)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale\+\_\+k\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{new\+\_\+scale, }
+\item[{{\bf size\+\_\+type}}]{new\+\_\+\+N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a1dbd9d6401c92b1153e8bb3465b64a88}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a6e451a1867a8b2685cbb1319ecde882d}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale\+\_\+k\+\_\+to\+\_\+match@{rescale\+\_\+k\+\_\+to\+\_\+match}}
+\index{rescale\+\_\+k\+\_\+to\+\_\+match@{rescale\+\_\+k\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale\+\_\+k\+\_\+to\+\_\+match(const radial\+\_\+vector \&other)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale\+\_\+k\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a6e451a1867a8b2685cbb1319ecde882d}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a10cf893a48dc6820af965aba77b2b5a3}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale\+\_\+r\+\_\+array@{rescale\+\_\+r\+\_\+array}}
+\index{rescale\+\_\+r\+\_\+array@{rescale\+\_\+r\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale\+\_\+r\+\_\+array(const flt\+\_\+type \&new\+\_\+scale, size\+\_\+type new\+\_\+\+N)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale\+\_\+r\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{new\+\_\+scale, }
+\item[{{\bf size\+\_\+type}}]{new\+\_\+\+N}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a10cf893a48dc6820af965aba77b2b5a3}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a85242c4833d110bbdb4eee1ef8cd2ea9}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale\+\_\+r\+\_\+to\+\_\+match@{rescale\+\_\+r\+\_\+to\+\_\+match}}
+\index{rescale\+\_\+r\+\_\+to\+\_\+match@{rescale\+\_\+r\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale\+\_\+r\+\_\+to\+\_\+match(const radial\+\_\+vector \&other)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale\+\_\+r\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a85242c4833d110bbdb4eee1ef8cd2ea9}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a108e3472bca3f9e98d99b617b9a85d5c}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!rescale\+\_\+to\+\_\+match@{rescale\+\_\+to\+\_\+match}}
+\index{rescale\+\_\+to\+\_\+match@{rescale\+\_\+to\+\_\+match}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{rescale\+\_\+to\+\_\+match(const radial\+\_\+vector \&other)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::rescale\+\_\+to\+\_\+match (
+\begin{DoxyParamCaption}
+\item[{const {\bf radial\+\_\+vector} \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a108e3472bca3f9e98d99b617b9a85d5c}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_abae33af5555fdc1cf5c32a96985caa25}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!set\+\_\+k\+\_\+array@{set\+\_\+k\+\_\+array}}
+\index{set\+\_\+k\+\_\+array@{set\+\_\+k\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{set\+\_\+k\+\_\+array(const flt\+\_\+array\+\_\+type \&array)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::set\+\_\+k\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+array\+\_\+type} \&}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_abae33af5555fdc1cf5c32a96985caa25}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a36d6cf58120aaf2e4e795cb7664f7e06}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!set\+\_\+r\+\_\+array@{set\+\_\+r\+\_\+array}}
+\index{set\+\_\+r\+\_\+array@{set\+\_\+r\+\_\+array}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{set\+\_\+r\+\_\+array(const flt\+\_\+array\+\_\+type \&array)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::set\+\_\+r\+\_\+array (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+array\+\_\+type} \&}]{array}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a36d6cf58120aaf2e4e795cb7664f7e06}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a60252cd582fe9f10ca2cc1749f6b6283}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!set\+\_\+scale@{set\+\_\+scale}}
+\index{set\+\_\+scale@{set\+\_\+scale}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{set\+\_\+scale(const flt\+\_\+type \&scale)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::set\+\_\+scale (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{scale}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a60252cd582fe9f10ca2cc1749f6b6283}
+\hypertarget{classIceBRG_1_1Fourier_1_1radial__vector_a64f6befadbdf161684eb35648c7eaa17}{}\index{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}!set\+\_\+wisdom@{set\+\_\+wisdom}}
+\index{set\+\_\+wisdom@{set\+\_\+wisdom}!Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector@{Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector}}
+\subsubsection[{set\+\_\+wisdom(const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom)}]{\setlength{\rightskip}{0pt plus 5cm}void Ice\+B\+R\+G\+::\+Fourier\+::radial\+\_\+vector\+::set\+\_\+wisdom (
+\begin{DoxyParamCaption}
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1Fourier_1_1radial__vector_a64f6befadbdf161684eb35648c7eaa17}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/\+Fourier/\hyperlink{radial__vector_8hpp}{radial\+\_\+vector.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{integrate_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/calculus/integrate.hpp File Reference}
+\label{integrate_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/calculus/integrate.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/calculus/integrate.\+hpp}}
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/functor/functor\+\_\+product.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/misc\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/safe\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/utility.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/units/units.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{integrate_8hpp_a60e25e397461d7f7278e67c86abd391a}{R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X}~20
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a4718d7945b3383345eb5cd363438a4ae}{Ice\+B\+R\+G\+::integrate\+\_\+trapezoid} (const f $\ast$func, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const T \&in\+\_\+param\+\_\+step) -\/$>$ decltype(func(min\+\_\+in\+\_\+param)$\ast$min\+\_\+in\+\_\+param)
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a8a2af5fc191dca55fe88b73af34be615}{Ice\+B\+R\+G\+::integrate\+\_\+trapezoid} (const f $\ast$func, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&in\+\_\+param\+\_\+step, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(multiply(func(min\+\_\+in\+\_\+param), min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_afc7d31efdf2b166573350a9e693bf3a4}{Ice\+B\+R\+G\+::integrate\+\_\+trapezoid} (const f $\ast$func, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} num\+\_\+samples) -\/$>$ decltype(func(min\+\_\+in\+\_\+param)$\ast$min\+\_\+in\+\_\+param)
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a53f412a68158389ebc34e1fb5c1780f6}{Ice\+B\+R\+G\+::integrate\+\_\+trapezoid} (const f $\ast$func, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} num\+\_\+samples, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f1 , typename f2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_aa592fc52ca60397e4db7bab2d89761cb}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+trapezoid} (const f1 $\ast$func, const f2 $\ast$func\+\_\+weight, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const T \&in\+\_\+param\+\_\+step) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f1 , typename f2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_ad6ad20d58c1f14090f5bd1f856555844}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+trapezoid} (const f1 $\ast$func, const f2 $\ast$func\+\_\+weight, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&in\+\_\+param\+\_\+step, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f1 , typename f2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a9573270e25c1856fb625a7fa18312c15}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+trapezoid} (const f1 $\ast$func, const f2 $\ast$func\+\_\+weight, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} num\+\_\+samples) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f1 , typename f2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a1964fd9e2f067b157d38557462743ff2}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+trapezoid} (const f1 $\ast$func, const f2 $\ast$func\+\_\+weight, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} num\+\_\+samples, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a181746e5e29de9697625ef0b723a483f}{Ice\+B\+R\+G\+::integrate\+\_\+mc} (const f $\ast$func, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} num\+\_\+samples) -\/$>$ decltype(multiply(func(min\+\_\+in\+\_\+param), min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f , typename Tin $>$ }\\auto \hyperlink{namespaceIceBRG_a7c0ae4acaf423cd7583952bfca121235}{Ice\+B\+R\+G\+::integrate\+\_\+\+Romberg} (const f \&func, const Tin \&min\+\_\+in\+\_\+param, const Tin \&max\+\_\+in\+\_\+param, \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} precision=0.\+00001, bool tighten\+\_\+precision=false) -\/$>$ decltype(func(min\+\_\+in\+\_\+param)$\ast$min\+\_\+in\+\_\+param)
+\item 
+{\footnotesize template$<$typename f , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a00d3f49b1b1603459621f0772ca9cbbe}{Ice\+B\+R\+G\+::integrate\+\_\+\+Romberg} (const f \&func, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&precision=0.\+00001, const bool tighten\+\_\+precision=false, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(multiply(func(min\+\_\+in\+\_\+param), min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f\+\_\+in\+\_\+1 , typename f\+\_\+in\+\_\+2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a150af93dc262b9ff66f987a1c013cf31}{Ice\+B\+R\+G\+::integrate\+\_\+product\+\_\+\+Romberg} (const f\+\_\+in\+\_\+1 \&func1, const f\+\_\+in\+\_\+2 \&func2, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&precision=0.\+00001, const bool tighten\+\_\+precision=false) -\/$>$ decltype(func1(min\+\_\+in\+\_\+param)$\ast$func2(min\+\_\+in\+\_\+param)$\ast$min\+\_\+in\+\_\+param)
+\item 
+{\footnotesize template$<$typename f\+\_\+in\+\_\+1 , typename f\+\_\+in\+\_\+2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a48c26b090cff88c3222a60b8954c366b}{Ice\+B\+R\+G\+::integrate\+\_\+product\+\_\+\+Romberg} (const f\+\_\+in\+\_\+1 \&func1, const f\+\_\+in\+\_\+2 \&func2, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&precision=0.\+00001, const bool tighten\+\_\+precision=false, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(multiply(multiply(func1(min\+\_\+in\+\_\+param), func2(min\+\_\+in\+\_\+param)), min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f\+\_\+in\+\_\+1 , typename f\+\_\+in\+\_\+2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a22c144f87c68440bed33220e96d57978}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+\+Romberg} (const f\+\_\+in\+\_\+1 \&func, const f\+\_\+in\+\_\+2 \&func\+\_\+weight, const T \&min\+\_\+in\+\_\+param, const T \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&precision=0.\+00001, const bool tighten\+\_\+precision=false) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\item 
+{\footnotesize template$<$typename f\+\_\+in\+\_\+1 , typename f\+\_\+in\+\_\+2 , typename T $>$ }\\auto \hyperlink{namespaceIceBRG_a0303a916ef72bb75fb83ef29be41ea72}{Ice\+B\+R\+G\+::integrate\+\_\+weighted\+\_\+\+Romberg} (const f\+\_\+in\+\_\+1 \&func, const f\+\_\+in\+\_\+2 \&func\+\_\+weight, const std\+::vector$<$ T $>$ \&min\+\_\+in\+\_\+param, const std\+::vector$<$ T $>$ \&max\+\_\+in\+\_\+param, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&precision=0.\+00001, const bool tighten\+\_\+precision=false, const std\+::vector$<$ T $>$ \&passed\+\_\+in\+\_\+param=std\+::vector$<$ T $>$(0)) -\/$>$ decltype(func(min\+\_\+in\+\_\+param))
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{integrate_8hpp_a60e25e397461d7f7278e67c86abd391a}{}\index{integrate.\+hpp@{integrate.\+hpp}!R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X@{R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X}}
+\index{R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X@{R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X}!integrate.\+hpp@{integrate.\+hpp}}
+\subsubsection[{R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+O\+M\+B\+E\+R\+G\+\_\+\+N\+\_\+\+M\+A\+X~20}\label{integrate_8hpp_a60e25e397461d7f7278e67c86abd391a}

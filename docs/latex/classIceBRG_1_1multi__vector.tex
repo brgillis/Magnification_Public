@@ -1,0 +1,538 @@
+\hypertarget{classIceBRG_1_1multi__vector}{}\section{Ice\+B\+R\+G\+:\+:multi\+\_\+vector$<$ T, A $>$ Class Template Reference}
+\label{classIceBRG_1_1multi__vector}\index{Ice\+B\+R\+G\+::multi\+\_\+vector$<$ T, A $>$@{Ice\+B\+R\+G\+::multi\+\_\+vector$<$ T, A $>$}}
+
+
+{\ttfamily \#include $<$multi\+\_\+vector.\+hpp$>$}
+
+Inheritance diagram for Ice\+B\+R\+G\+:\+:multi\+\_\+vector$<$ T, A $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classIceBRG_1_1multi__vector}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ T, A $>$\+::\hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{size\+\_\+type} \hyperlink{classIceBRG_1_1multi__vector_abcc3d84f2afbb3e4239cea8c2c4923c3}{vsize\+\_\+t}
+\item 
+typedef \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classIceBRG_1_1multi__vector_af2666369daa5e69abfbadbe365c200e9}{dsize\+\_\+t}
+\item 
+typedef \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classIceBRG_1_1multi__vector_a9ad43f84f33367955b45ca260ea5882b}{ssize\+\_\+t}
+\item 
+typedef std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} $>$ \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void \hyperlink{classIceBRG_1_1multi__vector_ae1a89438380ac2b5aeb898e171ed9364}{assign} (Input\+Iterator first, Input\+Iterator last)
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_a5dfdcc780219ad607ced1e3e894945f5}{assign} (typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{vec\+::size\+\_\+type} n, const T \&val)
+\item 
+\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a2f86b23b2ed4a23e20fb1292624e2da9}{push\+\_\+back} (const T \&val)
+\item 
+vec\+::iterator \hyperlink{classIceBRG_1_1multi__vector_a7db7da470a601e122fc74f2f9523ed04}{insert} (typename vec\+::iterator position, const T \&val)
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_ad7b717cff0ee7405af4837e29ecdf868}{insert} (typename vec\+::iterator position, typename \hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{vec\+::size\+\_\+type} n, const typename vec\+::value\+\_\+type \&val)
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\void \hyperlink{classIceBRG_1_1multi__vector_a8f74fe60c6358817ccf81d5c973cc93f}{insert} (typename vec\+::iterator position, Input\+Iterator first, Input\+Iterator last)
+\item 
+vec\+::iterator \hyperlink{classIceBRG_1_1multi__vector_aba38804447222d41c4ca7c49feac8cab}{erase} (typename vec\+::iterator position)
+\item 
+vec\+::iterator \hyperlink{classIceBRG_1_1multi__vector_a64188c90861ee5ad87b4ec9fcd265f20}{erase} (typename vec\+::iterator first, typename vec\+::iterator last)
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_a08b4f9d36263e9e35c753842716b04dc}{resize} (\hyperlink{classIceBRG_1_1multi__vector_abcc3d84f2afbb3e4239cea8c2c4923c3}{vsize\+\_\+t} n, T val=T())
+\item 
+const T \& \hyperlink{classIceBRG_1_1multi__vector_a5fafc6a7c33d88dc5d772365baf6cd40}{pop\+\_\+back} ()
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_accc4290ed0ee20edf847e26805cd54f2}{del\+\_\+back} ()
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_a12b96cd198798ebb0506dbf1b0475c57}{clear} ()
+\item 
+\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_abcfd8d5fcc0c020f3b2df4a7e9f8a86d}{operator=} (\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ other)
+\item 
+\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a92c909bfd31a10254ec5c490283bff73}{copy} (\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ other)
+\item 
+\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_ade66bbf2a7c88dab7578117828cbf51a}{swap} (\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \&other)
+\item 
+\hyperlink{classIceBRG_1_1multi__vector_a94d3f4a0aeb3e0a10deff3facab26ead}{operator T} () const 
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_ac98362c51641079300aea3e0e7b2c394}{operator+=} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a33e36547fa2a5a016652287d38b23eb1}{operator+=} (const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a100c7fe9b7eb28552d61ad9670da560b}{operator+=} (T\+\_\+o other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a1f8e2ea7d8cfbe4dab3a00d83dfc057f}{operator-\/=} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_ad2805cc6dfd1d7e5a6c3ddccf8e05217}{operator-\/=} (const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_aff6dc155260c3184e867fd791f90f4b2}{operator-\/=} (T\+\_\+o other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a73496e141636d17cb8518bf9349bcc61}{operator$\ast$=} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_ae18d0d68a054316add7134b34364504e}{operator$\ast$=} (const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a828d13398771ee0cb3618aa72023c414}{operator$\ast$=} (T\+\_\+o other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_ae6912cd1b408b33e4f6e616b394f6375}{operator/=} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_aea2029e62a8c71e4ce078002bbcf5a01}{operator/=} (const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_aef3fb151f960eff2cd162b9986229c46}{operator/=} (T\+\_\+o other)
+\item 
+\hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_a472689a6e3130c24d066c314bf6a8409}{operator++} ()
+\item 
+const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1multi__vector_adc1298f6bfb1b3d47bb6cb23230ca527}{operator++} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type})
+\item 
+std\+::vector$<$ T, A $>$ \hyperlink{classIceBRG_1_1multi__vector_a91f5eebc48c8849b8c27e7992e17701b}{v} () const 
+\item 
+const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \& \hyperlink{classIceBRG_1_1multi__vector_ad5fb113982dce9456f724ca9072e42c9}{shape} () const 
+\item 
+const \hyperlink{classIceBRG_1_1multi__vector_af2666369daa5e69abfbadbe365c200e9}{dsize\+\_\+t} \& \hyperlink{classIceBRG_1_1multi__vector_a0beaee05722b4fd40af1452d452f4fe7}{num\+\_\+dim} () const 
+\item 
+T \& \hyperlink{classIceBRG_1_1multi__vector_a58de7745b168b4831cb1f0b20d933684}{operator()} (const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \&position)
+\item 
+const T \& \hyperlink{classIceBRG_1_1multi__vector_a472ebe4b4a132452caf3cd98edb64e2c}{operator()} (const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \&position) const 
+\item 
+T \& \hyperlink{classIceBRG_1_1multi__vector_aad5f4f2ced67278183d44ff906f3b654}{operator()} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} $>$ \&position)
+\item 
+const T \& \hyperlink{classIceBRG_1_1multi__vector_a61766162e95d0896e9dd45b894cbd0f8}{operator()} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} $>$ \&position) const 
+\item 
+T \& \hyperlink{classIceBRG_1_1multi__vector_ac3c759345706a78af2c1a8a8cde072c7}{at} (const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \&position)
+\item 
+const T \& \hyperlink{classIceBRG_1_1multi__vector_af3f5a492939e45c036c73d0286ae8505}{at} (const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \&position) const 
+\item 
+T \& \hyperlink{classIceBRG_1_1multi__vector_a107ef0e6fea9601c2a1cd0fea5bef200}{at} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} $>$ \&position)
+\item 
+const T \& \hyperlink{classIceBRG_1_1multi__vector_aa50615a83dad050c93098950894d8fa5}{at} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} $>$ \&position) const 
+\item 
+void \hyperlink{classIceBRG_1_1multi__vector_a3eceee96718f7144bd056caa4486023e}{reshape} (const \hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} \&new\+\_\+shape, const T \&new\+\_\+val=T())
+\item 
+\hyperlink{classIceBRG_1_1multi__vector_a6ba7614c52e0dc623fc190d868f8b6ed}{multi\+\_\+vector} (const A \&alloc=A())
+\item 
+\hyperlink{classIceBRG_1_1multi__vector_a7bdea87bcffcdc2053cd65ba21dd3e95}{multi\+\_\+vector} (\hyperlink{classIceBRG_1_1multi__vector_abcc3d84f2afbb3e4239cea8c2c4923c3}{vsize\+\_\+t} init\+\_\+size, T init\+\_\+val, const A \&alloc=A())
+\item 
+\hyperlink{classIceBRG_1_1multi__vector_ae94a23b09a6f6bc737481c132332346b}{multi\+\_\+vector} (\hyperlink{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{shape\+\_\+t} init\+\_\+shape, T init\+\_\+val, const A \&alloc=A())
+\item 
+\hyperlink{classIceBRG_1_1multi__vector_aafd73188953583a68c242bbb201311ae}{multi\+\_\+vector} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T, A $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector_a1fcceaa14320c72bc437883f8d194bc2}{multi\+\_\+vector} (const \hyperlink{classIceBRG_1_1multi__vector}{multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , typename A\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector_ac300dd742268ef19405ce2ac8c9c3752}{multi\+\_\+vector} (const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)
+\item 
+{\footnotesize template$<$typename T\+\_\+o , size\+\_\+t N$>$ }\\\hyperlink{classIceBRG_1_1multi__vector_a29f4de67e11d47b98b5ff2e81df0dc7f}{multi\+\_\+vector} (const T\+\_\+o(\&array)\mbox{[}N\mbox{]}, const A \&alloc=A())
+\item 
+{\footnotesize template$<$typename T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector_ac1d11f942532985324c8c3acb5801bec}{multi\+\_\+vector} (const T\+\_\+o \&other, const A \&alloc=A())
+\item 
+{\footnotesize template$<$typename i\+T\+\_\+o $>$ }\\\hyperlink{classIceBRG_1_1multi__vector_ad91e124b6658894a6e8162f85b1ddd8f}{multi\+\_\+vector} (i\+T\+\_\+o first, i\+T\+\_\+o last, const A \&alloc=A())
+\item 
+virtual \hyperlink{classIceBRG_1_1multi__vector_a5838dc2869a700c864ab13c2abd65277}{$\sim$multi\+\_\+vector} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1multi__vector_af2666369daa5e69abfbadbe365c200e9}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!dsize\+\_\+t@{dsize\+\_\+t}}
+\index{dsize\+\_\+t@{dsize\+\_\+t}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{dsize\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef {\bf int\+\_\+type} {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf dsize\+\_\+t}}\label{classIceBRG_1_1multi__vector_af2666369daa5e69abfbadbe365c200e9}
+\hypertarget{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!shape\+\_\+t@{shape\+\_\+t}}
+\index{shape\+\_\+t@{shape\+\_\+t}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{shape\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef std\+::vector$<$ {\bf int\+\_\+type} $>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf shape\+\_\+t}}\label{classIceBRG_1_1multi__vector_a468a7f934274e7aa75e01c94ac58f3ea}
+\hypertarget{classIceBRG_1_1multi__vector_a9ad43f84f33367955b45ca260ea5882b}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!ssize\+\_\+t@{ssize\+\_\+t}}
+\index{ssize\+\_\+t@{ssize\+\_\+t}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{ssize\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef {\bf int\+\_\+type} {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf ssize\+\_\+t}}\label{classIceBRG_1_1multi__vector_a9ad43f84f33367955b45ca260ea5882b}
+\hypertarget{classIceBRG_1_1multi__vector_abcc3d84f2afbb3e4239cea8c2c4923c3}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!vsize\+\_\+t@{vsize\+\_\+t}}
+\index{vsize\+\_\+t@{vsize\+\_\+t}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{vsize\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef std\+::vector$<$T,A$>$\+::{\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf vsize\+\_\+t}}\label{classIceBRG_1_1multi__vector_abcc3d84f2afbb3e4239cea8c2c4923c3}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1multi__vector_a6ba7614c52e0dc623fc190d868f8b6ed}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a6ba7614c52e0dc623fc190d868f8b6ed}
+\hypertarget{classIceBRG_1_1multi__vector_a7bdea87bcffcdc2053cd65ba21dd3e95}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(vsize\+\_\+t init\+\_\+size, T init\+\_\+val, const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf vsize\+\_\+t}}]{init\+\_\+size, }
+\item[{T}]{init\+\_\+val, }
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a7bdea87bcffcdc2053cd65ba21dd3e95}
+\hypertarget{classIceBRG_1_1multi__vector_ae94a23b09a6f6bc737481c132332346b}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(shape\+\_\+t init\+\_\+shape, T init\+\_\+val, const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf shape\+\_\+t}}]{init\+\_\+shape, }
+\item[{T}]{init\+\_\+val, }
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ae94a23b09a6f6bc737481c132332346b}
+\hypertarget{classIceBRG_1_1multi__vector_aafd73188953583a68c242bbb201311ae}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const multi\+\_\+vector$<$ T, A $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aafd73188953583a68c242bbb201311ae}
+\hypertarget{classIceBRG_1_1multi__vector_a1fcceaa14320c72bc437883f8d194bc2}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const multi\+\_\+vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a1fcceaa14320c72bc437883f8d194bc2}
+\hypertarget{classIceBRG_1_1multi__vector_ac300dd742268ef19405ce2ac8c9c3752}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ac300dd742268ef19405ce2ac8c9c3752}
+\hypertarget{classIceBRG_1_1multi__vector_a29f4de67e11d47b98b5ff2e81df0dc7f}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const T\+\_\+o(\&array)[N], const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , size\+\_\+t N$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const T\+\_\+o(\&)}]{array\mbox{[}\+N\mbox{]}, }
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a29f4de67e11d47b98b5ff2e81df0dc7f}
+\hypertarget{classIceBRG_1_1multi__vector_ac1d11f942532985324c8c3acb5801bec}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(const T\+\_\+o \&other, const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o $>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const T\+\_\+o \&}]{other, }
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ac1d11f942532985324c8c3acb5801bec}
+\hypertarget{classIceBRG_1_1multi__vector_ad91e124b6658894a6e8162f85b1ddd8f}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!multi\+\_\+vector@{multi\+\_\+vector}}
+\index{multi\+\_\+vector@{multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{multi\+\_\+vector(i\+T\+\_\+o first, i\+T\+\_\+o last, const A \&alloc=\+A())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename i\+T\+\_\+o $>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::{\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{i\+T\+\_\+o}]{first, }
+\item[{i\+T\+\_\+o}]{last, }
+\item[{const A \&}]{alloc = {\ttfamily A()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ad91e124b6658894a6e8162f85b1ddd8f}
+\hypertarget{classIceBRG_1_1multi__vector_a5838dc2869a700c864ab13c2abd65277}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!````~multi\+\_\+vector@{$\sim$multi\+\_\+vector}}
+\index{````~multi\+\_\+vector@{$\sim$multi\+\_\+vector}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{$\sim$multi\+\_\+vector()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ virtual {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::$\sim${\bf multi\+\_\+vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1multi__vector_a5838dc2869a700c864ab13c2abd65277}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1multi__vector_ae1a89438380ac2b5aeb898e171ed9364}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!assign@{assign}}
+\index{assign@{assign}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{assign(\+Input\+Iterator first, Input\+Iterator last)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$class Input\+Iterator $>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ae1a89438380ac2b5aeb898e171ed9364}
+\hypertarget{classIceBRG_1_1multi__vector_a5dfdcc780219ad607ced1e3e894945f5}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!assign@{assign}}
+\index{assign@{assign}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{assign(typename vec\+::size\+\_\+type n, const T \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::assign (
+\begin{DoxyParamCaption}
+\item[{typename {\bf vec\+::size\+\_\+type}}]{n, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a5dfdcc780219ad607ced1e3e894945f5}
+\hypertarget{classIceBRG_1_1multi__vector_ac3c759345706a78af2c1a8a8cde072c7}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{at(const shape\+\_\+t \&position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf shape\+\_\+t} \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ac3c759345706a78af2c1a8a8cde072c7}
+\hypertarget{classIceBRG_1_1multi__vector_af3f5a492939e45c036c73d0286ae8505}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{at(const shape\+\_\+t \&position) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf shape\+\_\+t} \&}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_af3f5a492939e45c036c73d0286ae8505}
+\hypertarget{classIceBRG_1_1multi__vector_a107ef0e6fea9601c2a1cd0fea5bef200}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{at(const multi\+\_\+vector$<$ int\+\_\+type $>$ \&position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ {\bf int\+\_\+type} $>$ \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a107ef0e6fea9601c2a1cd0fea5bef200}
+\hypertarget{classIceBRG_1_1multi__vector_aa50615a83dad050c93098950894d8fa5}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{at(const multi\+\_\+vector$<$ int\+\_\+type $>$ \&position) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ {\bf int\+\_\+type} $>$ \&}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aa50615a83dad050c93098950894d8fa5}
+\hypertarget{classIceBRG_1_1multi__vector_a12b96cd198798ebb0506dbf1b0475c57}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!clear@{clear}}
+\index{clear@{clear}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a12b96cd198798ebb0506dbf1b0475c57}
+\hypertarget{classIceBRG_1_1multi__vector_a92c909bfd31a10254ec5c490283bff73}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!copy@{copy}}
+\index{copy@{copy}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{copy(multi\+\_\+vector$<$ T, A $>$ other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::copy (
+\begin{DoxyParamCaption}
+\item[{{\bf multi\+\_\+vector}$<$ T, A $>$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a92c909bfd31a10254ec5c490283bff73}
+\hypertarget{classIceBRG_1_1multi__vector_accc4290ed0ee20edf847e26805cd54f2}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!del\+\_\+back@{del\+\_\+back}}
+\index{del\+\_\+back@{del\+\_\+back}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{del\+\_\+back()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::del\+\_\+back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_accc4290ed0ee20edf847e26805cd54f2}
+\hypertarget{classIceBRG_1_1multi__vector_aba38804447222d41c4ca7c49feac8cab}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!erase@{erase}}
+\index{erase@{erase}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{erase(typename vec\+::iterator position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ vec\+::iterator {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{typename vec\+::iterator}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aba38804447222d41c4ca7c49feac8cab}
+\hypertarget{classIceBRG_1_1multi__vector_a64188c90861ee5ad87b4ec9fcd265f20}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!erase@{erase}}
+\index{erase@{erase}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{erase(typename vec\+::iterator first, typename vec\+::iterator last)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ vec\+::iterator {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{typename vec\+::iterator}]{first, }
+\item[{typename vec\+::iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a64188c90861ee5ad87b4ec9fcd265f20}
+\hypertarget{classIceBRG_1_1multi__vector_a7db7da470a601e122fc74f2f9523ed04}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!insert@{insert}}
+\index{insert@{insert}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{insert(typename vec\+::iterator position, const T \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ vec\+::iterator {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{typename vec\+::iterator}]{position, }
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a7db7da470a601e122fc74f2f9523ed04}
+\hypertarget{classIceBRG_1_1multi__vector_ad7b717cff0ee7405af4837e29ecdf868}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!insert@{insert}}
+\index{insert@{insert}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{insert(typename vec\+::iterator position, typename vec\+::size\+\_\+type n, const typename vec\+::value\+\_\+type \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{typename vec\+::iterator}]{position, }
+\item[{typename {\bf vec\+::size\+\_\+type}}]{n, }
+\item[{const typename vec\+::value\+\_\+type \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ad7b717cff0ee7405af4837e29ecdf868}
+\hypertarget{classIceBRG_1_1multi__vector_a8f74fe60c6358817ccf81d5c973cc93f}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!insert@{insert}}
+\index{insert@{insert}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{insert(typename vec\+::iterator position, Input\+Iterator first, Input\+Iterator last)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$class Input\+Iterator $>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{typename vec\+::iterator}]{position, }
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a8f74fe60c6358817ccf81d5c973cc93f}
+\hypertarget{classIceBRG_1_1multi__vector_a0beaee05722b4fd40af1452d452f4fe7}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!num\+\_\+dim@{num\+\_\+dim}}
+\index{num\+\_\+dim@{num\+\_\+dim}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{num\+\_\+dim() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const {\bf dsize\+\_\+t}\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::num\+\_\+dim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a0beaee05722b4fd40af1452d452f4fe7}
+\hypertarget{classIceBRG_1_1multi__vector_a94d3f4a0aeb3e0a10deff3facab26ead}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator T@{operator T}}
+\index{operator T@{operator T}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator T() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a94d3f4a0aeb3e0a10deff3facab26ead}
+\hypertarget{classIceBRG_1_1multi__vector_a58de7745b168b4831cb1f0b20d933684}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator()(const shape\+\_\+t \&position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf shape\+\_\+t} \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a58de7745b168b4831cb1f0b20d933684}
+\hypertarget{classIceBRG_1_1multi__vector_a472ebe4b4a132452caf3cd98edb64e2c}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator()(const shape\+\_\+t \&position) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf shape\+\_\+t} \&}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a472ebe4b4a132452caf3cd98edb64e2c}
+\hypertarget{classIceBRG_1_1multi__vector_aad5f4f2ced67278183d44ff906f3b654}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator()(const multi\+\_\+vector$<$ int\+\_\+type $>$ \&position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ {\bf int\+\_\+type} $>$ \&}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aad5f4f2ced67278183d44ff906f3b654}
+\hypertarget{classIceBRG_1_1multi__vector_a61766162e95d0896e9dd45b894cbd0f8}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator()(const multi\+\_\+vector$<$ int\+\_\+type $>$ \&position) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ {\bf int\+\_\+type} $>$ \&}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a61766162e95d0896e9dd45b894cbd0f8}
+\hypertarget{classIceBRG_1_1multi__vector_a73496e141636d17cb8518bf9349bcc61}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator$\ast$=(const multi\+\_\+vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a73496e141636d17cb8518bf9349bcc61}
+\hypertarget{classIceBRG_1_1multi__vector_ae18d0d68a054316add7134b34364504e}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator$\ast$=(const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ae18d0d68a054316add7134b34364504e}
+\hypertarget{classIceBRG_1_1multi__vector_a828d13398771ee0cb3618aa72023c414}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator$\ast$=(\+T\+\_\+o other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator$\ast$= (
+\begin{DoxyParamCaption}
+\item[{T\+\_\+o}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a828d13398771ee0cb3618aa72023c414}
+\hypertarget{classIceBRG_1_1multi__vector_a472689a6e3130c24d066c314bf6a8409}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator++@{operator++}}
+\index{operator++@{operator++}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a472689a6e3130c24d066c314bf6a8409}
+\hypertarget{classIceBRG_1_1multi__vector_adc1298f6bfb1b3d47bb6cb23230ca527}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator++@{operator++}}
+\index{operator++@{operator++}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator++(int\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator++ (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_adc1298f6bfb1b3d47bb6cb23230ca527}
+\hypertarget{classIceBRG_1_1multi__vector_ac98362c51641079300aea3e0e7b2c394}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator+=(const multi\+\_\+vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ac98362c51641079300aea3e0e7b2c394}
+\hypertarget{classIceBRG_1_1multi__vector_a33e36547fa2a5a016652287d38b23eb1}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator+=(const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a33e36547fa2a5a016652287d38b23eb1}
+\hypertarget{classIceBRG_1_1multi__vector_a100c7fe9b7eb28552d61ad9670da560b}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator+=(\+T\+\_\+o other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{T\+\_\+o}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a100c7fe9b7eb28552d61ad9670da560b}
+\hypertarget{classIceBRG_1_1multi__vector_a1f8e2ea7d8cfbe4dab3a00d83dfc057f}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator-\/=(const multi\+\_\+vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a1f8e2ea7d8cfbe4dab3a00d83dfc057f}
+\hypertarget{classIceBRG_1_1multi__vector_ad2805cc6dfd1d7e5a6c3ddccf8e05217}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator-\/=(const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ad2805cc6dfd1d7e5a6c3ddccf8e05217}
+\hypertarget{classIceBRG_1_1multi__vector_aff6dc155260c3184e867fd791f90f4b2}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator-\/=(\+T\+\_\+o other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{T\+\_\+o}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aff6dc155260c3184e867fd791f90f4b2}
+\hypertarget{classIceBRG_1_1multi__vector_ae6912cd1b408b33e4f6e616b394f6375}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator/=(const multi\+\_\+vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf multi\+\_\+vector}$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ae6912cd1b408b33e4f6e616b394f6375}
+\hypertarget{classIceBRG_1_1multi__vector_aea2029e62a8c71e4ce078002bbcf5a01}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator/=(const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o , typename A\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T\+\_\+o, A\+\_\+o $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aea2029e62a8c71e4ce078002bbcf5a01}
+\hypertarget{classIceBRG_1_1multi__vector_aef3fb151f960eff2cd162b9986229c46}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator/=(\+T\+\_\+o other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename T\+\_\+o $>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator/= (
+\begin{DoxyParamCaption}
+\item[{T\+\_\+o}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_aef3fb151f960eff2cd162b9986229c46}
+\hypertarget{classIceBRG_1_1multi__vector_abcfd8d5fcc0c020f3b2df4a7e9f8a86d}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{operator=(multi\+\_\+vector$<$ T, A $>$ other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf multi\+\_\+vector}$<$ T, A $>$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_abcfd8d5fcc0c020f3b2df4a7e9f8a86d}
+\hypertarget{classIceBRG_1_1multi__vector_a5fafc6a7c33d88dc5d772365baf6cd40}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!pop\+\_\+back@{pop\+\_\+back}}
+\index{pop\+\_\+back@{pop\+\_\+back}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{pop\+\_\+back()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const T\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::pop\+\_\+back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a5fafc6a7c33d88dc5d772365baf6cd40}
+\hypertarget{classIceBRG_1_1multi__vector_a2f86b23b2ed4a23e20fb1292624e2da9}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{push\+\_\+back(const T \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf multi\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a2f86b23b2ed4a23e20fb1292624e2da9}
+\hypertarget{classIceBRG_1_1multi__vector_a3eceee96718f7144bd056caa4486023e}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!reshape@{reshape}}
+\index{reshape@{reshape}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{reshape(const shape\+\_\+t \&new\+\_\+shape, const T \&new\+\_\+val=\+T())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::reshape (
+\begin{DoxyParamCaption}
+\item[{const {\bf shape\+\_\+t} \&}]{new\+\_\+shape, }
+\item[{const T \&}]{new\+\_\+val = {\ttfamily T()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a3eceee96718f7144bd056caa4486023e}
+\hypertarget{classIceBRG_1_1multi__vector_a08b4f9d36263e9e35c753842716b04dc}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!resize@{resize}}
+\index{resize@{resize}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{resize(vsize\+\_\+t n, T val=\+T())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::resize (
+\begin{DoxyParamCaption}
+\item[{{\bf vsize\+\_\+t}}]{n, }
+\item[{T}]{val = {\ttfamily T()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a08b4f9d36263e9e35c753842716b04dc}
+\hypertarget{classIceBRG_1_1multi__vector_ad5fb113982dce9456f724ca9072e42c9}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!shape@{shape}}
+\index{shape@{shape}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{shape() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const {\bf shape\+\_\+t}\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::shape (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ad5fb113982dce9456f724ca9072e42c9}
+\hypertarget{classIceBRG_1_1multi__vector_ade66bbf2a7c88dab7578117828cbf51a}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{swap(multi\+\_\+vector$<$ T, A $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf multi\+\_\+vector}$<$T, A$>$\& {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf multi\+\_\+vector}$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_ade66bbf2a7c88dab7578117828cbf51a}
+\hypertarget{classIceBRG_1_1multi__vector_a91f5eebc48c8849b8c27e7992e17701b}{}\index{Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}!v@{v}}
+\index{v@{v}!Ice\+B\+R\+G\+::multi\+\_\+vector@{Ice\+B\+R\+G\+::multi\+\_\+vector}}
+\subsubsection[{v() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ std\+::vector$<$T,A$>$ {\bf Ice\+B\+R\+G\+::multi\+\_\+vector}$<$ T, A $>$\+::v (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1multi__vector_a91f5eebc48c8849b8c27e7992e17701b}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/vector/\hyperlink{multi__vector_8hpp}{multi\+\_\+vector.\+hpp}\end{DoxyCompactItemize}

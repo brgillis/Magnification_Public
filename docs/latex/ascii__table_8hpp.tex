@@ -1,0 +1,48 @@
+\hypertarget{ascii__table_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table.hpp File Reference}
+\label{ascii__table_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table.\+hpp}}
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/\+Eigen.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/table\+\_\+typedefs.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/file\+\_\+access/open\+\_\+file.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/file\+\_\+access/table\+\_\+utility.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/file\+\_\+access/trim\+\_\+comments.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/misc\+\_\+math.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/utility.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/vector/manipulations.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{ascii__table_8hpp_ae91483aed93824585beeb595ae28b4a5}{\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_ae53d90be96da8318b9d62188970ce1d7}{Ice\+B\+R\+G\+::print\+\_\+table} (std\+::ostream \&out\+\_\+stream, const table\+\_\+t$<$ T $>$ \&data, const header\+\_\+t \&header=header\+\_\+t(), const char major\+\_\+tag=Eigen\+::\+Col\+Major, const char precision=10)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_ac15c03b00d4dc1d1fb843d1c5e8f9b01}{Ice\+B\+R\+G\+::print\+\_\+table} (const std\+::string \&file\+\_\+name, const table\+\_\+t$<$ T $>$ \&data, const header\+\_\+t \&header=header\+\_\+t(), const char major\+\_\+tag=Eigen\+::\+Col\+Major)
+\item 
+{\footnotesize template$<$typename T $>$ }\\table\+\_\+t$<$ T $>$ \hyperlink{namespaceIceBRG_ae243e8ce14d6e346cceab63a4d76637a}{Ice\+B\+R\+G\+::load\+\_\+table} (std\+::istream \&fi, const char major\+\_\+tag=Eigen\+::\+Col\+Major, const T \&default\+\_\+value=T(), size\+\_\+t min\+\_\+length=0)
+\item 
+{\footnotesize template$<$typename T $>$ }\\table\+\_\+t$<$ T $>$ \hyperlink{namespaceIceBRG_ac978c55b40895ee8d5d3731532e4b1c7}{Ice\+B\+R\+G\+::load\+\_\+table} (const std\+::string \&file\+\_\+name, const char major\+\_\+tag=Eigen\+::\+Col\+Major, const T \&default\+\_\+value=T())
+\item 
+header\+\_\+t \hyperlink{namespaceIceBRG_a047b573042d337c558184344d9d7fae1}{Ice\+B\+R\+G\+::load\+\_\+header} (std\+::istream \&table\+\_\+stream)
+\item 
+header\+\_\+t \hyperlink{namespaceIceBRG_adc28049500e5c5e79d321cc31847267a}{Ice\+B\+R\+G\+::load\+\_\+header} (const std\+::string \&file\+\_\+name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{ascii__table_8hpp_ae91483aed93824585beeb595ae28b4a5}{}\index{ascii\+\_\+table.\+hpp@{ascii\+\_\+table.\+hpp}!\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+@{\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+}}
+\index{\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+@{\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+}!ascii\+\_\+table.\+hpp@{ascii\+\_\+table.\+hpp}}
+\subsubsection[{\+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+B\+R\+G\+\_\+\+A\+S\+C\+I\+I\+\_\+\+T\+A\+B\+L\+E\+\_\+\+H\+\_\+\+I\+N\+C\+L\+U\+D\+E\+D\+\_\+}\label{ascii__table_8hpp_ae91483aed93824585beeb595ae28b4a5}

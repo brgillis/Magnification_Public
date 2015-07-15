@@ -1,0 +1,163 @@
+\hypertarget{classtk_1_1band__matrix}{}\section{tk\+:\+:band\+\_\+matrix Class Reference}
+\label{classtk_1_1band__matrix}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+
+
+{\ttfamily \#include $<$tk\+\_\+spline.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtk_1_1band__matrix_a5a62f404ad5ae5cf01229e975eb3f2e6}{band\+\_\+matrix} ()
+\item 
+\hyperlink{classtk_1_1band__matrix_afd7ec8606a784f26fa3e4ba8eba38fd4}{band\+\_\+matrix} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classtk_1_1band__matrix_a0e30948695f91e4f05ce0821ca727de9}{dim}, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} n\+\_\+u, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} n\+\_\+l)
+\item 
+\hyperlink{classtk_1_1band__matrix_a1d5af61e7df839f41ca2957176ca4cff}{$\sim$band\+\_\+matrix} ()
+\item 
+void \hyperlink{classtk_1_1band__matrix_a3a8be5ed65fe4e744547aa4b4687faa2}{resize} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classtk_1_1band__matrix_a0e30948695f91e4f05ce0821ca727de9}{dim}, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} n\+\_\+u, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} n\+\_\+l)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classtk_1_1band__matrix_a0e30948695f91e4f05ce0821ca727de9}{dim} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classtk_1_1band__matrix_a1634d67ea1342197c96f7b20ba15a693}{num\+\_\+upper} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{classtk_1_1band__matrix_a6d99ecb9a597e3784c0c928771a2c0b5}{num\+\_\+lower} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \& \hyperlink{classtk_1_1band__matrix_a3649997a5269e71326957f37ea57edec}{operator()} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} i, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} j)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classtk_1_1band__matrix_a661aa4b55f5d1aab75acf4fc6b47b961}{operator()} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} i, \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} j) const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \& \hyperlink{classtk_1_1band__matrix_aef88622f8ed1de988f627f77272a9814}{saved\+\_\+diag} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} i)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \hyperlink{classtk_1_1band__matrix_ab9d4e9df93a6755858374301ba44174c}{saved\+\_\+diag} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} i) const 
+\item 
+void \hyperlink{classtk_1_1band__matrix_a58c5621f3a2b81621b8a52d2e7fd2da5}{lu\+\_\+decompose} ()
+\item 
+std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \hyperlink{classtk_1_1band__matrix_a3626d6f87f19035b6c8732fb1cebb3b4}{r\+\_\+solve} (const std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \&b) const 
+\item 
+std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \hyperlink{classtk_1_1band__matrix_a0721ac3418dd32ad416fa7bac68ced0e}{l\+\_\+solve} (const std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \&b) const 
+\item 
+std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \hyperlink{classtk_1_1band__matrix_acdf1bef7330c077929e5c414b002fa83}{lu\+\_\+solve} (const std\+::vector$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ \&b, bool is\+\_\+lu\+\_\+decomposed=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtk_1_1band__matrix_a5a62f404ad5ae5cf01229e975eb3f2e6}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!band\+\_\+matrix@{band\+\_\+matrix}}
+\index{band\+\_\+matrix@{band\+\_\+matrix}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{band\+\_\+matrix()}]{\setlength{\rightskip}{0pt plus 5cm}tk\+::band\+\_\+matrix\+::band\+\_\+matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtk_1_1band__matrix_a5a62f404ad5ae5cf01229e975eb3f2e6}
+\hypertarget{classtk_1_1band__matrix_afd7ec8606a784f26fa3e4ba8eba38fd4}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!band\+\_\+matrix@{band\+\_\+matrix}}
+\index{band\+\_\+matrix@{band\+\_\+matrix}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{band\+\_\+matrix(int\+\_\+type dim, int\+\_\+type n\+\_\+u, int\+\_\+type n\+\_\+l)}]{\setlength{\rightskip}{0pt plus 5cm}tk\+::band\+\_\+matrix\+::band\+\_\+matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{dim, }
+\item[{{\bf int\+\_\+type}}]{n\+\_\+u, }
+\item[{{\bf int\+\_\+type}}]{n\+\_\+l}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_afd7ec8606a784f26fa3e4ba8eba38fd4}
+\hypertarget{classtk_1_1band__matrix_a1d5af61e7df839f41ca2957176ca4cff}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!````~band\+\_\+matrix@{$\sim$band\+\_\+matrix}}
+\index{````~band\+\_\+matrix@{$\sim$band\+\_\+matrix}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{$\sim$band\+\_\+matrix()}]{\setlength{\rightskip}{0pt plus 5cm}tk\+::band\+\_\+matrix\+::$\sim$band\+\_\+matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtk_1_1band__matrix_a1d5af61e7df839f41ca2957176ca4cff}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtk_1_1band__matrix_a0e30948695f91e4f05ce0821ca727de9}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!dim@{dim}}
+\index{dim@{dim}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{dim() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf int\+\_\+type} tk\+::band\+\_\+matrix\+::dim (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classtk_1_1band__matrix_a0e30948695f91e4f05ce0821ca727de9}
+\hypertarget{classtk_1_1band__matrix_a0721ac3418dd32ad416fa7bac68ced0e}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!l\+\_\+solve@{l\+\_\+solve}}
+\index{l\+\_\+solve@{l\+\_\+solve}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{l\+\_\+solve(const std\+::vector$<$ flt\+\_\+type $>$ \&b) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf flt\+\_\+type} $>$ tk\+::band\+\_\+matrix\+::l\+\_\+solve (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf flt\+\_\+type} $>$ \&}]{b}
+\end{DoxyParamCaption}
+) const}\label{classtk_1_1band__matrix_a0721ac3418dd32ad416fa7bac68ced0e}
+\hypertarget{classtk_1_1band__matrix_a58c5621f3a2b81621b8a52d2e7fd2da5}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!lu\+\_\+decompose@{lu\+\_\+decompose}}
+\index{lu\+\_\+decompose@{lu\+\_\+decompose}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{lu\+\_\+decompose()}]{\setlength{\rightskip}{0pt plus 5cm}void tk\+::band\+\_\+matrix\+::lu\+\_\+decompose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_a58c5621f3a2b81621b8a52d2e7fd2da5}
+\hypertarget{classtk_1_1band__matrix_acdf1bef7330c077929e5c414b002fa83}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!lu\+\_\+solve@{lu\+\_\+solve}}
+\index{lu\+\_\+solve@{lu\+\_\+solve}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{lu\+\_\+solve(const std\+::vector$<$ flt\+\_\+type $>$ \&b, bool is\+\_\+lu\+\_\+decomposed=false)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf flt\+\_\+type} $>$ tk\+::band\+\_\+matrix\+::lu\+\_\+solve (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf flt\+\_\+type} $>$ \&}]{b, }
+\item[{bool}]{is\+\_\+lu\+\_\+decomposed = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_acdf1bef7330c077929e5c414b002fa83}
+\hypertarget{classtk_1_1band__matrix_a6d99ecb9a597e3784c0c928771a2c0b5}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!num\+\_\+lower@{num\+\_\+lower}}
+\index{num\+\_\+lower@{num\+\_\+lower}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{num\+\_\+lower() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf int\+\_\+type} tk\+::band\+\_\+matrix\+::num\+\_\+lower (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtk_1_1band__matrix_a6d99ecb9a597e3784c0c928771a2c0b5}
+\hypertarget{classtk_1_1band__matrix_a1634d67ea1342197c96f7b20ba15a693}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!num\+\_\+upper@{num\+\_\+upper}}
+\index{num\+\_\+upper@{num\+\_\+upper}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{num\+\_\+upper() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf int\+\_\+type} tk\+::band\+\_\+matrix\+::num\+\_\+upper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtk_1_1band__matrix_a1634d67ea1342197c96f7b20ba15a693}
+\hypertarget{classtk_1_1band__matrix_a3649997a5269e71326957f37ea57edec}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{operator()(int\+\_\+type i, int\+\_\+type j)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} \& tk\+::band\+\_\+matrix\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{i, }
+\item[{{\bf int\+\_\+type}}]{j}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_a3649997a5269e71326957f37ea57edec}
+\hypertarget{classtk_1_1band__matrix_a661aa4b55f5d1aab75acf4fc6b47b961}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!operator()@{operator()}}
+\index{operator()@{operator()}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{operator()(int\+\_\+type i, int\+\_\+type j) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} tk\+::band\+\_\+matrix\+::operator() (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{i, }
+\item[{{\bf int\+\_\+type}}]{j}
+\end{DoxyParamCaption}
+) const}\label{classtk_1_1band__matrix_a661aa4b55f5d1aab75acf4fc6b47b961}
+\hypertarget{classtk_1_1band__matrix_a3626d6f87f19035b6c8732fb1cebb3b4}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!r\+\_\+solve@{r\+\_\+solve}}
+\index{r\+\_\+solve@{r\+\_\+solve}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{r\+\_\+solve(const std\+::vector$<$ flt\+\_\+type $>$ \&b) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf flt\+\_\+type} $>$ tk\+::band\+\_\+matrix\+::r\+\_\+solve (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf flt\+\_\+type} $>$ \&}]{b}
+\end{DoxyParamCaption}
+) const}\label{classtk_1_1band__matrix_a3626d6f87f19035b6c8732fb1cebb3b4}
+\hypertarget{classtk_1_1band__matrix_a3a8be5ed65fe4e744547aa4b4687faa2}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!resize@{resize}}
+\index{resize@{resize}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{resize(int\+\_\+type dim, int\+\_\+type n\+\_\+u, int\+\_\+type n\+\_\+l)}]{\setlength{\rightskip}{0pt plus 5cm}void tk\+::band\+\_\+matrix\+::resize (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{dim, }
+\item[{{\bf int\+\_\+type}}]{n\+\_\+u, }
+\item[{{\bf int\+\_\+type}}]{n\+\_\+l}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_a3a8be5ed65fe4e744547aa4b4687faa2}
+\hypertarget{classtk_1_1band__matrix_aef88622f8ed1de988f627f77272a9814}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!saved\+\_\+diag@{saved\+\_\+diag}}
+\index{saved\+\_\+diag@{saved\+\_\+diag}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{saved\+\_\+diag(int\+\_\+type i)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} \& tk\+::band\+\_\+matrix\+::saved\+\_\+diag (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{i}
+\end{DoxyParamCaption}
+)}\label{classtk_1_1band__matrix_aef88622f8ed1de988f627f77272a9814}
+\hypertarget{classtk_1_1band__matrix_ab9d4e9df93a6755858374301ba44174c}{}\index{tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}!saved\+\_\+diag@{saved\+\_\+diag}}
+\index{saved\+\_\+diag@{saved\+\_\+diag}!tk\+::band\+\_\+matrix@{tk\+::band\+\_\+matrix}}
+\subsubsection[{saved\+\_\+diag(int\+\_\+type i) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf flt\+\_\+type} tk\+::band\+\_\+matrix\+::saved\+\_\+diag (
+\begin{DoxyParamCaption}
+\item[{{\bf int\+\_\+type}}]{i}
+\end{DoxyParamCaption}
+) const}\label{classtk_1_1band__matrix_ab9d4e9df93a6755858374301ba44174c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/\hyperlink{tk__spline_8h}{tk\+\_\+spline.\+h}\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/external/\hyperlink{tk__spline_8cpp}{tk\+\_\+spline.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,50 @@
+The Ice\+B\+R\+G\+\_\+physics library contains functions and classes related to generic astrophysics problems and concepts. The Ice\+B\+R\+G\+\_\+lensing library contains those aspects which are more focused on gravitational lensing. This library relies on functions and classes defined in the Ice\+B\+R\+G\+\_\+main library, so that library must be included and linked as well when this is used. The proper link order is \char`\"{}-\/l\+Ice\+B\+R\+G\+\_\+physics
+-\/l\+Ice\+B\+R\+G\+\_\+main\char`\"{}.
+
+This section will go over various functions and classes available in the library, sorted by the files and folders they\textquotesingle{}re contained within.
+
+\subsection*{Miscellaneous}
+
+The header files discussed here reside in the root folder, \char`\"{}\+Ice\+B\+R\+G\+\_\+physics\char`\"{}. They can be included by, for instance \char`\"{}\#include $<$\+Ice\+B\+R\+G\+\_\+physics/astro.\+h$>$\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{astro_8h}{astro.\+h} -\/ Generic astrophysics functions, including conversions between redshift, distance measures, and cosmic time, and simply calculations of distance on the sky.
+\item \hyperlink{astro__caches_8h}{astro\+\_\+caches.\+h} and \hyperlink{astro__caches_8cpp}{astro\+\_\+caches.\+cpp} -\/ These provide a good example of how to use the cache base classes to cache the result of a function which is expensive to evaluate.
+\item \hyperlink{correlation__function__estimator_8h}{correlation\+\_\+function\+\_\+estimator.\+h} -\/ A class used to calculate correlation functions
+\item \hyperlink{lensing__correlation__function__estimator_8h}{lensing\+\_\+correlation\+\_\+function\+\_\+estimator.\+h} -\/ Used to calculate correlation functions between lenses and sources in the background from them. (This may get moved to the Ice\+B\+R\+G\+\_\+lensing library at some point in the future.)
+\end{DoxyItemize}
+
+\subsection*{Folders}
+
+\subsubsection*{density\+\_\+profile}
+
+This folder contains a definition of a base class for a spherically-\/symmetric density profile, and the definitions of some derived classes. The class allows easy calculation of various aspect of the profile from a minimal definition. Notable headers are\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{density__profile_8h}{density\+\_\+profile.\+h} -\/ The base class
+\item \hyperlink{point__mass__profile_8h}{point\+\_\+mass\+\_\+profile.\+h} -\/ An example profile for a point mass
+\item \hyperlink{tNFW__profile_8h}{t\+N\+F\+W\+\_\+profile.\+h} -\/ A truncated Navarro-\/\+Frenk-\/\+White (N\+F\+W) profile
+\end{DoxyItemize}
+
+\subsubsection*{sky\+\_\+obj}
+
+This folder contains the definition of the \char`\"{}sky\+\_\+obj\char`\"{} base class, representing anything with a position on the sky, and a few derived classes. Notable headers are\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{sky__obj_8h}{sky\+\_\+obj.\+h} -\/ The base class
+\item \hyperlink{galaxy_8h}{galaxy.\+h} -\/ A class representing a galaxy, with data stored on various aspects of it
+\end{DoxyItemize}
+
+The other classes defined in this folder have not been thoroughly tested, and should be used with caution.
+
+\subsubsection*{sky\+\_\+obj\+\_\+with\+\_\+density\+\_\+profile}
+
+This folder contains objects with both a position on the sky and a density profile.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{tNFW__galaxy_8h}{t\+N\+F\+W\+\_\+galaxy.\+h} -\/ A galaxy with a t\+N\+F\+W mass profile 
+\end{DoxyItemize}

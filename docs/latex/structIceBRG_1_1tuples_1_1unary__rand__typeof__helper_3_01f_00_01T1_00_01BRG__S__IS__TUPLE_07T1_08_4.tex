@@ -1,0 +1,32 @@
+\hypertarget{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}{}\section{Ice\+B\+R\+G\+:\+:tuples\+:\+:unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(T1)$>$ Struct Template Reference}
+\label{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4}\index{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}
+
+
+{\ttfamily \#include $<$tuple.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::decay$<$ T1 $>$\+::\hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_a1936e83b3ef0820a319846b7c3f3b9a6}{type} \hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_ac47636122d9eb47f1b4b42e03d2ca3ad}{T1d}
+\item 
+typedef boost\+::tuples\+::cons$<$ decltype(std\+::declval$<$ f $>$)(\hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_ac47636122d9eb47f1b4b42e03d2ca3ad}{T1d}().get\+\_\+head())), typename \hyperlink{namespaceIceBRG_1_1tuples_structIceBRG_1_1tuples_1_1unary__rand__typeof__helper}{unary\+\_\+rand\+\_\+typeof\+\_\+helper}$<$ f, decltype(\hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_ac47636122d9eb47f1b4b42e03d2ca3ad}{T1d}().get\+\_\+tail())$>$\+::\hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_a1936e83b3ef0820a319846b7c3f3b9a6}{type} $>$ \hyperlink{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_a1936e83b3ef0820a319846b7c3f3b9a6}{type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class f, class T1$>$struct Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}
+
+Helper structure to determine the type of generating a random tuple from a function. This is needed since the compiler won\textquotesingle{}t fully recurse function decltypes, but it will fully recurse a structure. 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_ac47636122d9eb47f1b4b42e03d2ca3ad}{}\index{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}!T1d@{T1d}}
+\index{T1d@{T1d}!Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}
+\subsubsection[{T1d}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class f , class T1 $>$ typedef std\+::decay$<$T1$>$\+::{\bf type} {\bf Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper}$<$ f, T1, {\bf B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}(T1)$>$\+::{\bf T1d}}\label{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_ac47636122d9eb47f1b4b42e03d2ca3ad}
+\hypertarget{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_a1936e83b3ef0820a319846b7c3f3b9a6}{}\index{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}!type@{type}}
+\index{type@{type}!Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$@{Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper$<$ f, T1, B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T1)$>$}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class f , class T1 $>$ typedef boost\+::tuples\+::cons$<$decltype(std\+::declval$<$f$>$)({\bf T1d}().get\+\_\+head())), typename {\bf unary\+\_\+rand\+\_\+typeof\+\_\+helper}$<$f,decltype({\bf T1d}().get\+\_\+tail())$>$\+::{\bf type}$>$ {\bf Ice\+B\+R\+G\+::tuples\+::unary\+\_\+rand\+\_\+typeof\+\_\+helper}$<$ f, T1, {\bf B\+R\+G\+\_\+\+S\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E}(T1)$>$\+::{\bf type}}\label{structIceBRG_1_1tuples_1_1unary__rand__typeof__helper_3_01f_00_01T1_00_01BRG__S__IS__TUPLE_07T1_08_4_a1936e83b3ef0820a319846b7c3f3b9a6}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/\hyperlink{tuple_8hpp}{tuple.\+hpp}\end{DoxyCompactItemize}

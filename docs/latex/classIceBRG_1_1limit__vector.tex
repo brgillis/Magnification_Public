@@ -1,0 +1,1062 @@
+\hypertarget{classIceBRG_1_1limit__vector}{}\section{Ice\+B\+R\+G\+:\+:limit\+\_\+vector$<$ T, A $>$ Class Template Reference}
+\label{classIceBRG_1_1limit__vector}\index{Ice\+B\+R\+G\+::limit\+\_\+vector$<$ T, A $>$@{Ice\+B\+R\+G\+::limit\+\_\+vector$<$ T, A $>$}}
+
+
+{\ttfamily \#include $<$limit\+\_\+vector.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \{ \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681ab61773b9b3968a9988d765d728985862}{type\+::\+G\+E\+N\+E\+R\+A\+L}, 
+\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681aaac544aacc3615aada24897a215f5046}{type\+::\+L\+I\+N\+E\+A\+R}, 
+\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a4b5ffcdaf38ce4d463171f5c977c5ab3}{type\+::\+L\+O\+G}, 
+\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a63548de92aab6aa127df46cfbed9e23f}{type\+::\+D\+I\+S\+J\+O\+I\+N\+T}
+ \}
+\item 
+typedef std\+::vector$<$ T, A $>$ \hyperlink{classIceBRG_1_1limit__vector_a8f5c1d622276ed2d9835feab9538b96e}{base\+\_\+type}
+\item 
+typedef base\+\_\+type\+::value\+\_\+type \hyperlink{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{value\+\_\+type}
+\item 
+typedef base\+\_\+type\+::allocator\+\_\+type \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}
+\item 
+typedef base\+\_\+type\+::reference \hyperlink{classIceBRG_1_1limit__vector_af3acb98a381ba86ca927f099591d1512}{reference}
+\item 
+typedef base\+\_\+type\+::const\+\_\+reference \hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference}
+\item 
+typedef base\+\_\+type\+::pointer \hyperlink{classIceBRG_1_1limit__vector_a87f3142bb69e755ba61e51ddfa7e6eae}{pointer}
+\item 
+typedef base\+\_\+type\+::const\+\_\+pointer \hyperlink{classIceBRG_1_1limit__vector_a06b68c790b5e5692b6e302d5478be33f}{const\+\_\+pointer}
+\item 
+typedef base\+\_\+type\+::iterator \hyperlink{classIceBRG_1_1limit__vector_aea9e186f4c5fb359da52895bafba6335}{iterator}
+\item 
+typedef base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::reverse\+\_\+iterator \hyperlink{classIceBRG_1_1limit__vector_af4ba6b26317b4b6f8b0a5dc2e5a1d268}{reverse\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1limit__vector_a4feb81d3ff27e274df451f2fe85cd21a}{const\+\_\+reverse\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::difference\+\_\+type \hyperlink{classIceBRG_1_1limit__vector_ab5e21e09f06ae1a5327e9d47f31ef6b4}{difference\+\_\+type}
+\item 
+typedef std\+::make\+\_\+signed$<$ typename base\+\_\+type\+::size\+\_\+type $>$\+::\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1limit__vector_a327dc940f2b7380e9af32935d449c911}{limit\+\_\+vector} (const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc=\hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a4f32922dba34667d42bb84d7dc041470}{limit\+\_\+vector} (const T \&\hyperlink{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}{min}, const T \&\hyperlink{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}{max}, const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&\hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins}, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc=\hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Construct as linear format. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a29d9cb5b0fe483c5d70642a999423af9}{limit\+\_\+vector} (const \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \&init\+\_\+type, const T \&\hyperlink{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}{min}, const T \&\hyperlink{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}{max}, const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&\hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins}, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc=\hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Construct as linear or log format. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{classIceBRG_1_1limit__vector_a28cc72fd30edd1fd9b6a0fba2793e18d}{limit\+\_\+vector} (Input\+Iterator first, Input\+Iterator last, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc=\hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Range constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae25a8bfadeba89edbd4b3c62bfcf2455}{limit\+\_\+vector} (const \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&other)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a6cc469394ec08a62f8a2a09e15d81ae2}{limit\+\_\+vector} (const \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&other, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc)
+\begin{DoxyCompactList}\small\item\em Copy and set allocator. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a155c43501fd2a683cbc7aa04ae484cbe}{limit\+\_\+vector} (const std\+::vector$<$ T, A $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Construct from vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ad051401ed395c6fe5e556d51e16416ef}{limit\+\_\+vector} (const std\+::vector$<$ T, A $>$ \&other, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc)
+\begin{DoxyCompactList}\small\item\em Construct from vector and set allocator. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ao $>$ }\\\hyperlink{classIceBRG_1_1limit__vector_ad49259faea655cb776389d009c5d30a1}{limit\+\_\+vector} (const std\+::vector$<$ To, Ao $>$ \&other, const \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \&init\+\_\+type=\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681ab61773b9b3968a9988d765d728985862}{type\+::\+G\+E\+N\+E\+R\+A\+L})
+\begin{DoxyCompactList}\small\item\em Coerce from vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ao $>$ }\\\hyperlink{classIceBRG_1_1limit__vector_a5a9e118da630e7a7a038e376e41049f7}{limit\+\_\+vector} (const std\+::vector$<$ To, Ao $>$ \&other, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc, const \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \&init\+\_\+type=\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681ab61773b9b3968a9988d765d728985862}{type\+::\+G\+E\+N\+E\+R\+A\+L})
+\begin{DoxyCompactList}\small\item\em Coerce from vector and set allocator. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_af9a42556163fef40c2c623494c7d7908}{limit\+\_\+vector} (\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&\&other)=default
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_afebcca7a397bf0da6020039edf255a31}{limit\+\_\+vector} (\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&\&other, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc)
+\begin{DoxyCompactList}\small\item\em Move and set allocator. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a2520a38aa5e633dd6ebc716ced0791b2}{limit\+\_\+vector} (std\+::vector$<$ T, A $>$ \&\&other)
+\begin{DoxyCompactList}\small\item\em Move from vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a6297026c0b0ea0c00c2ad891f5d38b32}{limit\+\_\+vector} (std\+::vector$<$ T, A $>$ \&\&other, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc)
+\begin{DoxyCompactList}\small\item\em Move from vector and set allocator. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ac73207daaf033e6e4be9b028fa86b435}{limit\+\_\+vector} (const std\+::initializer\+\_\+list$<$ \hyperlink{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{value\+\_\+type} $>$ \&il, const \hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type} \&alloc=\hyperlink{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{allocator\+\_\+type}())
+\begin{DoxyCompactList}\small\item\em Construct from initializer list. \end{DoxyCompactList}\item 
+virtual \hyperlink{classIceBRG_1_1limit__vector_a7464af68a55bc97d7303c2a393ed8722}{$\sim$limit\+\_\+vector} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a8e81ad5d96b7593d54f52d94110e2ed8}{reconstruct} (const \hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type} \&init\+\_\+type, const T \&\hyperlink{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}{min}, const T \&\hyperlink{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}{max}, const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&\hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins})
+\begin{DoxyCompactList}\small\item\em Reconstruct as linear or log format. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To , typename Ao $>$ }\\void \hyperlink{classIceBRG_1_1limit__vector_ad3e63fd248648734c9694e8426c507df}{reconstruct\+\_\+from\+\_\+bin\+\_\+mids} (const std\+::vector$<$ To, Ao $>$ \&vec)
+\item 
+{\footnotesize template$<$typename To , typename Ao $>$ }\\void \hyperlink{classIceBRG_1_1limit__vector_a2f0e8cf8aa4e31b55453634ea90afd64}{reconstruct\+\_\+from\+\_\+bin\+\_\+mids} (std\+::vector$<$ To, Ao $>$ \&\&vec)
+\item 
+{\footnotesize template$<$typename To $>$ }\\void \hyperlink{classIceBRG_1_1limit__vector_a27ec6eed7873706348a0b29b26d79ee5}{reconstruct\+\_\+as\+\_\+disjoint} (To \&\&vec)
+\begin{DoxyCompactList}\small\item\em Reconstruct as disjoint. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_aa8eb9d4b25be0022ccea9e06bef3cb05}{make\+\_\+general} ()
+\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a8328c477d791a4425a8461476d4b393f}{make\+\_\+disjoint} ()
+\item 
+\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_a3fece2b98d9b4b859d4d386976ff78c9}{operator=} (\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ other)
+\begin{DoxyCompactList}\small\item\em Copy assignment. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_aab9b832c6156dbd4d7425be36894c71d}{operator=} (const std\+::vector$<$ T, A $>$ \&new\+\_\+base)
+\begin{DoxyCompactList}\small\item\em Copy from vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Container\+Type $>$ }\\\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_ae49114008d4b1141d6911747283abc04}{operator=} (const Container\+Type \&other)
+\begin{DoxyCompactList}\small\item\em Coerce copy from container. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_a6c9ffe039efa71858e5aea175f8b9f7d}{operator=} (\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&\&other)
+\begin{DoxyCompactList}\small\item\em Move assignment. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_a28d7a79eb78abec3957e757ab2262532}{operator=} (std\+::vector$<$ T, A $>$ \&\&new\+\_\+base)
+\begin{DoxyCompactList}\small\item\em Move from vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \& \hyperlink{classIceBRG_1_1limit__vector_a23594cf6dd3e8e036c4bb3c7e5f02f8a}{operator=} (const std\+::initializer\+\_\+list$<$ \hyperlink{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{value\+\_\+type} $>$ \&il)
+\begin{DoxyCompactList}\small\item\em Assign from initializer\+\_\+list. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_ac777b677396a9e35f8c9e20c692c5ece}{begin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em begin (only const version allowed) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_a83c8a935495a3b160331b34ab22fe3f5}{end} () const  noexcept
+\begin{DoxyCompactList}\small\item\em end (only const version allowed) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_af1d46879c772026fb810ddf95a574d8f}{rbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rbegin (only const version allowed) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_a16efe52b79ef8ca10a45b6a2706f2a62}{rend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rend (only const version allowed) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_a90458c08bb863d24a26b2b8ff79bbdb0}{cbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cbegin \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_a4bdda61b8d16c1aa23dc4de95dbec933}{cend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cend \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_afbc08d1c3cd4928e69846b1aeef82777}{crbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crbegin \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{const\+\_\+iterator} \hyperlink{classIceBRG_1_1limit__vector_a6c05d24152373919acf910bfd474cba2}{crend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crend \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_a13a4acf96ebfd7b8d6a5354ada368f79}{size} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Get size of the base vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins} () const 
+\begin{DoxyCompactList}\small\item\em Get number of bins. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_a589edd5c2ab9c4a2c55af0081a8fb01e}{max\+\_\+size} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Get max size of the base vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_aa5e914c26779bab6daf66acb4c3de21a}{capacity} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Get capacity of the base vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_aa0ca192c0495d25b2a7419bf2b4afaac}{empty} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Empty test -\/ will always be false (included here for compatibility) \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_ad21b2f4f9e93bb508dba05f3f04c72ab}{reserve} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Request a change in capacity of the base vector. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_ac3ad1f9902e86e93b48e34502b7b65b6}{shrink\+\_\+to\+\_\+fit} () const 
+\begin{DoxyCompactList}\small\item\em Reduce base capacity to fit its size. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a6dc04a7b7340b2e8e0467e493698ea4b}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Element access (const only) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a6353bec6a3ab558a50fe9255e9ace992}{at} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access (const only) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a5c0fe22ffdce8122100cf24d0f8daf98}{front} () const 
+\begin{DoxyCompactList}\small\item\em Access first element (const only) \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a6b64da787bb41c0da27e6ae6cd82fee2}{back} () const 
+\begin{DoxyCompactList}\small\item\em Access last element (const only) \end{DoxyCompactList}\item 
+const \hyperlink{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{value\+\_\+type} $\ast$ \hyperlink{classIceBRG_1_1limit__vector_a67977f6da2aeab8ef1d77dcc0fe9bebb}{data} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Access data (const only) \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a35083732ec606851566d3ca6c56769a3}{swap} (\hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ T, A $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Swap with another \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a1b2f88e47b1db40b5ae72ba560b584bc}{clear} ()
+\begin{DoxyCompactList}\small\item\em Clear function -\/ leaves it in initial state. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_ae34c3659f8203ea285a5f81c9a5beb21}{fixbad} ()
+\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a325027b05e079aa836725e4e66576026}{multiply} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&val)
+\begin{DoxyCompactList}\small\item\em Multiply the whole vector by a constant. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Tv $>$ }\\auto \hyperlink{classIceBRG_1_1limit__vector_aeb944f9e344296d0b8c8501f2b2cf360}{get\+\_\+multiplied} (const Tv \&val) const  -\/$>$ \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ decltype(val $\ast$T())$>$
+\begin{DoxyCompactList}\small\item\em Multiply the whole vector by a constant. \end{DoxyCompactList}\item 
+void \hyperlink{classIceBRG_1_1limit__vector_a1564579561d66d38f339bd109d2a25fd}{divide} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&val)
+\begin{DoxyCompactList}\small\item\em Divide the whole vector by a constant. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename Tv $>$ }\\auto \hyperlink{classIceBRG_1_1limit__vector_ae30b0b186d5121820e050f9e8a84fb03}{get\+\_\+divided} (const Tv \&val) const  -\/$>$ \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}$<$ decltype(T()/val)$>$
+\begin{DoxyCompactList}\small\item\em Multiply the whole vector by a constant. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}{min} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Returns minimum limit. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}{max} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Returns maximum limit. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_a90ae58089ebe3e59ca3ec43d8233370e}{lower\+\_\+limit} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&i) const  noexcept
+\begin{DoxyCompactList}\small\item\em Get lower limit of specific bin. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{const\+\_\+reference} \hyperlink{classIceBRG_1_1limit__vector_aeaf77a5825130f2022fbebf1b9118d52}{upper\+\_\+limit} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&i) const  noexcept
+\begin{DoxyCompactList}\small\item\em Get upper limit of specific bin. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{value\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_adf6aa961b37c72f2e25d16d66e9cc859}{bin\+\_\+mid} (const \hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \&i) const 
+\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_a7975521646ad8dbaca8254d8a33e43b8}{above\+\_\+limits} (const T \&val) const  noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if val is equal to or greater than the maximum limit of this vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_adb1b5ba25a11cfcfb4bc1979488014f5}{under\+\_\+limits} (const T \&val) const  noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if val is less than the minimum limit of this vector. \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_a0ea5ac6558cc90a4812ba93c7e57054b}{outside\+\_\+limits} (const T \&val) const  noexcept
+\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_a9b47d4b5dc675e647e5a3633d57a69b6}{inside\+\_\+limits} (const T \&val) const  noexcept
+\begin{DoxyCompactList}\small\item\em Returns true if val is inside the limits of the vector. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{size\+\_\+type} \hyperlink{classIceBRG_1_1limit__vector_a13cbaeedb094eebb7e602e81e8112ba7}{get\+\_\+bin\+\_\+index} (const T \&val) const 
+\item 
+{\footnotesize template$<$typename Tv , typename To $>$ }\\auto \hyperlink{classIceBRG_1_1limit__vector_aad97d38929225a580ae79d495e260630}{interpolate\+\_\+bins} (const Tv \&val, const To \&val\+\_\+vec) const  -\/$>$ typename std\+::decay$<$ decltype(val\+\_\+vec\mbox{[}0\mbox{]})$>$\+::\hyperlink{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{type}
+\begin{DoxyCompactList}\small\item\em Interpolate between values for successive bins. \end{DoxyCompactList}\item 
+std\+::vector$<$ T, A $>$ \hyperlink{classIceBRG_1_1limit__vector_a0f1c7bc6424a5c498bf9dfdc14312bc4}{get\+\_\+bin\+\_\+mids} () const 
+\item 
+std\+::vector$<$ T, A $>$ \hyperlink{classIceBRG_1_1limit__vector_a10b4227a05effb6a814bd9cda3c8e778}{lower\+\_\+limits} () const 
+\item 
+std\+::vector$<$ T, A $>$ \hyperlink{classIceBRG_1_1limit__vector_a1a0c448dbef103bb20f84d99fd1f9bc7}{upper\+\_\+limits} () const 
+\item 
+\hyperlink{classIceBRG_1_1limit__vector_a7ef5df716da2ceb3ec3ff35f0cd8086b}{operator std\+::vector$<$ T, A $>$} () const 
+\begin{DoxyCompactList}\small\item\em Cast to vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To  = T, typename Ao  = A$>$ }\\std\+::vector$<$ To, Ao $>$ \hyperlink{classIceBRG_1_1limit__vector_a129eb3186886eaa417b687774227dd19}{to\+\_\+vector} () const 
+\begin{DoxyCompactList}\small\item\em Coerce to vector. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename To  = T$>$ }\\std\+::valarray$<$ To $>$ \hyperlink{classIceBRG_1_1limit__vector_a7e8940e7524a8db501a7496b39c19b56}{to\+\_\+array} () const 
+\begin{DoxyCompactList}\small\item\em Coerce to Eigen\+::array. \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1limit__vector_ac543b65b10569f4ad956958698269f67}{operator==} (const \hyperlink{classIceBRG_1_1limit__vector}{Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$ \&other) const 
+\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classIceBRG_1_1limit__vector_aa99a30f3018b8a0916d2597dafbcadca}{serialize} (Archive \&ar, const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} version)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1limit__vector_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!allocator\+\_\+type@{allocator\+\_\+type}}
+\index{allocator\+\_\+type@{allocator\+\_\+type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{allocator\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::allocator\+\_\+type {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf allocator\+\_\+type}}\label{classIceBRG_1_1limit__vector_ac75a579f04baed676ee916b0ad3dfec0}
+\hypertarget{classIceBRG_1_1limit__vector_a8f5c1d622276ed2d9835feab9538b96e}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!base\+\_\+type@{base\+\_\+type}}
+\index{base\+\_\+type@{base\+\_\+type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{base\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef std\+::vector$<$T,A$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf base\+\_\+type}}\label{classIceBRG_1_1limit__vector_a8f5c1d622276ed2d9835feab9538b96e}
+\hypertarget{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf const\+\_\+iterator}}\label{classIceBRG_1_1limit__vector_ae7acd983de8fc074624eb50450a01e30}
+\hypertarget{classIceBRG_1_1limit__vector_a06b68c790b5e5692b6e302d5478be33f}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{const\+\_\+pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::const\+\_\+pointer {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf const\+\_\+pointer}}\label{classIceBRG_1_1limit__vector_a06b68c790b5e5692b6e302d5478be33f}
+\hypertarget{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{const\+\_\+reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::const\+\_\+reference {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf const\+\_\+reference}}\label{classIceBRG_1_1limit__vector_aed6fc504d7987040be16d150089c7893}
+\hypertarget{classIceBRG_1_1limit__vector_a4feb81d3ff27e274df451f2fe85cd21a}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{const\+\_\+reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf const\+\_\+reverse\+\_\+iterator}}\label{classIceBRG_1_1limit__vector_a4feb81d3ff27e274df451f2fe85cd21a}
+\hypertarget{classIceBRG_1_1limit__vector_ab5e21e09f06ae1a5327e9d47f31ef6b4}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{difference\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::difference\+\_\+type {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf difference\+\_\+type}}\label{classIceBRG_1_1limit__vector_ab5e21e09f06ae1a5327e9d47f31ef6b4}
+\hypertarget{classIceBRG_1_1limit__vector_aea9e186f4c5fb359da52895bafba6335}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!iterator@{iterator}}
+\index{iterator@{iterator}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::iterator {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf iterator}}\label{classIceBRG_1_1limit__vector_aea9e186f4c5fb359da52895bafba6335}
+\hypertarget{classIceBRG_1_1limit__vector_a87f3142bb69e755ba61e51ddfa7e6eae}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!pointer@{pointer}}
+\index{pointer@{pointer}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::pointer {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf pointer}}\label{classIceBRG_1_1limit__vector_a87f3142bb69e755ba61e51ddfa7e6eae}
+\hypertarget{classIceBRG_1_1limit__vector_af3acb98a381ba86ca927f099591d1512}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reference@{reference}}
+\index{reference@{reference}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::reference {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf reference}}\label{classIceBRG_1_1limit__vector_af3acb98a381ba86ca927f099591d1512}
+\hypertarget{classIceBRG_1_1limit__vector_af4ba6b26317b4b6f8b0a5dc2e5a1d268}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf reverse\+\_\+iterator}}\label{classIceBRG_1_1limit__vector_af4ba6b26317b4b6f8b0a5dc2e5a1d268}
+\hypertarget{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{size\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef std\+::make\+\_\+signed$<$typename base\+\_\+type\+::size\+\_\+type$>$\+::{\bf type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf size\+\_\+type}}\label{classIceBRG_1_1limit__vector_a81be3eb6cd519b3f5279ef735ccc4c2f}
+\hypertarget{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ typedef base\+\_\+type\+::value\+\_\+type {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf value\+\_\+type}}\label{classIceBRG_1_1limit__vector_a9b1e2f022c18b0227b25bb571741bb28}
+
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!type@{type}}
+\index{type@{type}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ enum {\bf Ice\+B\+R\+G\+::limit\+\_\+vector\+::type}\hspace{0.3cm}{\ttfamily [strong]}}\label{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{G\+E\+N\+E\+R\+A\+L@{G\+E\+N\+E\+R\+A\+L}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!G\+E\+N\+E\+R\+A\+L@{G\+E\+N\+E\+R\+A\+L}}\item[{\em 
+\hypertarget{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681ab61773b9b3968a9988d765d728985862}{}G\+E\+N\+E\+R\+A\+L\label{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681ab61773b9b3968a9988d765d728985862}
+}]\index{L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!L\+I\+N\+E\+A\+R@{L\+I\+N\+E\+A\+R}}\item[{\em 
+\hypertarget{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681aaac544aacc3615aada24897a215f5046}{}L\+I\+N\+E\+A\+R\label{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681aaac544aacc3615aada24897a215f5046}
+}]\index{L\+O\+G@{L\+O\+G}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!L\+O\+G@{L\+O\+G}}\item[{\em 
+\hypertarget{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a4b5ffcdaf38ce4d463171f5c977c5ab3}{}L\+O\+G\label{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a4b5ffcdaf38ce4d463171f5c977c5ab3}
+}]\index{D\+I\+S\+J\+O\+I\+N\+T@{D\+I\+S\+J\+O\+I\+N\+T}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!D\+I\+S\+J\+O\+I\+N\+T@{D\+I\+S\+J\+O\+I\+N\+T}}\item[{\em 
+\hypertarget{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a63548de92aab6aa127df46cfbed9e23f}{}D\+I\+S\+J\+O\+I\+N\+T\label{classIceBRG_1_1limit__vector_a67ad5ccda3b716a3aca2fa6223e75681a63548de92aab6aa127df46cfbed9e23f}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1limit__vector_a327dc940f2b7380e9af32935d449c911}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const allocator\+\_\+type \&alloc=allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc = {\ttfamily {\bf allocator\+\_\+type}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1limit__vector_a327dc940f2b7380e9af32935d449c911}
+
+
+Default constructor. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a4f32922dba34667d42bb84d7dc041470}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const T \&min, const T \&max, const size\+\_\+type \&num\+\_\+bins, const allocator\+\_\+type \&alloc=allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{min, }
+\item[{const T \&}]{max, }
+\item[{const {\bf size\+\_\+type} \&}]{num\+\_\+bins, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc = {\ttfamily {\bf allocator\+\_\+type}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a4f32922dba34667d42bb84d7dc041470}
+
+
+Construct as linear format. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a29d9cb5b0fe483c5d70642a999423af9}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const type \&init\+\_\+type, const T \&min, const T \&max, const size\+\_\+type \&num\+\_\+bins, const allocator\+\_\+type \&alloc=allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf type} \&}]{init\+\_\+type, }
+\item[{const T \&}]{min, }
+\item[{const T \&}]{max, }
+\item[{const {\bf size\+\_\+type} \&}]{num\+\_\+bins, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc = {\ttfamily {\bf allocator\+\_\+type}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a29d9cb5b0fe483c5d70642a999423af9}
+
+
+Construct as linear or log format. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a28cc72fd30edd1fd9b6a0fba2793e18d}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(\+Input\+Iterator first, Input\+Iterator last, const allocator\+\_\+type \&alloc=allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$class Input\+Iterator $>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc = {\ttfamily {\bf allocator\+\_\+type}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a28cc72fd30edd1fd9b6a0fba2793e18d}
+
+
+Range constructor. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ae25a8bfadeba89edbd4b3c62bfcf2455}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const limit\+\_\+vector$<$ T, A $>$ \&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf limit\+\_\+vector}$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1limit__vector_ae25a8bfadeba89edbd4b3c62bfcf2455}
+
+
+Copy constructor. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6cc469394ec08a62f8a2a09e15d81ae2}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const limit\+\_\+vector$<$ T, A $>$ \&other, const allocator\+\_\+type \&alloc)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const {\bf limit\+\_\+vector}$<$ T, A $>$ \&}]{other, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6cc469394ec08a62f8a2a09e15d81ae2}
+
+
+Copy and set allocator. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a155c43501fd2a683cbc7aa04ae484cbe}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const std\+::vector$<$ T, A $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1limit__vector_a155c43501fd2a683cbc7aa04ae484cbe}
+
+
+Construct from vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ad051401ed395c6fe5e556d51e16416ef}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const std\+::vector$<$ T, A $>$ \&other, const allocator\+\_\+type \&alloc)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T, A $>$ \&}]{other, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ad051401ed395c6fe5e556d51e16416ef}
+
+
+Construct from vector and set allocator. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ad49259faea655cb776389d009c5d30a1}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const std\+::vector$<$ To, Ao $>$ \&other, const type \&init\+\_\+type=type\+::\+G\+E\+N\+E\+R\+A\+L)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To , typename Ao $>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ To, Ao $>$ \&}]{other, }
+\item[{const {\bf type} \&}]{init\+\_\+type = {\ttfamily {\bf type\+::\+G\+E\+N\+E\+R\+A\+L}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1limit__vector_ad49259faea655cb776389d009c5d30a1}
+
+
+Coerce from vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a5a9e118da630e7a7a038e376e41049f7}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const std\+::vector$<$ To, Ao $>$ \&other, const allocator\+\_\+type \&alloc, const type \&init\+\_\+type=type\+::\+G\+E\+N\+E\+R\+A\+L)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To , typename Ao $>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ To, Ao $>$ \&}]{other, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc, }
+\item[{const {\bf type} \&}]{init\+\_\+type = {\ttfamily {\bf type\+::\+G\+E\+N\+E\+R\+A\+L}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a5a9e118da630e7a7a038e376e41049f7}
+
+
+Coerce from vector and set allocator. 
+
+\hypertarget{classIceBRG_1_1limit__vector_af9a42556163fef40c2c623494c7d7908}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(limit\+\_\+vector$<$ T, A $>$ \&\&other)=default}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf limit\+\_\+vector}$<$ T, A $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [default]}}\label{classIceBRG_1_1limit__vector_af9a42556163fef40c2c623494c7d7908}
+
+
+Move constructor. 
+
+\hypertarget{classIceBRG_1_1limit__vector_afebcca7a397bf0da6020039edf255a31}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(limit\+\_\+vector$<$ T, A $>$ \&\&other, const allocator\+\_\+type \&alloc)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{{\bf limit\+\_\+vector}$<$ T, A $>$ \&\&}]{other, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_afebcca7a397bf0da6020039edf255a31}
+
+
+Move and set allocator. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a2520a38aa5e633dd6ebc716ced0791b2}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(std\+::vector$<$ T, A $>$ \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T, A $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1limit__vector_a2520a38aa5e633dd6ebc716ced0791b2}
+
+
+Move from vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6297026c0b0ea0c00c2ad891f5d38b32}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(std\+::vector$<$ T, A $>$ \&\&other, const allocator\+\_\+type \&alloc)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T, A $>$ \&\&}]{other, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6297026c0b0ea0c00c2ad891f5d38b32}
+
+
+Move from vector and set allocator. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ac73207daaf033e6e4be9b028fa86b435}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!limit\+\_\+vector@{limit\+\_\+vector}}
+\index{limit\+\_\+vector@{limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{limit\+\_\+vector(const std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ \&il, const allocator\+\_\+type \&alloc=allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::{\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+\item[{const std\+::initializer\+\_\+list$<$ {\bf value\+\_\+type} $>$ \&}]{il, }
+\item[{const {\bf allocator\+\_\+type} \&}]{alloc = {\ttfamily {\bf allocator\+\_\+type}()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1limit__vector_ac73207daaf033e6e4be9b028fa86b435}
+
+
+Construct from initializer list. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a7464af68a55bc97d7303c2a393ed8722}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!````~limit\+\_\+vector@{$\sim$limit\+\_\+vector}}
+\index{````~limit\+\_\+vector@{$\sim$limit\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{$\sim$limit\+\_\+vector()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ virtual {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::$\sim${\bf limit\+\_\+vector} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1limit__vector_a7464af68a55bc97d7303c2a393ed8722}
+
+
+Virtual destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1limit__vector_a7975521646ad8dbaca8254d8a33e43b8}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!above\+\_\+limits@{above\+\_\+limits}}
+\index{above\+\_\+limits@{above\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{above\+\_\+limits(const T \&val) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::above\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a7975521646ad8dbaca8254d8a33e43b8}
+
+
+Returns true if val is equal to or greater than the maximum limit of this vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6353bec6a3ab558a50fe9255e9ace992}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{at(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6353bec6a3ab558a50fe9255e9ace992}
+
+
+Range-\/checked element access (const only) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6b64da787bb41c0da27e6ae6cd82fee2}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!back@{back}}
+\index{back@{back}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{back() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6b64da787bb41c0da27e6ae6cd82fee2}
+
+
+Access last element (const only) 
+
+\hypertarget{classIceBRG_1_1limit__vector_ac777b677396a9e35f8c9e20c692c5ece}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{begin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_ac777b677396a9e35f8c9e20c692c5ece}
+
+
+begin (only const version allowed) 
+
+\hypertarget{classIceBRG_1_1limit__vector_adf6aa961b37c72f2e25d16d66e9cc859}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!bin\+\_\+mid@{bin\+\_\+mid}}
+\index{bin\+\_\+mid@{bin\+\_\+mid}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{bin\+\_\+mid(const size\+\_\+type \&i) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::bin\+\_\+mid (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_adf6aa961b37c72f2e25d16d66e9cc859}
+\hypertarget{classIceBRG_1_1limit__vector_aa5e914c26779bab6daf66acb4c3de21a}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!capacity@{capacity}}
+\index{capacity@{capacity}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{capacity() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::capacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_aa5e914c26779bab6daf66acb4c3de21a}
+
+
+Get capacity of the base vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a90458c08bb863d24a26b2b8ff79bbdb0}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a90458c08bb863d24a26b2b8ff79bbdb0}
+
+
+cbegin 
+
+\hypertarget{classIceBRG_1_1limit__vector_a4bdda61b8d16c1aa23dc4de95dbec933}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a4bdda61b8d16c1aa23dc4de95dbec933}
+
+
+cend 
+
+\hypertarget{classIceBRG_1_1limit__vector_a1b2f88e47b1db40b5ae72ba560b584bc}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!clear@{clear}}
+\index{clear@{clear}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a1b2f88e47b1db40b5ae72ba560b584bc}
+
+
+Clear function -\/ leaves it in initial state. 
+
+\hypertarget{classIceBRG_1_1limit__vector_afbc08d1c3cd4928e69846b1aeef82777}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_afbc08d1c3cd4928e69846b1aeef82777}
+
+
+crbegin 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6c05d24152373919acf910bfd474cba2}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a6c05d24152373919acf910bfd474cba2}
+
+
+crend 
+
+\hypertarget{classIceBRG_1_1limit__vector_a67977f6da2aeab8ef1d77dcc0fe9bebb}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!data@{data}}
+\index{data@{data}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{data() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ const {\bf value\+\_\+type}$\ast$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a67977f6da2aeab8ef1d77dcc0fe9bebb}
+
+
+Access data (const only) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a1564579561d66d38f339bd109d2a25fd}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!divide@{divide}}
+\index{divide@{divide}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{divide(const flt\+\_\+type \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::divide (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a1564579561d66d38f339bd109d2a25fd}
+
+
+Divide the whole vector by a constant. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aa0ca192c0495d25b2a7419bf2b4afaac}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!empty@{empty}}
+\index{empty@{empty}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{empty() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_aa0ca192c0495d25b2a7419bf2b4afaac}
+
+
+Empty test -\/ will always be false (included here for compatibility) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a83c8a935495a3b160331b34ab22fe3f5}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{end() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a83c8a935495a3b160331b34ab22fe3f5}
+
+
+end (only const version allowed) 
+
+\hypertarget{classIceBRG_1_1limit__vector_ae34c3659f8203ea285a5f81c9a5beb21}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!fixbad@{fixbad}}
+\index{fixbad@{fixbad}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{fixbad()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::fixbad (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ae34c3659f8203ea285a5f81c9a5beb21}
+Fix bad values -\/ use before serializing so it can be saved and reloaded. Any Na\+N of inf values will be valid extreme values of the variable type \hypertarget{classIceBRG_1_1limit__vector_a5c0fe22ffdce8122100cf24d0f8daf98}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!front@{front}}
+\index{front@{front}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{front() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a5c0fe22ffdce8122100cf24d0f8daf98}
+
+
+Access first element (const only) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a13cbaeedb094eebb7e602e81e8112ba7}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!get\+\_\+bin\+\_\+index@{get\+\_\+bin\+\_\+index}}
+\index{get\+\_\+bin\+\_\+index@{get\+\_\+bin\+\_\+index}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{get\+\_\+bin\+\_\+index(const T \&val) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::get\+\_\+bin\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a13cbaeedb094eebb7e602e81e8112ba7}
+Gets the bin number val falls within. 0 implies lowest valid bin, \hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins()}-\/1 implies highest valid bin, \hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins()} implies below limits, \hyperlink{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{num\+\_\+bins()}+1 implies above limits. \hypertarget{classIceBRG_1_1limit__vector_a0f1c7bc6424a5c498bf9dfdc14312bc4}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!get\+\_\+bin\+\_\+mids@{get\+\_\+bin\+\_\+mids}}
+\index{get\+\_\+bin\+\_\+mids@{get\+\_\+bin\+\_\+mids}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{get\+\_\+bin\+\_\+mids() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ std\+::vector$<$T,A$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::get\+\_\+bin\+\_\+mids (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a0f1c7bc6424a5c498bf9dfdc14312bc4}
+\hypertarget{classIceBRG_1_1limit__vector_ae30b0b186d5121820e050f9e8a84fb03}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!get\+\_\+divided@{get\+\_\+divided}}
+\index{get\+\_\+divided@{get\+\_\+divided}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{get\+\_\+divided(const Tv \&val) const  -\/$>$ limit\+\_\+vector$<$ decltype(\+T()/val)$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename Tv $>$ auto {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::get\+\_\+divided (
+\begin{DoxyParamCaption}
+\item[{const Tv \&}]{val}
+\end{DoxyParamCaption}
+) const -\/$>$ {\bf limit\+\_\+vector}$<$decltype(T()/val)$>$
+	\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ae30b0b186d5121820e050f9e8a84fb03}
+
+
+Multiply the whole vector by a constant. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aeb944f9e344296d0b8c8501f2b2cf360}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!get\+\_\+multiplied@{get\+\_\+multiplied}}
+\index{get\+\_\+multiplied@{get\+\_\+multiplied}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{get\+\_\+multiplied(const Tv \&val) const  -\/$>$ limit\+\_\+vector$<$ decltype(val $\ast$\+T())$>$}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename Tv $>$ auto {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::get\+\_\+multiplied (
+\begin{DoxyParamCaption}
+\item[{const Tv \&}]{val}
+\end{DoxyParamCaption}
+) const -\/$>$ {\bf limit\+\_\+vector}$<$decltype(val$\ast$T())$>$
+	\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_aeb944f9e344296d0b8c8501f2b2cf360}
+
+
+Multiply the whole vector by a constant. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a9b47d4b5dc675e647e5a3633d57a69b6}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!inside\+\_\+limits@{inside\+\_\+limits}}
+\index{inside\+\_\+limits@{inside\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{inside\+\_\+limits(const T \&val) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::inside\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a9b47d4b5dc675e647e5a3633d57a69b6}
+
+
+Returns true if val is inside the limits of the vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aad97d38929225a580ae79d495e260630}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!interpolate\+\_\+bins@{interpolate\+\_\+bins}}
+\index{interpolate\+\_\+bins@{interpolate\+\_\+bins}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{interpolate\+\_\+bins(const Tv \&val, const To \&val\+\_\+vec) const  -\/$>$ typename std\+::decay$<$ decltype(val\+\_\+vec[0])$>$\+::type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename Tv , typename To $>$ auto {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::interpolate\+\_\+bins (
+\begin{DoxyParamCaption}
+\item[{const Tv \&}]{val, }
+\item[{const To \&}]{val\+\_\+vec}
+\end{DoxyParamCaption}
+) const -\/$>$ typename std\+::decay$<$decltype(val\+\_\+vec\mbox{[}0\mbox{]})$>$\+::{\bf type}
+	\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_aad97d38929225a580ae79d495e260630}
+
+
+Interpolate between values for successive bins. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a90ae58089ebe3e59ca3ec43d8233370e}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!lower\+\_\+limit@{lower\+\_\+limit}}
+\index{lower\+\_\+limit@{lower\+\_\+limit}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{lower\+\_\+limit(const size\+\_\+type \&i) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::lower\+\_\+limit (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a90ae58089ebe3e59ca3ec43d8233370e}
+
+
+Get lower limit of specific bin. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a10b4227a05effb6a814bd9cda3c8e778}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!lower\+\_\+limits@{lower\+\_\+limits}}
+\index{lower\+\_\+limits@{lower\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{lower\+\_\+limits() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ std\+::vector$<$T,A$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::lower\+\_\+limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a10b4227a05effb6a814bd9cda3c8e778}
+\hypertarget{classIceBRG_1_1limit__vector_a8328c477d791a4425a8461476d4b393f}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!make\+\_\+disjoint@{make\+\_\+disjoint}}
+\index{make\+\_\+disjoint@{make\+\_\+disjoint}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{make\+\_\+disjoint()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::make\+\_\+disjoint (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a8328c477d791a4425a8461476d4b393f}
+\hypertarget{classIceBRG_1_1limit__vector_aa8eb9d4b25be0022ccea9e06bef3cb05}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!make\+\_\+general@{make\+\_\+general}}
+\index{make\+\_\+general@{make\+\_\+general}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{make\+\_\+general()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::make\+\_\+general (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_aa8eb9d4b25be0022ccea9e06bef3cb05}
+\hypertarget{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!max@{max}}
+\index{max@{max}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{max() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a4f020c6f3e092f6cbfdc3c015de83667}
+
+
+Returns maximum limit. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a589edd5c2ab9c4a2c55af0081a8fb01e}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!max\+\_\+size@{max\+\_\+size}}
+\index{max\+\_\+size@{max\+\_\+size}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{max\+\_\+size() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::max\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a589edd5c2ab9c4a2c55af0081a8fb01e}
+
+
+Get max size of the base vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!min@{min}}
+\index{min@{min}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{min() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a6dddba344399189344e410ddca2615d6}
+
+
+Returns minimum limit. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a325027b05e079aa836725e4e66576026}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!multiply@{multiply}}
+\index{multiply@{multiply}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{multiply(const flt\+\_\+type \&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::multiply (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a325027b05e079aa836725e4e66576026}
+
+
+Multiply the whole vector by a constant. 
+
+\hypertarget{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!num\+\_\+bins@{num\+\_\+bins}}
+\index{num\+\_\+bins@{num\+\_\+bins}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{num\+\_\+bins() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::num\+\_\+bins (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_af09ecb88fd55929c0b08faa63c9a3e1c}
+
+
+Get number of bins. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a7ef5df716da2ceb3ec3ff35f0cd8086b}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator std\+::vector$<$ T, A $>$@{operator std\+::vector$<$ T, A $>$}}
+\index{operator std\+::vector$<$ T, A $>$@{operator std\+::vector$<$ T, A $>$}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator std\+::vector$<$ T, A $>$() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator std\+::vector$<$ T, A $>$ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a7ef5df716da2ceb3ec3ff35f0cd8086b}
+
+
+Cast to vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a3fece2b98d9b4b859d4d386976ff78c9}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(limit\+\_\+vector$<$ T, A $>$ other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf limit\+\_\+vector}$<$ T, A $>$}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a3fece2b98d9b4b859d4d386976ff78c9}
+
+
+Copy assignment. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aab9b832c6156dbd4d7425be36894c71d}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(const std\+::vector$<$ T, A $>$ \&new\+\_\+base)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ T, A $>$ \&}]{new\+\_\+base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_aab9b832c6156dbd4d7425be36894c71d}
+
+
+Copy from vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ae49114008d4b1141d6911747283abc04}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(const Container\+Type \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename Container\+Type $>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const Container\+Type \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ae49114008d4b1141d6911747283abc04}
+
+
+Coerce copy from container. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a6c9ffe039efa71858e5aea175f8b9f7d}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(limit\+\_\+vector$<$ T, A $>$ \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf limit\+\_\+vector}$<$ T, A $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6c9ffe039efa71858e5aea175f8b9f7d}
+
+
+Move assignment. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a28d7a79eb78abec3957e757ab2262532}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(std\+::vector$<$ T, A $>$ \&\&new\+\_\+base)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ T, A $>$ \&\&}]{new\+\_\+base}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a28d7a79eb78abec3957e757ab2262532}
+
+
+Move from vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a23594cf6dd3e8e036c4bb3c7e5f02f8a}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator=(const std\+::initializer\+\_\+list$<$ value\+\_\+type $>$ \&il)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf limit\+\_\+vector}$<$T,A$>$\& {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const std\+::initializer\+\_\+list$<$ {\bf value\+\_\+type} $>$ \&}]{il}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a23594cf6dd3e8e036c4bb3c7e5f02f8a}
+
+
+Assign from initializer\+\_\+list. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ac543b65b10569f4ad956958698269f67}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator==@{operator==}}
+\index{operator==@{operator==}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator==(const Ice\+B\+R\+G\+::limit\+\_\+vector$<$ T, A $>$ \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ac543b65b10569f4ad956958698269f67}
+\hypertarget{classIceBRG_1_1limit__vector_a6dc04a7b7340b2e8e0467e493698ea4b}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{operator[](const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a6dc04a7b7340b2e8e0467e493698ea4b}
+
+
+Element access (const only) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a0ea5ac6558cc90a4812ba93c7e57054b}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!outside\+\_\+limits@{outside\+\_\+limits}}
+\index{outside\+\_\+limits@{outside\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{outside\+\_\+limits(const T \&val) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::outside\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a0ea5ac6558cc90a4812ba93c7e57054b}
+Returns true if val is outside the limits of this vector. Equivalent to above\+\_\+limits O\+R below\+\_\+limits. \hypertarget{classIceBRG_1_1limit__vector_af1d46879c772026fb810ddf95a574d8f}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{rbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_af1d46879c772026fb810ddf95a574d8f}
+
+
+rbegin (only const version allowed) 
+
+\hypertarget{classIceBRG_1_1limit__vector_a8e81ad5d96b7593d54f52d94110e2ed8}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reconstruct@{reconstruct}}
+\index{reconstruct@{reconstruct}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reconstruct(const type \&init\+\_\+type, const T \&min, const T \&max, const size\+\_\+type \&num\+\_\+bins)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::reconstruct (
+\begin{DoxyParamCaption}
+\item[{const {\bf type} \&}]{init\+\_\+type, }
+\item[{const T \&}]{min, }
+\item[{const T \&}]{max, }
+\item[{const {\bf size\+\_\+type} \&}]{num\+\_\+bins}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a8e81ad5d96b7593d54f52d94110e2ed8}
+
+
+Reconstruct as linear or log format. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a27ec6eed7873706348a0b29b26d79ee5}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reconstruct\+\_\+as\+\_\+disjoint@{reconstruct\+\_\+as\+\_\+disjoint}}
+\index{reconstruct\+\_\+as\+\_\+disjoint@{reconstruct\+\_\+as\+\_\+disjoint}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reconstruct\+\_\+as\+\_\+disjoint(\+To \&\&vec)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To $>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::reconstruct\+\_\+as\+\_\+disjoint (
+\begin{DoxyParamCaption}
+\item[{To \&\&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a27ec6eed7873706348a0b29b26d79ee5}
+
+
+Reconstruct as disjoint. 
+
+\hypertarget{classIceBRG_1_1limit__vector_ad3e63fd248648734c9694e8426c507df}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reconstruct\+\_\+from\+\_\+bin\+\_\+mids@{reconstruct\+\_\+from\+\_\+bin\+\_\+mids}}
+\index{reconstruct\+\_\+from\+\_\+bin\+\_\+mids@{reconstruct\+\_\+from\+\_\+bin\+\_\+mids}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reconstruct\+\_\+from\+\_\+bin\+\_\+mids(const std\+::vector$<$ To, Ao $>$ \&vec)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To , typename Ao $>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::reconstruct\+\_\+from\+\_\+bin\+\_\+mids (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ To, Ao $>$ \&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ad3e63fd248648734c9694e8426c507df}
+Reconstruct from a vector of the bin middles. Since some information is lost here, the method has to take some guesses. \hypertarget{classIceBRG_1_1limit__vector_a2f0e8cf8aa4e31b55453634ea90afd64}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reconstruct\+\_\+from\+\_\+bin\+\_\+mids@{reconstruct\+\_\+from\+\_\+bin\+\_\+mids}}
+\index{reconstruct\+\_\+from\+\_\+bin\+\_\+mids@{reconstruct\+\_\+from\+\_\+bin\+\_\+mids}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reconstruct\+\_\+from\+\_\+bin\+\_\+mids(std\+::vector$<$ To, Ao $>$ \&\&vec)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To , typename Ao $>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::reconstruct\+\_\+from\+\_\+bin\+\_\+mids (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ To, Ao $>$ \&\&}]{vec}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a2f0e8cf8aa4e31b55453634ea90afd64}
+Reconstruct from a vector of the bin middles (move version). Since some information is lost here, the method has to take some guesses. \hypertarget{classIceBRG_1_1limit__vector_a16efe52b79ef8ca10a45b6a2706f2a62}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+iterator} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a16efe52b79ef8ca10a45b6a2706f2a62}
+
+
+rend (only const version allowed) 
+
+\hypertarget{classIceBRG_1_1limit__vector_ad21b2f4f9e93bb508dba05f3f04c72ab}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!reserve@{reserve}}
+\index{reserve@{reserve}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{reserve(const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::reserve (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ad21b2f4f9e93bb508dba05f3f04c72ab}
+
+
+Request a change in capacity of the base vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aa99a30f3018b8a0916d2597dafbcadca}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!serialize@{serialize}}
+\index{serialize@{serialize}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{serialize(\+Archive \&ar, const int\+\_\+type version)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$class Archive $>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::serialize (
+\begin{DoxyParamCaption}
+\item[{Archive \&}]{ar, }
+\item[{const {\bf int\+\_\+type}}]{version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_aa99a30f3018b8a0916d2597dafbcadca}
+\hypertarget{classIceBRG_1_1limit__vector_ac3ad1f9902e86e93b48e34502b7b65b6}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!shrink\+\_\+to\+\_\+fit@{shrink\+\_\+to\+\_\+fit}}
+\index{shrink\+\_\+to\+\_\+fit@{shrink\+\_\+to\+\_\+fit}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{shrink\+\_\+to\+\_\+fit() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::shrink\+\_\+to\+\_\+fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_ac3ad1f9902e86e93b48e34502b7b65b6}
+
+
+Reduce base capacity to fit its size. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a13a4acf96ebfd7b8d6a5354ada368f79}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!size@{size}}
+\index{size@{size}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{size() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_a13a4acf96ebfd7b8d6a5354ada368f79}
+
+
+Get size of the base vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a35083732ec606851566d3ca6c56769a3}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{swap(limit\+\_\+vector$<$ T, A $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ void {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf limit\+\_\+vector}$<$ T, A $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a35083732ec606851566d3ca6c56769a3}
+
+
+Swap with another \hyperlink{classIceBRG_1_1limit__vector}{limit\+\_\+vector}. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a7e8940e7524a8db501a7496b39c19b56}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!to\+\_\+array@{to\+\_\+array}}
+\index{to\+\_\+array@{to\+\_\+array}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{to\+\_\+array() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To  = T$>$ std\+::valarray$<$To$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::to\+\_\+array (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a7e8940e7524a8db501a7496b39c19b56}
+
+
+Coerce to Eigen\+::array. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a129eb3186886eaa417b687774227dd19}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!to\+\_\+vector@{to\+\_\+vector}}
+\index{to\+\_\+vector@{to\+\_\+vector}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{to\+\_\+vector() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ template$<$typename To  = T, typename Ao  = A$>$ std\+::vector$<$To,Ao$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::to\+\_\+vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a129eb3186886eaa417b687774227dd19}
+
+
+Coerce to vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_adb1b5ba25a11cfcfb4bc1979488014f5}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!under\+\_\+limits@{under\+\_\+limits}}
+\index{under\+\_\+limits@{under\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{under\+\_\+limits(const T \&val) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ bool {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::under\+\_\+limits (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{val}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_adb1b5ba25a11cfcfb4bc1979488014f5}
+
+
+Returns true if val is less than the minimum limit of this vector. 
+
+\hypertarget{classIceBRG_1_1limit__vector_aeaf77a5825130f2022fbebf1b9118d52}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!upper\+\_\+limit@{upper\+\_\+limit}}
+\index{upper\+\_\+limit@{upper\+\_\+limit}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{upper\+\_\+limit(const size\+\_\+type \&i) const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::upper\+\_\+limit (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{i}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1limit__vector_aeaf77a5825130f2022fbebf1b9118d52}
+
+
+Get upper limit of specific bin. 
+
+\hypertarget{classIceBRG_1_1limit__vector_a1a0c448dbef103bb20f84d99fd1f9bc7}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!upper\+\_\+limits@{upper\+\_\+limits}}
+\index{upper\+\_\+limits@{upper\+\_\+limits}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{upper\+\_\+limits() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ std\+::vector$<$T,A$>$ {\bf Ice\+B\+R\+G\+::limit\+\_\+vector}$<$ T, A $>$\+::upper\+\_\+limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1limit__vector_a1a0c448dbef103bb20f84d99fd1f9bc7}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classIceBRG_1_1limit__vector_ac98d07dd8f7b70e16ccb9a01abf56b9c}{}\index{Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Ice\+B\+R\+G\+::limit\+\_\+vector@{Ice\+B\+R\+G\+::limit\+\_\+vector}}
+\subsubsection[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T, class A = std\+::allocator$<$\+T$>$$>$ friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}\label{classIceBRG_1_1limit__vector_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/vector/\hyperlink{limit__vector_8hpp}{limit\+\_\+vector.\+hpp}\end{DoxyCompactItemize}

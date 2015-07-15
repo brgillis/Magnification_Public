@@ -1,0 +1,83 @@
+\hypertarget{classIceBRG_1_1functor}{}\section{Ice\+B\+R\+G\+:\+:functor$<$ Tin, Tout, param\+\_\+struct $>$ Class Template Reference}
+\label{classIceBRG_1_1functor}\index{Ice\+B\+R\+G\+::functor$<$ Tin, Tout, param\+\_\+struct $>$@{Ice\+B\+R\+G\+::functor$<$ Tin, Tout, param\+\_\+struct $>$}}
+
+
+{\ttfamily \#include $<$functor.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1functor_a7657016f84dc413c8681c43078a6acaf}{functor} ()
+\item 
+\hyperlink{classIceBRG_1_1functor_ac1de0c6a2aed3cf32278e3ca5d1cfa04}{functor} (param\+\_\+struct init\+\_\+params)
+\item 
+virtual \hyperlink{classIceBRG_1_1functor_aa702a653f474cf9f2f7f4a7699967421}{$\sim$functor} ()
+\item 
+{\footnotesize template$<$typename other\+\_\+param\+\_\+struct $>$ }\\void \hyperlink{classIceBRG_1_1functor_abc4c0c3f1704d4bfefae5fce79b09bd1}{set\+\_\+params} (other\+\_\+param\+\_\+struct \&\&new\+\_\+params)
+\item 
+const param\+\_\+struct \& \hyperlink{classIceBRG_1_1functor_aa26e65bbcaa6403a4033de396de14597}{params} () const 
+\item 
+virtual Tout \hyperlink{classIceBRG_1_1functor_a299cdb8972790082a99a244a4255381b}{operator()} (const Tin \&in\+\_\+param) const  =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$class Ice\+B\+R\+G\+::functor$<$ Tin, Tout, param\+\_\+struct $>$}
+
+An abstract base class representing a functor which can store parameters in a \char`\"{}param\+\_\+struct\char`\"{} object. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1functor_a7657016f84dc413c8681c43078a6acaf}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!functor@{functor}}
+\index{functor@{functor}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{functor()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::{\bf functor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1functor_a7657016f84dc413c8681c43078a6acaf}
+\hypertarget{classIceBRG_1_1functor_ac1de0c6a2aed3cf32278e3ca5d1cfa04}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!functor@{functor}}
+\index{functor@{functor}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{functor(param\+\_\+struct init\+\_\+params)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::{\bf functor} (
+\begin{DoxyParamCaption}
+\item[{param\+\_\+struct}]{init\+\_\+params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1functor_ac1de0c6a2aed3cf32278e3ca5d1cfa04}
+\hypertarget{classIceBRG_1_1functor_aa702a653f474cf9f2f7f4a7699967421}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!````~functor@{$\sim$functor}}
+\index{````~functor@{$\sim$functor}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{$\sim$functor()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ virtual {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::$\sim${\bf functor} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1functor_aa702a653f474cf9f2f7f4a7699967421}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1functor_a299cdb8972790082a99a244a4255381b}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{operator()(const Tin \&in\+\_\+param) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ virtual Tout {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const Tin \&}]{in\+\_\+param}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classIceBRG_1_1functor_a299cdb8972790082a99a244a4255381b}
+
+
+Implemented in \hyperlink{classIceBRG_1_1Schechter__like__functor_af58cca1d9091086949437f9c07e1f8f9}{Ice\+B\+R\+G\+::\+Schechter\+\_\+like\+\_\+functor}.
+
+\hypertarget{classIceBRG_1_1functor_aa26e65bbcaa6403a4033de396de14597}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!params@{params}}
+\index{params@{params}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{params() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ const param\+\_\+struct\& {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::params (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1functor_aa26e65bbcaa6403a4033de396de14597}
+\hypertarget{classIceBRG_1_1functor_abc4c0c3f1704d4bfefae5fce79b09bd1}{}\index{Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}!set\+\_\+params@{set\+\_\+params}}
+\index{set\+\_\+params@{set\+\_\+params}!Ice\+B\+R\+G\+::functor@{Ice\+B\+R\+G\+::functor}}
+\subsubsection[{set\+\_\+params(other\+\_\+param\+\_\+struct \&\&new\+\_\+params)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Tin, typename Tout, typename param\+\_\+struct = char$>$ template$<$typename other\+\_\+param\+\_\+struct $>$ void {\bf Ice\+B\+R\+G\+::functor}$<$ Tin, Tout, param\+\_\+struct $>$\+::set\+\_\+params (
+\begin{DoxyParamCaption}
+\item[{other\+\_\+param\+\_\+struct \&\&}]{new\+\_\+params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1functor_abc4c0c3f1704d4bfefae5fce79b09bd1}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/functor/\hyperlink{functor_8hpp}{functor.\+hpp}\end{DoxyCompactItemize}

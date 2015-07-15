@@ -1,0 +1,82 @@
+\hypertarget{statistic__extractors_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/statistics/statistic\+\_\+extractors.hpp File Reference}
+\label{statistic__extractors_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/statistics/statistic\+\_\+extractors.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/statistics/statistic\+\_\+extractors.\+hpp}}
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/mean.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/error\+\_\+of\+\_\+mean.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/moment.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/variance.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/weighted\+\_\+mean.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/weighted\+\_\+moment.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/accumulators/statistics/weighted\+\_\+variance.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/statistics/effective\+\_\+count.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/statistics/error\+\_\+of\+\_\+weighted\+\_\+mean.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/statistics/mean\+\_\+weight.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/math/statistics/sum\+\_\+of\+\_\+square\+\_\+weights.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a75d35aa72ae3736b68382f3ca42657e0}{Ice\+B\+R\+G\+::extract\+\_\+count} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::count(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a4f46efc43f2fc8d95db203182ef6fc32}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+count} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::count(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_ad807205719340ed71a2514f6e77a1fd3}{Ice\+B\+R\+G\+::extract\+\_\+effective\+\_\+count} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::effective\+\_\+count(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a5c808a5e225d0768a50bd712ef7426c7}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+effective\+\_\+count} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::effective\+\_\+count(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a4bf198a273d57a21710dead846cf269c}{Ice\+B\+R\+G\+::extract\+\_\+sum\+\_\+of\+\_\+weights} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum\+\_\+of\+\_\+weights(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_afcbd6038c7fa0f33805d87f75e98f6b9}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+sum\+\_\+of\+\_\+weights} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum\+\_\+of\+\_\+weights(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a728019da879dc9500594414b56dc85bc}{Ice\+B\+R\+G\+::extract\+\_\+mean\+\_\+weight} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::mean\+\_\+weight(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a042bba7c8b44a6a7ca623bfe373b273f}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+mean\+\_\+weight} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::mean\+\_\+weight(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_aea29007252f30bb20f0620f59b297603}{Ice\+B\+R\+G\+::extract\+\_\+sum\+\_\+of\+\_\+square\+\_\+weights} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum\+\_\+of\+\_\+square\+\_\+weights(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_aa2d4cecfba45ec3ae1870783f5a04f63}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+sum\+\_\+of\+\_\+square\+\_\+weights} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum\+\_\+of\+\_\+square\+\_\+weights(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a40b1eb8685c7b8e5c159ace2976a59c0}{Ice\+B\+R\+G\+::extract\+\_\+sum} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_ad1e41f2a4d446c69e71e74c05b1408ed}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+sum} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::sum(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_ab34cf70501400f6f066c9973c36fa32a}{Ice\+B\+R\+G\+::extract\+\_\+weighted\+\_\+sum} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+sum(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a3300519b0f536b08ac80fbd6e0a68746}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+weighted\+\_\+sum} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+sum(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a4122b8dc1ecb425c81b4db3895c32f9b}{Ice\+B\+R\+G\+::extract\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_aa481db79e7e803a54fac6acd148a04b1}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a3c40074b2db7040d09500bb38943810c}{Ice\+B\+R\+G\+::extract\+\_\+weighted\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_aa2abdc23aea604106db2956e96a556c3}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+weighted\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a66390bd354e17fa02cc3b97938eebd30}{Ice\+B\+R\+G\+::extract\+\_\+error\+\_\+of\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::error\+\_\+of$<$ boost\+::accumulators\+::tag\+::mean $>$(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_af9fda323150adcd72e18ea2a0f580c40}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+error\+\_\+of\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::error\+\_\+of$<$ boost\+::accumulators\+::tag\+::mean $>$(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a97a93271bc992491c6279059eff9bc8e}{Ice\+B\+R\+G\+::extract\+\_\+error\+\_\+of\+\_\+weighted\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::error\+\_\+of\+\_\+weighted\+\_\+mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a504319d2e3f772df661baf7683b9228b}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+error\+\_\+of\+\_\+weighted\+\_\+mean} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::error\+\_\+of\+\_\+weighted\+\_\+mean(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a8984d996a3218f6f25237d4abfd8e6e9}{Ice\+B\+R\+G\+::extract\+\_\+variance} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::variance(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a1148efd8f20b36a1ae36cde5e846d1cf}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+variance} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::variance(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a7ba80483c5dd983ec5885955aede683b}{Ice\+B\+R\+G\+::extract\+\_\+weighted\+\_\+variance} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+variance(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_ad04e308c37c6d964cdfd5d1adf2dda69}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+weighted\+\_\+variance} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+variance(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$int\+\_\+type n, typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a2d8804cbac17895c9a8c38d9d7592795}{Ice\+B\+R\+G\+::extract\+\_\+moment} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::moment$<$ n $>$(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$int\+\_\+type n, typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a5a4e94e443d9c7d31491031dff9dd2b6}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+moment} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::moment$<$ n $>$(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$int\+\_\+type n, typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_ae8f57dd98ef9adb164062bcac6818a4b}{Ice\+B\+R\+G\+::extract\+\_\+weighted\+\_\+moment} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+moment$<$ n $>$(std\+::forward$<$ Ti $>$(acc)))
+\item 
+{\footnotesize template$<$int\+\_\+type n, typename Ti $>$ }\\auto \hyperlink{namespaceIceBRG_a2ca931a6f8819c75e4e1119fbd11ada7}{Ice\+B\+R\+G\+::safe\+\_\+extract\+\_\+weighted\+\_\+moment} (Ti \&\&acc) -\/$>$ decltype(boost\+::accumulators\+::weighted\+\_\+moment$<$ n $>$(std\+::forward$<$ Ti $>$(acc)))
+\end{DoxyCompactItemize}

@@ -1,0 +1,40 @@
+\hypertarget{management_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/\+Fourier/management.hpp File Reference}
+\label{management_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/\+Fourier/management.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/math/\+Fourier/management.\+hpp}}
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$fftw3.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/utility.\+hpp\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{Ice\+B\+R\+G\+::\+Fourier\+::managed\+\_\+fftw\+\_\+plan}
+\item 
+class \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+wisdom\+\_\+accumulator}
+\item 
+struct \hyperlink{structIceBRG_1_1Fourier_1_1fftw__array__deleter}{Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+array\+\_\+deleter$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\item 
+ \hyperlink{namespaceIceBRG_1_1Fourier}{Ice\+B\+R\+G\+::\+Fourier}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Map$<$ flt\+\_\+array\+\_\+type $>$ \hyperlink{namespaceIceBRG_1_1Fourier_a6fc544fe13bd85c16ab9f67052e1a882}{Ice\+B\+R\+G\+::\+Fourier\+::flt\+\_\+array\+\_\+map\+\_\+type}
+\item 
+typedef Eigen\+::\+Map$<$ complex\+\_\+array\+\_\+type $>$ \hyperlink{namespaceIceBRG_1_1Fourier_a647364fe9550c95ba04a10e0228b3c8d}{Ice\+B\+R\+G\+::\+Fourier\+::complex\+\_\+array\+\_\+map\+\_\+type}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type}, fftw\+\_\+array\+\_\+deleter$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ $>$ \hyperlink{namespaceIceBRG_1_1Fourier_ad7f59ed7cb7a3053346be0e1102a5af3}{Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+flt\+\_\+ptr}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ fftw\+\_\+complex, fftw\+\_\+array\+\_\+deleter$<$ fftw\+\_\+complex $>$ $>$ \hyperlink{namespaceIceBRG_1_1Fourier_adbfb704fc18fb22a63f5d6c6b080fcd1}{Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+complex\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const char $\ast$ \hyperlink{namespaceIceBRG_1_1Fourier_a6ebd3b65a33ddde6362840e1dd67866b}{Ice\+B\+R\+G\+::\+Fourier\+::default\+\_\+fftw\+\_\+wisdom\+\_\+filename} = \char`\"{}.fftw\+\_\+wisdom\char`\"{}
+\end{DoxyCompactItemize}

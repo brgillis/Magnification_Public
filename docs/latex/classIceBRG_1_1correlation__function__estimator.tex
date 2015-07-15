@@ -1,0 +1,167 @@
+\hypertarget{classIceBRG_1_1correlation__function__estimator}{}\section{Ice\+B\+R\+G\+:\+:correlation\+\_\+function\+\_\+estimator Class Reference}
+\label{classIceBRG_1_1correlation__function__estimator}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+
+
+{\ttfamily \#include $<$correlation\+\_\+function\+\_\+estimator.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1correlation__function__estimator_a52c4f409a89854934fd34afad5166566}{correlation\+\_\+function\+\_\+estimator} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Will not be set up for calculation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\\hyperlink{classIceBRG_1_1correlation__function__estimator_a26f8e8c187185aec13fc53ba9593be35}{correlation\+\_\+function\+\_\+estimator} (T \&\&D\+\_\+bin\+\_\+limits, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{magic__values_8hpp_a424f49a8036e9de5962c718fb785356f}{z\+\_\+buffer}=0)
+\begin{DoxyCompactList}\small\item\em Construct with only bin limits. Will not set up for calculation. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+R1 , typename T\+R2 , typename T\+M1 , typename T\+M2 $>$ }\\\hyperlink{classIceBRG_1_1correlation__function__estimator_ac4d2c23263bdf8ea610e29e01a0bda5f}{correlation\+\_\+function\+\_\+estimator} (T\+R1 \&\&D1\+\_\+pos\+\_\+list, T\+R2 \&\&D2\+\_\+pos\+\_\+list, T\+M1 \&\&R1\+\_\+pos\+\_\+list, T\+M2 \&\&R2\+\_\+pos\+\_\+list, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{magic__values_8hpp_a424f49a8036e9de5962c718fb785356f}{z\+\_\+buffer}=0)
+\begin{DoxyCompactList}\small\item\em Construct with only position lists. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T , typename T\+R1 , typename T\+R2 , typename T\+M1 , typename T\+M2 $>$ }\\\hyperlink{classIceBRG_1_1correlation__function__estimator_a59237c5a746877067a4369b78e6f8ae9}{correlation\+\_\+function\+\_\+estimator} (T \&\&D\+\_\+bin\+\_\+limits, T\+R1 \&\&D1\+\_\+pos\+\_\+list, T\+R2 \&\&D2\+\_\+pos\+\_\+list, T\+M1 \&\&R1\+\_\+pos\+\_\+list, T\+M2 \&\&R2\+\_\+pos\+\_\+list, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{magic__values_8hpp_a424f49a8036e9de5962c718fb785356f}{z\+\_\+buffer}=0)
+\begin{DoxyCompactList}\small\item\em Construct with bin limits and position lists. \end{DoxyCompactList}\item 
+virtual \hyperlink{classIceBRG_1_1correlation__function__estimator_a42ac5dffcb70b053754013d239e74a35}{$\sim$correlation\+\_\+function\+\_\+estimator} ()
+\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_af8bf6a9491ce8f79794217aa184e6ca2}{calculate} () const 
+\begin{DoxyCompactList}\small\item\em Standard calculation function, using Hamilton estimator. \end{DoxyCompactList}\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_a7ade911a81bda90e1d4b22f948dc3334}{weights} () const 
+\begin{DoxyCompactList}\small\item\em Get bin weights for standard calculation function. \end{DoxyCompactList}\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_a069ffe500eed94e05d5900b75ac5ac9c}{errors} () const 
+\begin{DoxyCompactList}\small\item\em Get errors for standard calculation function. \end{DoxyCompactList}\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_ac3952b540562a8bc2076ad50fd739c23}{calculate\+\_\+weighted} (const std\+::function$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type}(\hyperlink{namespaceIceBRG_a688eeb0811a2474b20b667ed2e9625a1}{angle\+\_\+type})$>$ \&weight\+\_\+function=\mbox{[}$\,$\mbox{]}(const \hyperlink{namespaceIceBRG_a688eeb0811a2474b20b667ed2e9625a1}{angle\+\_\+type} \&theta)\{return 1.;\}) const 
+\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_abfd5bb3e305a32a7c4b1e3a1674f411a}{calculate\+\_\+dipole} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&offset=0) const 
+\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_a973ae7c7a26b966609f675fb671fac4d}{calculate\+\_\+quadrupole} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&offset=0) const 
+\item 
+Eigen\+::\+Array\+Xd \hyperlink{classIceBRG_1_1correlation__function__estimator_aaf29ef2a510737315bbe72da3d4e1fde}{calculate\+\_\+octopole} (const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&offset=0) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1correlation__function__estimator_a52c4f409a89854934fd34afad5166566}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}}
+\index{correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{correlation\+\_\+function\+\_\+estimator()}]{\setlength{\rightskip}{0pt plus 5cm}Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::correlation\+\_\+function\+\_\+estimator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1correlation__function__estimator_a52c4f409a89854934fd34afad5166566}
+
+
+Default constructor. Will not be set up for calculation. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_a26f8e8c187185aec13fc53ba9593be35}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}}
+\index{correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{correlation\+\_\+function\+\_\+estimator(\+T \&\&\+D\+\_\+bin\+\_\+limits, const flt\+\_\+type \&z\+\_\+buffer=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::correlation\+\_\+function\+\_\+estimator (
+\begin{DoxyParamCaption}
+\item[{T \&\&}]{D\+\_\+bin\+\_\+limits, }
+\item[{const {\bf flt\+\_\+type} \&}]{z\+\_\+buffer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1correlation__function__estimator_a26f8e8c187185aec13fc53ba9593be35}
+
+
+Construct with only bin limits. Will not set up for calculation. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_ac4d2c23263bdf8ea610e29e01a0bda5f}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}}
+\index{correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{correlation\+\_\+function\+\_\+estimator(\+T\+R1 \&\&\+D1\+\_\+pos\+\_\+list, T\+R2 \&\&\+D2\+\_\+pos\+\_\+list, T\+M1 \&\&\+R1\+\_\+pos\+\_\+list, T\+M2 \&\&\+R2\+\_\+pos\+\_\+list, const flt\+\_\+type \&z\+\_\+buffer=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+R1 , typename T\+R2 , typename T\+M1 , typename T\+M2 $>$ Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::correlation\+\_\+function\+\_\+estimator (
+\begin{DoxyParamCaption}
+\item[{T\+R1 \&\&}]{D1\+\_\+pos\+\_\+list, }
+\item[{T\+R2 \&\&}]{D2\+\_\+pos\+\_\+list, }
+\item[{T\+M1 \&\&}]{R1\+\_\+pos\+\_\+list, }
+\item[{T\+M2 \&\&}]{R2\+\_\+pos\+\_\+list, }
+\item[{const {\bf flt\+\_\+type} \&}]{z\+\_\+buffer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1correlation__function__estimator_ac4d2c23263bdf8ea610e29e01a0bda5f}
+
+
+Construct with only position lists. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_a59237c5a746877067a4369b78e6f8ae9}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}}
+\index{correlation\+\_\+function\+\_\+estimator@{correlation\+\_\+function\+\_\+estimator}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{correlation\+\_\+function\+\_\+estimator(\+T \&\&\+D\+\_\+bin\+\_\+limits, T\+R1 \&\&\+D1\+\_\+pos\+\_\+list, T\+R2 \&\&\+D2\+\_\+pos\+\_\+list, T\+M1 \&\&\+R1\+\_\+pos\+\_\+list, T\+M2 \&\&\+R2\+\_\+pos\+\_\+list, const flt\+\_\+type \&z\+\_\+buffer=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T , typename T\+R1 , typename T\+R2 , typename T\+M1 , typename T\+M2 $>$ Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::correlation\+\_\+function\+\_\+estimator (
+\begin{DoxyParamCaption}
+\item[{T \&\&}]{D\+\_\+bin\+\_\+limits, }
+\item[{T\+R1 \&\&}]{D1\+\_\+pos\+\_\+list, }
+\item[{T\+R2 \&\&}]{D2\+\_\+pos\+\_\+list, }
+\item[{T\+M1 \&\&}]{R1\+\_\+pos\+\_\+list, }
+\item[{T\+M2 \&\&}]{R2\+\_\+pos\+\_\+list, }
+\item[{const {\bf flt\+\_\+type} \&}]{z\+\_\+buffer = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1correlation__function__estimator_a59237c5a746877067a4369b78e6f8ae9}
+
+
+Construct with bin limits and position lists. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_a42ac5dffcb70b053754013d239e74a35}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!````~correlation\+\_\+function\+\_\+estimator@{$\sim$correlation\+\_\+function\+\_\+estimator}}
+\index{````~correlation\+\_\+function\+\_\+estimator@{$\sim$correlation\+\_\+function\+\_\+estimator}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{$\sim$correlation\+\_\+function\+\_\+estimator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::$\sim$correlation\+\_\+function\+\_\+estimator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1correlation__function__estimator_a42ac5dffcb70b053754013d239e74a35}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1correlation__function__estimator_af8bf6a9491ce8f79794217aa184e6ca2}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!calculate@{calculate}}
+\index{calculate@{calculate}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{calculate() const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::calculate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_af8bf6a9491ce8f79794217aa184e6ca2}
+
+
+Standard calculation function, using Hamilton estimator. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_abfd5bb3e305a32a7c4b1e3a1674f411a}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!calculate\+\_\+dipole@{calculate\+\_\+dipole}}
+\index{calculate\+\_\+dipole@{calculate\+\_\+dipole}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{calculate\+\_\+dipole(const flt\+\_\+type \&offset=0) const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::calculate\+\_\+dipole (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{offset = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_abfd5bb3e305a32a7c4b1e3a1674f411a}
+Calculation function for dipole correlation function with a given offset. The offset should vary from \mbox{[}0,1) or \mbox{[}-\/0.\+5,0.\+5) for unique results. \hypertarget{classIceBRG_1_1correlation__function__estimator_aaf29ef2a510737315bbe72da3d4e1fde}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!calculate\+\_\+octopole@{calculate\+\_\+octopole}}
+\index{calculate\+\_\+octopole@{calculate\+\_\+octopole}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{calculate\+\_\+octopole(const flt\+\_\+type \&offset=0) const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::calculate\+\_\+octopole (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{offset = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_aaf29ef2a510737315bbe72da3d4e1fde}
+Calculation function for octopole correlation function with a given offset. The offset should vary from \mbox{[}0,1) or \mbox{[}-\/0.\+5,0.\+5) for unique results. \hypertarget{classIceBRG_1_1correlation__function__estimator_a973ae7c7a26b966609f675fb671fac4d}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!calculate\+\_\+quadrupole@{calculate\+\_\+quadrupole}}
+\index{calculate\+\_\+quadrupole@{calculate\+\_\+quadrupole}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{calculate\+\_\+quadrupole(const flt\+\_\+type \&offset=0) const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::calculate\+\_\+quadrupole (
+\begin{DoxyParamCaption}
+\item[{const {\bf flt\+\_\+type} \&}]{offset = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_a973ae7c7a26b966609f675fb671fac4d}
+Calculation function for quadrupole correlation function with a given offset. The offset should vary from \mbox{[}0,1) or \mbox{[}-\/0.\+5,0.\+5) for unique results. \hypertarget{classIceBRG_1_1correlation__function__estimator_ac3952b540562a8bc2076ad50fd739c23}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!calculate\+\_\+weighted@{calculate\+\_\+weighted}}
+\index{calculate\+\_\+weighted@{calculate\+\_\+weighted}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{calculate\+\_\+weighted(const std\+::function$<$ flt\+\_\+type(angle\+\_\+type)$>$ \&weight\+\_\+function=[](const angle\+\_\+type \&theta)\lcurly{}return 1.;\rcurly{}) const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::calculate\+\_\+weighted (
+\begin{DoxyParamCaption}
+\item[{const std\+::function$<$ {\bf flt\+\_\+type}({\bf angle\+\_\+type})$>$ \&}]{weight\+\_\+function = {\ttfamily \mbox{[}\mbox{]}~(const~{\bf angle\+\_\+type}~\&~theta)~\{return~1.;\}}}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_ac3952b540562a8bc2076ad50fd739c23}
+Weighted calculation function, using a Hamilton-\/like estimator. This assumes the weight function passed here has an expected value of zero. \hypertarget{classIceBRG_1_1correlation__function__estimator_a069ffe500eed94e05d5900b75ac5ac9c}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!errors@{errors}}
+\index{errors@{errors}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{errors() const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::errors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_a069ffe500eed94e05d5900b75ac5ac9c}
+
+
+Get errors for standard calculation function. 
+
+\hypertarget{classIceBRG_1_1correlation__function__estimator_a7ade911a81bda90e1d4b22f948dc3334}{}\index{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}!weights@{weights}}
+\index{weights@{weights}!Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator@{Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator}}
+\subsubsection[{weights() const }]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Array\+Xd Ice\+B\+R\+G\+::correlation\+\_\+function\+\_\+estimator\+::weights (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classIceBRG_1_1correlation__function__estimator_a7ade911a81bda90e1d4b22f948dc3334}
+
+
+Get bin weights for standard calculation function. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+physics/\hyperlink{correlation__function__estimator_8h}{correlation\+\_\+function\+\_\+estimator.\+h}\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+physics/\hyperlink{correlation__function__estimator_8cpp}{correlation\+\_\+function\+\_\+estimator.\+cpp}\end{DoxyCompactItemize}

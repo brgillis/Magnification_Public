@@ -1,0 +1,492 @@
+\hypertarget{classIceBRG_1_1insertion__ordered__map}{}\section{Ice\+B\+R\+G\+:\+:insertion\+\_\+ordered\+\_\+map$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ Class Template Reference}
+\label{classIceBRG_1_1insertion__ordered__map}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$}}
+
+
+{\ttfamily \#include $<$insertion\+\_\+ordered\+\_\+map.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef T\+\_\+key\+\_\+type \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type}
+\item 
+typedef T\+\_\+mapped\+\_\+type \hyperlink{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{mapped\+\_\+type}
+\item 
+typedef std\+::pair$<$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type}, \hyperlink{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{mapped\+\_\+type} $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a3d6c2c7983b7feaab115020ca240d73c}{value\+\_\+type}
+\item 
+typedef std\+::vector$<$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a3d6c2c7983b7feaab115020ca240d73c}{value\+\_\+type} $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_afac747acefbbac2509113178f93cee10}{base\+\_\+type}
+\item 
+typedef std\+::unordered\+\_\+map$<$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type}, size\+\_\+t $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a934f40368284ca35feac3413f95fe4a9}{map\+\_\+type}
+\item 
+typedef base\+\_\+type\+::allocator\+\_\+type \hyperlink{classIceBRG_1_1insertion__ordered__map_affacbb9577d346f764974b169f73e762}{allocator\+\_\+type}
+\item 
+typedef base\+\_\+type\+::reference \hyperlink{classIceBRG_1_1insertion__ordered__map_a22138af723d72d95d476af6baae7c130}{reference}
+\item 
+typedef base\+\_\+type\+::const\+\_\+reference \hyperlink{classIceBRG_1_1insertion__ordered__map_a31d0718377868da407efc5e3c099bb72}{const\+\_\+reference}
+\item 
+typedef base\+\_\+type\+::pointer \hyperlink{classIceBRG_1_1insertion__ordered__map_a55d30074a56e43059e08952287eec04a}{pointer}
+\item 
+typedef base\+\_\+type\+::const\+\_\+pointer \hyperlink{classIceBRG_1_1insertion__ordered__map_a7cea6f693fc996cb361c9e18a3073db2}{const\+\_\+pointer}
+\item 
+typedef base\+\_\+type\+::iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_ac41b1e73bdb41c7b45da36e8eca7fb70}{iterator}
+\item 
+typedef base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a69d0d661aae3e27da8aafc22b6db8950}{const\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_ae040bd2bd5e69ae6288849f97d666a24}{reverse\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a6ea4c81c64ddc62cc283edcf681d892e}{const\+\_\+reverse\+\_\+iterator}
+\item 
+typedef base\+\_\+type\+::difference\+\_\+type \hyperlink{classIceBRG_1_1insertion__ordered__map_acf3d07daab9a17d295825ba88e86f9b6}{difference\+\_\+type}
+\item 
+typedef base\+\_\+type\+::size\+\_\+type \hyperlink{classIceBRG_1_1insertion__ordered__map_a1572dc5358a75c3908382208e74af12d}{size\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map_a25ef7dfc57b16788fefef374b5bfbe0f}{insertion\+\_\+ordered\+\_\+map} ()
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map_a19d1c23882b2d97535279259b3e6a966}{insertion\+\_\+ordered\+\_\+map} (const typename base\+\_\+type\+::allocator\+\_\+type \&alloc)
+\item 
+{\footnotesize template$<$class Input\+Iterator $>$ }\\\hyperlink{classIceBRG_1_1insertion__ordered__map_a70fd49480c10d052ac533f8262cb2060}{insertion\+\_\+ordered\+\_\+map} (Input\+Iterator first, Input\+Iterator last, const typename base\+\_\+type\+::allocator\+\_\+type \&alloc=typename base\+\_\+type\+::allocator\+\_\+type())
+\item 
+virtual \hyperlink{classIceBRG_1_1insertion__ordered__map_a46dbf4c21c1448d57e172592aaa5f0af}{$\sim$insertion\+\_\+ordered\+\_\+map} ()
+\item 
+void \hyperlink{classIceBRG_1_1insertion__ordered__map_a44c1e51972b49c7702ef06c1bb37c442}{swap} (\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&other)
+\item 
+void \hyperlink{classIceBRG_1_1insertion__ordered__map_ad315869cd423018e43329cb4055c896c}{swap} (\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&\&other)
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map_a45ede697550fad83d89e1df6d7bc1203}{insertion\+\_\+ordered\+\_\+map} (const \hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&other)
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map_a1f8306d844d66c11bf6277405ac4f871}{insertion\+\_\+ordered\+\_\+map} (\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&\&other)
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \& \hyperlink{classIceBRG_1_1insertion__ordered__map_ae791b058e7ff4f1425be97b1bc62f3b9}{operator=} (const \hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&other)
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \& \hyperlink{classIceBRG_1_1insertion__ordered__map_a178ee1f5b892403fe3fe1084c65f2d0c}{operator=} (\hyperlink{classIceBRG_1_1insertion__ordered__map}{insertion\+\_\+ordered\+\_\+map} \&\&other)
+\item 
+\hyperlink{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{mapped\+\_\+type} \& \hyperlink{classIceBRG_1_1insertion__ordered__map_aef97a47f0b2bdcdaa37bcb3dee9fd8b6}{at} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k)
+\item 
+const \hyperlink{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{mapped\+\_\+type} \& \hyperlink{classIceBRG_1_1insertion__ordered__map_af812acebdf449029907f7dacce4b5da0}{at} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k) const 
+\item 
+base\+\_\+type\+::iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a78dfab2ce10559843aeb83d817dd9171}{find} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k)
+\item 
+base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a4453d88b81a7ec0c786542b9eee19f46}{find} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k) const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{base\+\_\+type\+::size\+\_\+type} \hyperlink{classIceBRG_1_1insertion__ordered__map_a3c728c0dee432431a5354a5a4f90e46b}{count} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k) const 
+\item 
+std\+::pair$<$ typename base\+\_\+type\+::const\+\_\+iterator, typename base\+\_\+type\+::const\+\_\+iterator $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a862013899251bdcfe2a0d577206a9937}{equal\+\_\+range} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k) const 
+\item 
+std\+::pair$<$ typename base\+\_\+type\+::iterator, typename base\+\_\+type\+::iterator $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a0cd1e5de494b9499089ab3b2ccecd0cd}{equal\+\_\+range} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k)
+\item 
+{\footnotesize template$<$typename new\+\_\+key\+\_\+type $>$ }\\\hyperlink{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{mapped\+\_\+type} \& \hyperlink{classIceBRG_1_1insertion__ordered__map_a5f5aeac415ad2b4162731f6c08488918}{operator\mbox{[}$\,$\mbox{]}} (new\+\_\+key\+\_\+type \&\&key)
+\item 
+{\footnotesize template$<$typename new\+\_\+val\+\_\+type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ new\+\_\+val\+\_\+type, value\+\_\+type $>$\+::value, new\+\_\+val\+\_\+type $>$\+::type $\ast$  = nullptr$>$ }\\std\+::pair$<$ typename base\+\_\+type\+::iterator, bool $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_acabf6130fcb8b1ee1053f295f15576a8}{insert} (new\+\_\+val\+\_\+type \&\&val)
+\item 
+{\footnotesize template$<$typename new\+\_\+mapped\+\_\+type , typename other\+\_\+map\+\_\+type  = insertion\+\_\+ordered\+\_\+map$<$key\+\_\+type,mapped\+\_\+type$>$, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ new\+\_\+mapped\+\_\+type, value\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ new\+\_\+mapped\+\_\+type, mapped\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ key\+\_\+type, typename other\+\_\+map\+\_\+type\+::key\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\std\+::pair$<$ typename base\+\_\+type\+::iterator, bool $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_a3cf8c0bddcdab93acedd5849c17faf18}{insert} (new\+\_\+mapped\+\_\+type \&\&val, const other\+\_\+map\+\_\+type \&other\+\_\+map=other\+\_\+map\+\_\+type())
+\item 
+{\footnotesize template$<$class... Args$>$ }\\std\+::pair$<$ typename base\+\_\+type\+::iterator, bool $>$ \hyperlink{classIceBRG_1_1insertion__ordered__map_aec47c4c13110aa5b8b8c54f2e93f409c}{emplace} (Args \&\&...args)
+\item 
+void \hyperlink{classIceBRG_1_1insertion__ordered__map_a296af7873f2c543c802bc246a0d19a7e}{erase} (typename base\+\_\+type\+::iterator position)
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{base\+\_\+type\+::size\+\_\+type} \hyperlink{classIceBRG_1_1insertion__ordered__map_a116d6afa13598b786f3d9ded19d09af9}{erase} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&k)
+\item 
+void \hyperlink{classIceBRG_1_1insertion__ordered__map_abb85fef2c1e44d0520e2efdb7699db7d}{erase} (typename base\+\_\+type\+::iterator first, typename base\+\_\+type\+::iterator last)
+\item 
+void \hyperlink{classIceBRG_1_1insertion__ordered__map_a3a6fa53a6c6578733b7f729d49e2c391}{clear} ()
+\item 
+base\+\_\+type\+::iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a0bd85eb4ac19d20755a9fbca7bd8db23}{begin} ()
+\item 
+base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a6646f2d8d8a08f81f493e2219a1d52dd}{begin} () const 
+\item 
+base\+\_\+type\+::iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_afeeef9703456b344be94f4e56c022f43}{end} ()
+\item 
+base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a5f7e155d87a08ccbd3653c551b3a5798}{end} () const 
+\item 
+base\+\_\+type\+::reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a76b8f47594ac40b1e9bec80200d5ca9b}{rbegin} ()
+\item 
+base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_af409619627087dd11590efa689d87dfa}{rbegin} () const 
+\item 
+base\+\_\+type\+::reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a458a31e9b5d99590a065941afdf96d7f}{rend} ()
+\item 
+base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_ae6ab82fa2fc00e18ff85b581ee25f8a0}{rend} () const 
+\item 
+base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a593d829149fca5a801f3d7b7d96ee20c}{cbegin} () const  noexcept
+\item 
+base\+\_\+type\+::const\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_afa62e1a0c2aa91ed355368a4f392c25b}{cend} () const  noexcept
+\item 
+base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_a7ace245ef4b1550af7a030b72841c205}{crbegin} () const  noexcept
+\item 
+base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator \hyperlink{classIceBRG_1_1insertion__ordered__map_abe4b2fcd77cbea56e737b9e9d47865a2}{crend} () const  noexcept
+\item 
+bool \hyperlink{classIceBRG_1_1insertion__ordered__map_aa7d7a107137c30963714a3759fe29ccb}{empty} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{base\+\_\+type\+::size\+\_\+type} \hyperlink{classIceBRG_1_1insertion__ordered__map_a08ee5071a2b00333968c93e7b232d2a1}{size} () const 
+\item 
+\hyperlink{lib_2IceBRG__main_2common_8h_a566c61f2ca17211f4ba8557f3f65e8d3}{base\+\_\+type\+::size\+\_\+type} \hyperlink{classIceBRG_1_1insertion__ordered__map_a3c0c4b8b24877398dc27421bcce3f48d}{max\+\_\+size} () const 
+\item 
+{\footnotesize template$<$typename new\+\_\+key\+\_\+type $>$ }\\char \hyperlink{classIceBRG_1_1insertion__ordered__map_a7ffb4a518ffdc66281691d94ee75de23}{change\+\_\+key} (const \hyperlink{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{key\+\_\+type} \&init\+\_\+key, new\+\_\+key\+\_\+type \&\&new\+\_\+key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_affacbb9577d346f764974b169f73e762}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!allocator\+\_\+type@{allocator\+\_\+type}}
+\index{allocator\+\_\+type@{allocator\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{allocator\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::allocator\+\_\+type {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf allocator\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_affacbb9577d346f764974b169f73e762}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_afac747acefbbac2509113178f93cee10}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!base\+\_\+type@{base\+\_\+type}}
+\index{base\+\_\+type@{base\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{base\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef std\+::vector$<${\bf value\+\_\+type}$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf base\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_afac747acefbbac2509113178f93cee10}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a69d0d661aae3e27da8aafc22b6db8950}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf const\+\_\+iterator}}\label{classIceBRG_1_1insertion__ordered__map_a69d0d661aae3e27da8aafc22b6db8950}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a7cea6f693fc996cb361c9e18a3073db2}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!const\+\_\+pointer@{const\+\_\+pointer}}
+\index{const\+\_\+pointer@{const\+\_\+pointer}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{const\+\_\+pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::const\+\_\+pointer {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf const\+\_\+pointer}}\label{classIceBRG_1_1insertion__ordered__map_a7cea6f693fc996cb361c9e18a3073db2}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a31d0718377868da407efc5e3c099bb72}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{const\+\_\+reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::const\+\_\+reference {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf const\+\_\+reference}}\label{classIceBRG_1_1insertion__ordered__map_a31d0718377868da407efc5e3c099bb72}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a6ea4c81c64ddc62cc283edcf681d892e}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{const\+\_\+reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf const\+\_\+reverse\+\_\+iterator}}\label{classIceBRG_1_1insertion__ordered__map_a6ea4c81c64ddc62cc283edcf681d892e}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_acf3d07daab9a17d295825ba88e86f9b6}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{difference\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::difference\+\_\+type {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf difference\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_acf3d07daab9a17d295825ba88e86f9b6}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_ac41b1e73bdb41c7b45da36e8eca7fb70}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!iterator@{iterator}}
+\index{iterator@{iterator}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf iterator}}\label{classIceBRG_1_1insertion__ordered__map_ac41b1e73bdb41c7b45da36e8eca7fb70}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!key\+\_\+type@{key\+\_\+type}}
+\index{key\+\_\+type@{key\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{key\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef T\+\_\+key\+\_\+type {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf key\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_a89f1c1aa5a0c6d1a681a0957092bb738}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a934f40368284ca35feac3413f95fe4a9}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!map\+\_\+type@{map\+\_\+type}}
+\index{map\+\_\+type@{map\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{map\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef std\+::unordered\+\_\+map$<${\bf key\+\_\+type},size\+\_\+t$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf map\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_a934f40368284ca35feac3413f95fe4a9}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!mapped\+\_\+type@{mapped\+\_\+type}}
+\index{mapped\+\_\+type@{mapped\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{mapped\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef T\+\_\+mapped\+\_\+type {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf mapped\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_a4ab99f9f37138d3239735b5ff4aac2e5}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a55d30074a56e43059e08952287eec04a}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!pointer@{pointer}}
+\index{pointer@{pointer}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::pointer {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf pointer}}\label{classIceBRG_1_1insertion__ordered__map_a55d30074a56e43059e08952287eec04a}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a22138af723d72d95d476af6baae7c130}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!reference@{reference}}
+\index{reference@{reference}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::reference {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf reference}}\label{classIceBRG_1_1insertion__ordered__map_a22138af723d72d95d476af6baae7c130}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_ae040bd2bd5e69ae6288849f97d666a24}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf reverse\+\_\+iterator}}\label{classIceBRG_1_1insertion__ordered__map_ae040bd2bd5e69ae6288849f97d666a24}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a1572dc5358a75c3908382208e74af12d}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{size\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef base\+\_\+type\+::size\+\_\+type {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf size\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_a1572dc5358a75c3908382208e74af12d}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a3d6c2c7983b7feaab115020ca240d73c}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ typedef std\+::pair$<${\bf key\+\_\+type},{\bf mapped\+\_\+type}$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf value\+\_\+type}}\label{classIceBRG_1_1insertion__ordered__map_a3d6c2c7983b7feaab115020ca240d73c}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a25ef7dfc57b16788fefef374b5bfbe0f}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}}
+\index{insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insertion\+\_\+ordered\+\_\+map()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a25ef7dfc57b16788fefef374b5bfbe0f}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a19d1c23882b2d97535279259b3e6a966}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}}
+\index{insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insertion\+\_\+ordered\+\_\+map(const typename base\+\_\+type\+::allocator\+\_\+type \&alloc)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+\item[{const typename base\+\_\+type\+::allocator\+\_\+type \&}]{alloc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}\label{classIceBRG_1_1insertion__ordered__map_a19d1c23882b2d97535279259b3e6a966}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a70fd49480c10d052ac533f8262cb2060}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}}
+\index{insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insertion\+\_\+ordered\+\_\+map(\+Input\+Iterator first, Input\+Iterator last, const typename base\+\_\+type\+::allocator\+\_\+type \&alloc=typename base\+\_\+type\+::allocator\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$class Input\+Iterator $>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+\item[{Input\+Iterator}]{first, }
+\item[{Input\+Iterator}]{last, }
+\item[{const typename base\+\_\+type\+::allocator\+\_\+type \&}]{alloc = {\ttfamily typename~base\+\_\+type\+:\+:allocator\+\_\+type()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a70fd49480c10d052ac533f8262cb2060}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a46dbf4c21c1448d57e172592aaa5f0af}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!````~insertion\+\_\+ordered\+\_\+map@{$\sim$insertion\+\_\+ordered\+\_\+map}}
+\index{````~insertion\+\_\+ordered\+\_\+map@{$\sim$insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{$\sim$insertion\+\_\+ordered\+\_\+map()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ virtual {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::$\sim${\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1insertion__ordered__map_a46dbf4c21c1448d57e172592aaa5f0af}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a45ede697550fad83d89e1df6d7bc1203}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}}
+\index{insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insertion\+\_\+ordered\+\_\+map(const insertion\+\_\+ordered\+\_\+map \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+\item[{const {\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a45ede697550fad83d89e1df6d7bc1203}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a1f8306d844d66c11bf6277405ac4f871}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}}
+\index{insertion\+\_\+ordered\+\_\+map@{insertion\+\_\+ordered\+\_\+map}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insertion\+\_\+ordered\+\_\+map(insertion\+\_\+ordered\+\_\+map \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::{\bf insertion\+\_\+ordered\+\_\+map} (
+\begin{DoxyParamCaption}
+\item[{{\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a1f8306d844d66c11bf6277405ac4f871}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_aef97a47f0b2bdcdaa37bcb3dee9fd8b6}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{at(const key\+\_\+type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf mapped\+\_\+type}\& {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_aef97a47f0b2bdcdaa37bcb3dee9fd8b6}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_af812acebdf449029907f7dacce4b5da0}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{at(const key\+\_\+type \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ const {\bf mapped\+\_\+type}\& {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_af812acebdf449029907f7dacce4b5da0}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a0bd85eb4ac19d20755a9fbca7bd8db23}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{begin()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a0bd85eb4ac19d20755a9fbca7bd8db23}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a6646f2d8d8a08f81f493e2219a1d52dd}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{begin() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a6646f2d8d8a08f81f493e2219a1d52dd}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a593d829149fca5a801f3d7b7d96ee20c}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1insertion__ordered__map_a593d829149fca5a801f3d7b7d96ee20c}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_afa62e1a0c2aa91ed355368a4f392c25b}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1insertion__ordered__map_afa62e1a0c2aa91ed355368a4f392c25b}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a7ffb4a518ffdc66281691d94ee75de23}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!change\+\_\+key@{change\+\_\+key}}
+\index{change\+\_\+key@{change\+\_\+key}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{change\+\_\+key(const key\+\_\+type \&init\+\_\+key, new\+\_\+key\+\_\+type \&\&new\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$typename new\+\_\+key\+\_\+type $>$ char {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::change\+\_\+key (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{init\+\_\+key, }
+\item[{new\+\_\+key\+\_\+type \&\&}]{new\+\_\+key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a7ffb4a518ffdc66281691d94ee75de23}
+Changes a key to another, without altering its mapped data or position.
+
+
+\begin{DoxyParams}{Parameters}
+{\em init\+\_\+key} & \\
+\hline
+{\em new\+\_\+key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char -\/ 0 if successful 1 if init\+\_\+key doesn\textquotesingle{}t exist in map 2 if new\+\_\+key already exists in map 
+\end{DoxyReturn}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a3a6fa53a6c6578733b7f729d49e2c391}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!clear@{clear}}
+\index{clear@{clear}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ void {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a3a6fa53a6c6578733b7f729d49e2c391}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a3c728c0dee432431a5354a5a4f90e46b}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!count@{count}}
+\index{count@{count}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{count(const key\+\_\+type \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf base\+\_\+type\+::size\+\_\+type} {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::count (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a3c728c0dee432431a5354a5a4f90e46b}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a7ace245ef4b1550af7a030b72841c205}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1insertion__ordered__map_a7ace245ef4b1550af7a030b72841c205}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_abe4b2fcd77cbea56e737b9e9d47865a2}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1insertion__ordered__map_abe4b2fcd77cbea56e737b9e9d47865a2}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_aec47c4c13110aa5b8b8c54f2e93f409c}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!emplace@{emplace}}
+\index{emplace@{emplace}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{emplace(\+Args \&\&...\+args)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$class... Args$>$ std\+::pair$<$typename base\+\_\+type\+::iterator,bool$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::emplace (
+\begin{DoxyParamCaption}
+\item[{Args \&\&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_aec47c4c13110aa5b8b8c54f2e93f409c}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_aa7d7a107137c30963714a3759fe29ccb}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!empty@{empty}}
+\index{empty@{empty}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{empty() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ bool {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_aa7d7a107137c30963714a3759fe29ccb}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_afeeef9703456b344be94f4e56c022f43}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_afeeef9703456b344be94f4e56c022f43}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a5f7e155d87a08ccbd3653c551b3a5798}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{end() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a5f7e155d87a08ccbd3653c551b3a5798}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a862013899251bdcfe2a0d577206a9937}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!equal\+\_\+range@{equal\+\_\+range}}
+\index{equal\+\_\+range@{equal\+\_\+range}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{equal\+\_\+range(const key\+\_\+type \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ std\+::pair$<$typename base\+\_\+type\+::const\+\_\+iterator,typename base\+\_\+type\+::const\+\_\+iterator$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::equal\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a862013899251bdcfe2a0d577206a9937}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a0cd1e5de494b9499089ab3b2ccecd0cd}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!equal\+\_\+range@{equal\+\_\+range}}
+\index{equal\+\_\+range@{equal\+\_\+range}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{equal\+\_\+range(const key\+\_\+type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ std\+::pair$<$typename base\+\_\+type\+::iterator,typename base\+\_\+type\+::iterator$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::equal\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a0cd1e5de494b9499089ab3b2ccecd0cd}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a296af7873f2c543c802bc246a0d19a7e}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!erase@{erase}}
+\index{erase@{erase}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{erase(typename base\+\_\+type\+::iterator position)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ void {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{typename base\+\_\+type\+::iterator}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a296af7873f2c543c802bc246a0d19a7e}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a116d6afa13598b786f3d9ded19d09af9}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!erase@{erase}}
+\index{erase@{erase}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{erase(const key\+\_\+type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf base\+\_\+type\+::size\+\_\+type} {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a116d6afa13598b786f3d9ded19d09af9}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_abb85fef2c1e44d0520e2efdb7699db7d}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!erase@{erase}}
+\index{erase@{erase}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{erase(typename base\+\_\+type\+::iterator first, typename base\+\_\+type\+::iterator last)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ void {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::erase (
+\begin{DoxyParamCaption}
+\item[{typename base\+\_\+type\+::iterator}]{first, }
+\item[{typename base\+\_\+type\+::iterator}]{last}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_abb85fef2c1e44d0520e2efdb7699db7d}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a78dfab2ce10559843aeb83d817dd9171}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!find@{find}}
+\index{find@{find}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{find(const key\+\_\+type \&k)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a78dfab2ce10559843aeb83d817dd9171}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a4453d88b81a7ec0c786542b9eee19f46}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!find@{find}}
+\index{find@{find}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{find(const key\+\_\+type \&k) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{const {\bf key\+\_\+type} \&}]{k}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a4453d88b81a7ec0c786542b9eee19f46}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_acabf6130fcb8b1ee1053f295f15576a8}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insert@{insert}}
+\index{insert@{insert}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insert(new\+\_\+val\+\_\+type \&\&val)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$typename new\+\_\+val\+\_\+type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ new\+\_\+val\+\_\+type, value\+\_\+type $>$\+::value, new\+\_\+val\+\_\+type $>$\+::type $\ast$  = nullptr$>$ std\+::pair$<$typename base\+\_\+type\+::iterator,bool$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{new\+\_\+val\+\_\+type \&\&}]{val}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_acabf6130fcb8b1ee1053f295f15576a8}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a3cf8c0bddcdab93acedd5849c17faf18}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!insert@{insert}}
+\index{insert@{insert}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{insert(new\+\_\+mapped\+\_\+type \&\&val, const other\+\_\+map\+\_\+type \&other\+\_\+map=other\+\_\+map\+\_\+type())}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$typename new\+\_\+mapped\+\_\+type , typename other\+\_\+map\+\_\+type  = insertion\+\_\+ordered\+\_\+map$<$key\+\_\+type,mapped\+\_\+type$>$, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+convertible$<$ new\+\_\+mapped\+\_\+type, value\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ new\+\_\+mapped\+\_\+type, mapped\+\_\+type $>$\+::value, char $>$\+::type  = 0, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ key\+\_\+type, typename other\+\_\+map\+\_\+type\+::key\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ std\+::pair$<$typename base\+\_\+type\+::iterator,bool$>$ {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{new\+\_\+mapped\+\_\+type \&\&}]{val, }
+\item[{const other\+\_\+map\+\_\+type \&}]{other\+\_\+map = {\ttfamily other\+\_\+map\+\_\+type()}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a3cf8c0bddcdab93acedd5849c17faf18}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a3c0c4b8b24877398dc27421bcce3f48d}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!max\+\_\+size@{max\+\_\+size}}
+\index{max\+\_\+size@{max\+\_\+size}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{max\+\_\+size() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf base\+\_\+type\+::size\+\_\+type} {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::max\+\_\+size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a3c0c4b8b24877398dc27421bcce3f48d}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_ae791b058e7ff4f1425be97b1bc62f3b9}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{operator=(const insertion\+\_\+ordered\+\_\+map \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf insertion\+\_\+ordered\+\_\+map}\& {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_ae791b058e7ff4f1425be97b1bc62f3b9}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a178ee1f5b892403fe3fe1084c65f2d0c}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!operator=@{operator=}}
+\index{operator=@{operator=}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{operator=(insertion\+\_\+ordered\+\_\+map \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf insertion\+\_\+ordered\+\_\+map}\& {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a178ee1f5b892403fe3fe1084c65f2d0c}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a5f5aeac415ad2b4162731f6c08488918}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{operator[](new\+\_\+key\+\_\+type \&\&key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ template$<$typename new\+\_\+key\+\_\+type $>$ {\bf mapped\+\_\+type}\& {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{new\+\_\+key\+\_\+type \&\&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a5f5aeac415ad2b4162731f6c08488918}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a76b8f47594ac40b1e9bec80200d5ca9b}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{rbegin()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a76b8f47594ac40b1e9bec80200d5ca9b}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_af409619627087dd11590efa689d87dfa}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{rbegin() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_af409619627087dd11590efa689d87dfa}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a458a31e9b5d99590a065941afdf96d7f}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{rend()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a458a31e9b5d99590a065941afdf96d7f}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_ae6ab82fa2fc00e18ff85b581ee25f8a0}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{rend() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ base\+\_\+type\+::const\+\_\+reverse\+\_\+iterator {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_ae6ab82fa2fc00e18ff85b581ee25f8a0}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a08ee5071a2b00333968c93e7b232d2a1}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!size@{size}}
+\index{size@{size}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ {\bf base\+\_\+type\+::size\+\_\+type} {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a08ee5071a2b00333968c93e7b232d2a1}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_a44c1e51972b49c7702ef06c1bb37c442}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{swap(insertion\+\_\+ordered\+\_\+map \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ void {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_a44c1e51972b49c7702ef06c1bb37c442}
+\hypertarget{classIceBRG_1_1insertion__ordered__map_ad315869cd423018e43329cb4055c896c}{}\index{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}!swap@{swap}}
+\index{swap@{swap}!Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map@{Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}}
+\subsubsection[{swap(insertion\+\_\+ordered\+\_\+map \&\&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T\+\_\+key\+\_\+type, typename T\+\_\+mapped\+\_\+type$>$ void {\bf Ice\+B\+R\+G\+::insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$\+::swap (
+\begin{DoxyParamCaption}
+\item[{{\bf insertion\+\_\+ordered\+\_\+map}$<$ T\+\_\+key\+\_\+type, T\+\_\+mapped\+\_\+type $>$ \&\&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1insertion__ordered__map_ad315869cd423018e43329cb4055c896c}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/\hyperlink{insertion__ordered__map_8hpp}{insertion\+\_\+ordered\+\_\+map.\+hpp}\end{DoxyCompactItemize}

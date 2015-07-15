@@ -1,0 +1,620 @@
+\hypertarget{classIceBRG_1_1labeled__array__vecs}{}\section{Ice\+B\+R\+G\+:\+:labeled\+\_\+array\+\_\+vecs$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$ Class Template Reference}
+\label{classIceBRG_1_1labeled__array__vecs}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$}}
+
+
+{\ttfamily \#include $<$labeled\+\_\+array\+\_\+vecs.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::label\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_a2bbe62200750107fc665bd86753bff4f}{label\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::value\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_ac065b9242f4296223c4415479ca5f5c6}{value\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::size\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type}
+\item 
+typedef T\+\_\+vec\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_aa0fdd516085cd0ab638b05ff66cae352}{vec\+\_\+type}
+\item 
+typedef T\+\_\+const\+\_\+vec\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_a02abd04f15383823d790ea596eee00ed}{const\+\_\+vec\+\_\+type}
+\item 
+typedef T\+\_\+reference \hyperlink{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{reference}
+\item 
+typedef T\+\_\+const\+\_\+reference \hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference}
+\item 
+typedef T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator}
+\item 
+typedef T\+\_\+const\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator}
+\item 
+typedef boost\+::reverse\+\_\+iterator$<$ \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator} $>$ \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{reverse\+\_\+iterator}
+\item 
+typedef boost\+::reverse\+\_\+iterator$<$ \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$ \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::difference\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3914361470feba7994ebc0f84ea683b}{difference\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a67951d0908cdc5b4b2dea5f56cbed4b8}{labeled\+\_\+array\+\_\+vecs} (labeled\+\_\+array\+\_\+type $\ast$init\+\_\+array, const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \&init\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Constructor. Requires a pointer to a labeled array. \end{DoxyCompactList}\item 
+virtual \hyperlink{classIceBRG_1_1labeled__array__vecs_a689bb4e7c9fad2abfa58a84d36be4974}{$\sim$labeled\+\_\+array\+\_\+vecs} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a1680867685a6c6efef5da6401a54fe2f}{begin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em begin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a2773eae89ddb063f1ae8ff759752a494}{begin} () noexcept
+\begin{DoxyCompactList}\small\item\em begin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ac9f9dbf3e4dcf8f73273257ef1d6a088}{end} () const  noexcept
+\begin{DoxyCompactList}\small\item\em end (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a6f3a2fe9cd8a98935622c092520251a9}{end} () noexcept
+\begin{DoxyCompactList}\small\item\em end \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a807f22042b0a4ccfcdc97070dcca575f}{rbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rbegin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ac891b09def145b0b3ea31d52fc328307}{rbegin} () noexcept
+\begin{DoxyCompactList}\small\item\em rbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a481e3df0f50b71ed4470b7cc4acecf6c}{rend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rend (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_af0400571b7c32060ac2a48cfb55bcd53}{rend} () noexcept
+\begin{DoxyCompactList}\small\item\em rend \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a0fd935fbb80e4929ecb7c90074eaa076}{cbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_aaa11a779bcf4aed83b89832566096646}{cend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cend \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a60f922c0bb7a9bd91d721823dfb6c07e}{crbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91ac4e94566c20918ca2fe2c7ccdfdec928}{forward\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a6f46d6e7f48c18f32d928115338457ea}{crend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crend \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ad3ed4cc81eddc2737699cf48522917ac}{begin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em begin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a61696c6a614ebce96581fa774c4dc8b4}{begin} () noexcept
+\begin{DoxyCompactList}\small\item\em begin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ae465f0c700df40b9b812dac7e5d36551}{end} () const  noexcept
+\begin{DoxyCompactList}\small\item\em end (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a1561f5d623f9a85a67611c3639030759}{end} () noexcept
+\begin{DoxyCompactList}\small\item\em end \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a7dc0b675a7fc85d2c7a98e750b70f7bc}{rbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rbegin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ad374db7356fdca78708d5d187f35ad71}{rbegin} () noexcept
+\begin{DoxyCompactList}\small\item\em rbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ab09541f2a597e6e87c73c709ece9f02f}{rend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rend (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a1dc9a9fb257c1c6410bab3f2b765fd12}{rend} () noexcept
+\begin{DoxyCompactList}\small\item\em rend \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a67d12cc0b711b72c4da300909a3a3692}{cbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{const\+\_\+reverse\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_ae7aec5a8b78a9135b0815364e4c48951}{cend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cend \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_afabf85abbc1a32c96514ad95cc2a8247}{crbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ }\\std\+::enable\+\_\+if$<$ direction\+\_\+tag==\hyperlink{namespaceIceBRG_a3f2c2517005b9902e3eb97894b072f91a9793d1e2c6b63e17ed62034e78307b63}{reverse\+\_\+tag}, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator} $>$\+::type \hyperlink{classIceBRG_1_1labeled__array__vecs_a08abbec5a8dbd327521ed6a793b87d83}{crend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crend \end{DoxyCompactList}\item 
+const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \& \hyperlink{classIceBRG_1_1labeled__array__vecs_a7ddf32112a8b25509f1c8be953f4c2ba}{size} () const  noexcept
+\begin{DoxyCompactList}\small\item\em size \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1labeled__array__vecs_ae7390338a779738f1d262346c58fb5fd}{empty} () const 
+\begin{DoxyCompactList}\small\item\em empty \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_aeb7746b3c184475a19f6fd9bcb1b02ca}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_a8d38425a36c60808674fbd8db59d868b}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_a8178a1581f73ac8686c551280d0bda44}{at} (const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_afa6747759c1fdb4dba4d7636d6a30eac}{at} (const \hyperlink{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_a9356083abfd390c7a04d7dfd4796c85f}{front} () const 
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_acdd9797396e19001756b9d2f48adb72b}{front} ()
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_a86c46110ad7a7f3b37066f125b1742dd}{back} () const 
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{reference} \hyperlink{classIceBRG_1_1labeled__array__vecs_ae46c4984caff111cea2afbe0f9114829}{back} ()
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+const labeled\+\_\+array\+\_\+type \& \hyperlink{classIceBRG_1_1labeled__array__vecs_a4341cdc8903def87df4e16635c169af9}{base} () const 
+\begin{DoxyCompactList}\small\item\em Access base array. \end{DoxyCompactList}\item 
+labeled\+\_\+array\+\_\+type \& \hyperlink{classIceBRG_1_1labeled__array__vecs_a73765e0f5dcf4545e3c3afb2d3c7b21e}{base} ()
+\begin{DoxyCompactList}\small\item\em Access base array. \end{DoxyCompactList}\item 
+const \hyperlink{classIceBRG_1_1labeled__array__vecs_ac065b9242f4296223c4415479ca5f5c6}{value\+\_\+type} $\ast$ \hyperlink{classIceBRG_1_1labeled__array__vecs_a88fa4ff71cc90ea59562de3feb0d8090}{data} () const 
+\begin{DoxyCompactList}\small\item\em Access data. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__vecs_ac065b9242f4296223c4415479ca5f5c6}{value\+\_\+type} $\ast$ \hyperlink{classIceBRG_1_1labeled__array__vecs_a2629aa006cb9f09e97fad2b720f25caf}{data} ()
+\begin{DoxyCompactList}\small\item\em Access data. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename other\+\_\+vec\+\_\+type , typename other\+\_\+reference , typename other\+\_\+iterator , int\+\_\+type other\+\_\+direction\+\_\+tag, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+vec\+\_\+type, vec\+\_\+type $>$\+::value, other\+\_\+vec\+\_\+type $\ast$ $>$\+::type  = nullptr, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+reference, reference $>$\+::value, other\+\_\+reference $\ast$ $>$\+::type  = nullptr, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+iterator, iterator $>$\+::value, other\+\_\+iterator $\ast$ $>$\+::type  = nullptr$>$ }\\\hyperlink{classIceBRG_1_1labeled__array__vecs_a7def03289ea8410a14142a73fa3aa62e}{labeled\+\_\+array\+\_\+vecs} (const \hyperlink{classIceBRG_1_1labeled__array__vecs}{labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, other\+\_\+vec\+\_\+type, \hyperlink{classIceBRG_1_1labeled__array__vecs_a02abd04f15383823d790ea596eee00ed}{const\+\_\+vec\+\_\+type}, other\+\_\+reference, \hyperlink{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{const\+\_\+reference}, other\+\_\+iterator, \hyperlink{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{const\+\_\+iterator}, other\+\_\+direction\+\_\+tag $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Cast non-\/const version to const version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+const\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf const\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__vecs_a6003abed56d6f931ce74524cda329972}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{const\+\_\+reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+const\+\_\+reference {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf const\+\_\+reference}}\label{classIceBRG_1_1labeled__array__vecs_a5ab1d23d61a03d4f64756b59f5773d41}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{const\+\_\+reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef boost\+::reverse\+\_\+iterator$<${\bf const\+\_\+iterator}$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf const\+\_\+reverse\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__vecs_aefecf82bcd5d24b2c6fc29b4f8930054}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a02abd04f15383823d790ea596eee00ed}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!const\+\_\+vec\+\_\+type@{const\+\_\+vec\+\_\+type}}
+\index{const\+\_\+vec\+\_\+type@{const\+\_\+vec\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{const\+\_\+vec\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+const\+\_\+vec\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf const\+\_\+vec\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_a02abd04f15383823d790ea596eee00ed}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ab3914361470feba7994ebc0f84ea683b}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{difference\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef labeled\+\_\+array\+\_\+type\+::difference\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf difference\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_ab3914361470feba7994ebc0f84ea683b}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!iterator@{iterator}}
+\index{iterator@{iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf iterator}}\label{classIceBRG_1_1labeled__array__vecs_a989cbe0a7bc0b96a206c52ddd3513a23}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a2bbe62200750107fc665bd86753bff4f}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!label\+\_\+type@{label\+\_\+type}}
+\index{label\+\_\+type@{label\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{label\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef labeled\+\_\+array\+\_\+type\+::label\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf label\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_a2bbe62200750107fc665bd86753bff4f}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!reference@{reference}}
+\index{reference@{reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+reference {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf reference}}\label{classIceBRG_1_1labeled__array__vecs_a83e2aad33d65d344a7df84aab091e48d}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef boost\+::reverse\+\_\+iterator$<${\bf iterator}$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf reverse\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__vecs_ab3d90428e6ba03e8a3bcb3b44629e3f5}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{size\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef labeled\+\_\+array\+\_\+type\+::size\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf size\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_a9395382460f12145dc0c835e78283fdd}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ac065b9242f4296223c4415479ca5f5c6}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef labeled\+\_\+array\+\_\+type\+::value\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf value\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_ac065b9242f4296223c4415479ca5f5c6}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_aa0fdd516085cd0ab638b05ff66cae352}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!vec\+\_\+type@{vec\+\_\+type}}
+\index{vec\+\_\+type@{vec\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{vec\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ typedef T\+\_\+vec\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf vec\+\_\+type}}\label{classIceBRG_1_1labeled__array__vecs_aa0fdd516085cd0ab638b05ff66cae352}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a67951d0908cdc5b4b2dea5f56cbed4b8}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!labeled\+\_\+array\+\_\+vecs@{labeled\+\_\+array\+\_\+vecs}}
+\index{labeled\+\_\+array\+\_\+vecs@{labeled\+\_\+array\+\_\+vecs}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{labeled\+\_\+array\+\_\+vecs(labeled\+\_\+array\+\_\+type $\ast$init\+\_\+array, const size\+\_\+type \&init\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf labeled\+\_\+array\+\_\+vecs} (
+\begin{DoxyParamCaption}
+\item[{labeled\+\_\+array\+\_\+type $\ast$}]{init\+\_\+array, }
+\item[{const {\bf size\+\_\+type} \&}]{init\+\_\+size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a67951d0908cdc5b4b2dea5f56cbed4b8}
+
+
+Constructor. Requires a pointer to a labeled array. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a689bb4e7c9fad2abfa58a84d36be4974}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!````~labeled\+\_\+array\+\_\+vecs@{$\sim$labeled\+\_\+array\+\_\+vecs}}
+\index{````~labeled\+\_\+array\+\_\+vecs@{$\sim$labeled\+\_\+array\+\_\+vecs}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{$\sim$labeled\+\_\+array\+\_\+vecs()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ virtual {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::$\sim${\bf labeled\+\_\+array\+\_\+vecs} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1labeled__array__vecs_a689bb4e7c9fad2abfa58a84d36be4974}
+
+
+Virtual destructor. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a7def03289ea8410a14142a73fa3aa62e}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!labeled\+\_\+array\+\_\+vecs@{labeled\+\_\+array\+\_\+vecs}}
+\index{labeled\+\_\+array\+\_\+vecs@{labeled\+\_\+array\+\_\+vecs}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{labeled\+\_\+array\+\_\+vecs(const labeled\+\_\+array\+\_\+vecs$<$ labeled\+\_\+array\+\_\+type, other\+\_\+vec\+\_\+type, const\+\_\+vec\+\_\+type, other\+\_\+reference, const\+\_\+reference, other\+\_\+iterator, const\+\_\+iterator, other\+\_\+direction\+\_\+tag $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$typename other\+\_\+vec\+\_\+type , typename other\+\_\+reference , typename other\+\_\+iterator , int\+\_\+type other\+\_\+direction\+\_\+tag, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+vec\+\_\+type, vec\+\_\+type $>$\+::value, other\+\_\+vec\+\_\+type $\ast$ $>$\+::type  = nullptr, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+reference, reference $>$\+::value, other\+\_\+reference $\ast$ $>$\+::type  = nullptr, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+iterator, iterator $>$\+::value, other\+\_\+iterator $\ast$ $>$\+::type  = nullptr$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::{\bf labeled\+\_\+array\+\_\+vecs} (
+\begin{DoxyParamCaption}
+\item[{const {\bf labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, other\+\_\+vec\+\_\+type, {\bf const\+\_\+vec\+\_\+type}, other\+\_\+reference, {\bf const\+\_\+reference}, other\+\_\+iterator, {\bf const\+\_\+iterator}, other\+\_\+direction\+\_\+tag $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a7def03289ea8410a14142a73fa3aa62e}
+
+
+Cast non-\/const version to const version. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a8178a1581f73ac8686c551280d0bda44}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{at(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a8178a1581f73ac8686c551280d0bda44}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_afa6747759c1fdb4dba4d7636d6a30eac}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{at(const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_afa6747759c1fdb4dba4d7636d6a30eac}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a86c46110ad7a7f3b37066f125b1742dd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!back@{back}}
+\index{back@{back}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{back() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a86c46110ad7a7f3b37066f125b1742dd}
+
+
+Access last element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ae46c4984caff111cea2afbe0f9114829}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!back@{back}}
+\index{back@{back}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{back()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_ae46c4984caff111cea2afbe0f9114829}
+
+
+Access last element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a4341cdc8903def87df4e16635c169af9}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!base@{base}}
+\index{base@{base}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{base() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ const labeled\+\_\+array\+\_\+type\& {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a4341cdc8903def87df4e16635c169af9}
+
+
+Access base array. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a73765e0f5dcf4545e3c3afb2d3c7b21e}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!base@{base}}
+\index{base@{base}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{base()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ labeled\+\_\+array\+\_\+type\& {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a73765e0f5dcf4545e3c3afb2d3c7b21e}
+
+
+Access base array. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a1680867685a6c6efef5da6401a54fe2f}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{begin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a1680867685a6c6efef5da6401a54fe2f}
+
+
+begin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a2773eae89ddb063f1ae8ff759752a494}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{begin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a2773eae89ddb063f1ae8ff759752a494}
+
+
+begin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ad3ed4cc81eddc2737699cf48522917ac}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{begin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ad3ed4cc81eddc2737699cf48522917ac}
+
+
+begin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a61696c6a614ebce96581fa774c4dc8b4}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{begin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a61696c6a614ebce96581fa774c4dc8b4}
+
+
+begin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a0fd935fbb80e4929ecb7c90074eaa076}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a0fd935fbb80e4929ecb7c90074eaa076}
+
+
+cbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a67d12cc0b711b72c4da300909a3a3692}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a67d12cc0b711b72c4da300909a3a3692}
+
+
+cbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_aaa11a779bcf4aed83b89832566096646}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_aaa11a779bcf4aed83b89832566096646}
+
+
+cend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ae7aec5a8b78a9135b0815364e4c48951}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ae7aec5a8b78a9135b0815364e4c48951}
+
+
+cend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a60f922c0bb7a9bd91d721823dfb6c07e}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a60f922c0bb7a9bd91d721823dfb6c07e}
+
+
+crbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_afabf85abbc1a32c96514ad95cc2a8247}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_afabf85abbc1a32c96514ad95cc2a8247}
+
+
+crbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a6f46d6e7f48c18f32d928115338457ea}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a6f46d6e7f48c18f32d928115338457ea}
+
+
+crend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a08abbec5a8dbd327521ed6a793b87d83}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a08abbec5a8dbd327521ed6a793b87d83}
+
+
+crend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a88fa4ff71cc90ea59562de3feb0d8090}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!data@{data}}
+\index{data@{data}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{data() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ const {\bf value\+\_\+type}$\ast$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a88fa4ff71cc90ea59562de3feb0d8090}
+
+
+Access data. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a2629aa006cb9f09e97fad2b720f25caf}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!data@{data}}
+\index{data@{data}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{data()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf value\+\_\+type}$\ast$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a2629aa006cb9f09e97fad2b720f25caf}
+
+
+Access data. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ae7390338a779738f1d262346c58fb5fd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!empty@{empty}}
+\index{empty@{empty}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{empty() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ bool {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_ae7390338a779738f1d262346c58fb5fd}
+
+
+empty 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ac9f9dbf3e4dcf8f73273257ef1d6a088}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{end() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ac9f9dbf3e4dcf8f73273257ef1d6a088}
+
+
+end (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a6f3a2fe9cd8a98935622c092520251a9}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{end() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a6f3a2fe9cd8a98935622c092520251a9}
+
+
+end 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ae465f0c700df40b9b812dac7e5d36551}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{end() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ae465f0c700df40b9b812dac7e5d36551}
+
+
+end (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a1561f5d623f9a85a67611c3639030759}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{end() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a1561f5d623f9a85a67611c3639030759}
+
+
+end 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a9356083abfd390c7a04d7dfd4796c85f}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!front@{front}}
+\index{front@{front}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{front() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a9356083abfd390c7a04d7dfd4796c85f}
+
+
+Access first element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_acdd9797396e19001756b9d2f48adb72b}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!front@{front}}
+\index{front@{front}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{front()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_acdd9797396e19001756b9d2f48adb72b}
+
+
+Access first element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_aeb7746b3c184475a19f6fd9bcb1b02ca}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{operator[](const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf const\+\_\+reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_aeb7746b3c184475a19f6fd9bcb1b02ca}
+
+
+Element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a8d38425a36c60808674fbd8db59d868b}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{operator[](const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__vecs_a8d38425a36c60808674fbd8db59d868b}
+
+
+Element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a807f22042b0a4ccfcdc97070dcca575f}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a807f22042b0a4ccfcdc97070dcca575f}
+
+
+rbegin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ac891b09def145b0b3ea31d52fc328307}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rbegin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ac891b09def145b0b3ea31d52fc328307}
+
+
+rbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a7dc0b675a7fc85d2c7a98e750b70f7bc}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a7dc0b675a7fc85d2c7a98e750b70f7bc}
+
+
+rbegin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ad374db7356fdca78708d5d187f35ad71}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rbegin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ad374db7356fdca78708d5d187f35ad71}
+
+
+rbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a481e3df0f50b71ed4470b7cc4acecf6c}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf const\+\_\+reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a481e3df0f50b71ed4470b7cc4acecf6c}
+
+
+rend (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_af0400571b7c32060ac2a48cfb55bcd53}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rend() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf forward\+\_\+tag}, {\bf reverse\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_af0400571b7c32060ac2a48cfb55bcd53}
+
+
+rend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_ab09541f2a597e6e87c73c709ece9f02f}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf const\+\_\+iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_ab09541f2a597e6e87c73c709ece9f02f}
+
+
+rend (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a1dc9a9fb257c1c6410bab3f2b765fd12}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{rend() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ template$<$int\+\_\+type direction\+\_\+tag = T\+\_\+direction\+\_\+tag$>$ std\+::enable\+\_\+if$<$direction\+\_\+tag=={\bf reverse\+\_\+tag}, {\bf iterator}$>$\+::type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a1dc9a9fb257c1c6410bab3f2b765fd12}
+
+
+rend 
+
+\hypertarget{classIceBRG_1_1labeled__array__vecs_a7ddf32112a8b25509f1c8be953f4c2ba}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}!size@{size}}
+\index{size@{size}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}}
+\subsubsection[{size() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type , typename T\+\_\+vec\+\_\+type , typename T\+\_\+const\+\_\+vec\+\_\+type , typename T\+\_\+reference , typename T\+\_\+const\+\_\+reference , typename T\+\_\+iterator , typename T\+\_\+const\+\_\+iterator , int\+\_\+type T\+\_\+direction\+\_\+tag = forward\+\_\+tag$>$ const {\bf size\+\_\+type}\& {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+vecs}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+vec\+\_\+type, T\+\_\+const\+\_\+vec\+\_\+type, T\+\_\+reference, T\+\_\+const\+\_\+reference, T\+\_\+iterator, T\+\_\+const\+\_\+iterator, T\+\_\+direction\+\_\+tag $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__vecs_a7ddf32112a8b25509f1c8be953f4c2ba}
+
+
+size 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/labeled\+\_\+array/\hyperlink{labeled__array__vecs_8hpp}{labeled\+\_\+array\+\_\+vecs.\+hpp}\end{DoxyCompactItemize}

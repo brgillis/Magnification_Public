@@ -1,0 +1,179 @@
+The Ice\+B\+R\+G\+\_\+main library contains various C++ functions and classes which will likely be of use to programmers in a variety of fields. Most of the library is header-\/only, with all classes and functions inlined, which is intended to allow better optimizations at compilation time but may slow down compilation.
+
+This section will go over various functions and classes available in the library, sorted by the files and folders they\textquotesingle{}re contained within.
+
+\subsection*{Miscellaneous}
+
+The header files discussed here reside in the root folder, \char`\"{}\+Ice\+B\+R\+G\+\_\+main\char`\"{}. They can be include by, for instance \char`\"{}\#include
+$<$\+Ice\+B\+R\+G\+\_\+main/common.\+h$>$\char`\"{}.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{call__program_8hpp}{call\+\_\+program.\+hpp} -\/ This header defines a function \char`\"{}call\+\_\+program(...)\char`\"{} which handles calling another program at the command-\/line and passing arguments to it. See the header for the required syntax.
+\item \hyperlink{command__line_8hpp}{command\+\_\+line.\+hpp} -\/ This header defines various functions for processing command-\/line arguments, such as getting an argument and throwing an exception if it isn\textquotesingle{}t present, or testing if an argument satisfies a test function or otherwise using a default value.
+\item \href{lib_2IceBRG__main_2common_8h.html}{\tt {\bfseries common.\+h}} -\/ This file defines various common typedefs (eg. \char`\"{}flt\+\_\+type\char`\"{} for double), to ease maintenance when its needed to change one of these. It also includes a few global defines for numeric values. Notably, it defines \char`\"{}pi\char`\"{} as a constexpr flt\+\_\+type with the value of M\+\_\+\+P\+I. Basically, include this if you want to get the typedefs and/or pi.
+\item \hyperlink{Eigen_8hpp}{Eigen.\+hpp} -\/ This is an include-\/wrapper for Eigen/\+Core, which includes it, defines begin and end functions for Eigen matrices and arrays (allowing their elements to be iterated over instead of requiring a for loop with each element indexed), and defines a few typedefs for arrays. Include this as an alternative to including Eigen/\+Core if you want to iterate over Eigen arrays, particularly with the C++11 \char`\"{}for each\char`\"{} syntax.
+\item \hyperlink{error__handling_8h}{error\+\_\+handling.\+h} -\/ This header defines functions for handling (non-\/critical) errors, warnings, and notifications, where the desired behavior on an error is determined by the value of a static variable. This allows the value of the this variable to be changed to alter whether errors will result in exceptions, printed warnings, etc.
+\item \hyperlink{join__path_8hpp}{join\+\_\+path.\+hpp} -\/ This header defines a function to join two strings as elements of a file path, ensuring there\textquotesingle{}s just one slash between them. Note that it does this by replacing all instances of multiple slashes with a single slash in the resulting string, so it won\textquotesingle{}t work properly on strings that deliberately contain multiple slashes (eg. the \char`\"{}http\+://\char`\"{} at the beginning of a U\+R\+L).
+\item \hyperlink{lexical__cast_8hpp}{lexical\+\_\+cast.\+hpp} -\/ This header defines functions to apply a few extensions to Boost\textquotesingle{}s lexical cast, such as functions which return the minimum possible value for a variable if the value can\textquotesingle{}t be cast, or casting to a boolean (useful for reading user-\/defined values).
+\item \hyperlink{utility_8hpp}{utility.\+hpp} -\/ This header defines miscellaneous utility functions used within the library.
+\end{DoxyItemize}
+
+\subsection*{Folders}
+
+\subsubsection*{container}
+
+This folder contains various classes and functions for dealing with containers other than vectors (which have their own folder). Of particular note are the headers\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{coerce_8hpp}{coerce.\+hpp} -\/ Functions to coerce one type into a different type of container when the assignment operator won\textquotesingle{}t work, by using the assignment operator on the individual elements (or recursively coercing, in the case of structures of structures). For instance, this can be used to set a vector of doubles equal to a vector of ints.
+\item \hyperlink{insertion__ordered__map_8hpp}{insertion\+\_\+ordered\+\_\+map.\+hpp} -\/ Works like a std\+::map, except items are ordered by the order in which they\textquotesingle{}re added to the map.
+\item \hyperlink{labeled__array_8hpp}{labeled\+\_\+array.\+hpp} -\/ A container meant to represent a table of values. Each column has its own label, and it\textquotesingle{}s possible to access a column by its label. It\textquotesingle{}s also possible to easily iterate over rows, columns, or elements of an individual row or column. Also includes methods for reading in data from an A\+S\+C\+I\+I table format and outputting in this format. The only significant limitation is that it can only include one type of data -\/ ie. it can\textquotesingle{}t have one column of doubles and another of strings.
+\item \hyperlink{tuple_8hpp}{tuple.\+hpp} -\/ Many functions to extend the use of boost\+::tuples, allowing elementwise-\/operations to be performed on them for instance.
+\end{DoxyItemize}
+
+\subsubsection*{external}
+
+This folder contains code developed by others (licensed under the G\+P\+L), which I\textquotesingle{}ve included in the library\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{tk__spline_8h}{tk\+\_\+spline.\+h} -\/ A fast implementation of a spline. See also my \hyperlink{interpolator_8h}{interpolator} class, which allows this and other types of interpolation.
+\item \hyperlink{sgsmooth_8h}{sgsmooth.\+h} -\/ An implementation of Savitsky-\/\+Golay smoothing, useful for handling noisy data which needs to be differentiated.
+\end{DoxyItemize}
+
+\subsubsection*{file\+\_\+access}
+
+This folder contains various functions for handling file access and A\+S\+C\+I\+I tables. Most of the functions and classes related to A\+S\+C\+I\+I tables are subsumed by the functionality of the labeled\+\_\+array class, which provides a superior interface. These are still used behind the scenes in order to create a labeled\+\_\+array, however. Some notable headers here are\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{open__file_8hpp}{open\+\_\+file.\+hpp} -\/ Functions to handle the boilerplate of opening up a file stream.
+\item \hyperlink{table__utility_8hpp}{table\+\_\+utility.\+hpp} -\/ Various utility functions for loading in a table.
+\item \hyperlink{trim__comments_8hpp}{trim\+\_\+comments.\+hpp} -\/ Functions for trimming the comments from files
+\end{DoxyItemize}
+
+\subsubsection*{math}
+
+This folder contains functions for various mathematical operations, sorted into further subfolders.
+
+\paragraph*{math}
+
+The following useful headers are in the root \char`\"{}math\char`\"{} folder\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{ipow_8hpp}{ipow.\+hpp} -\/ Defines the function \char`\"{}ipow\char`\"{} in a few different manners, which represents taking an integral power. In the C++11 standard, compilers can\textquotesingle{}t optimize integral powers with std\+::pow, so this function can be used instead when the power is integral. Variations exist for when the power is and isn\textquotesingle{}t known at runtime.
+\item \hyperlink{misc__math_8hpp}{misc\+\_\+math.\+hpp} -\/ Miscellaneous useful functions, such as testing if a value is good (or Na\+N or inf), squaring/cubing/etc. values, adding/subtracting in quadruture, getting distance between two points, and a few useful functions for calculating errors under certain operations.
+\item \hyperlink{safe__math_8hpp}{safe\+\_\+math.\+hpp} -\/ \char`\"{}\+Safe\char`\"{} functions, to allow operations such as sqrt or division without worrying about edge cases (sqrt of a negative number or division by zero) causing too much of an issue. The results won\textquotesingle{}t always be sensible, but they\textquotesingle{}ll be numerical, so you don\textquotesingle{}t have to worry about a Na\+N contaminating all future math if it might be ignored (eg. 0/safe\+\_\+d(0) will result in 0 rather than Na\+N, which is often a more useful result for eg. taking a weighted average).
+\end{DoxyItemize}
+
+\paragraph*{cache}
+
+The headers here define abstract base classes which help with caching the result of a function which is expensive to evaluate. The user will define a derived class from the cache of the desired dimension, define the desired bounds of input variables to use for the limits of the cache, and define a function to calculate the function. The cache can then be used to get the value at any point, interpolating between cached values.
+
+The different header files define caches for functions of different dimensionality. When possible, the 1-\/4d caches should be used, as the cache for arbitrary dimensionality is significantly slower. Headers are\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{cache_8hpp}{cache.\+hpp}
+\item \hyperlink{cache__2d_8hpp}{cache\+\_\+2d.\+hpp}
+\item \hyperlink{cache__3d_8hpp}{cache\+\_\+3d.\+hpp}
+\item \hyperlink{cache__4d_8hpp}{cache\+\_\+4d.\+hpp}
+\item \hyperlink{cache__nd_8hpp}{cache\+\_\+nd.\+hpp}
+\end{DoxyItemize}
+
+Examples of caches being used can be seen in the \hyperlink{astro__caches_8h}{astro\+\_\+caches.\+h} and \hyperlink{astro__caches_8cpp}{astro\+\_\+caches.\+cpp} files.
+
+\paragraph*{calculus}
+
+This folder contains the following calculus-\/related headers\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{DE_8hpp}{D\+E.\+hpp} -\/ Differential equation solving methods
+\item \hyperlink{differentiate_8hpp}{differentiate.\+hpp} -\/ Functions to numerically differentiate a function of one or arbitrary dimensions
+\item \hyperlink{integrate_8hpp}{integrate.\+hpp} -\/ Functions to numerically integrate a function of one or arbitrary dimensions, using various different methods
+\end{DoxyItemize}
+
+\paragraph*{functor}
+
+The header \hyperlink{functor__product_8hpp}{functor\+\_\+product.\+hpp} here is useful for easily defining a functor whose result is the product of two other functions or functors applied to the input value.
+
+\paragraph*{Fourier}
+
+This folder contains headers to easily perform Fourier transforms with the F\+F\+T\+W library, handling the necessary boilerplate\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{radial__vector_8hpp}{radial\+\_\+vector.\+hpp} -\/ A class for handling transforms of spherically-\/symmetric functions easily.
+\item \hyperlink{transform_8hpp}{transform.\+hpp} -\/ Functions which handle the necessary boilerplate for Fourier transforms
+\end{DoxyItemize}
+
+\paragraph*{interpolator}
+
+This folder contains the header \hyperlink{interpolator_8h}{interpolator.\+h} for a class which helps determine the interpolation between known points, using one of multiple interpolation methods, and the header \hyperlink{interpolator__derivative_8h}{interpolator\+\_\+derivative.\+h} for a class which calculates the (smoothed) derivative of an interpolator.
+
+\paragraph*{random}
+
+This folder contains functions related to random-\/number generation.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{distributions_8hpp}{distributions.\+hpp} -\/ Functions to get aspects of common distributions (eg. pdf/cdf values)
+\item \hyperlink{random__functions_8hpp}{random\+\_\+functions.\+hpp} -\/ Functions to generate a random number with given distributions, optionally using a generator object.
+\end{DoxyItemize}
+
+\paragraph*{solvers}
+
+Functions to solve or minimize functions, and the ability to get the errors on best-\/fit values.
+
+
+\begin{DoxyItemize}
+\item \hyperlink{solvers_8hpp}{solvers.\+hpp} -\/ Functions to solve or minimize
+\item \hyperlink{solver__classes_8hpp}{solver\+\_\+classes.\+hpp} -\/ Classes which perform minimize functions and retain data needed to also get errors on solutions
+\end{DoxyItemize}
+
+\paragraph*{statistics}
+
+This folder contains class definitions which are used with Boost\+::accumulators to get additional statistics from them, and other statistical operations.
+
+Headers for accumulators\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{effective__count_8hpp}{effective\+\_\+count.\+hpp} -\/ Using the definition\+: Square of sum of weights / sum of squares of weights
+\item \hyperlink{error__of__weighted__mean_8hpp}{error\+\_\+of\+\_\+weighted\+\_\+mean.\+hpp} -\/ Using an old definition; shouldn\textquotesingle{}t be used until I update to a better one
+\item \hyperlink{mean__weight_8hpp}{mean\+\_\+weight.\+hpp} -\/ Mean of weights
+\item \hyperlink{sum__of__square__weights_8hpp}{sum\+\_\+of\+\_\+square\+\_\+weights.\+hpp} -\/ Sum of squares of weights
+\end{DoxyItemize}
+
+Other\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{resampling_8hpp}{resampling.\+hpp} -\/ Functions to generate a bootstrap or jackknife resampled version of a dataset.
+\end{DoxyItemize}
+
+\subsubsection*{units}
+
+This folder deals with the set-\/up for dimensional analysis. Notable headers are\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{units_8hpp}{units.\+hpp} -\/ Defines typedefs for common unit types and base units, plus function overloads which can be used on quantities and return quantities with the correct units (eg. sqrt, ipow)
+\item \hyperlink{unit__conversions_8hpp}{unit\+\_\+conversions.\+hpp} -\/ Defines conversions to and from the base S\+I unit set.
+\end{DoxyItemize}
+
+\subsubsection*{vector}
+
+This folder contains headers for operations on vectors and the definitions of some derived classes. Notable headers include\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{elementwise__functions_8hpp}{elementwise\+\_\+functions.\+hpp} -\/ Elementwise operations on vectors and other containers, which work recursively to allow function on vectors of vectors as well
+\item \hyperlink{limit__vector_8hpp}{limit\+\_\+vector.\+hpp} -\/ A class representing a set of bin limits. It includes various operations to quickly determine the bin which a given value falls within.
+\item \hyperlink{manipulations_8hpp}{manipulations.\+hpp} -\/ Functions to concatenate vectors, transpose and vertically flip vectors of vectors.
+\item \hyperlink{summary__functions_8hpp}{summary\+\_\+functions.\+hpp} -\/ Functions which provide summary statistics of vectors (eg. the sum of all elements). As with the elementwise functions, these also work recursively. 
+\end{DoxyItemize}

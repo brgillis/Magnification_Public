@@ -1,0 +1,44 @@
+\hypertarget{utility_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/utility.hpp File Reference}
+\label{utility_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/utility.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/utility.\+hpp}}
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$complex$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$type\+\_\+traits$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$boost/tuple/tuple.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/is\+\_\+container.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+C\+O\+N\+T\+A\+I\+N\+E\+R(\+T) $>$ }\\\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{namespaceIceBRG_a1c98028bf4680f4efbc1e733387e8372}{Ice\+B\+R\+G\+::ssize} (const T \&container)
+\item 
+{\footnotesize template$<$typename T , B\+R\+G\+\_\+\+F\+\_\+\+I\+S\+\_\+\+T\+U\+P\+L\+E(\+T) $>$ }\\constexpr \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \hyperlink{namespaceIceBRG_ac1a2389088324d112920ccf87a49b1e6}{Ice\+B\+R\+G\+::ssize} (const T \&tuple)
+\item 
+void \hyperlink{namespaceIceBRG_a60c9c906d9f458bf783e375345e7a4b9}{Ice\+B\+R\+G\+::set\+\_\+zero} (\hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&obj)
+\item 
+void \hyperlink{namespaceIceBRG_a69aded32f9a7eb7f673e1ee1ee61fc5a}{Ice\+B\+R\+G\+::set\+\_\+zero} (\hyperlink{lib_2IceBRG__main_2common_8h_a9a4c2c3afa89b73437fa1d63d607c7c1}{short\+\_\+int\+\_\+type} \&obj)
+\item 
+void \hyperlink{namespaceIceBRG_a665dc0f345896d185932ca88f01d047b}{Ice\+B\+R\+G\+::set\+\_\+zero} (\hyperlink{lib_2IceBRG__main_2common_8h_a155f1d4a7ac7ced2a2aa269b30ba2558}{long\+\_\+int\+\_\+type} \&obj)
+\item 
+void \hyperlink{namespaceIceBRG_a33a8c84fa22b6a3426175293c4a7f2e8}{Ice\+B\+R\+G\+::set\+\_\+zero} (\hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&obj)
+\item 
+void \hyperlink{namespaceIceBRG_a30f227fc88aa56ab4348f5a18a5f1d54}{Ice\+B\+R\+G\+::set\+\_\+zero} (\hyperlink{lib_2IceBRG__main_2common_8h_a7040956e7e1b504d34a9ccfb4253bdce}{long\+\_\+flt\+\_\+type} \&obj)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_a9c366be6b3a40d49d9418d9da8d1a1c6}{Ice\+B\+R\+G\+::set\+\_\+zero} (std\+::vector$<$ T $>$ \&vec)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_ad1026e1aa1d1c1bf6ce4887bc3c7e75e}{Ice\+B\+R\+G\+::set\+\_\+zero} (T $\ast$\&obj)
+\item 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\void \hyperlink{namespaceIceBRG_a22bcc23a96823f19209ee1a872f4b2d5}{Ice\+B\+R\+G\+::set\+\_\+zero} (obj\+\_\+type \&obj)
+\item 
+{\footnotesize template$<$typename obj\+\_\+type $>$ }\\void \hyperlink{namespaceIceBRG_ab7e2d18e0bff491788b46ca3720ea674}{Ice\+B\+R\+G\+::make\+\_\+obj} (\hyperlink{lib_2IceBRG__main_2common_8h_a14fca7a819f4969aaf506478b426c11d}{B\+R\+G\+\_\+\+U\+N\+I\+Q\+U\+E\+\_\+\+P\+T\+R}$<$ obj\+\_\+type $>$ \&obj\+\_\+pointer)
+\end{DoxyCompactItemize}

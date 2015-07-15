@@ -1,0 +1,30 @@
+\hypertarget{ascii__table__map_8hpp}{}\section{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table\+\_\+map.hpp File Reference}
+\label{ascii__table__map_8hpp}\index{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table\+\_\+map.\+hpp@{/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table\+\_\+map.\+hpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/\+Eigen.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/container/table\+\_\+typedefs.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/file\+\_\+access/ascii\+\_\+table.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Ice\+B\+R\+G\+\_\+main/file\+\_\+access/table\+\_\+utility.\+hpp\char`\"{}}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_a1379800d6e0cafd9a437e456e95a3b1f}{Ice\+B\+R\+G\+::print\+\_\+table\+\_\+map} (std\+::ostream \&out, const table\+\_\+map\+\_\+t$<$ T $>$ \&table\+\_\+map)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_aabd3e256b75420ca59af04c81c9bae99}{Ice\+B\+R\+G\+::print\+\_\+table\+\_\+map} (const std\+::string \&file\+\_\+name, const table\+\_\+map\+\_\+t$<$ T $>$ \&table\+\_\+map)
+\item 
+{\footnotesize template$<$typename T $>$ }\\table\+\_\+map\+\_\+t$<$ T $>$ \hyperlink{namespaceIceBRG_a845530aefc4255d4d98730502e0ad5b6}{Ice\+B\+R\+G\+::load\+\_\+table\+\_\+map} (std\+::istream \&fi, const T default\+\_\+value=T())
+\item 
+{\footnotesize template$<$typename T $>$ }\\table\+\_\+map\+\_\+t$<$ T $>$ \hyperlink{namespaceIceBRG_a3f55c2c1511c52252fc04d73b77fe777}{Ice\+B\+R\+G\+::load\+\_\+table\+\_\+map} (const std\+::string \&file\+\_\+name, const T default\+\_\+value=T())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_ac0ffd49fd81c88cfada1e555c0bef325}{Ice\+B\+R\+G\+::load\+\_\+table\+\_\+columns} (std\+::istream \&fi, std\+::map$<$ std\+::string, std\+::vector$<$ T $>$ $\ast$ $>$ \&column\+\_\+map, const bool case\+\_\+sensitive=false, const T default\+\_\+value=T())
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{namespaceIceBRG_a613f4da18fa3608894513caf3abeb80a}{Ice\+B\+R\+G\+::load\+\_\+table\+\_\+columns} (const std\+::string \&file\+\_\+name, std\+::map$<$ std\+::string, std\+::vector$<$ T $>$ $\ast$ $>$ \&column\+\_\+map, const bool case\+\_\+sensitive=false, const T default\+\_\+value=T())
+\end{DoxyCompactItemize}

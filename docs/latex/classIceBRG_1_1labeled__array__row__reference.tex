@@ -1,0 +1,679 @@
+\hypertarget{classIceBRG_1_1labeled__array__row__reference}{}\section{Ice\+B\+R\+G\+:\+:labeled\+\_\+array\+\_\+row\+\_\+reference$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$ Class Template Reference}
+\label{classIceBRG_1_1labeled__array__row__reference}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$}}
+
+
+{\ttfamily \#include $<$labeled\+\_\+array\+\_\+row\+\_\+reference.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::label\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}{label\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::value\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+value\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_a3eaf76b7cd84107e68c41cd4fc056c39}{const\+\_\+value\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::size\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type}
+\item 
+typedef T\+\_\+row\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5b537072b2f12f7a4ea9484e2e26986d}{row\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+row\+\_\+type \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80b2a3ea3231a22bf8c493841ad8cf3a}{const\+\_\+row\+\_\+type}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::reference \hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+reference \hyperlink{classIceBRG_1_1labeled__array__row__reference_a7343692e3cbf28a9edfff61f6812f355}{const\+\_\+reference}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::row\+\_\+element\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a6019a8a167f6816b145f39478b2fb691}{iterator}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+row\+\_\+element\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a32426fe25a4b7f8659eb5fe2b58ecba2}{const\+\_\+iterator}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::reverse\+\_\+row\+\_\+element\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a69e88ba1f1071a47fa00e4ec45f8147d}{reverse\+\_\+iterator}
+\item 
+typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+reverse\+\_\+row\+\_\+element\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a4bb091c3a6d8be3b433acbc02745fa0a}{const\+\_\+reverse\+\_\+iterator}
+\item 
+typedef size\+\_\+t \hyperlink{classIceBRG_1_1labeled__array__row__reference_a3c4333001dfc05e470766b9c2786f630}{difference\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T\+\_\+init\+\_\+row\+\_\+type $>$ }\\\hyperlink{classIceBRG_1_1labeled__array__row__reference_aa5b99a997fb1c6a92aff73d093300bca}{labeled\+\_\+array\+\_\+row\+\_\+reference} (map\+\_\+type $\ast$label\+\_\+map, T\+\_\+init\+\_\+row\+\_\+type \&\&row, const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&num\+\_\+cols)
+\begin{DoxyCompactList}\small\item\em Constructor. Requires a pointer to a \hyperlink{classIceBRG_1_1labeled__array}{labeled\+\_\+array}\textquotesingle{}s label map and row. \end{DoxyCompactList}\item 
+virtual \hyperlink{classIceBRG_1_1labeled__array__row__reference_a87c88e311e4178e7d945eac0349f16ec}{$\sim$labeled\+\_\+array\+\_\+row\+\_\+reference} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}{begin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em begin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}{begin} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}{begin} () noexcept
+\begin{DoxyCompactList}\small\item\em begin \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}{begin} () noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}{end} () const  noexcept
+\begin{DoxyCompactList}\small\item\em end (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}{end} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}{end} () noexcept
+\begin{DoxyCompactList}\small\item\em end \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}{end} () noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}{rbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rbegin (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}{rbegin} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}{rbegin} () noexcept
+\begin{DoxyCompactList}\small\item\em rbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}{rbegin} () noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{rend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rend (const) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{rend} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{rend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em rend \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{rend} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}{cbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}{cbegin} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}{cend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em cend \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}{cend} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}{crbegin} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crbegin \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}{crbegin} () const  noexcept
+\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}{crend} () const  noexcept
+\begin{DoxyCompactList}\small\item\em crend \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ }\\T\+\_\+iterator \hyperlink{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}{crend} () const  noexcept
+\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_ab4e97720dc6fe2d271e3e0b14457089a}{size} () const  noexcept
+\begin{DoxyCompactList}\small\item\em size \end{DoxyCompactList}\item 
+bool \hyperlink{classIceBRG_1_1labeled__array__row__reference_ab220e53aa76e04b91490b69d2a96c80c}{empty} () const  noexcept
+\begin{DoxyCompactList}\small\item\em empty \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a7901cf2168312de2ecc2c76f1ab48626}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a4ec0100a9da99645d7a920af8c540adb}{operator\mbox{[}$\,$\mbox{]}} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a63481c81c06930bbc3fbc89fe46566c1}{operator()} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_addc6a4c323eee903550283cf2643e4dc}{operator()} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_ac0d1bdec63585d14f9db3a23fe884634}{at} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_ace6c86966dbf1b4792773335c537bb5d}{at} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a8946e390ed977e79ac9f42f9155fe16c}{col} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_afd8adae270f4df67924de96ccc5beaa0}{col} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n)
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a91c3c3f275b448e443bc27f72b494216}{at\+\_\+label} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}{label\+\_\+type} \&\hyperlink{classIceBRG_1_1labeled__array__row__reference_a1280fd88579bdf943ac18d547b8805de}{label}) const 
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_addae59ee5af7d76586bd6695f6a2a171}{at\+\_\+label} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}{label\+\_\+type} \&\hyperlink{classIceBRG_1_1labeled__array__row__reference_a1280fd88579bdf943ac18d547b8805de}{label})
+\begin{DoxyCompactList}\small\item\em Range-\/checked element access. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_aa7a42a670dab9f96920066c653421cbd}{front} () const 
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_aa46c594742690fec656a424ca271350d}{front} ()
+\begin{DoxyCompactList}\small\item\em Access first element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a770181450611ea00a8d502bc0ac56bfb}{back} () const 
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{reference} \hyperlink{classIceBRG_1_1labeled__array__row__reference_aca02f3abb7e1cd0e09eca061d7692d3e}{back} ()
+\begin{DoxyCompactList}\small\item\em Access last element. \end{DoxyCompactList}\item 
+const \hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} $\ast$ \hyperlink{classIceBRG_1_1labeled__array__row__reference_ad6361e121660139ffb358731c4899f0b}{data} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Access data. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{value\+\_\+type} $\ast$ \hyperlink{classIceBRG_1_1labeled__array__row__reference_ae6bc6a700188db9404b6b98da8d4bb09}{data} () noexcept
+\begin{DoxyCompactList}\small\item\em Access data. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}{label\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a1280fd88579bdf943ac18d547b8805de}{label} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{size\+\_\+type} \&n) const 
+\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a0e900a8b5986ca2cb340474a3f418f5d}{operator const\+\_\+row\+\_\+type} () const  noexcept
+\begin{DoxyCompactList}\small\item\em Cast to row\+\_\+type. \end{DoxyCompactList}\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_ab82d5549f91955afcd109b1cd3e993ed}{operator row\+\_\+type} () noexcept
+\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a80b2a3ea3231a22bf8c493841ad8cf3a}{const\+\_\+row\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_af46b03ffffb0b010f6e8e5363a7d67b9}{raw} () const  noexcept
+\item 
+\hyperlink{classIceBRG_1_1labeled__array__row__reference_a5b537072b2f12f7a4ea9484e2e26986d}{row\+\_\+type} \hyperlink{classIceBRG_1_1labeled__array__row__reference_a958f842412775c063fbc4b1c6a17d2fc}{raw} () noexcept
+\item 
+{\footnotesize template$<$typename other\+\_\+row\+\_\+type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+row\+\_\+type, row\+\_\+type $>$\+::value, other\+\_\+row\+\_\+type $>$\+::type $\ast$  = nullptr$>$ }\\\hyperlink{classIceBRG_1_1labeled__array__row__reference_abac40a2fd198e90d70557a349453def9}{labeled\+\_\+array\+\_\+row\+\_\+reference} (const \hyperlink{classIceBRG_1_1labeled__array__row__reference}{labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, other\+\_\+row\+\_\+type $>$ \&other)
+\begin{DoxyCompactList}\small\item\em Cast non-\/const version to const version. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a32426fe25a4b7f8659eb5fe2b58ecba2}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+row\+\_\+element\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf const\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__row__reference_a32426fe25a4b7f8659eb5fe2b58ecba2}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a7343692e3cbf28a9edfff61f6812f355}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!const\+\_\+reference@{const\+\_\+reference}}
+\index{const\+\_\+reference@{const\+\_\+reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{const\+\_\+reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+reference {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf const\+\_\+reference}}\label{classIceBRG_1_1labeled__array__row__reference_a7343692e3cbf28a9edfff61f6812f355}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a4bb091c3a6d8be3b433acbc02745fa0a}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}}
+\index{const\+\_\+reverse\+\_\+iterator@{const\+\_\+reverse\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{const\+\_\+reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+reverse\+\_\+row\+\_\+element\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf const\+\_\+reverse\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__row__reference_a4bb091c3a6d8be3b433acbc02745fa0a}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a80b2a3ea3231a22bf8c493841ad8cf3a}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!const\+\_\+row\+\_\+type@{const\+\_\+row\+\_\+type}}
+\index{const\+\_\+row\+\_\+type@{const\+\_\+row\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{const\+\_\+row\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+row\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf const\+\_\+row\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a80b2a3ea3231a22bf8c493841ad8cf3a}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a3eaf76b7cd84107e68c41cd4fc056c39}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!const\+\_\+value\+\_\+type@{const\+\_\+value\+\_\+type}}
+\index{const\+\_\+value\+\_\+type@{const\+\_\+value\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{const\+\_\+value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::const\+\_\+value\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf const\+\_\+value\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a3eaf76b7cd84107e68c41cd4fc056c39}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a3c4333001dfc05e470766b9c2786f630}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!difference\+\_\+type@{difference\+\_\+type}}
+\index{difference\+\_\+type@{difference\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{difference\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef size\+\_\+t {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf difference\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a3c4333001dfc05e470766b9c2786f630}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a6019a8a167f6816b145f39478b2fb691}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!iterator@{iterator}}
+\index{iterator@{iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::row\+\_\+element\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf iterator}}\label{classIceBRG_1_1labeled__array__row__reference_a6019a8a167f6816b145f39478b2fb691}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!label\+\_\+type@{label\+\_\+type}}
+\index{label\+\_\+type@{label\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{label\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::label\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf label\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a0b7e29867009277fee9102863be2d63a}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!reference@{reference}}
+\index{reference@{reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{reference}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::reference {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf reference}}\label{classIceBRG_1_1labeled__array__row__reference_a24c2694c9ca46757f21f7024a229c925}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a69e88ba1f1071a47fa00e4ec45f8147d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!reverse\+\_\+iterator@{reverse\+\_\+iterator}}
+\index{reverse\+\_\+iterator@{reverse\+\_\+iterator}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{reverse\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::reverse\+\_\+row\+\_\+element\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf reverse\+\_\+iterator}}\label{classIceBRG_1_1labeled__array__row__reference_a69e88ba1f1071a47fa00e4ec45f8147d}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5b537072b2f12f7a4ea9484e2e26986d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!row\+\_\+type@{row\+\_\+type}}
+\index{row\+\_\+type@{row\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{row\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef T\+\_\+row\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf row\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a5b537072b2f12f7a4ea9484e2e26986d}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!size\+\_\+type@{size\+\_\+type}}
+\index{size\+\_\+type@{size\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{size\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::size\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf size\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_a80c5d11ebfa639fa27894ce288633df0}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!value\+\_\+type@{value\+\_\+type}}
+\index{value\+\_\+type@{value\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{value\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ typedef labeled\+\_\+array\+\_\+type\+::value\+\_\+type {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf value\+\_\+type}}\label{classIceBRG_1_1labeled__array__row__reference_ae6cfe4bdcb3bc59c3d7613193633f063}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_aa5b99a997fb1c6a92aff73d093300bca}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!labeled\+\_\+array\+\_\+row\+\_\+reference@{labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\index{labeled\+\_\+array\+\_\+row\+\_\+reference@{labeled\+\_\+array\+\_\+row\+\_\+reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{labeled\+\_\+array\+\_\+row\+\_\+reference(map\+\_\+type $\ast$label\+\_\+map, T\+\_\+init\+\_\+row\+\_\+type \&\&row, const size\+\_\+type \&num\+\_\+cols)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+init\+\_\+row\+\_\+type $>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf labeled\+\_\+array\+\_\+row\+\_\+reference} (
+\begin{DoxyParamCaption}
+\item[{map\+\_\+type $\ast$}]{label\+\_\+map, }
+\item[{T\+\_\+init\+\_\+row\+\_\+type \&\&}]{row, }
+\item[{const {\bf size\+\_\+type} \&}]{num\+\_\+cols}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_aa5b99a997fb1c6a92aff73d093300bca}
+
+
+Constructor. Requires a pointer to a \hyperlink{classIceBRG_1_1labeled__array}{labeled\+\_\+array}\textquotesingle{}s label map and row. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a87c88e311e4178e7d945eac0349f16ec}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!````~labeled\+\_\+array\+\_\+row\+\_\+reference@{$\sim$labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\index{````~labeled\+\_\+array\+\_\+row\+\_\+reference@{$\sim$labeled\+\_\+array\+\_\+row\+\_\+reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{$\sim$labeled\+\_\+array\+\_\+row\+\_\+reference()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ virtual {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::$\sim${\bf labeled\+\_\+array\+\_\+row\+\_\+reference} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classIceBRG_1_1labeled__array__row__reference_a87c88e311e4178e7d945eac0349f16ec}
+
+
+Virtual destructor. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_abac40a2fd198e90d70557a349453def9}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!labeled\+\_\+array\+\_\+row\+\_\+reference@{labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\index{labeled\+\_\+array\+\_\+row\+\_\+reference@{labeled\+\_\+array\+\_\+row\+\_\+reference}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{labeled\+\_\+array\+\_\+row\+\_\+reference(const labeled\+\_\+array\+\_\+row\+\_\+reference$<$ labeled\+\_\+array\+\_\+type, other\+\_\+row\+\_\+type $>$ \&other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename other\+\_\+row\+\_\+type , typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+convertible$<$ other\+\_\+row\+\_\+type, row\+\_\+type $>$\+::value, other\+\_\+row\+\_\+type $>$\+::type $\ast$  = nullptr$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::{\bf labeled\+\_\+array\+\_\+row\+\_\+reference} (
+\begin{DoxyParamCaption}
+\item[{const {\bf labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, other\+\_\+row\+\_\+type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_abac40a2fd198e90d70557a349453def9}
+
+
+Cast non-\/const version to const version. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ac0d1bdec63585d14f9db3a23fe884634}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{at(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_ac0d1bdec63585d14f9db3a23fe884634}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ace6c86966dbf1b4792773335c537bb5d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!at@{at}}
+\index{at@{at}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{at(const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::at (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_ace6c86966dbf1b4792773335c537bb5d}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a91c3c3f275b448e443bc27f72b494216}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!at\+\_\+label@{at\+\_\+label}}
+\index{at\+\_\+label@{at\+\_\+label}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{at\+\_\+label(const label\+\_\+type \&label) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::at\+\_\+label (
+\begin{DoxyParamCaption}
+\item[{const {\bf label\+\_\+type} \&}]{label}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a91c3c3f275b448e443bc27f72b494216}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_addae59ee5af7d76586bd6695f6a2a171}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!at\+\_\+label@{at\+\_\+label}}
+\index{at\+\_\+label@{at\+\_\+label}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{at\+\_\+label(const label\+\_\+type \&label)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::at\+\_\+label (
+\begin{DoxyParamCaption}
+\item[{const {\bf label\+\_\+type} \&}]{label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_addae59ee5af7d76586bd6695f6a2a171}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a770181450611ea00a8d502bc0ac56bfb}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!back@{back}}
+\index{back@{back}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{back() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a770181450611ea00a8d502bc0ac56bfb}
+
+
+Access last element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_aca02f3abb7e1cd0e09eca061d7692d3e}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!back@{back}}
+\index{back@{back}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{back()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_aca02f3abb7e1cd0e09eca061d7692d3e}
+
+
+Access last element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{begin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}
+
+
+begin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{begin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a3e3cf78cfef5f00b83417cbbfb692443}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{begin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}
+
+
+begin 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!begin@{begin}}
+\index{begin@{begin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{begin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5fa54eb388d4240ce4700a20882c4616}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}
+
+
+cbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!cbegin@{cbegin}}
+\index{cbegin@{cbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{cbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::cbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a8b451f17a7ae6b69e324fc131a599635}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}
+
+
+cend 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!cend@{cend}}
+\index{cend@{cend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{cend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::cend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ac51579aff50e4f6c41fa94be1028b387}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a8946e390ed977e79ac9f42f9155fe16c}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!col@{col}}
+\index{col@{col}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{col(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::col (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a8946e390ed977e79ac9f42f9155fe16c}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_afd8adae270f4df67924de96ccc5beaa0}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!col@{col}}
+\index{col@{col}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{col(const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::col (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_afd8adae270f4df67924de96ccc5beaa0}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}
+
+
+crbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!crbegin@{crbegin}}
+\index{crbegin@{crbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{crbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::crbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a991b98e4c2251b590ef4db8c800b1d40}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}
+
+
+crend 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!crend@{crend}}
+\index{crend@{crend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{crend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::crend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a2a2500834824ec67a61f748375e66c62}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ad6361e121660139ffb358731c4899f0b}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!data@{data}}
+\index{data@{data}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{data() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ const {\bf value\+\_\+type}$\ast$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ad6361e121660139ffb358731c4899f0b}
+
+
+Access data. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ae6bc6a700188db9404b6b98da8d4bb09}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!data@{data}}
+\index{data@{data}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{data() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type}$\ast$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ae6bc6a700188db9404b6b98da8d4bb09}
+
+
+Access data. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ab220e53aa76e04b91490b69d2a96c80c}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!empty@{empty}}
+\index{empty@{empty}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{empty() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ bool {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ab220e53aa76e04b91490b69d2a96c80c}
+
+
+empty 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{end() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}
+
+
+end (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{end() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ad8387c725079b50f2364109245fec8c1}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{end() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}
+
+
+end 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!end@{end}}
+\index{end@{end}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{end() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a24df418e36063069ab29cd3a33e95154}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_aa7a42a670dab9f96920066c653421cbd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!front@{front}}
+\index{front@{front}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{front() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_aa7a42a670dab9f96920066c653421cbd}
+
+
+Access first element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_aa46c594742690fec656a424ca271350d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!front@{front}}
+\index{front@{front}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{front()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_aa46c594742690fec656a424ca271350d}
+
+
+Access first element. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a1280fd88579bdf943ac18d547b8805de}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!label@{label}}
+\index{label@{label}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{label(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf label\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::label (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a1280fd88579bdf943ac18d547b8805de}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a0e900a8b5986ca2cb340474a3f418f5d}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator const\+\_\+row\+\_\+type@{operator const\+\_\+row\+\_\+type}}
+\index{operator const\+\_\+row\+\_\+type@{operator const\+\_\+row\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator const\+\_\+row\+\_\+type() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator {\bf const\+\_\+row\+\_\+type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a0e900a8b5986ca2cb340474a3f418f5d}
+
+
+Cast to row\+\_\+type. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ab82d5549f91955afcd109b1cd3e993ed}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator row\+\_\+type@{operator row\+\_\+type}}
+\index{operator row\+\_\+type@{operator row\+\_\+type}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator row\+\_\+type() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator {\bf row\+\_\+type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ab82d5549f91955afcd109b1cd3e993ed}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a63481c81c06930bbc3fbc89fe46566c1}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator()(const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a63481c81c06930bbc3fbc89fe46566c1}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_addc6a4c323eee903550283cf2643e4dc}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator()@{operator()}}
+\index{operator()@{operator()}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator()(const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator() (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_addc6a4c323eee903550283cf2643e4dc}
+
+
+Range-\/checked element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a7901cf2168312de2ecc2c76f1ab48626}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator[](const size\+\_\+type \&n) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf value\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a7901cf2168312de2ecc2c76f1ab48626}
+
+
+Element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a4ec0100a9da99645d7a920af8c540adb}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{operator[](const size\+\_\+type \&n)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf reference} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const {\bf size\+\_\+type} \&}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classIceBRG_1_1labeled__array__row__reference_a4ec0100a9da99645d7a920af8c540adb}
+
+
+Element access. 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_af46b03ffffb0b010f6e8e5363a7d67b9}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!raw@{raw}}
+\index{raw@{raw}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{raw() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf const\+\_\+row\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_af46b03ffffb0b010f6e8e5363a7d67b9}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a958f842412775c063fbc4b1c6a17d2fc}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!raw@{raw}}
+\index{raw@{raw}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{raw() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf row\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::raw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a958f842412775c063fbc4b1c6a17d2fc}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}
+
+
+rbegin (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rbegin() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_af456f66a8f20ba0ba7a0d0af09cd24d3}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rbegin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}
+
+
+rbegin 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rbegin() noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rbegin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a6f4b44fd665e3de18cf66acbf7e7a684}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}
+
+
+rend (const) 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = const\+\_\+reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, const\+\_\+value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$!std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}
+
+
+rend 
+
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!rend@{rend}}
+\index{rend@{rend}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{rend() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ template$<$typename T\+\_\+iterator  = reverse\+\_\+iterator, typename std\+::enable\+\_\+if$<$ std\+::is\+\_\+same$<$ T\+\_\+iterator, value\+\_\+type $\ast$ $>$\+::value, char $>$\+::type  = 0$>$ T\+\_\+iterator {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::rend (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_a5a033e4890a28fc1fc854e69892865dd}
+\hypertarget{classIceBRG_1_1labeled__array__row__reference_ab4e97720dc6fe2d271e3e0b14457089a}{}\index{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}!size@{size}}
+\index{size@{size}!Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference@{Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}}
+\subsubsection[{size() const  noexcept}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename labeled\+\_\+array\+\_\+type, typename T\+\_\+row\+\_\+type$>$ {\bf size\+\_\+type} {\bf Ice\+B\+R\+G\+::labeled\+\_\+array\+\_\+row\+\_\+reference}$<$ labeled\+\_\+array\+\_\+type, T\+\_\+row\+\_\+type $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}\label{classIceBRG_1_1labeled__array__row__reference_ab4e97720dc6fe2d271e3e0b14457089a}
+
+
+size 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/disk2/brg/git/\+Magnification\+\_\+\+Public/src/lib/\+Ice\+B\+R\+G\+\_\+main/container/labeled\+\_\+array/\hyperlink{labeled__array__row__reference_8hpp}{labeled\+\_\+array\+\_\+row\+\_\+reference.\+hpp}\end{DoxyCompactItemize}

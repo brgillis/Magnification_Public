@@ -1,0 +1,153 @@
+\hypertarget{namespaceIceBRG_1_1Fourier}{}\section{Ice\+B\+R\+G\+:\+:Fourier Namespace Reference}
+\label{namespaceIceBRG_1_1Fourier}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structIceBRG_1_1Fourier_1_1fftw__array__deleter}{fftw\+\_\+array\+\_\+deleter}
+\item 
+class \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator}
+\item 
+class \hyperlink{classIceBRG_1_1Fourier_1_1managed__fftw__plan}{managed\+\_\+fftw\+\_\+plan}
+\item 
+class \hyperlink{classIceBRG_1_1Fourier_1_1radial__vector}{radial\+\_\+vector}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef Eigen\+::\+Map$<$ \hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} $>$ \hyperlink{namespaceIceBRG_1_1Fourier_a6fc544fe13bd85c16ab9f67052e1a882}{flt\+\_\+array\+\_\+map\+\_\+type}
+\item 
+typedef Eigen\+::\+Map$<$ \hyperlink{namespaceIceBRG_a02e79930ea75411b7883d2786b2fc5d7}{complex\+\_\+array\+\_\+type} $>$ \hyperlink{namespaceIceBRG_1_1Fourier_a647364fe9550c95ba04a10e0228b3c8d}{complex\+\_\+array\+\_\+map\+\_\+type}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type}, \hyperlink{structIceBRG_1_1Fourier_1_1fftw__array__deleter}{fftw\+\_\+array\+\_\+deleter}$<$ \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} $>$ $>$ \hyperlink{namespaceIceBRG_1_1Fourier_ad7f59ed7cb7a3053346be0e1102a5af3}{fftw\+\_\+flt\+\_\+ptr}
+\item 
+typedef std\+::unique\+\_\+ptr$<$ fftw\+\_\+complex, \hyperlink{structIceBRG_1_1Fourier_1_1fftw__array__deleter}{fftw\+\_\+array\+\_\+deleter}$<$ fftw\+\_\+complex $>$ $>$ \hyperlink{namespaceIceBRG_1_1Fourier_adbfb704fc18fb22a63f5d6c6b080fcd1}{fftw\+\_\+complex\+\_\+ptr}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_a02e79930ea75411b7883d2786b2fc5d7}{complex\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_ad1efe4a24e34a8b704205a52629cb707}{Fourier\+\_\+transform} (const \hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} \&vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_affb54aec64ffd50653afcdc145ece870}{inverse\+\_\+\+Fourier\+\_\+transform} (const \hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} \&vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_aec332460e7be732629ad96425628a858}{Fourier\+\_\+sin\+\_\+transform} (const \hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} \&vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_a2f02fa3fbb88e69e1355ac8823fa02e9}{inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform} (const \hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} \&vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_a97aa6b3ec3f4fe380be476a24f613cfc}{spherical\+\_\+\+Fourier\+\_\+transform} (\hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_afabdc17609e1191649e571a21dbe3c13}{inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform} (\hyperlink{main__lensing__model__fitter_8cpp_ad3282ec06f468e9f4cb74fee9155540e}{array\+\_\+type} vals, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_a02e79930ea75411b7883d2786b2fc5d7}{complex\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_a129c362c44c64c7e1e303abcf96f55e9}{Fourier\+\_\+transform} (const func\+\_\+type \&func, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{namespaceIceBRG_aa6b6fb2d7875bb865ebaf20c5c9cbc85}{min}=0., const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{namespaceIceBRG_af8123f867f9a8c6a9703da8556182c84}{max}=1., const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&samples=1024, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_a1f070994484cad6c11dd8a58871d0b60}{Fourier\+\_\+sin\+\_\+transform} (const func\+\_\+type \&func, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{namespaceIceBRG_af8123f867f9a8c6a9703da8556182c84}{max}=1., const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&samples=1024, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\item 
+{\footnotesize template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ }\\\hyperlink{namespaceIceBRG_acdca5c05302480eba6ba053449643a6d}{flt\+\_\+array\+\_\+type} \hyperlink{namespaceIceBRG_1_1Fourier_a51335fd335a542a763e192bb1f341a83}{spherical\+\_\+\+Fourier\+\_\+transform} (const func\+\_\+type \&func, const \hyperlink{lib_2IceBRG__main_2common_8h_ad0f130a56eeb944d9ef2692ee881ecc4}{flt\+\_\+type} \&\hyperlink{namespaceIceBRG_af8123f867f9a8c6a9703da8556182c84}{max}=1., const \hyperlink{lib_2IceBRG__main_2common_8h_ac4de9d9335536ac22821171deec8d39e}{int\+\_\+type} \&samples=1024, const boost\+::optional$<$ \hyperlink{classIceBRG_1_1Fourier_1_1fftw__wisdom__accumulator}{fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&wisdom=boost\+::none)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr const char $\ast$ \hyperlink{namespaceIceBRG_1_1Fourier_a6ebd3b65a33ddde6362840e1dd67866b}{default\+\_\+fftw\+\_\+wisdom\+\_\+filename} = \char`\"{}.fftw\+\_\+wisdom\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespaceIceBRG_1_1Fourier_a647364fe9550c95ba04a10e0228b3c8d}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!complex\+\_\+array\+\_\+map\+\_\+type@{complex\+\_\+array\+\_\+map\+\_\+type}}
+\index{complex\+\_\+array\+\_\+map\+\_\+type@{complex\+\_\+array\+\_\+map\+\_\+type}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{complex\+\_\+array\+\_\+map\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef Eigen\+::\+Map$<${\bf complex\+\_\+array\+\_\+type}$>$ {\bf Ice\+B\+R\+G\+::\+Fourier\+::complex\+\_\+array\+\_\+map\+\_\+type}}\label{namespaceIceBRG_1_1Fourier_a647364fe9550c95ba04a10e0228b3c8d}
+\hypertarget{namespaceIceBRG_1_1Fourier_adbfb704fc18fb22a63f5d6c6b080fcd1}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!fftw\+\_\+complex\+\_\+ptr@{fftw\+\_\+complex\+\_\+ptr}}
+\index{fftw\+\_\+complex\+\_\+ptr@{fftw\+\_\+complex\+\_\+ptr}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{fftw\+\_\+complex\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::unique\+\_\+ptr$<$fftw\+\_\+complex,{\bf fftw\+\_\+array\+\_\+deleter}$<$fftw\+\_\+complex$>$ $>$ {\bf Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+complex\+\_\+ptr}}\label{namespaceIceBRG_1_1Fourier_adbfb704fc18fb22a63f5d6c6b080fcd1}
+\hypertarget{namespaceIceBRG_1_1Fourier_ad7f59ed7cb7a3053346be0e1102a5af3}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!fftw\+\_\+flt\+\_\+ptr@{fftw\+\_\+flt\+\_\+ptr}}
+\index{fftw\+\_\+flt\+\_\+ptr@{fftw\+\_\+flt\+\_\+ptr}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{fftw\+\_\+flt\+\_\+ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::unique\+\_\+ptr$<${\bf flt\+\_\+type},{\bf fftw\+\_\+array\+\_\+deleter}$<${\bf flt\+\_\+type}$>$ $>$ {\bf Ice\+B\+R\+G\+::\+Fourier\+::fftw\+\_\+flt\+\_\+ptr}}\label{namespaceIceBRG_1_1Fourier_ad7f59ed7cb7a3053346be0e1102a5af3}
+\hypertarget{namespaceIceBRG_1_1Fourier_a6fc544fe13bd85c16ab9f67052e1a882}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!flt\+\_\+array\+\_\+map\+\_\+type@{flt\+\_\+array\+\_\+map\+\_\+type}}
+\index{flt\+\_\+array\+\_\+map\+\_\+type@{flt\+\_\+array\+\_\+map\+\_\+type}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{flt\+\_\+array\+\_\+map\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}typedef Eigen\+::\+Map$<${\bf flt\+\_\+array\+\_\+type}$>$ {\bf Ice\+B\+R\+G\+::\+Fourier\+::flt\+\_\+array\+\_\+map\+\_\+type}}\label{namespaceIceBRG_1_1Fourier_a6fc544fe13bd85c16ab9f67052e1a882}
+
+
+\subsection{Function Documentation}
+\hypertarget{namespaceIceBRG_1_1Fourier_aec332460e7be732629ad96425628a858}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!Fourier\+\_\+sin\+\_\+transform@{Fourier\+\_\+sin\+\_\+transform}}
+\index{Fourier\+\_\+sin\+\_\+transform@{Fourier\+\_\+sin\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{Fourier\+\_\+sin\+\_\+transform(const array\+\_\+type \&vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::\+Fourier\+\_\+sin\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const {\bf array\+\_\+type} \&}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_aec332460e7be732629ad96425628a858}
+\hypertarget{namespaceIceBRG_1_1Fourier_a1f070994484cad6c11dd8a58871d0b60}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!Fourier\+\_\+sin\+\_\+transform@{Fourier\+\_\+sin\+\_\+transform}}
+\index{Fourier\+\_\+sin\+\_\+transform@{Fourier\+\_\+sin\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{Fourier\+\_\+sin\+\_\+transform(const func\+\_\+type \&func, const flt\+\_\+type \&max=1., const int\+\_\+type \&samples=1024, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::\+Fourier\+\_\+sin\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const func\+\_\+type \&}]{func, }
+\item[{const {\bf flt\+\_\+type} \&}]{max = {\ttfamily 1.}, }
+\item[{const {\bf int\+\_\+type} \&}]{samples = {\ttfamily 1024}, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_a1f070994484cad6c11dd8a58871d0b60}
+\hypertarget{namespaceIceBRG_1_1Fourier_ad1efe4a24e34a8b704205a52629cb707}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!Fourier\+\_\+transform@{Fourier\+\_\+transform}}
+\index{Fourier\+\_\+transform@{Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{Fourier\+\_\+transform(const array\+\_\+type \&vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf complex\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const {\bf array\+\_\+type} \&}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_ad1efe4a24e34a8b704205a52629cb707}
+\hypertarget{namespaceIceBRG_1_1Fourier_a129c362c44c64c7e1e303abcf96f55e9}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!Fourier\+\_\+transform@{Fourier\+\_\+transform}}
+\index{Fourier\+\_\+transform@{Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{Fourier\+\_\+transform(const func\+\_\+type \&func, const flt\+\_\+type \&min=0., const flt\+\_\+type \&max=1., const int\+\_\+type \&samples=1024, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf complex\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const func\+\_\+type \&}]{func, }
+\item[{const {\bf flt\+\_\+type} \&}]{min = {\ttfamily 0.}, }
+\item[{const {\bf flt\+\_\+type} \&}]{max = {\ttfamily 1.}, }
+\item[{const {\bf int\+\_\+type} \&}]{samples = {\ttfamily 1024}, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_a129c362c44c64c7e1e303abcf96f55e9}
+\hypertarget{namespaceIceBRG_1_1Fourier_a2f02fa3fbb88e69e1355ac8823fa02e9}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform@{inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform}}
+\index{inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform@{inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform(const array\+\_\+type \&vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::inverse\+\_\+\+Fourier\+\_\+sin\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const {\bf array\+\_\+type} \&}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_a2f02fa3fbb88e69e1355ac8823fa02e9}
+\hypertarget{namespaceIceBRG_1_1Fourier_affb54aec64ffd50653afcdc145ece870}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!inverse\+\_\+\+Fourier\+\_\+transform@{inverse\+\_\+\+Fourier\+\_\+transform}}
+\index{inverse\+\_\+\+Fourier\+\_\+transform@{inverse\+\_\+\+Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{inverse\+\_\+\+Fourier\+\_\+transform(const array\+\_\+type \&vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::inverse\+\_\+\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const {\bf array\+\_\+type} \&}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_affb54aec64ffd50653afcdc145ece870}
+\hypertarget{namespaceIceBRG_1_1Fourier_afabdc17609e1191649e571a21dbe3c13}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform@{inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform}}
+\index{inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform@{inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform(array\+\_\+type vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::inverse\+\_\+spherical\+\_\+\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{{\bf array\+\_\+type}}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_afabdc17609e1191649e571a21dbe3c13}
+\hypertarget{namespaceIceBRG_1_1Fourier_a97aa6b3ec3f4fe380be476a24f613cfc}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!spherical\+\_\+\+Fourier\+\_\+transform@{spherical\+\_\+\+Fourier\+\_\+transform}}
+\index{spherical\+\_\+\+Fourier\+\_\+transform@{spherical\+\_\+\+Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{spherical\+\_\+\+Fourier\+\_\+transform(array\+\_\+type vals, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename array\+\_\+type , typename std\+::enable\+\_\+if$<$ Ice\+B\+R\+G\+::is\+\_\+container$<$ array\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::spherical\+\_\+\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{{\bf array\+\_\+type}}]{vals, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_a97aa6b3ec3f4fe380be476a24f613cfc}
+\hypertarget{namespaceIceBRG_1_1Fourier_a51335fd335a542a763e192bb1f341a83}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!spherical\+\_\+\+Fourier\+\_\+transform@{spherical\+\_\+\+Fourier\+\_\+transform}}
+\index{spherical\+\_\+\+Fourier\+\_\+transform@{spherical\+\_\+\+Fourier\+\_\+transform}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{spherical\+\_\+\+Fourier\+\_\+transform(const func\+\_\+type \&func, const flt\+\_\+type \&max=1., const int\+\_\+type \&samples=1024, const boost\+::optional$<$ fftw\+\_\+wisdom\+\_\+accumulator \& $>$ \&wisdom=boost\+::none)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename func\+\_\+type , typename std\+::enable\+\_\+if$<$!\+Ice\+B\+R\+G\+::is\+\_\+container$<$ func\+\_\+type $>$\+::value, char $>$\+::type  = 0$>$ {\bf flt\+\_\+array\+\_\+type} Ice\+B\+R\+G\+::\+Fourier\+::spherical\+\_\+\+Fourier\+\_\+transform (
+\begin{DoxyParamCaption}
+\item[{const func\+\_\+type \&}]{func, }
+\item[{const {\bf flt\+\_\+type} \&}]{max = {\ttfamily 1.}, }
+\item[{const {\bf int\+\_\+type} \&}]{samples = {\ttfamily 1024}, }
+\item[{const boost\+::optional$<$ {\bf fftw\+\_\+wisdom\+\_\+accumulator} \& $>$ \&}]{wisdom = {\ttfamily boost\+:\+:none}}
+\end{DoxyParamCaption}
+)}\label{namespaceIceBRG_1_1Fourier_a51335fd335a542a763e192bb1f341a83}
+
+
+\subsection{Variable Documentation}
+\hypertarget{namespaceIceBRG_1_1Fourier_a6ebd3b65a33ddde6362840e1dd67866b}{}\index{Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}!default\+\_\+fftw\+\_\+wisdom\+\_\+filename@{default\+\_\+fftw\+\_\+wisdom\+\_\+filename}}
+\index{default\+\_\+fftw\+\_\+wisdom\+\_\+filename@{default\+\_\+fftw\+\_\+wisdom\+\_\+filename}!Ice\+B\+R\+G\+::\+Fourier@{Ice\+B\+R\+G\+::\+Fourier}}
+\subsubsection[{default\+\_\+fftw\+\_\+wisdom\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}constexpr const char$\ast$ Ice\+B\+R\+G\+::\+Fourier\+::default\+\_\+fftw\+\_\+wisdom\+\_\+filename = \char`\"{}.fftw\+\_\+wisdom\char`\"{}}\label{namespaceIceBRG_1_1Fourier_a6ebd3b65a33ddde6362840e1dd67866b}

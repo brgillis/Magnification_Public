@@ -1,0 +1,116 @@
+This package contains the code used for Gillis and Taylor (2015, \char`\"{}\+G\+T15\char`\"{}), available at \href{http://arxiv.org/abs/1507.01858}{\tt http\+://arxiv.\+org/abs/1507.\+01858}. In broad terms, the code in this package can be considered in two parts\+:
+
+
+\begin{DoxyEnumerate}
+\item The \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G} libraries -\/ C++ libraries I\textquotesingle{}ve developed through the course of my work, which I\textquotesingle{}m distributing in full (even though some parts aren\textquotesingle{}t used here, and some aren\textquotesingle{}t complete).
+\item Executables and scripts which recreate most of the analysis performed in G\+T15, all prepended with \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+\char`\"{}.
+\end{DoxyEnumerate}
+
+\subsubsection*{Installation}
+
+If you\textquotesingle{}re reading this, chances are you\textquotesingle{}ve already built the package. If not, see the directions in \hyperlink{README_8md}{R\+E\+A\+D\+M\+E.\+md} in the root directory.
+
+\subsubsection*{General Code Explanations}
+
+Here are some of the naming conventions I use\+:
+
+
+\begin{DoxyItemize}
+\item C++ source files are all .cpp. Headers are either .h or .hpp. .hpp headers are those which are self-\/contained -\/ they include inlined definitions of all functions and methods defined within.
+\item Private member variables are surrounded by underscores (\char`\"{}\+\_\+x\+\_\+\char`\"{}), and private methods are prepended with an underscore (\char`\"{}\+\_\+f()\char`\"{}).
+\item Getter methods are in most cases simply the name of the variable. For instance, galaxy.\+z() would return the redshift of the galaxy.
+\end{DoxyItemize}
+
+Variable typedefs are defined in \char`\"{}\+Ice\+B\+R\+G\+\_\+main/common.\+h\char`\"{} and \char`\"{}\+Ice\+B\+R\+G\+\_\+main/units/units.\+hpp\char`\"{}. I use Boost\textquotesingle{}s units library for dimensional analysis in programming, using typedefs to save space in giving the types of units. This is mostly checked at compile-\/time, but it can\textquotesingle{}t be entirely optimized out in my code, so I use a preprocessor macro to disable dimensional analysis in the release version of the code. This means that in the release version, any value like \char`\"{}distance\+\_\+type\char`\"{} is actually just a double.
+
+Since Boost\textquotesingle{}s \char`\"{}quantities\char`\"{} (values with units) aren\textquotesingle{}t directly comparable to unitless values (even zero), you\textquotesingle{}ll see functions like \char`\"{}value\+\_\+of(...)\char`\"{} in various places. This is defined differently depending on whether dimensional analysis is used or not, but in either case it has the result of returning the unitless value of a variable. The reverse operation, turning a unitless value into a quantity, is performed with the method \char`\"{}units\+\_\+cast$<$\+T$>$()\char`\"{}.
+
+To simplify units, I use all values in S\+I kms units throughout my code, except at input and output. This way I don\textquotesingle{}t have to worry in the translation from debug code (with dimensional analysis enabled) to release code (with it disabled) that the units might differ. This is done through the use of conversions to and from this base in the header \char`\"{}\+Ice\+B\+R\+G\+\_\+main/units/unit\+\_\+conversions.\+hpp\char`\"{}, which are defined in the namespace \char`\"{}\+Ice\+B\+R\+G\+::unitconv\char`\"{}.
+
+\subsubsection*{\hyperlink{namespaceIceBRG}{Ice\+B\+R\+G} Libraries}
+
+In this section, I\textquotesingle{}ll give an overview of the \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G} libraries, explain the purpose of each, and point to some functions and classes which others may find interesting. All functions, classes, and typedefs in these libraries are declared in the namespace \char`\"{}\+Ice\+B\+R\+G\char`\"{}, except for certain overloads of std\+:\+: functions.
+
+\paragraph*{Ice\+B\+R\+G\+\_\+main Library}
+
+\href{md_IceBRG_main.html}{\tt Ice\+B\+R\+G\+\_\+main} contains all useful functions and classes I\textquotesingle{}ve written which don\textquotesingle{}t have anything specifically to do with my astrophysics work. That is, anything that might be useful to someone completely outside of astrophysics would go in this library.
+
+\paragraph*{Ice\+B\+R\+G\+\_\+physics Library}
+
+\href{md_IceBRG_physics.html}{\tt Ice\+B\+R\+G\+\_\+physics} contains functions and classes related to (astro)physics, but not specifically to a subfield which has its own library.
+
+\paragraph*{Ice\+B\+R\+G\+\_\+lensing Library}
+
+\href{md_IceBRG_lensing.html}{\tt Ice\+B\+R\+G\+\_\+lensing} contains functions and classes related to gravitational lensing in one way or another.
+
+\subsubsection*{C\+F\+H\+T\+Len\+S\+\_\+\+Mag executables}
+
+The various programs here generate executables for performing most of the necessary steps for a gravitational lensing analysis as done in G\+T15. Much of the heavy lifting for these executables is performed by functions and classes within the \hyperlink{namespaceIceBRG}{Ice\+B\+R\+G} libraries. The code in these executables is typically designed to work specifically with the C\+F\+H\+T\+Len\+S catalogues and isn\textquotesingle{}t as portable as the code in the libraries.
+
+When run without command-\/line arguments, the downloaded and generated data will be stored in a Data/ subdirectory of the directory from which the executables are run. The first command-\/line argument to all executables can be used to specify an alternate directory for data.
+
+The code here will be listed by folder, in the order in which the generated executables should generally be run in a first pass.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+catalogue\+\_\+fetching}
+
+This folder contains Python scripts to generate a list of the fields we want to process, download them from the C\+F\+H\+T\+Len\+S web server, and download and compress the corresponding mask files. Two executable python scripts will be installed\+:
+
+
+\begin{DoxyItemize}
+\item \hyperlink{CFHTLenS__Mag__get__fields_8py}{C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+get\+\_\+fields.\+py} -\/ This generates the list of fields and downloads them. By default, this creates a list of only a single field and downloads just that. This is done to lower the burden on the C\+F\+H\+T\+Len\+S server for people who only want to test the code. The second command-\/line argument can be set to \char`\"{}\+True\char`\"{} to instead generate a list of all fields and download them all.
+\item \hyperlink{CFHTLenS__Mag__get__masks_8py}{C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+get\+\_\+masks.\+py} -\/ This downloads the mask file for each field in the generated fields list, then compresses it with fpack (the files are quite large, but smoothly varying, so they have a very good compression ratio).
+\end{DoxyItemize}
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+catalogue\+\_\+filtering}
+
+This folder contains the source to build an executable which will filter the catalogues, separating into lens and source catalogues and removing unnecessary columns. It manually applies the masks (since the values in the catalogue don\textquotesingle{}t always match with the mask files) and removes galaxies which don\textquotesingle{}t meed some cuts.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+filter\+\_\+catalogues\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+get\+\_\+unmasked\+\_\+fractions}
+
+This folder contains source to build an executable which will determine the unmasked fraction in annuli surrounding every lens galaxy. At present, it uses a hard-\/coded set of annuli. I\textquotesingle{}ll try to update this soon so it can take a configuration file.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+get\+\_\+unmasked\+\_\+fractions\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+source\+\_\+counting}
+
+This folder contains source to build an executable which will count the number of source galaxies in magnitude bins which lie at or beyond a given redshift.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+count\+\_\+sources\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+gg\+\_\+lensing}
+
+This folder contains source to build an executable which will perform the weak lensing measurement (including both shear and magnification) for a sample of lens galaxies. It allows use of a config file to determine how lenses are binned.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+measure\+\_\+weak\+\_\+lensing\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+fit\+\_\+lensing\+\_\+models}
+
+This folder contains source to build an executable which will fit a model halo profile to the measured lensing signals.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+fit\+\_\+lensing\+\_\+model\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+make\+\_\+mock\+\_\+cats}
+
+This folder contains source to build an executable which will generate mock lens and source catalogues, which are needed for a correlation-\/function analysis. This isn\textquotesingle{}t part of the main pipeline, so its code hasn\textquotesingle{}t been made as user-\/friendly yet.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+make\+\_\+mock\+\_\+cats\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+corr\+\_\+func}
+
+This folder contains source to build an executable which will measure the correlation functions between lens and source galaxies, as an alternate means of analysis. This isn\textquotesingle{}t part of the main pipeline, so its code hasn\textquotesingle{}t been made as user-\/friendly yet.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+measure\+\_\+corr\+\_\+funcs\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+field\+\_\+stats}
+
+This folder contains source to build an executable which will count the number density of lenses in each field in the C\+F\+H\+T\+Len\+S at various redshift slices. This isn\textquotesingle{}t part of the main pipeline, so its code hasn\textquotesingle{}t been made as user-\/friendly yet.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+get\+\_\+field\+\_\+stats\char`\"{}.
+
+\paragraph*{C\+F\+H\+T\+Len\+S\+\_\+source\+\_\+count\+\_\+fitting}
+
+This folder contains source to build an executable which will attempt to fit an analytic function to the source number count distribute, and will report on the quality of the fit. This isn\textquotesingle{}t part of the main pipeline, so its code hasn\textquotesingle{}t been made as user-\/friendly yet.
+
+It generates the executable \char`\"{}\+C\+F\+H\+T\+Len\+S\+\_\+\+Mag\+\_\+fit\+\_\+source\+\_\+counts\char`\"{}. 
