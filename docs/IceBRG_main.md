@@ -154,12 +154,14 @@ This folder contains class definitions which are used with Boost::accumulators t
 other statistical operations.
 
 Headers for accumulators:
+
 - effective_count.hpp - Using the definition: Square of sum of weights / sum of squares of weights
 - error_of_weighted_mean.hpp - Using an old definition; shouldn't be used until I update to a better one
 - mean_weight.hpp - Mean of weights
 - sum_of_square_weights.hpp - Sum of squares of weights
 
 Other:
+
 - resampling.hpp - Functions to generate a bootstrap or jackknife resampled version of a dataset.
 
 ### units
@@ -173,7 +175,7 @@ quantities and return quantities with the correct units (eg. sqrt, ipow)
 ### vector
 
 This folder contains headers for operations on vectors and the definitions of some derived classes. Notable headers
-inlude:
+include:
 
 - elementwise_functions.hpp - Elementwise operations on vectors and other containers, which work recursively to
 allow function on vectors of vectors as well
