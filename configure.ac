@@ -2,14 +2,14 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([CFHTLenS_Magnification], [0.9.3], [brg@roe.ac.uk])
+AC_INIT([CFHTLenS_Magnification], [0.9.4], [brg@roe.ac.uk])
 AC_CONFIG_SRCDIR([src/exec/CFHTLenS_catalogue_filtering/correct_redshift_bias.h])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIRS([m4])
 
 LT_INIT
 
-AM_INIT_AUTOMAKE([subdir-objects])
+AM_INIT_AUTOMAKE([subdir-objects foreign])
 
 AC_LANG(C++)
 AM_PATH_PYTHON([2.6])
