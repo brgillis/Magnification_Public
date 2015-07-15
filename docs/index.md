@@ -98,13 +98,12 @@ This folder contains Python scripts to generate a list of the fields we want to 
 download them from the CFHTLenS web server, and download and compress the corresponding
 mask files. Two executable python scripts will be installed:
 
--CFHTLenS_Mag_get_fields.py - This generates the list of fields and downloads them. By default,
+- CFHTLenS_Mag_get_fields.py - This generates the list of fields and downloads them. By default,
 this creates a list of only a single field and downloads just that. This is done to lower
 the burden on the CFHTLenS server for people who only want to test the code. The second
 command-line argument can be set to "True" to instead generate a list of all fields and
 download them all.
-
--CFHTLenS_Mag_get_masks.py - This downloads the mask file for each field in the generated fields
+- CFHTLenS_Mag_get_masks.py - This downloads the mask file for each field in the generated fields
 list, then compresses it with fpack (the files are quite large, but smoothly varying, so they
 have a very good compression ratio).
 
