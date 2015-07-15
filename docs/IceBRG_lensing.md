@@ -31,7 +31,7 @@ headers include:
 - mag_correlation_function_estimator.h - My implementation of the optimally-weighted correlation function
 estimator for measuring magnification
 
-- count_fitting_results.hpp, Shcechter_like_functor.h, and expected_count_fit_loader.h - Headers which
+- count_fitting_results.hpp, Schechter_like_functor.h, and expected_count_fit_loader.h - Headers which
 were used in attempts to model the source counts with an analytic function. Not used in current
 implementation.
 - mag_calibration_cache.h and mag_calibration_loader.h - Headers which were used to test if calibrating
