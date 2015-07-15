@@ -18,7 +18,7 @@ AM_PATH_PYTHON([2.6])
 AC_ARG_ENABLE([parallelization],
     AS_HELP_STRING([--disable-parallelization], [Disable OpenMP parallelization.]))
 
-AS_IF([test "x$enable_parallelization" != "xno"], [parallelization_flags="-fopenmp -DEIGEN_DONT_PARALLELIZE"],[parallelization_flags=""])
+AS_IF([test "x$enable_parallelization" != "xno"], [parallelization_flags="-fopenmp"],[parallelization_flags=""])
 
 # Ask the user if they want to install the IceBRG libraries
 AC_ARG_ENABLE([install-IceBRG],
@@ -95,7 +95,7 @@ AC_CONFIG_FILES([Makefile
 
 # Setup flags
 
-MY_CPPFLAGS="-DNDEBUG -I\$(top_srcdir)/src/lib -I\$(top_srcdir)/src/lib/CFHTLenS_include $BOOST_CPPFLAGS $CCFITS_CPPFLAGS"
+MY_CPPFLAGS="-DNDEBUG -DEIGEN_DONT_PARALLELIZE -I\$(top_srcdir)/src/lib -I\$(top_srcdir)/src/lib/CFHTLenS_include $BOOST_CPPFLAGS $CCFITS_CPPFLAGS"
 AC_SUBST(MY_CPPFLAGS)
 
 MY_CXXFLAGS="-std=c++11 $parallelization_flags -funroll-loops -march=native -mfpmath=sse $BOOST_CXXFLAGS $CCFITS_CXXFLAGS"
