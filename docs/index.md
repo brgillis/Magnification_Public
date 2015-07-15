@@ -21,7 +21,7 @@ the directions in README.md in the root directory.
 
 Here are some of the naming conventions I use:
 
-- C++ source files are all.cpp. Headers are either.h or.hpp..hpp headers are those
+- C++ source files are all .cpp. Headers are either .h or .hpp. .hpp headers are those
 which are self-contained - they include inlined definitions of all functions and methods
 defined within.
 - Private member variables are surrounded by underscores ("_x_"), and private methods are
