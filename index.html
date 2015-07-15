@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Magnification public by brgillis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Magnification public</h1>
+      <h2 class="project-tagline">Public release of magnification-measuring code used for Gillis and Taylor (2015)</h2>
+      <a href="https://github.com/brgillis/Magnification_Public" class="btn">View on GitHub</a>
+      <a href="https://github.com/brgillis/Magnification_Public/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/brgillis/Magnification_Public/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="readme" class="anchor" href="#readme" aria-hidden="true"><span class="octicon octicon-link"></span></a>README</h1>
+
+<p>This is a pre-release public posting of the code used for Gillis and Taylor (2015), available at
+<a href="http://arxiv.org/abs/1507.01858">http://arxiv.org/abs/1507.01858</a>.</p>
+
+<h3>
+<a id="what-is-this-repository-for" class="anchor" href="#what-is-this-repository-for" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is this repository for?</h3>
+
+<ul>
+<li>Code used for Gillis and Taylor (2015), including a release of my C++ library, "IceBRG"</li>
+<li>v1.0.0</li>
+</ul>
+
+<h3>
+<a id="how-do-i-get-set-up" class="anchor" href="#how-do-i-get-set-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do I get set up?</h3>
+
+<ul>
+<li>Summary of set up</li>
+</ul>
+
+<p>This project is set up with autotools, so it can be built from source on a Linux-like system with the standard:</p>
+
+<pre><code>#!bash
+
+./configure &lt;options&gt;
+make &lt;options&gt;
+make install
+</code></pre>
+
+<p>My quick recommendation for options is:</p>
+
+<pre><code>#!bash
+
+./configure --enable-full-optimization (add --prefix=$HOME for a user-space install)
+make -j8
+make install
+</code></pre>
+
+<p>If the configuration step fails, see below for relevant options that may help point to dependencies.</p>
+
+<p>You can uninstall through:</p>
+
+<pre><code>#!bash
+
+make uninstall
+</code></pre>
+
+<p>and clean up the installation directory through:</p>
+
+<pre><code>#!bash
+
+make clean
+</code></pre>
+
+<p>The executables will be installed in $PREFIX/bin, the needed python package will be installed in $PYTHONPREFIX/site-packages, and unless --disable-install-IceBRG is set, the libraries will be installed in $PREFIX/lib, and their headers in $PREFIX/include/cfhtlens_magnification.</p>
+
+<ul>
+<li>Configuration</li>
+</ul>
+
+<p>Relevant configure options:</p>
+
+<pre><code>#!bash
+
+--help # View help and configure options
+--prefix=??? # Install in a particular directory. --prefix=$HOME will do install in userspace
+--disable-parallelization # Unless this flag is used, the executables will be installed using parallelization. With this, only one thread will be run at a time.
+--enable-full-optimization # Overrides default C++ compilation flags (-g -O2) and uses a recommended set for better optimization. I recommend using this unless you want to tweak the flags yourself.
+--with-boost=??? # Point to a specific location to find boost headers
+--with-boost-libdir=??? # Point to a specific location to find boost libraries
+--with-ccfits=??? # Point to a specific location to find CCfits headers
+--with-ccfits-libdir=??? # Point to a specific location to find the CCfits library
+CPPFLAGS=??? # Set specific preprocessor flags. For instance, CPPFLAGS='-I/path/to/Eigen/' to help find the Eigen headers.
+</code></pre>
+
+<ul>
+<li>Dependencies</li>
+</ul>
+
+<p>C++11-compliant C++ compiler
+Python interpreter (tested on Python 2.7)
+Boost headers and Boost Serialization library (tested on v1.56)
+Eigen 3 headers
+CCfits headers and library
+wcstools (needed at runtime for certain executables, but not needed at installation)
+fpack/funpack (as wcstools, only needed at runtime)</p>
+
+<ul>
+<li>How to run tests</li>
+</ul>
+
+<p>Once it's installed, you can run a test analysis through going to a directory where you want to store data, then running the series of commands:</p>
+
+<pre><code>#!bash
+
+CFHTLenS_Mag_get_fields.py
+CFHTLenS_Mag_get_masks.py
+CFHTLenS_Mag_filter_catalogues
+CFHTLenS_Mag_get_unmasked_fractions
+CFHTLenS_Mag_count_sources
+CFHTLenS_Mag_measure_weak_lensing
+CFHTLenS_Mag_fit_lensing_model
+
+</code></pre>
+
+<p>This will run all necessary steps on the process up through fitting a lensing model to the data. By default, this only downloads one pointing from the CFHTLenS server (to lighten the load on it and speed things up for those only performing quick tests). A configure file (not distributed at the moment) may be used with the CFHTLenS_Mag_measure_weak_lensing step to modify the lens bins for which the lensing signal is measured.</p>
+
+<h3>
+<a id="who-do-i-talk-to" class="anchor" href="#who-do-i-talk-to" aria-hidden="true"><span class="octicon octicon-link"></span></a>Who do I talk to?</h3>
+
+<ul>
+<li>Bryan Gillis - repo owner</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/brgillis/Magnification_Public">Magnification public</a> is maintained by <a href="https://github.com/brgillis">brgillis</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
