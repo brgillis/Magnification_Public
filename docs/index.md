@@ -21,12 +21,12 @@ the directions in README.md in the root directory.
 
 Here are some of the naming conventions I use:
 
--C++ source files are all.cpp. Headers are either.h or.hpp..hpp headers are those
+- C++ source files are all.cpp. Headers are either.h or.hpp..hpp headers are those
 which are self-contained - they include inlined definitions of all functions and methods
 defined within.
--Private member variables are surrounded by underscores ("_x_"), and private methods are
+- Private member variables are surrounded by underscores ("_x_"), and private methods are
 prepended with an underscore ("_f()").
--Getter methods are in most cases simply the name of the variable. For instance,
+- Getter methods are in most cases simply the name of the variable. For instance,
 galaxy.z() would return the redshift of the galaxy.
 
 Variable typedefs are defined in "IceBRG_main/common.h" and "IceBRG_main/units/units.hpp".
