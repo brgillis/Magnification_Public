@@ -652,6 +652,8 @@ BOOST_CPPFLAGS
 HAVE_DOXYGEN_FALSE
 HAVE_DOXYGEN_TRUE
 doxygen_found
+funpack_found
+fpack_found
 xy2sky_found
 sky2xy_found
 am__fastdepCXX_FALSE
@@ -16652,6 +16654,82 @@ $as_echo "no" >&6; }
 fi
 
 
+# Extract the first word of "fpack", so it can be a program name with args.
+set dummy fpack; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_prog_fpack_found+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  if test -n "$fpack_found"; then
+  ac_cv_prog_fpack_found="$fpack_found" # Let the user override the test.
+else
+as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_prog_fpack_found=""yes""
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  test -z "$ac_cv_prog_fpack_found" && ac_cv_prog_fpack_found=""no""
+fi
+fi
+fpack_found=$ac_cv_prog_fpack_found
+if test -n "$fpack_found"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $fpack_found" >&5
+$as_echo "$fpack_found" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
+# Extract the first word of "funpack", so it can be a program name with args.
+set dummy funpack; ac_word=$2
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+$as_echo_n "checking for $ac_word... " >&6; }
+if ${ac_cv_prog_funpack_found+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  if test -n "$funpack_found"; then
+  ac_cv_prog_funpack_found="$funpack_found" # Let the user override the test.
+else
+as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
+for as_dir in $PATH
+do
+  IFS=$as_save_IFS
+  test -z "$as_dir" && as_dir=.
+    for ac_exec_ext in '' $ac_executable_extensions; do
+  if as_fn_executable_p "$as_dir/$ac_word$ac_exec_ext"; then
+    ac_cv_prog_funpack_found=""yes""
+    $as_echo "$as_me:${as_lineno-$LINENO}: found $as_dir/$ac_word$ac_exec_ext" >&5
+    break 2
+  fi
+done
+  done
+IFS=$as_save_IFS
+
+  test -z "$ac_cv_prog_funpack_found" && ac_cv_prog_funpack_found=""no""
+fi
+fi
+funpack_found=$ac_cv_prog_funpack_found
+if test -n "$funpack_found"; then
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: $funpack_found" >&5
+$as_echo "$funpack_found" >&6; }
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: result: no" >&5
+$as_echo "no" >&6; }
+fi
+
+
 # Extract the first word of "doxygen", so it can be a program name with args.
 set dummy doxygen; ac_word=$2
 { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
@@ -17924,15 +18002,22 @@ MY_LDFLAGS="$parallelization_flags $BOOST_LDFLAGS $CCFITS_LDFLAGS"
 if test "x$sky2xy_found" == "xyes" -a "x$xy2sky_found" == "xyes"; then :
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
-$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This program can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find sky2xy and/or xy2sky. This package can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&5
+$as_echo "$as_me: WARNING: Unable to find sky2xy and/or xy2sky. This package can compile, but certain executables which call these programs will fail until these are installed. They can be installed as part of the wcstools package." >&2;}
+fi
+
+if test "x$fpack_found" == "xyes" -a "x$funpack_found" == "xyes"; then :
+
+else
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find fpack and/or funpack. This package can compile, but certain executables which call these programs will fail until these are installed." >&5
+$as_echo "$as_me: WARNING: Unable to find fpack and/or funpack. This package can compile, but certain executables which call these programs will fail until these are installed." >&2;}
 fi
 
 if test "x$doxygen_found" == "xyes"; then :
 
 else
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find Doxygen. This program can compile, but documentation will not be generated." >&5
-$as_echo "$as_me: WARNING: Unable to find Doxygen. This program can compile, but documentation will not be generated." >&2;}
+  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: Unable to find Doxygen. This package can compile, but documentation will not be generated." >&5
+$as_echo "$as_me: WARNING: Unable to find Doxygen. This package can compile, but documentation will not be generated." >&2;}
 fi
 
 if test "x$mypj_found_std_headers" != "xyes"; then :

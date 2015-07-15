@@ -1,9 +1,9 @@
 /**********************************************************************\
-  @file file_functions.h
+  @file trim_comments.hpp
 
  **********************************************************************
 
- Copyright (C) 2014  Bryan R. Gillis
+ Copyright (C) 2014, 2015  Bryan R. Gillis
 
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
