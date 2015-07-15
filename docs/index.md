@@ -1,4 +1,4 @@
-\section intro_sec Introduction
+## Introduction
 
 This package contains the code used for Gillis and Taylor (2015, "GT15"), available at
 http://arxiv.org/abs/1507.01858. In broad terms, the code in this package can
@@ -11,13 +11,13 @@ aren't complete).
 prepended with "CFHTLenS_Mag_".
 
 
-\section install_sec Installation
+### Installation
 
 If you're reading this, chances are you've already built the package. If not, see
 the directions in README.md in the root directory.
 
 
-\section conventions_sec General Code Explanations
+### General Code Explanations
 
 Here are some of the naming conventions I use:
 
@@ -49,7 +49,7 @@ through the use of conversions to and from this base in the header
 "IceBRG_main/units/unit_conversions.hpp", which are defined in the namespace "IceBRG::unitconv".
 
 
-\section icebrg_sec IceBRG Libraries
+### IceBRG Libraries
 
 In this section, I'll give an overview of the IceBRG libraries, explain the purpose of
 each, and point to some functions and classes which others may find interesting. All
@@ -57,26 +57,26 @@ functions, classes, and typedefs in these libraries are declared in the namespac
 "IceBRG", except for certain overloads of std:: functions.
 
 
-\subsection icebrg_main_sec IceBRG_main Library
+#### IceBRG_main Library
 
 [IceBRG_main](md_IceBRG_main.html) contains all useful functions and classes I've written which don't have
 anything specifically to do with my astrophysics work. That is, anything that might be
 useful to someone completely outside of astrophysics would go in this library.
 
 
-\subsection icebrg_physics_sec IceBRG_physics Library
+#### IceBRG_physics Library
 
 [IceBRG_physics](md_IceBRG_physics.html) contains functions and classes related to (astro)physics, but not
 specifically to a subfield which has its own library.
 
 
-\subsection icebrg_lensing_sec IceBRG_lensing Library
+#### IceBRG_lensing Library
 
 [IceBRG_lensing](md_IceBRG_lensing.html) contains functions and classes related to gravitational lensing in one
 way or another.
 
 
-\section execs_sec CFHTLenS_Mag executables
+### CFHTLenS_Mag executables
 
 The various programs here generate executables for performing most of the necessary steps for
 a gravitational lensing analysis as done in GT15. Much of the heavy lifting for these
@@ -92,7 +92,7 @@ The code here will be listed by folder, in the order in which the generated exec
 generally be run in a first pass.
 
 
-\subsection fetching_sec CFHTLenS_catalogue_fetching
+#### CFHTLenS_catalogue_fetching
 
 This folder contains Python scripts to generate a list of the fields we want to process,
 download them from the CFHTLenS web server, and download and compress the corresponding
@@ -109,7 +109,7 @@ list, then compresses it with fpack (the files are quite large, but smoothly var
 have a very good compression ratio).
 
 
-\subsection filtering_sec CFHTLenS_catalogue_filtering
+#### CFHTLenS_catalogue_filtering
 
 This folder contains the source to build an executable which will filter the catalogues,
 separating into lens and source catalogues and removing unnecessary columns. It manually
@@ -119,7 +119,7 @@ and removes galaxies which don't meed some cuts.
 It generates the executable "CFHTLenS_Mag_filter_catalogues".
 
 
-\subsection mask_fracs_sec CFHTLenS_get_unmasked_fractions
+#### CFHTLenS_get_unmasked_fractions
 
 This folder contains source to build an executable which will determine the unmasked fraction
 in annuli surrounding every lens galaxy. At present, it uses a hard-coded set of annuli. I'll
@@ -128,7 +128,7 @@ try to update this soon so it can take a configuration file.
 It generates the executable "CFHTLenS_Mag_get_unmasked_fractions".
 
 
-\subsection source_counting_sec CFHTLenS_source_counting
+#### CFHTLenS_source_counting
 
 This folder contains source to build an executable which will count the number of source galaxies
 in magnitude bins which lie at or beyond a given redshift.
@@ -136,7 +136,7 @@ in magnitude bins which lie at or beyond a given redshift.
 It generates the executable "CFHTLenS_Mag_count_sources".
 
 
-\subsection weak_lensing_sec CFHTLenS_gg_lensing
+#### CFHTLenS_gg_lensing
 
 This folder contains source to build an executable which will perform the weak lensing measurement
 (including both shear and magnification) for a sample of lens galaxies. It allows use of a config
@@ -145,7 +145,7 @@ file to determine how lenses are binned.
 It generates the executable "CFHTLenS_measure_weak_lensing".
 
 
-\subsection lensing_model_sec CFHTLenS_fit_lensing_models
+#### CFHTLenS_fit_lensing_models
 
 This folder contains source to build an executable which will fit a model halo profile to the
 measured lensing signals.
@@ -153,7 +153,7 @@ measured lensing signals.
 It generates the executable "CFHTLenS_fit_lensing_model".
 
 
-\subsection mock_cats_sec CFHTLenS_make_mock_cats
+#### CFHTLenS_make_mock_cats
 
 This folder contains source to build an executable which will generate mock lens and source
 catalogues, which are needed for a correlation-function analysis. This isn't part of the main
@@ -162,7 +162,7 @@ pipeline, so its code hasn't been made as user-friendly yet.
 It generates the executable "CFHTLenS_Mag_make_mock_cats".
 
 
-\subsection corr_func_sec CFHTLenS_corr_func
+#### CFHTLenS_corr_func
 
 This folder contains source to build an executable which will measure the correlation functions
 between lens and source galaxies, as an alternate means of analysis. This isn't part of the main
@@ -171,7 +171,7 @@ pipeline, so its code hasn't been made as user-friendly yet.
 It generates the executable "CFHTLenS_Mag_measure_corr_funcs".
 
 
-\subsection field_stats_sec CFHTLenS_field_stats
+#### CFHTLenS_field_stats
 
 This folder contains source to build an executable which will count the number density of lenses
 in each field in the CFHTLenS at various redshift slices. This isn't part of the main
@@ -180,7 +180,7 @@ pipeline, so its code hasn't been made as user-friendly yet.
 It generates the executable "CFHTLenS_Mag_get_field_stats".
 
 
-\subsection source_count_fitting_sec CFHTLenS_source_count_fitting
+#### CFHTLenS_source_count_fitting
 
 This folder contains source to build an executable which will attempt to fit an analytic function
 to the source number count distribute, and will report on the quality of the fit. This isn't part
