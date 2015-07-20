@@ -270,7 +270,6 @@ private:
 		#endif
 		for ( size_t i_1 = 0; i_1 < SPCP(name)->_resolution_1_; ++i_1 )
 		{
-			std::cout << i_1 << std::endl;
 			flt_type x_1 = SPCP(name)->_min_1_ + i_1*SPCP(name)->_step_1_;
 			for( size_t i_2 = 0; i_2 < SPCP(name)->_resolution_2_; ++i_2)
 			{
