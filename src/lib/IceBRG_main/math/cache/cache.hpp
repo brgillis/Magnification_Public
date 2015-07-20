@@ -99,7 +99,7 @@ private:
 		if(SPCP(name)->_initialised_) return;
 
 		#ifdef _OPENMP
-		#pragma omp critical(init_brg_cache_nd)
+		#pragma omp critical(init_brg_cache)
 		#endif
 		if(!SPCP(name)->_initialised_)
 		{
@@ -263,7 +263,7 @@ private:
 		bool bad_result = false;
 
 		#ifdef _OPENMP
-		#pragma omp parallel for
+		#pragma omp parallel for schedule(dynamic)
 		#endif
 		for ( size_t i = 0; i < SPCP(name)->_resolution_1_; i++ )
 		{

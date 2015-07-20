@@ -266,7 +266,7 @@ private:
 		// Calculate data
 		bool bad_result = false;
 		#ifdef _OPENMP
-		#pragma omp parallel for
+		#pragma omp parallel for schedule(dynamic)
 		#endif
 		for ( size_t i_1 = 0; i_1 < SPCP(name)->_resolution_1_; ++i_1 )
 		{
