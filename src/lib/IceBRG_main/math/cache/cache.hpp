@@ -112,13 +112,13 @@ private:
 	}
 	void _load() const
 	{
+		if ( SPCP(name)->_loaded_ ) return;
+
 		std::ifstream in_file;
 		std::string file_data;
 		bool need_to_calc = false;
 		size_t i;
 		int_type loop_counter = 0;
-
-		if ( SPCP(name)->_loaded_ ) return;
 
 		do
 		{
@@ -326,15 +326,14 @@ protected:
 	// These are made protected instead of private so base classes can overload them
 #if (1)
 
-	std::string _name_base() const;
-
 #ifdef _BRG_USE_UNITS_
 
-	// Gets the result in the proper units
+	/// Gets the result in the proper units; must be overloaded if units are used.
 	any_units_type _units( const flt_type & v ) const
 	{
 		return v;
 	}
+	/// Gets the inverse result in the proper units; must be overloaded if units are used.
 	any_units_type _inverse_units(const flt_type & v) const
 	{
 		return v;
@@ -342,12 +341,16 @@ protected:
 
 #endif // _BRG_USE_UNITS_
 
-	// Long calculation function, which is used to generate the cache
+	/// Long calculation function, which is used to generate the cache; must be overloaded by each
+	/// child.
 	flt_type _calculate(const flt_type & x) const;
 
-	// This function should be overloaded to call each cache of the same dimensionality as
-	// this cache depends upon in calculation. This is necessary in order to avoid critical
-	// sections of the same name being called recursively.
+	/// The default name (without extension) for the cache file; should be unique for each cache.
+	std::string _name_base() const;
+
+	/// This function should be overloaded to call each cache of the same dimensionality as
+	/// this cache, which this depends upon in calculation. This is necessary in order to avoid critical
+	/// sections of the same name being called recursively.
 	void _load_cache_dependencies() const
 	{
 	}
@@ -359,6 +362,11 @@ public:
 	// Public methods
 #if (1)
 
+	/**
+	 * Set the name of the cache file to use.
+	 *
+	 * @param new_name The name of the cache file to use
+	 */
 	void set_file_name( const std::string & new_name )
 	{
 		SPP(name)->_file_name_ = new_name;
@@ -368,8 +376,16 @@ public:
 		}
 	} // set_file_name()
 
-	void set_range( const flt_type & new_mins, const flt_type & new_maxes,
-			const flt_type & new_steps)
+	/**
+	 * Set the range of the independent parameter for wish you want values to be
+	 * cached.
+	 *
+	 * @param new_min The new minimum value
+	 * @param new_max The new maximum value
+	 * @param new_step The number of points at which to cache the results
+	 */
+	void set_range( const flt_type & new_min, const flt_type & new_max,
+			const flt_type & new_step)
 	{
 		// First we try to load, so we can see if there are any changes from
 		// the existing cache
@@ -377,19 +393,24 @@ public:
 			SPCP(name)->_load( true );
 
 		// Go through variables, check if any are actually changed. If so, recalculate cache
-		if ( ( SPCP(name)->_min_1_ != new_mins ) || ( SPCP(name)->_max_1_ != new_maxes )
-				|| ( SPCP(name)->_step_1_ != new_steps ) )
+		if ( ( SPCP(name)->_min_1_ != new_min ) || ( SPCP(name)->_max_1_ != new_max )
+				|| ( SPCP(name)->_step_1_ != new_step ) )
 		{
-			SPP(name)->_min_1_ = new_mins;
-			SPP(name)->_max_1_ = new_maxes;
-			SPP(name)->_step_1_ = new_steps;
+			SPP(name)->_min_1_ = new_min;
+			SPP(name)->_max_1_ = new_max;
+			SPP(name)->_step_1_ = new_step;
 
 			SPCP(name)->_unload();
 			SPCP(name)->_calc();
 		}
 	} // const int_type set_range()
 
-	void set_precision( const size_t new_precision)
+	/**
+	 * Set the precision you wish the values stored in the cache to have.
+	 *
+	 * @param new_precision The desired precision
+	 */
+	void set_precision( const size_t & new_precision)
 	{
 		if ( new_precision > 0 )
 		{
@@ -401,6 +422,11 @@ public:
 		}
 	} // const int_type set_precision()
 
+	/**
+	 * Print the cached input and output values to an output stream.
+	 *
+	 * @param out The output stream you wish to print the cached values to.
+	 */
 	template<typename otype>
 	void print( otype & out ) const
 	{
@@ -435,6 +461,12 @@ public:
 		print_table(out,data,header);
 	}
 
+	/**
+	 * Get the result of the cached function for a given value.
+	 *
+	 * @param init_x The value for which you desired the cached result.
+	 * @return The cached result for the input value.
+	 */
 	template<typename Tx>
 	const any_units_type get( const Tx & init_x ) const
 	{
@@ -489,6 +521,13 @@ public:
 
 	} // get()
 
+	/**
+	 * Get the independent parameter "x" from the corresponding dependent parameter "y". This only
+	 * works if the function is monotonic increasing or monotonic decreasing.
+	 *
+	 * @param y The independent parameter of the cached function
+	 * @return The corresponding independent parameter of the cached function
+	 */
 	const any_units_type inverse_get( const flt_type & y ) const
 	{
 		// Check if it's possible to do an inverse get
@@ -561,8 +600,21 @@ public:
 
 	}
 
-	// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
-	// (for instance, the _calculate() function has been altered)
+	/// Load the cache, calculating if necessary
+	void load() const
+	{
+		_load();
+	}
+
+	/// Reload the cache, calculating if necessary.
+	void reload() const
+	{
+		_unload();
+		_load();
+	}
+
+	/// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
+	/// (for instance, the _calculate() function has been altered)
 	void recalc() const
 	{
 		SPCP(name)->_unload();

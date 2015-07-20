@@ -343,15 +343,16 @@ protected:
 
 #endif // _BRG_USE_UNITS_
 
-	// Long calculation function, which is used to generate the cache
+	/// Long calculation function, which is used to generate the cache; must be overloaded by each
+	/// child.
 	flt_type _calculate(const flt_type & x_1, const flt_type & x_2) const;
 
-	// This function should be overloaded to provide a unique name for this cache
+	/// The default name (without extension) for the cache file; should be unique for each cache.
 	std::string _name_base() const;
 
-	// This function should be overloaded to call each cache of the same dimensionality
-	// this cache depends upon in calculation. This is necessary in order to avoid critical
-	// sections of the same name being called recursively.
+	/// This function should be overloaded to call each cache of the same dimensionality as
+	/// this cache, which this depends upon in calculation. This is necessary in order to avoid critical
+	/// sections of the same name being called recursively.
 	void _load_cache_dependencies() const
 	{
 	}
@@ -363,6 +364,11 @@ public:
 	// Public methods
 #if (1)
 
+	/**
+	 * Set the name of the cache file to use.
+	 *
+	 * @param new_name The name of the cache file to use
+	 */
 	void set_file_name( const std::string new_name )
 	{
 		if(!SPCP(name)->_initialised_) SPP(name)->_init();
@@ -374,6 +380,17 @@ public:
 		return;
 	} // const int_type set_file_name()
 
+	/**
+	 * Set the range of the independent parameter for wish you want values to be
+	 * cached.
+	 *
+	 * @param new_min_1 The new minimum value, dimension 1.
+	 * @param new_max_1 The new maximum value, dimension 1.
+	 * @param new_step_1 The number of points at which to cache the results, dimension 1.
+	 * @param new_min_1 The new minimum value, dimension 2.
+	 * @param new_max_1 The new maximum value, dimension 2.
+	 * @param new_step_1 The number of points at which to cache the results, dimension 2.
+	 */
 	void set_range( const flt_type & new_min_1, const flt_type & new_max_1, const flt_type & new_step_1,
 			 	         const flt_type & new_min_2, const flt_type & new_max_2, const flt_type & new_step_2 )
 	{
@@ -402,6 +419,11 @@ public:
 		}
 	} // const int_type set_range()
 
+	/**
+	 * Print the cached input and output values to an output stream.
+	 *
+	 * @param out The output stream you wish to print the cached values to.
+	 */
 	template<typename otype>
 	void print( otype & out) const
 	{
@@ -446,6 +468,14 @@ public:
 		print_table(out,data,header);
 	}
 
+
+	/**
+	 * Get the result of the cached function for a given value.
+	 *
+	 * @param init_x_1 The value for which you desired the cached result, dimension 1.
+	 * @param init_x_2 The value for which you desired the cached result, dimension 2.
+	 * @return The cached result for the input value.
+	 */
 	template< typename Tx1, typename Tx2 >
 	any_units_type get( const Tx1 & init_x_1, const Tx2 & init_x_2 ) const
 	{
@@ -519,8 +549,21 @@ public:
 
 	} // get()
 
-	// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
-	// (for instance, the _calculate() function has been altered)
+	/// Load the cache, calculating if necessary
+	void load() const
+	{
+		SPCP(name)->_load();
+	}
+
+	/// Reload the cache, calculating if necessary.
+	void reload() const
+	{
+		SPCP(name)->_unload();
+		SPCP(name)->_load();
+	}
+
+	/// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
+	/// (for instance, the _calculate() function has been altered)
 	void recalc() const
 	{
 		SPCP(name)->_unload();

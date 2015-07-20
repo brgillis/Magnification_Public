@@ -349,15 +349,16 @@ protected:
 
 #endif // _BRG_USE_UNITS_
 
-	// Long calculation function, which is used to generate the cache
+	/// Long calculation function, which is used to generate the cache; must be overloaded by each
+	/// child.
 	flt_type _calculate(const IceBRG::multi_vector<flt_type> & x) const;
 
-	// This function should be overloaded to provide a unique name for this cache
+	/// The default name (without extension) for the cache file; should be unique for each cache.
 	std::string _name_base() const;
 
-	// This function should be overloaded to call each cache of the same dimensionality
-	// this cache depends upon in calculation. This is necessary in order to avoid critical
-	// sections of the same name being called recursively.
+	/// This function should be overloaded to call each cache of the same dimensionality as
+	/// this cache, which this depends upon in calculation. This is necessary in order to avoid critical
+	/// sections of the same name being called recursively.
 	void _load_cache_dependencies() const
 	{
 	}
@@ -369,6 +370,11 @@ public:
 	// Public methods
 #if (1)
 
+	/**
+	 * Set the name of the cache file to use.
+	 *
+	 * @param new_name The name of the cache file to use
+	 */
 	void set_file_name( const std::string new_name )
 	{
 		if(!SPCP(name)->_initialised_) SPP(name)->_init();
@@ -413,6 +419,12 @@ public:
 		}
 	} // void set_range()
 
+	/**
+	 * Get the result of the cached function for a given value.
+	 *
+	 * @param x The value for which you desired the cached result.
+	 * @return The cached result for the input value.
+	 */
 	const any_units_type get( const IceBRG::multi_vector<flt_type> & x,) const
 	{
 
@@ -493,8 +505,21 @@ public:
 
 	} // get()
 
-	// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
-	// (for instance, the _calculate() function has been altered)
+	/// Load the cache, calculating if necessary
+	void load() const
+	{
+		SPCP(name)->_load();
+	}
+
+	/// Reload the cache, calculating if necessary.
+	void reload() const
+	{
+		SPCP(name)->_unload();
+		SPCP(name)->_load();
+	}
+
+	/// Recalculate function. Call if you want to overwrite a cache when something's changed in the code
+	/// (for instance, the _calculate() function has been altered)
 	void recalc() const
 	{
 		SPCP(name)->_unload();
