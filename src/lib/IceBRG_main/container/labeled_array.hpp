@@ -81,7 +81,7 @@ public:
 	typedef T_label_type label_type;
 	typedef const label_type const_label_type;
 
-	typedef decltype(ssize(data_table_type())) size_type;
+	typedef int_type size_type;
 	typedef ptrdiff_t difference_type;
 
 	// Col typedefs
@@ -652,13 +652,13 @@ public:
 	{
 		_check_valid_col_index(index);
 
-		return col_reference(&(get_label_for_column(index)),_data_table_.col(index),num_cols());
+		return col_reference(this,index,num_cols());
 	}
 	const_col_reference col(const size_type & index) const
 	{
 		_check_valid_col_index(index);
 
-		return const_col_reference(&(get_label_for_column(index)),const_cast<const data_table_type &>(_data_table_).col(index),num_cols());
+		return const_col_reference(this,index,num_cols());
 	}
 	col_type raw_col(const size_type & index)
 	{
@@ -696,11 +696,11 @@ public:
 	}
 	cols_type cols()
 	{
-		return cols_type(this,num_cols());
+		return cols_type(this,num_cols(),num_rows());
 	}
 	const_cols_type const_cols() const
 	{
-		return const_cols_type(this,num_cols());
+		return const_cols_type(this,num_cols(),num_rows());
 	}
 
 	// Get a reverse iterable set of columns
@@ -710,11 +710,11 @@ public:
 	}
 	reverse_cols_type reverse_cols()
 	{
-		return reverse_cols_type(this,num_cols());
+		return reverse_cols_type(this,num_cols(),num_rows());
 	}
 	const_reverse_cols_type const_reverse_cols() const
 	{
-		return const_reverse_cols_type(this,num_cols());
+		return const_reverse_cols_type(this,num_cols(),num_rows());
 	}
 
 	// Get an iterable set of raw columns
@@ -724,11 +724,11 @@ public:
 	}
 	raw_cols_type raw_cols()
 	{
-		return raw_cols_type(this,num_cols());
+		return raw_cols_type(this,num_cols(),num_rows());
 	}
 	const_raw_cols_type const_raw_cols() const
 	{
-		return const_raw_cols_type(this,num_cols());
+		return const_raw_cols_type(this,num_cols(),num_rows());
 	}
 
 	// Get a reverse iterable set of raw columns
@@ -738,11 +738,11 @@ public:
 	}
 	reverse_raw_cols_type reverse_raw_cols()
 	{
-		return reverse_raw_cols_type(this,num_cols());
+		return reverse_raw_cols_type(this,num_cols(),num_rows());
 	}
 	const_reverse_raw_cols_type const_reverse_raw_cols() const
 	{
-		return const_reverse_raw_cols_type(this,num_cols());
+		return const_reverse_raw_cols_type(this,num_cols(),num_rows());
 	}
 
 	// Get an iterable set of rows
@@ -752,11 +752,11 @@ public:
 	}
 	rows_type rows()
 	{
-		return rows_type(this,num_rows());
+		return rows_type(this,num_rows(),num_cols());
 	}
 	const_rows_type const_rows() const
 	{
-		return const_rows_type(this,num_rows());
+		return const_rows_type(this,num_rows(),num_cols());
 	}
 
 	// Get a reverse iterable set of rows
@@ -766,11 +766,11 @@ public:
 	}
 	reverse_rows_type reverse_rows()
 	{
-		return reverse_rows_type(this,num_rows());
+		return reverse_rows_type(this,num_rows(),num_cols());
 	}
 	const_reverse_rows_type const_reverse_rows() const
 	{
-		return const_reverse_rows_type(this,num_rows());
+		return const_reverse_rows_type(this,num_rows(),num_cols());
 	}
 
 	// Get an iterable set of raw rows
@@ -780,11 +780,11 @@ public:
 	}
 	raw_rows_type raw_rows()
 	{
-		return raw_rows_type(this,num_rows());
+		return raw_rows_type(this,num_rows(),num_cols());
 	}
 	const_raw_rows_type const_raw_rows() const
 	{
-		return const_raw_rows_type(this,num_rows());
+		return const_raw_rows_type(this,num_rows(),num_cols());
 	}
 
 	// Get a reverse iterable set of raw rows
@@ -794,11 +794,11 @@ public:
 	}
 	reverse_raw_rows_type reverse_raw_rows()
 	{
-		return reverse_raw_rows_type(this,num_rows());
+		return reverse_raw_rows_type(this,num_rows(),num_cols());
 	}
 	const_reverse_raw_rows_type const_reverse_raw_rows() const
 	{
-		return const_reverse_raw_rows_type(this,num_rows());
+		return const_reverse_raw_rows_type(this,num_rows(),num_cols());
 	}
 
 #endif
@@ -915,8 +915,8 @@ public:
 
     template< typename new_row_type,
 	typename std::enable_if<!(std::is_convertible<typename IceBRG::ct<new_row_type>::type,row_buffer_row_type>::value ||
-	std::is_convertible<typename IceBRG::ct<new_row_type>::type,row_buffer_row_type>::value),char>::type = 0,
-	typename std::enable_if<IceBRG::is_stl_container<typename IceBRG::ct<new_row_type>::type>::value,char>::type = 0>
+	std::is_convertible<typename IceBRG::ct<new_row_type>::type,row_buffer_labeled_row_type>::value),char>::type = 0,
+	typename std::enable_if<IceBRG::is_container<typename IceBRG::ct<new_row_type>::type>::value,char>::type = 0>
     void insert_row(new_row_type && new_column)
     {
     	_add_column_buffer_to_data_table();
@@ -1010,13 +1010,13 @@ public:
 	{
 		_check_valid_row_index(index);
 
-		return row_reference(&_label_map_,_data_table_.row(index),num_rows());
+		return row_reference(this,index,num_rows());
 	}
 	const_row_reference row(const size_type & index) const
 	{
 		_check_valid_row_index(index);
 
-		return const_row_reference(&_label_map_,const_cast<const data_table_type &>(_data_table_).row(index),num_rows());
+		return const_row_reference(this,index,num_rows());
 	}
 	row_reference operator[](const size_type & index)
 	{
@@ -1424,6 +1424,15 @@ public:
 
     // Advanced operations
 #if(1)
+
+	void reverse_vertical()
+	{
+    	_add_buffer_to_data_table();
+		for( auto col : raw_cols())
+		{
+			col.reverseInPlace();
+		}
+	}
 
     // Apply unit conversions
     template< typename unitconvs >

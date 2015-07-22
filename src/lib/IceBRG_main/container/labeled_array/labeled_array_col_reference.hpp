@@ -72,11 +72,11 @@ private:
 public:
 
 	/// Constructor. Requires a pointer to a labeled_array's label, the column, and the number of rows
-	template< typename T_init_col_type >
-	labeled_array_col_reference(label_type * label, T_init_col_type && col, size_type num_rows)
-	: _label_(label),
-	  _col_(std::forward<T_init_col_type>(col)),
-	  _num_cols_(num_rows)
+	labeled_array_col_reference(labeled_array_type * array, const size_type & col,
+			const size_type & num_cols)
+	: _label_(&array->_label_map_.right.at(col)),
+	  _col_(array->raw_col(col)),
+	  _num_cols_(num_cols)
 	{
 	}
 
@@ -290,61 +290,61 @@ public:
 	/// Range-checked element access
 	const_reference row( const size_type & n ) const
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Range-checked element access
 	reference row( const size_type & n )
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Range-checked element access
 	const_reference at( const size_type & n ) const
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Range-checked element access
 	reference at( const size_type & n )
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Range-checked element access
 	const_reference operator()( const size_type & n ) const
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Range-checked element access
 	reference operator()( const size_type & n )
 	{
-		return _col_(n);
+		return _col_[n];
 	}
 
 	/// Access first element
 	const_reference front() const
 	{
-		return _col_(0);
+		return _col_[0];
 	}
 
 	/// Access first element
 	reference front()
 	{
-		return _col_(0);
+		return _col_[0];
 	}
 
 	/// Access last element
 	const_reference back() const
 	{
-		return _col_(_col_.size()-1);
+		return _col_[_col_.size()-1];
 	}
 
 	/// Access last element
 	reference back()
 	{
-		return _col_(_col_.size()-1);
+		return _col_[_col_.size()-1];
 	}
 
 	/// Access data

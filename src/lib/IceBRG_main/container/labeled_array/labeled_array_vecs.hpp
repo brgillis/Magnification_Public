@@ -52,6 +52,7 @@ private:
 	// Members
 	labeled_array_type * const _array_;
 	typename labeled_array_type::size_type _size_;
+	typename labeled_array_type::size_type _num_ovecs_;
 
 public:
 
@@ -125,8 +126,9 @@ private:
 public:
 
 	/// Constructor. Requires a pointer to a labeled array
-	labeled_array_vecs(labeled_array_type * init_array, const size_type & init_size)
-	: _array_(init_array), _size_(init_size)
+	labeled_array_vecs(labeled_array_type * init_array, const size_type & init_size,
+			const size_type & num_ovecs=1)
+	: _array_(init_array), _size_(init_size), _num_ovecs_(num_ovecs)
 	{
 	}
 
@@ -302,7 +304,13 @@ public:
 		return _size_==0;
 	}
 
-#endif // Capacity methods
+	/// size
+	const size_type & num_ovecs() const noexcept
+	{
+		return _num_ovecs_;
+	}
+
+#endif // Size methods
 
 	// Row access
 #if(1)
@@ -310,51 +318,51 @@ public:
 	/// Element access
 	const_reference operator[] (const size_type & n) const
 	{
-		return const_reference(_array_->_label_map_,n);
+		return const_reference(_array_,n,_num_ovecs_);
 	}
 
 	/// Element access
 	reference operator[] (const size_type & n)
 	{
-		return reference(_array_->_label_map_,n);
+		return reference(_array_,n,_num_ovecs_);
 	}
 
 	/// Range-checked element access
 	const_reference at( const size_type & n ) const
 	{
 		if((n<0)||(n>_size_)) throw std::out_of_range();
-		return const_reference(_array_->_label_map_,n);
+		return const_reference(_array_,n,_num_ovecs_);
 	}
 
 	/// Range-checked element access
 	reference at( const size_type & n )
 	{
 		if((n<0)||n>_size_) throw std::out_of_range();
-		return reference(_array_->_label_map_,n);
+		return reference(_array_,n,_num_ovecs_);
 	}
 
 	/// Access first element
 	const_reference front() const
 	{
-		return const_reference(_array_->_label_map_,0);
+		return const_reference(_array_,0,_num_ovecs_);
 	}
 
 	/// Access first element
 	reference front()
 	{
-		return reference(_array_->_label_map_,0);
+		return reference(_array_,0,_num_ovecs_);
 	}
 
 	/// Access last element
 	const_reference back() const
 	{
-		return const_reference(_array_->_label_map_,_size_-1);
+		return const_reference(_array_,_size_-1,_num_ovecs_);
 	}
 
 	/// Access last element
 	reference back()
 	{
-		return reference(_array_->_label_map_,_size_-1);
+		return reference(_array_,_size_-1,_num_ovecs_);
 	}
 
 	/// Access base array
@@ -393,7 +401,7 @@ public:
 	typename std::enable_if<std::is_convertible<other_iterator,iterator>::value, other_iterator *>::type = nullptr>
 	labeled_array_vecs( const labeled_array_vecs<labeled_array_type,other_vec_type,const_vec_type,other_reference,const_reference,
 						other_iterator,const_iterator,other_direction_tag> & other)
-	: _array_(&other.base()), _size_(other.size()) {}
+	: _array_(&other.base()), _size_(other.size()), _num_ovecs_(other.num_ovecs()) {}
 
 #endif
 

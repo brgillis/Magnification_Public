@@ -65,18 +65,19 @@ private:
 	typedef typename labeled_array_type::map_type map_type;
 
 	// Members
-	map_type * _label_map_;
+	labeled_array_type * _array_;
 	row_type _row_;
 	size_type _num_rows_;
 
 public:
 
-	/// Constructor. Requires a pointer to a labeled_array's label map and row
-	template <typename T_init_row_type>
-	labeled_array_row_reference(map_type * label_map, T_init_row_type && row, const size_type & num_cols)
-	: _label_map_(label_map),
-	  _row_(std::forward<T_init_row_type>(row)),
-	  _num_rows_(num_cols)
+	/// Constructor. Requires a pointer to a labeled_array's label map and row number
+	labeled_array_row_reference(labeled_array_type * array,
+			const size_type & row,
+			const size_type & num_rows)
+	: _array_(array),
+	  _row_(_array_->raw_row(row)),
+	  _num_rows_(num_rows)
 	{
 	}
 
@@ -290,61 +291,61 @@ public:
 	/// Range-checked element access
 	value_type operator()( const size_type & n ) const
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	reference operator()( const size_type & n )
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	value_type at( const size_type & n ) const
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	reference at( const size_type & n )
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	value_type col( const size_type & n ) const
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	reference col( const size_type & n )
 	{
-		return _row_(n);
+		return _row_[n];
 	}
 
 	/// Range-checked element access
 	value_type at_label( const label_type & label ) const
 	{
-		return _row_(_label_map_->left.at(label));
+		return _row_(_array_->_label_map_.left.at(label));
 	}
 
 	/// Range-checked element access
 	reference at_label( const label_type & label )
 	{
-		return _row_(_label_map_->left.at(label));
+		return _row_(_array_->_label_map_.left.at(label));
 	}
 
 	/// Access first element
 	value_type front() const
 	{
-		return _row_(0);
+		return _array_->_data_table_.row(0);
 	}
 
 	/// Access first element
 	reference front()
 	{
-		return _row_(0);
+		return _array_->_data_table_.row(0);
 	}
 
 	/// Access last element
@@ -362,13 +363,13 @@ public:
 	/// Access data
 	const value_type* data() const noexcept
 	{
-		return _row_.data();
+		return _array_->_data_table_.raw_row(_row_).data();
 	}
 
 	/// Access data
 	value_type* data() noexcept
 	{
-		return _row_.data();
+		return _array_->_data_table_.raw_row(_row_).data();
 	}
 
 #endif // Element access
@@ -378,7 +379,7 @@ public:
 
 	label_type label(const size_type & n) const
 	{
-		return _label_map_->right.at(n);
+		return _array_->_label_map_->right.at(n);
 	}
 
 #endif
@@ -386,20 +387,11 @@ public:
 	// Casting
 #if(1)
 
-	/// Cast to row_type
-	operator const_row_type() const noexcept
+	const_row_type raw() const
 	{
 		return _row_;
 	}
-	operator row_type() noexcept
-	{
-		return _row_;
-	}
-	const_row_type raw() const noexcept
-	{
-		return _row_;
-	}
-	row_type raw() noexcept
+	row_type raw()
 	{
 		return _row_;
 	}
@@ -408,7 +400,7 @@ public:
 	template <typename other_row_type,
 	typename std::enable_if<std::is_convertible<other_row_type,row_type>::value, other_row_type>::type* = nullptr>
 	labeled_array_row_reference( const labeled_array_row_reference<labeled_array_type,other_row_type> & other)
-	: _label_map_(other._label_map_), _row_(other._row_), _num_rows_(other._num_rows_) {}
+	: _array_(other._array_), _row_(other._row_), _num_rows_(other._num_rows_) {}
 
 #endif
 
